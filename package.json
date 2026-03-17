@@ -21,6 +21,9 @@
   "author": "Merlin Chatou",
   "type": "module",
   "main": "index.js",
+  "exports": {
+    ".": "./index.js"
+  },
   "bin": {
     "sutairu": "./bin/cli.js",
     "sutairu-play": "./bin/playground.js"
@@ -31,6 +34,9 @@
   },
   "dependencies": {
     "byte-size": "^9.0.1",
-    "clean-css": "^5.3.3"
+    "chokidar": "^5.0.0",
+    "clean-css": "^5.3.3",
+    "commander": "^14.0.3",
+    "fs-extra": "^11.3.4"
   }
 }

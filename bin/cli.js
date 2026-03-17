@@ -1,60 +1,79 @@
 #!/usr/bin/env node
-import chokidar from "chokidar";
-import path from "path";
+import { watch } from "chokidar";
+import path from "node:path";
 import { getResolvedConfig } from "../src/config.js";
 import { logger } from "../src/utils/logger.js";
-import { scanFile, generateCSS, getFileCount } from "../src/processor.js";
+import { scanFile, generateCSS } from "../src/processor.js";
 import { processSafelist } from "../src/safelist.js";
 import { report } from "../src/utils/report.js";
 
-
 async function start() {
-  // Measure computation time
-  const startTime = performance.now(); // ⏱️ Start the clock
+  const startTime = performance.now();
 
-  // Get config from CLI or config file
+  // 1. Load Config
   const config = await getResolvedConfig();
+  const extensions = config.extensions || ["html", "svelte"];
+  const watchDirs = config.watchDirs || ["src", "static"];
+  const safeList = processSafelist(config);
 
-
-  // Initialize the logger globally
+  // 2. Initialize Logger
   logger.init(config.verbose, config.label);
+  logger.verbose(`Sutairu is running in: ${process.cwd()}`);
+  logger.info(`Sutairu v1.0.0 CSS active!`);
 
-  // Prepare targets files
-  const targets = config.watchDirs.map((dir) => path.resolve(dir, `**/*.{${config.extensions.join(",")}}`));
-  logger.info(`Sutairu CSS active!`);
 
-  // Configure Chokidar watcher
-  const watcher = chokidar.watch(targets, {
-    ignored: /(^|[\/\\])\../, // ignore dotfiles
+  // Helper to check if a file should be processed
+  const isTargetFile = (filePath) => {
+    const ext = path.extname(filePath).slice(1).toLowerCase();
+    return extensions.includes(ext);
+  };
+
+  // 3. Configure Watcher (Watching directories directly for better reliability)
+  const watcher = watch(watchDirs, {
+    cwd: process.cwd(),
+    ignored: [
+      /(^|[\/\\])\../, // ignore dotfiles
+      "**/node_modules/**",
+      "**/.svelte-kit/**"
+    ],
     persistent: true,
-    ignoreInitial: false, // Run the generator once at the start
+    ignoreInitial: false,
   });
 
-  // Process safe list from config file
-  const safeList = processSafelist(config); 
-
-  // Set the handlers on file add, change, delete ...
+  // 4. Event Handlers
   watcher
-    .on("add", (filePath) => scanFile(filePath))
+    .on("add", (filePath) => {
+      if (isTargetFile(filePath)) {
+        // No 'await' needed here usually, just queue the scan
+        scanFile(filePath);
+      }
+    })
     .on("change", async (filePath) => {
-      const updateStart = performance.now();
-      scanFile(filePath);
-      const stats = await generateCSS(config, safeList);
-      const updateEnd = performance.now();
-      stats.duration = (updateEnd - updateStart).toFixed(1); // One decimal place for precision
-      report (stats);
+      if (isTargetFile(filePath)) {
+        const updateStart = performance.now();
+        
+        scanFile(filePath);
+        const stats = await generateCSS(config, safeList);
+        
+        const updateEnd = performance.now();
+        stats.duration = (updateEnd - updateStart).toFixed(1);
+        report(stats);
+      }
     })
     .on("unlink", (filePath) => {
-      logger.info(`[REMOVED] ${filePath}`);
-      logger.error("Unlinking files is not yet supported");
+      if (isTargetFile(filePath)) {
+        logger.info(`[REMOVED] ${filePath}`);
+        logger.error("Unlinking files is not yet supported");
+      }
     })
     .on("ready", async () => {
-      let stats = await generateCSS(config, safeList);
+      // Generate initial CSS after all 'add' events have been queued
+      const stats = await generateCSS(config, safeList);
       const endTime = performance.now();
-      stats.duration = (endTime - startTime).toFixed(0); // Round to nearest ms
-
-      report (stats);
-    });
+      stats.duration = (endTime - startTime).toFixed(0);
+      report(stats);
+    })
+    .on("error", (error) => logger.error(`Watcher error: ${error}`));
 }
 
 start();
