@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="alternate icon" href="/favicon.ico">
+    
+    <title>Sutairu Playground</title>
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        font-family: sans-serif;
+      }
+
+      /* Container for each section to keep labels relative to their box */
+      .section {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        position: relative; /* Labels will anchor to this */
+        overflow: hidden;
+      }
+
+      textarea,
+      pre {
+        flex: 1;
+        padding: 40px 20px 20px 20px; /* Top padding increased to make room for label */
+        margin: 0;
+        border: none;
+        outline: none;
+        font-size: 16px;
+      }
+
+      textarea {
+        background: #1e1e1e;
+        color: #d4d4d4;
+        font-family: monospace;
+        resize: none;
+      }
+
+      pre {
+        background: #f8f9fa;
+        color: #212529;
+        overflow: auto;
+        border-top: 2px solid #ddd; /* Changed from left to top border */
+      }
+
+      .label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 4px 12px;
+        font-size: 11px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: white;
+        background: rgba(85, 85, 85, 0.8);
+        pointer-events: none; /* Allows clicking "through" the label to the textarea */
+        z-index: 10;
+      }
+    </style>
+  </head>
+  <body>
+<div class="section">
+    <div class="label">INPUT (SPACE SEPARATED)</div>
+    <textarea id="input" placeholder="m-3 !bg-blue-123/83 m-5"></textarea>
+  </div>
+
+  <div class="section">
+    <div class="label">GENERATED CSS</div>
+    <pre id="output"></pre>
+  </div>
+
+    <script type="module">
+      // Points to your actual source logic!
+      import { compileCSS } from "../src/compiler.js";
+
+      const input = document.getElementById("input");
+      const output = document.getElementById("output");
+      input.addEventListener("input", async () => {
+        const classes = input.value.split(/\s+/).filter(Boolean);
+        const css = await compileCSS(classes);
+        output.textContent = css;
+      });
+    </script>
+  </body>
+</html>

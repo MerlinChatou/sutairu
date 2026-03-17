@@ -1,0 +1,36 @@
+{
+  "name": "@merlin-chatou/sutairu",
+  "version": "1.0.0",
+  "description": "CSS framework that creates a minifyed css file on demand with utilities and components",
+  "keywords": [
+    "CSS",
+    "framework",
+    "JIT",
+    "components",
+    "utilities"
+  ],
+  "homepage": "https://github.com/MerlinChatou/sutairu#readme",
+  "bugs": {
+    "url": "https://github.com/MerlinChatou/sutairu/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MerlinChatou/sutairu.git"
+  },
+  "license": "MIT",
+  "author": "Merlin Chatou",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "sutairu": "./bin/cli.js",
+    "sutairu-play": "./bin/playground.js"
+  },
+  "scripts": {
+    "test": "node --test",
+    "test:update": "node --test --test-update-snapshots ./test/*.test.js"
+  },
+  "dependencies": {
+    "byte-size": "^9.0.1",
+    "clean-css": "^5.3.3"
+  }
+}

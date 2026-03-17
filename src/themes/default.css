@@ -1,0 +1,70 @@
+/* Import Inter & Indie Flower for default theme */
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  /* Base Palette Colors */
+  --yellow: oklch(86% 0.17 92);
+  --orange: oklch(70% 0.19 48);
+  --red: oklch(64% 0.21 25);
+  --pink: oklch(66% 0.21 354);
+  --purple: oklch(63% 0.23 303);
+  --blue: oklch(62% 0.19 259);
+  --cyan: oklch(71% 0.13 214);
+  --green: oklch(70% 0.15 162);
+  --white: oklch(98% 0 264);
+  --gray: oklch(55% 0.02 264);
+  --black: oklch(21% 0.04 265);
+
+  /* Accent color, here blue reported from the palette */
+  --accent: var(--blue);
+
+  /* Scroll bar */
+  --sb-track-color: var(--container);
+  --sb-thumb-color: oklch(from var(--accent) l 0.05 h);
+
+  /* Typography */
+  --ff-base: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --fs-adjust-base: none;
+
+  --ff-title: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --fs-adjust-title: none;
+
+  --ff-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", Consolas, monaco, monospace;
+  --fs-adjust-mono: 0.548;
+
+  --ff-handwritten: "Indie Flower";
+  --fs-adjust-handwritten: 0.44;
+
+  /* Line Heights - Titles usually need less leading than body text */
+  --lh-title: 1.2;
+  --lh-base: 1.5;
+
+  /* Headings */
+  --fs-h1: clamp(2.25rem, 1.6rem + 2.8vw, 3rem);
+  --fs-h2: calc(1rem + (var(--fs-h1) - 1rem) * 0.6);
+  --fs-h3: calc(1rem + (var(--fs-h1) - 1rem) * 0.35);
+  --fs-h4: calc(1rem + (var(--fs-h1) - 1rem) * 0.19);
+  --fs-h5: calc(1rem + (var(--fs-h1) - 1rem) * 0.1);
+  --fs-h6: calc(1rem + (var(--fs-h1) - 1rem) * 0.04);
+
+  --fw-h1: 800;
+  --fw-h2: 800;
+  --fw-h3: 700;
+  --fw-h4: 700;
+  --fw-h5: 700;
+  --fw-h6: 700;
+
+  --ls-h1: -0.06em;
+  --ls-h2: -0.05em;
+  --ls-h3: -0.04em;
+  --ls-h4: -0.03em;
+  --ls-h5: -0.02em;
+  --ls-h6: -0.01em;
+
+  /* Default border colors*/
+  --border: oklch(from var(--accent) 94% 0.01 h);
+}
+
+[data-color-scheme="dark"] {
+  --border: oklch(from var(--accent) 29% 0.03 h);
+}

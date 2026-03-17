@@ -1,0 +1,47 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: var(--border);
+}
+:root {
+  /* thumb color | track color */
+  scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+}
+body {
+  margin: 0;
+  line-height: var(--lh-base);
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--ff-base);
+  font-size-adjust: var(--fs-adjust-base);
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: var(--ff-title);
+}
+hr {
+  border-style: inset;
+  border-width: 1px;
+  border-color: var(--border);
+}

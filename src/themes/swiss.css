@@ -1,0 +1,70 @@
+/* Import Inter & Indie Flower */
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+[data-theme="swiss"] {
+  /* Base Palette Colors */
+  --yellow: oklch(88% 0.1809 94);
+  --orange: oklch(66% 0.22 38);
+  --red: oklch(52% 0.2 27);
+  --pink: oklch(55% 0.23 357);
+  --purple: oklch(42% 0.14 320);
+  --blue: oklch(59% 0.14 244);
+  --cyan: oklch(64% 0.11 186);
+  --green: oklch(63% 0.18 149);
+  --white: oklch(92% 0.005 86);
+  --gray: oklch(70% 0.005 86);
+  --black: oklch(26% 0.005 86);
+
+  /* Accent color, here blue reported from the palette */
+  --accent: var(--red);
+
+  /* Scroll bar */
+  --sb-track-color: var(--container);
+  --sb-thumb-color: oklch(from var(--accent) l 0.1 h);
+
+  /* Typography */
+  --ff-base: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --fs-adjust-base: none;
+
+  --ff-title: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --fs-adjust-title: none;
+
+  --ff-mono: Consolas, monaco, monospace;
+  --fs-adjust-mono: 0.559;
+
+  --ff-handwritten: "Indie Flower";
+  --fs-adjust-handwritten: 0.44;
+
+  --lh-title: 1.2;
+  --lh-base: 1.5;
+
+  /* Headings */
+  --fs-h1: clamp(2.25rem, 1.6rem + 2.8vw, 3rem);
+  --fs-h2: calc(1rem + (var(--fs-h1) - 1rem) * 0.6);
+  --fs-h3: calc(1rem + (var(--fs-h1) - 1rem) * 0.35);
+  --fs-h4: calc(1rem + (var(--fs-h1) - 1rem) * 0.19);
+  --fs-h5: calc(1rem + (var(--fs-h1) - 1rem) * 0.1);
+  --fs-h6: calc(1rem + (var(--fs-h1) - 1rem) * 0.04);
+
+  --fw-h1: 800;
+  --fw-h2: 800;
+  --fw-h3: 700;
+  --fw-h4: 700;
+  --fw-h5: 700;
+  --fw-h6: 700;
+
+  --ls-h1: -0.06em;
+  --ls-h2: -0.05em;
+  --ls-h3: -0.04em;
+  --ls-h4: -0.03em;
+  --ls-h5: -0.02em;
+  --ls-h6: -0.01em;
+
+  /* default border colors*/
+  --border: oklch(from var(--accent) 94% 0.01 h);
+}
+
+/* Dark mode */
+[data-theme="swiss"][data-color-scheme="dark"] {
+  --border: oklch(from var(--accent) 27% 0.005 h);
+}

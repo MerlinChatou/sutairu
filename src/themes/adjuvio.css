@@ -1,0 +1,70 @@
+/* Import Inter & Indie Flower for default theme */
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+[data-theme="adjuvio"] {  
+  /* Base Palette Colors */
+  --yellow: oklch(0.9137 0.1624 98.24);
+  --orange: oklch(0.8002 0.1551 67.32);
+  --red: oklch(0.6597 0.2021 25.78);
+  --pink: oklch(0.6938 0.2458 329.47);
+  --purple: oklch(0.5781 0.227 301.98);
+  --blue: oklch(0.6534 0.1611 253.24);
+  --cyan: oklch(0.77 0.1265 190.49);
+  --green: oklch(0.711 0.1774 149.15);
+  --white: oklch(0.95 0.01 253.24);
+  --gray: oklch(0.5861 0.0302 253.24);
+  --black: oklch(0.1831 0.0297 251.41);
+  
+  /* Accent color, here blue reported from the palette */
+  --accent: var(--blue);
+
+  /* Scroll bar */
+  --sb-track-color: var(--container);
+  --sb-thumb-color: oklch(from var(--gray) l 0.05 h);
+
+  /* Typography */
+  --ff-base: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --fs-adjust-base: none;
+
+  --ff-title: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --fs-adjust-title: none;
+
+  --ff-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", Consolas, monaco, monospace;
+  --fs-adjust-mono: 0.548;
+
+  --ff-handwritten: "Indie Flower";
+  --fs-adjust-handwritten: 0.44;
+
+  /* Line Heights - Titles usually need less leading than body text */
+  --lh-title: 1.2;
+  --lh-base: 1.5;
+
+  /* Headings */
+  --fs-h1: clamp(2.25rem, 1.6rem + 2.8vw, 3rem);
+  --fs-h2: calc(1rem + (var(--fs-h1) - 1rem) * 0.6);
+  --fs-h3: calc(1rem + (var(--fs-h1) - 1rem) * 0.35);
+  --fs-h4: calc(1rem + (var(--fs-h1) - 1rem) * 0.19);
+  --fs-h5: calc(1rem + (var(--fs-h1) - 1rem) * 0.1);
+  --fs-h6: calc(1rem + (var(--fs-h1) - 1rem) * 0.04);
+
+  --fw-h1: 800;
+  --fw-h2: 800;
+  --fw-h3: 700;
+  --fw-h4: 700;
+  --fw-h5: 700;
+  --fw-h6: 700;
+
+  --ls-h1: -0.06em;
+  --ls-h2: -0.05em;
+  --ls-h3: -0.04em;
+  --ls-h4: -0.03em;
+  --ls-h5: -0.02em;
+  --ls-h6: -0.01em;
+
+  /* Default border colors*/
+  --border: oklch(from var(--accent) 94% 0.01 h);
+}
+
+[data-color-scheme="dark"] {
+  --border: oklch(from var(--accent) 29% 0.03 h);
+}

@@ -1,0 +1,25 @@
+/* The Master Pipeline Trigger */
+:where(
+  [class*="blur-"],
+  [class*="grayscale-"],
+  [class*="contrast-"],
+  [class*="brightness-"],
+  [class*="invert-"],
+  [class*="saturate-"],
+  [class*="sepia-"],
+  [class*="hue-rotate-"]
+) {
+  /* Initialize variables to 'initial' or empty so they don't break the string */
+  --su-blur: ;
+  --su-brightness: ;
+  --su-contrast: ;
+  --su-grayscale: ;
+  --su-invert: ;
+  --su-saturate: ;
+  --su-sepia: ;
+  --su-hue-rotate: ;
+
+  /* The combined filter property */
+  /* If a variable is empty, the browser ignores that segment */
+  filter: var(--su-blur) var(--su-brightness) var(--su-contrast) var(--su-grayscale) var(--su-invert) var(--su-saturate) var(--su-sepia) var(--su-hue-rotate);
+}
