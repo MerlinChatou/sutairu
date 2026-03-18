@@ -17,6 +17,7 @@ import * as border_width_unit from "./border/border-width-unit.js";
 
 // Components
 import * as badge from "./components/badge.js";
+import * as group from "./components/group.js";
 
 // Effects
 import * as blur from "./effects/blur.js";
@@ -112,6 +113,7 @@ const modules = [
 
   // Components
   badge,
+  group,
 
   // Effects
   blur,
