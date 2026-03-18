@@ -50,4 +50,5 @@ export const sampleClasses = [
   "lh-2em",
   "lh-3/2em",
   "lh-12px",
+  "lh-none",
 ];
