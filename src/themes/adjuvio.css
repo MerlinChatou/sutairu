@@ -16,7 +16,7 @@
   --su-black: oklch(0.1831 0.0297 251.41);
 
   /* Accent color, here blue reported from the palette */
-  --su-accent: var(--blue);
+  --su-accent: var(--su-blue);
 
   /* Semantic text */
   --su-body: oklch(from var(--su-accent) 60% 0.01 h);

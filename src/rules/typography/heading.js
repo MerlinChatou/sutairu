@@ -2,46 +2,46 @@
 // These use the fluid clamp() and optical letter-spacing we defined
 const baseHeadings = {
   h1: `
-    font-size: var(--fs-h1);
-    letter-spacing:var(--ls-h1);
-    line-height: var(--lh-title);
-    font-weight: var(--fw-h1);    
-    color: var(--text-title);
+    font-size: var(--su-fs-h1);
+    letter-spacing:var(--su-ls-h1);
+    line-height: var(--su-lh-title);
+    font-weight: var(--su-fw-h1);    
+    color: var(--su-text-title);
   `,
   h2: `
-    font-size: var(--fs-h2);
-    letter-spacing:var(--ls-h2);
-    line-height: var(--lh-title);
-    font-weight: var(--fw-h2);
-    color: var(--text-title);
+    font-size: var(--su-fs-h2);
+    letter-spacing:var(--su-ls-h2);
+    line-height: var(--su-lh-title);
+    font-weight: var(--su-fw-h2);
+    color: var(--su-text-title);
   `,
   h3: `
-    font-size:  var(--fs-h3);
-    letter-spacing:var(--ls-h3);
-    line-height: var(--lh-title);
-    font-weight: var(--fw-h3);
-    color: var(--text-title);
+    font-size:  var(--su-fs-h3);
+    letter-spacing:var(--su-ls-h3);
+    line-height: var(--su-lh-title);
+    font-weight: var(--su-fw-h3);
+    color: var(--su-text-title);
   `,
   h4: `
-    font-size:  var(--fs-h4);
-    letter-spacing:var(--ls-h4);
-    line-height: var(--lh-title);
-    font-weight: var(--fw-h4);
-    color: var(--text-title);
+    font-size:  var(--su-fs-h4);
+    letter-spacing:var(--su-ls-h4);
+    line-height: var(--su-lh-title);
+    font-weight: var(--su-fw-h4);
+    color: var(--su-text-title);
   `,
   h5: `
-    font-size:  var(--fs-h5);
-    letter-spacing:var(--ls-h5);
-    line-height: var(--lh-title);
-    font-weight: var(--fw-h5);
-    color: var(--text-title);
+    font-size:  var(--su-fs-h5);
+    letter-spacing:var(--su-ls-h5);
+    line-height: var(--su-lh-title);
+    font-weight: var(--su-fw-h5);
+    color: var(--su-text-title);
   `,
   h6: `
-    font-size: var(--fs-h6);
-    letter-spacing:var(--ls-h6);
-    line-height: var(--lh-title);
-    font-weight: var(--fw-h6);
-    color: var(--text-title);
+    font-size: var(--su-fs-h6);
+    letter-spacing:var(--su-ls-h6);
+    line-height: var(--su-lh-title);
+    font-weight: var(--su-fw-h6);
+    color: var(--su-text-title);
   `,
 };
 

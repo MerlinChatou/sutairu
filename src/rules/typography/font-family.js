@@ -12,8 +12,8 @@ export const patterns = [
 
       // We return both properties to ensure the font-size-adjust stays in sync
       return `
-        font-family: var(--ff-${themeKey})${suffix};
-        font-size-adjust: var(--fs-adjust-${themeKey})${suffix};
+        font-family: var(--su-ff-${themeKey})${suffix};
+        font-size-adjust: var(--su-fs-adjust-${themeKey})${suffix};
       `.trim();
     },
   },

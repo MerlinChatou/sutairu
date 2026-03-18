@@ -28,8 +28,7 @@ export const patterns = [
       const importantTag = isImportant ? " !important" : "";
 
       // Logic for negative values
-      // If the key is 'behind' (-1), -z-behind results in --1 (invalid).
-      // We can wrap in calc for safety or just prepend the dash for raw numbers.
+            // We can wrap in calc for safety or just prepend the dash for raw numbers.
       const finalValue = isNegative ? `calc(${value} * -1)` : value;
 
       return `z-index: ${finalValue}${importantTag};`;

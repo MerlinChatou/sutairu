@@ -2,7 +2,7 @@
  * The Transform Engine String
  * Injected into every utility to ensure composition.
  */
-const transformEngine = "transform: translateX(var(--s-tr-x, 0)) translateY(var(--s-tr-y, 0)) rotate(var(--s-rot, 0)) scaleX(calc(var(--s-sc-x, 1) * var(--s-sc, 1))) scaleY(calc(var(--s-sc-y, 1) * var(--s-sc, 1)));";
+const transformEngine = "transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));";
 
 const buildTransform = (variable, value, isImportant) => {
   const importantTag = isImportant ? " !important" : "";
@@ -24,7 +24,7 @@ export const patterns = [
     parse: (match) => {
       const isNeg = match[2] === "-";
       const value = `${isNeg ? "-" : ""}${match[4]}${match[5] || "px"}`;
-      return buildTransform(`--s-tr-${match[3]}`, value, match[1] === "!");
+      return buildTransform(`--su-tr-${match[3]}`, value, match[1] === "!");
     },
   },
 {
@@ -40,7 +40,7 @@ export const patterns = [
       const unit = "deg";
       
       const finalValue = `${isNegative ? "-" : ""}${value}${unit}`;
-      return buildTransform("--s-rot", finalValue, isImportant);
+      return buildTransform("--su-rot", finalValue, isImportant);
     },
   },
   {
@@ -66,7 +66,7 @@ export const patterns = [
       // If no axis, target the uniform scale variable
       const variableSuffix = axis ? `-${axis}` : "";
       
-      return buildTransform(`--s-sc${variableSuffix}`, multiplier, isImportant);
+      return buildTransform(`--su-sc${variableSuffix}`, multiplier, isImportant);
     },
   },
 ];

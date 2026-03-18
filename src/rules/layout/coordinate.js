@@ -4,7 +4,7 @@ import { spacingUnitPattern } from "../constants.js";
  * The Transform Engine String
  * Injected into every utility that affects the transform stack.
  */
-const transformEngine = "transform: translateX(var(--s-tr-x, 0)) translateY(var(--s-tr-y, 0)) rotate(var(--s-rot, 0)) scale(var(--s-sc, 1));";
+const transformEngine = "transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scale(var(--su-sc, 1));";
 
 const coordAliases = {
   middle: "50%",
@@ -50,7 +50,7 @@ const buildRule = (prop, valueStr, unit, isNegative, isImportant) => {
     const sign = (prop === "left" || prop === "top") ? "-" : "";
     
     // 1. Update the specific transform variable
-    declarations += ` --s-tr-${axis}: ${sign}50%${importantTag};`;
+    declarations += ` --su-tr-${axis}: ${sign}50%${importantTag};`;
     
     // 2. Inject the transform property itself (applying !important if needed)
     const injectedEngine = transformEngine.replace(';', `${importantTag};`);
