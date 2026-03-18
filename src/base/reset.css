@@ -12,7 +12,7 @@
 }
 body {
   margin: 0;
-  line-height: var(--lh-base);
+  line-height: 1;
   -webkit-font-smoothing: antialiased;
   font-family: var(--ff-base);
   font-size-adjust: var(--fs-adjust-base);
@@ -44,4 +44,7 @@ hr {
   border-style: inset;
   border-width: 1px;
   border-color: var(--border);
+}
+p {
+  line-height: var(--lh-base);
 }

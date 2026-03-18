@@ -2,6 +2,7 @@
 export const sampleClasses = [
   "m-5",
   "p-2",
+  "p-1/2",
   "-m-2",
   "!m-32px",
   "hover:bg-blue-500",
@@ -41,4 +42,12 @@ export const sampleClasses = [
   "fd-row",
   "fd-col",
   "fw-wrap",
+
+  "lh-sm",
+  "lh-150%",
+  "!lh-15",
+  "!lh-sm",
+  "lh-2em",
+  "lh-3/2em",
+  "lh-12px",
 ];

@@ -11,9 +11,7 @@ async function start() {
   const startTime = performance.now();
 
   // 1. Load Config
-  const config = await getResolvedConfig();
-  const extensions = config.extensions || ["html", "svelte"];
-  const watchDirs = config.watchDirs || ["src", "static"];
+  const config = await getResolvedConfig();  
   const safeList = processSafelist(config);
 
   // 2. Initialize Logger
@@ -25,11 +23,11 @@ async function start() {
   // Helper to check if a file should be processed
   const isTargetFile = (filePath) => {
     const ext = path.extname(filePath).slice(1).toLowerCase();
-    return extensions.includes(ext);
+    return config.extensions.includes(ext);
   };
 
   // 3. Configure Watcher (Watching directories directly for better reliability)
-  const watcher = watch(watchDirs, {
+  const watcher = watch(config.watchDirs, {
     cwd: process.cwd(),
     ignored: [
       /(^|[\/\\])\../, // ignore dotfiles

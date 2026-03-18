@@ -21,9 +21,7 @@ async function start() {
   // Prepare targets files
 
   const targets = config.watchDirs.map((dir) => {
-    const relativeDir = path.relative(process.cwd(), dir);
-    return `${relativeDir}/**/*.{${config.extensions.join(",")}}`;
-    //path.resolve(dir, `**/*.{${config.extensions.join(",")}}`);
+    path.resolve(dir, `**/*.{${config.extensions.join(",")}}`);
   });
 
   

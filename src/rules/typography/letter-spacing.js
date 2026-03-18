@@ -1,67 +1,71 @@
 import { letterSpacingUnitPattern } from "../constants.js";
 
-const namedScales = {
-  tighter: -0.05,
-  tight: -0.025,
-  normal: 0,
-  wide: 0.025,
-  wider: 0.05,
-  widest: 0.1,
+/*
+| Class | Value | Best Use Case |
+| :--- | :--- | :--- |
+| **`ls-xs`** | `0.01em` | Micro-tuning for body text. |
+| **`ls-sm`** | `0.025em` | Subtle breath for sub-headers. |
+| **`ls-md`** | `0.05em` | Standard for small all-caps tags. |
+| **`ls-lg`** | `0.1em` | Wide-spaced headings or navigation. |
+| **`ls-xl`** | `0.25em` | Highly stylized, airy display text. |
+*/
+
+// 1. Static Keyword Rules (Positive Magnitudes)
+const baseRules = {
+  "ls-xs": { "letter-spacing": "0.01em" },
+  "ls-sm": { "letter-spacing": "0.025em" },
+  "ls-md": { "letter-spacing": "0.05em" },
+  "ls-lg": { "letter-spacing": "0.1em" },
+  "ls-xl": { "letter-spacing": "0.25em" },
 };
 
-const STEP_UNIT = 0.01;
+const build = (props, imp) => Object.entries(props)
+  .map(([k, v]) => `${k}: ${v}${imp ? " !important" : ""};`).join(" ");
 
+export const rules = Object.entries(baseRules).reduce((acc, [key, props]) => {
+  // Positive: ls-sm -> 0.05em
+  acc[key] = build(props, false);
+  acc[`!${key}`] = build(props, true);
+  
+  // Negative: -ls-sm -> -0.05em
+  const negProps = { "letter-spacing": `-${props["letter-spacing"]}` };
+  acc[`-${key}`] = build(negProps, false);
+  acc[`!-${key}`] = build(negProps, true);
+  
+  return acc;
+}, {});
+
+// 2. Dynamic Patterns
 export const patterns = [
-  // 1. Named Scales (ls-wide)
-  {
-    test: new RegExp(`^(-)?ls-(${Object.keys(namedScales).join("|")})$`),
-    parse: (match) => {
-      const isNegative = match[1] === "-";
-      const rawValue = namedScales[match[2]];
-      const finalValue = isNegative ? rawValue * -1 : rawValue;
-      return `letter-spacing: ${finalValue === 0 ? "0" : finalValue + "em"};`;
-    },
-  },
   {
     /**
-     * Matches milli-units: ls-1000mrem, -ls-50mpx, ls-25mem
-     * Group 1: Optional leading negative
-     * Group 2: The integer value
-     * Group 3: The unit (rem, px, or em)
+     * Matches: ls-1px, -ls-10, !-ls-1/2rem
      */
-    test: /^(-)?ls-(\d+)m(rem|px|em)$/,
+    test: new RegExp(`^(!?)(-?)ls-([0-9]+(?:\\/[0-9]+)?)${letterSpacingUnitPattern}?$`),
     parse: (match) => {
-      const isNegative = match[1] === "-";
-      const num = parseInt(match[2], 10);
-      const unit = match[3];
-      const value = num / 1000;
-      
-      return `letter-spacing: ${isNegative ? "-" : ""}${value}${unit};`;
-    },
-  },
-  {
-    /**
-     * Matches unitless steps: ls-1, -ls-10
-     */
-    test: /^(-)?ls-(\d+)$/,
-    parse: (match) => {
-      const isNegative = match[1] === "-";
-      const num = parseInt(match[2], 10);
-      const value = (num * STEP_UNIT).toFixed(3).replace(/\.?0+$/, "");
-      return `letter-spacing: ${isNegative ? "-" : ""}${value}em;`;
-    },
-  },
-  {
-    /**
-     * Matches standard units: ls-1px, ls-0.05rem
-     */
-    test: new RegExp(`^(-)?ls-(-?\\d*\\.?\\d+)${letterSpacingUnitPattern}$`),
-    parse: (match) => {
-      const isNegative = match[1] === "-";
-      const value = match[2];
-      const unit = match[3];
-      const num = parseFloat(value) * (isNegative ? -1 : 1);
-      return `letter-spacing: ${num}${unit};`;
-    },
-  },
+      const isImportant = match[1] === "!";
+      const isNegative = match[2] === "-";
+      const rawValue = match[3];
+      const unit = match[4];
+
+      let val;
+
+      // Fraction logic (e.g., 1/2rem)
+      if (rawValue.includes("/")) {
+        const [num, den] = rawValue.split("/").map(Number);
+        val = `${num / den}${unit || "em"}`;
+      } 
+      // Unitless Step logic (ls-1 -> 0.01em)
+      else if (!unit) {
+        val = `${parseFloat(rawValue) * 0.01}em`;
+      } 
+      // Standard Unit logic (ls-2px)
+      else {
+        val = `${rawValue}${unit}`;
+      }
+
+      const finalValue = isNegative ? `-${val}` : val;
+      return `letter-spacing: ${finalValue}${isImportant ? " !important" : ""};`;
+    }
+  }
 ];

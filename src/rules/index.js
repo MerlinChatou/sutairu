@@ -72,6 +72,7 @@ import * as font_size_fluid from "./typography/font-size-fluid.js";
 import * as font_weight from "./typography/font-weight.js";
 import * as heading from "./typography/heading.js";
 import * as letter_spacing from "./typography/letter-spacing.js";
+import * as line_height from "./typography/line-height.js";
 import * as text_alignement from "./typography/text-alignment.js";
 import * as text_color from "./typography/text-color.js";
 import * as text_decoration from "./typography/text-decoration.js";
@@ -165,6 +166,7 @@ const modules = [
   font_weight,
   heading,
   letter_spacing,
+  line_height,
   text_alignement,
   text_color,
   text_decoration,

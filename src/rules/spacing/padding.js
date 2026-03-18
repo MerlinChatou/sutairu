@@ -25,15 +25,18 @@ export const patterns = [
     // (p|pt|pb|pl|pr|px|py|ps|pe) -> Group 2: The prefix
     // -                 -> The separator
     // (\d*\.?\d+)       -> Group 3: The number
-    test: /^(!?)(p|pt|pb|pl|pr|px|py|ps|pe)-(\d*\.?\d+)$/,
+    test: /^(!?)(p|pt|pb|pl|pr|px|py|ps|pe)-(\d+)(?:\/(\d+))?$/,
+    
     parse: (match) => {
       const isImportant = match[1] === "!";
       const type = match[2];
-      const rawValue = parseFloat(match[3]);
+      const numerator = parseInt(match[3], 10);
+      const denominator = match[4] ? parseInt(match[4], 10) : 1;
 
-      // Calculate value and append !important if needed
+      // Calculate: (Numerator / Denominator) * 0.25rem
+      const valueMultiplier = numerator / denominator;
       const suffix = isImportant ? " !important" : "";
-      const finalValue = `${rawValue * 0.25}rem${suffix}`;
+      const finalValue = `${valueMultiplier * 0.25}rem${suffix}`;
 
       const map = {
         p:  `padding: ${finalValue};`,
