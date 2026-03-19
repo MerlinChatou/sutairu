@@ -35,6 +35,7 @@ import * as sepia from "./effects/sepia.js";
 import * as cursor from "./interactivity/cursor.js";
 
 // Layout
+import * as alignment from "./layout/alignment.js";
 import * as align_content from "./layout/align-content.js";
 import * as align_items from "./layout/align-items.js";
 import * as align_self from "./layout/align-self.js";
@@ -130,6 +131,7 @@ const modules = [
   cursor,
 
   // Layout
+  alignment,
   align_content,
   align_items,
   align_self,

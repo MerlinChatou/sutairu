@@ -51,4 +51,12 @@ export const sampleClasses = [
   "lh-3/2em",
   "lh-12px",
   "lh-none",
+
+  "!align-cc",
+  "align-center-center",
+  "!align-top-center",
+  "align-top-center",
+  "align-tl",
+  "align-br",
+  "align-bl",
 ];
