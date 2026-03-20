@@ -51,7 +51,15 @@ export const sampleClasses = [
 
   // /layout/flex-basis.js
   // /layout/flex-grow.js
+
   // /layout/flex.js
+  "flex-y",
+  "flex-y",
+  "fd-row",
+  "!flex-row",
+  "fw-wrap",
+  "active:fw-nowrap",
+
   // /layout/flex-shrink.js
   // /layout/gap.js
   // /layout/grid-cols.js
