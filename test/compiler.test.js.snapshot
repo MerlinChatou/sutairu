@@ -2,6 +2,10 @@ exports[`compiler: !-m-4 1`] = `
 ".\\\\-m-4 {\\n  margin: -1rem !important;\\n}"
 `;
 
+exports[`compiler: !as-center 1`] = `
+".as-center {\\n  align-self: center !important;\\n}"
+`;
+
 exports[`compiler: !b-blue-133/12 1`] = `
 ".\\\\!b-blue-133\\\\/12 {\\n  border-color: oklch(from color-mix(in oklch, var(--su-blue), #fff 73.4%) l c h / 0.12) !important;\\n}"
 `;
@@ -56,6 +60,14 @@ exports[`compiler: 2xl:hover:gap-3 1`] = `
 
 exports[`compiler: active:fw-nowrap 1`] = `
 ".active\\\\:fw-nowrap:active {\\n    flex-wrap: nowrap;\\n  }"
+`;
+
+exports[`compiler: as-auto 1`] = `
+".as-auto {\\n  align-self: auto;\\n}"
+`;
+
+exports[`compiler: as-flex-start 1`] = `
+".as-flex-start {\\n  align-self: flex-start;\\n}"
 `;
 
 exports[`compiler: b-orange-800 1`] = `
@@ -120,6 +132,10 @@ exports[`compiler: dark:portrait:hover:!h6 1`] = `
 
 exports[`compiler: dark:sm:d-block 1`] = `
 ":where([data-color-scheme=\\"dark\\"] *) {\\n  @media (width >= 40rem) {\\n    &.dark\\\\:sm\\\\:d-block {\\n      display: block;\\n    }\\n  }\\n}"
+`;
+
+exports[`compiler: disabled:as-stretch 1`] = `
+".disabled\\\\:as-stretch:is(:disabled, [aria-disabled=\\"true\\"]) {\\n    align-self: stretch;\\n  }"
 `;
 
 exports[`compiler: fd-row 1`] = `

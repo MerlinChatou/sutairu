@@ -66,9 +66,8 @@ export function buildCSS(tree) {
             .join("\n");
           wrappedOutput = tool.wrapper(indented);
         }
-      
 
-      cssOutput += wrappedOutput + "\n\n";
+        cssOutput += wrappedOutput + "\n\n";
       }
     }
 

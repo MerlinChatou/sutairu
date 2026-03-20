@@ -35,10 +35,17 @@ export const sampleClasses = [
   // /effects/saturate.js
   // /effects/sepia.js
   // /interactivity/cursor.js
+
   // /layout/align-content.js
   // /layout/align-items.js
   // /layout/alignment.js
+  
   // /layout/align-self.js
+  "as-auto",
+  "as-flex-start",
+  "!as-center",
+  "disabled:as-stretch",
+
   // /layout/aspect-ratio.js
   // /layout/coordinate.js
 
