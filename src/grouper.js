@@ -26,9 +26,9 @@ export function groupClassesByVariant(allUniqueClasses) {
       }
       currentNode = currentNode[variant];
     }
-    if (utility == '') console.log ('full-class', fullClass);
-    // Push the utility into the leaf node
-    currentNode._utilities.push(utility);
+
+     // Push the utility into the leaf node
+    if (utility !== '') currentNode._utilities.push(utility);
   }
 
   return tree;

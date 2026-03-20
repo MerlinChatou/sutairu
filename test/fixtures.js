@@ -61,7 +61,6 @@ export const sampleClasses = [
   "active:fw-nowrap",
 
   // /layout/flex-shrink.js
-  // /layout/gap.js
   // /layout/grid-cols.js
   // /layout/grid.js
   // /layout/grid-rows.js
@@ -75,6 +74,20 @@ export const sampleClasses = [
   // /layout/size-unit.js
   // /layout/transforms.js
   // /layout/z-index.js
+
+  // /spacing/gap.js
+  "gap-0",
+  "!gap-2",
+  "gap-4",
+  "gap-x-2.5",
+  "lg:gap-5/2",
+
+  // /spacing/gap-unit.js
+  "gap-0px",
+  "gap-53mm",
+  "gap-x-12vw",
+  "!gap-y-5%",
+  "2xl:hover:gap-3",
 
   // /spacing/margin-unit.js
   "m-2px",

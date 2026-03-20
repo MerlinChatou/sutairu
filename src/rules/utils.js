@@ -2,7 +2,7 @@
 //export const unitPattern = "(px|rem|em|vw|vh|vmin|vmax|vi|vb|ch|ex|cqw|cqh|cqi|cqb|cqmin|cqmax|%)";
 
 // Everything valid for spacing (Margin/Padding)
-export const spacingUnitPattern = "(px|rem|em|vw|vh|vmin|vmax|vi|vb|ch|ex|cqw|cqh|cqi|cqb|cqmin|cqmax|%)";
+export const spacingUnitPattern = "(px|rem|em|lh|rlh|vw|vh|vmin|vmax|svw|svh|lvw|lvh|dvw|dvh|vi|vb|svi|svb|lvi|lvb|dvi|dvb|ch|ex|cap|ic|cqw|cqh|cqi|cqb|cqmin|cqmax|cm|mm|in|pt|pc|%)";
 
 // Valid for Border Width (Length units only)
 export const borderWidthUnitPattern = "(px|rem|em|vw|vh|vmin|vmax|vi|vb|ch|ex|cqw|cqh|cqi|cqb|cqmin|cqmax)";

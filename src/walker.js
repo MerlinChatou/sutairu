@@ -31,8 +31,9 @@ export function buildCSS(tree) {
             return null;
           }
           return handler();
-        });
-  
+        })
+        .filter((tool) => tool !== null);
+
       // If the tools array contains any nulls, the whole chain is invalid.
       if (tools.includes(null)) {
         return null; // Exit early, do not generate CSS for this class
@@ -50,19 +51,25 @@ export function buildCSS(tree) {
         .filter(Boolean)
         .join("\n\n");
 
-      // Transform the Wrapper (Inside-Out)
-      // e.g., body -> @media { body } -> :where { @media { body } }
-      let wrappedOutput = rules;
-      for (const tool of [...tools].reverse()) {
-        // Indent content for clean nested output
-        const indented = wrappedOutput
-          .split("\n")
-          .map((line) => `  ${line}`)
-          .join("\n");
-        wrappedOutput = tool.wrapper(indented);
-      }
+      if (!rules || rules.trim().length === 0) {
+        // No valid CSS was generated for these utilities,
+        // skip wrapping and move to sub-variants.
+      } else {
+        // Transform the Wrapper (Inside-Out)
+        // e.g., body -> @media { body } -> :where { @media { body } }
+        let wrappedOutput = rules;
+        for (const tool of [...tools].reverse()) {
+          // Indent content for clean nested output
+          const indented = wrappedOutput
+            .split("\n")
+            .map((line) => `  ${line}`)
+            .join("\n");
+          wrappedOutput = tool.wrapper(indented);
+        }
+      
 
       cssOutput += wrappedOutput + "\n\n";
+      }
     }
 
     // 2. Dive deeper into sub-variants

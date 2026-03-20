@@ -47,7 +47,6 @@ import * as flex from "./layout/flex.js";
 import * as flex_basis from "./layout/flex-basis.js";
 import * as flex_grow from "./layout/flex-grow.js";
 import * as flex_shrink from "./layout/flex-shrink.js";
-import * as gap from "./layout/gap.js";
 import * as grid from "./layout/grid.js";
 import * as grid_cols from "./layout/grid-cols.js";
 import * as grid_rows from "./layout/grid-rows.js";
@@ -63,6 +62,8 @@ import * as transform from "./layout/transforms.js";
 import * as z_index from "./layout/z-index.js";
 
 // Spacing
+import * as gap from "./spacing/gap.js";
+import * as gap_unit from "./spacing/gap-unit.js";
 import * as margin from "./spacing/margin.js";
 import * as margin_unit from "./spacing/margin-unit.js";
 import * as padding from "./spacing/padding.js";
@@ -143,8 +144,7 @@ const modules = [
   flex,
   flex_basis,
   flex_grow,
-  flex_shrink,
-  gap,
+  flex_shrink,  
   grid,
   grid_cols,
   grid_rows,
@@ -160,6 +160,8 @@ const modules = [
   z_index,
 
   // Spacing
+  gap,
+  gap_unit,
   margin,
   margin_unit,
   padding,
