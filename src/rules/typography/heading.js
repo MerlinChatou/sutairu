@@ -1,56 +1,53 @@
-// 1. Static Rules for .h1 through .h6
-// These use the fluid clamp() and optical letter-spacing we defined
+/**
+ * Base Heading Definitions
+ * Defines the core typography tokens for H1-H6.
+ * Using CSS variables allows for fluid scaling (clamp) and centralized theming.
+ */
 const baseHeadings = {
-  h1: `
-    font-size: var(--su-fs-h1);
-    letter-spacing:var(--su-ls-h1);
-    line-height: var(--su-lh-title);
-    font-weight: var(--su-fw-h1);    
-    color: var(--su-text-title);
-  `,
-  h2: `
-    font-size: var(--su-fs-h2);
-    letter-spacing:var(--su-ls-h2);
-    line-height: var(--su-lh-title);
-    font-weight: var(--su-fw-h2);
-    color: var(--su-text-title);
-  `,
-  h3: `
-    font-size:  var(--su-fs-h3);
-    letter-spacing:var(--su-ls-h3);
-    line-height: var(--su-lh-title);
-    font-weight: var(--su-fw-h3);
-    color: var(--su-text-title);
-  `,
-  h4: `
-    font-size:  var(--su-fs-h4);
-    letter-spacing:var(--su-ls-h4);
-    line-height: var(--su-lh-title);
-    font-weight: var(--su-fw-h4);
-    color: var(--su-text-title);
-  `,
-  h5: `
-    font-size:  var(--su-fs-h5);
-    letter-spacing:var(--su-ls-h5);
-    line-height: var(--su-lh-title);
-    font-weight: var(--su-fw-h5);
-    color: var(--su-text-title);
-  `,
-  h6: `
-    font-size: var(--su-fs-h6);
-    letter-spacing:var(--su-ls-h6);
-    line-height: var(--su-lh-title);
-    font-weight: var(--su-fw-h6);
-    color: var(--su-text-title);
-  `,
+  h1: { fontSize: "var(--su-fs-h1)", letterSpacing: "var(--su-ls-h1)", fontWeight: "var(--su-fw-h1)" },
+  h2: { fontSize: "var(--su-fs-h2)", letterSpacing: "var(--su-ls-h2)", fontWeight: "var(--su-fw-h2)" },
+  h3: { fontSize: "var(--su-fs-h3)", letterSpacing: "var(--su-ls-h3)", fontWeight: "var(--su-fw-h3)" },
+  h4: { fontSize: "var(--su-fs-h4)", letterSpacing: "var(--su-ls-h4)", fontWeight: "var(--su-fw-h4)" },
+  h5: { fontSize: "var(--su-fs-h5)", letterSpacing: "var(--su-ls-h5)", fontWeight: "var(--su-fw-h5)" },
+  h6: { fontSize: "var(--su-fs-h6)", letterSpacing: "var(--su-ls-h6)", fontWeight: "var(--su-fw-h6)" },
 };
 
-export const rules = Object.entries(baseHeadings).reduce((acc, [key, value]) => {
-  // Standard class: .h1
-  acc[key] = value.trim().replace(/\n\s+/g, " ");
+// Common shared properties for all titles to keep the baseHeadings map clean
+const sharedTitleProps = {
+  lineHeight: "var(--su-lh-title)",
+  color: "var(--su-text-title)",
+};
 
-  // Important class: .!h1
-  acc[`!${key}`] = value.trim().replace(/;/g, " !important;").replace(/\n\s+/g, " ");
+/**
+ * Heading Registry
+ * Generates both standard (.h1) and important (.!h1) variants.
+ */
+export const rules = Object.entries(baseHeadings).reduce((acc, [key, props]) => {
+  const baseConfig = {
+    identifier: ".",
+    rules: [
+      {
+        selector: key, // "h1", "h2", etc.
+        declarations: [{ ...sharedTitleProps, ...props }],
+      },
+    ],
+  };
+
+  // 1. Standard version: .h1
+  acc[key] = {
+    ...baseConfig,
+    isImportant: false,
+  };
+
+  // 2. Important version: .!h1
+  acc[`!${key}`] = {
+    ...baseConfig,
+    isImportant: true,
+    rules: baseConfig.rules.map((rule) => ({
+      ...rule,
+      selector: `!${rule.selector}`, // Becomes "!h1"
+    })),
+  };
 
   return acc;
 }, {});

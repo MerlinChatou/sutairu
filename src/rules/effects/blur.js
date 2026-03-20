@@ -1,4 +1,4 @@
-import { borderWidthUnitPattern } from "../constants.js";
+import { borderWidthUnitPattern } from "../utils.js";
 
 export const patterns = [
   {

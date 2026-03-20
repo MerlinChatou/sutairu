@@ -1,5 +1,4 @@
-import { convertToOklch } from "../../utils/convert-to-oklch.js";
-import { colorsList } from "../constants.js";
+import { colorsList, convertToOklch } from "../utils.js";
 
 
 export const patterns = [

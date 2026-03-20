@@ -1,41 +1,58 @@
-import { spacingUnitPattern } from "../constants.js";
+import { spacingUnitPattern, resolveNumericValue } from "../utils.js";
 
-
-const getProperties = (type, value) => {
-  const map = {
-    m: `margin: ${value};`,
-    mt: `margin-top: ${value};`,
-    mb: `margin-bottom: ${value};`,
-    ml: `margin-left: ${value};`,
-    mr: `margin-right: ${value};`,
-    mx: `margin-inline: ${value};`,
-    my: `margin-block: ${value};`,
-    ms: `margin-inline-start: ${value};`,
-    me: `margin-inline-end: ${value};`,
-  };
-  return map[type];
+// Helper for Property Mapping
+const propertiesLUT = {
+  m: ["margin"],
+  mt: ["margin-top"],
+  mb: ["margin-bottom"],
+  ml: ["margin-left"],
+  mr: ["margin-right"],
+  mx: ["margin-inline"],
+  my: ["margin-block"],
+  ms: ["margin-inline-start"],
+  me: ["margin-inline-end"],
 };
 
 export const patterns = [
   {
     /**
-     * Matches: !-mx-2.5rem, -mx-2.5rem, !mt-10vh, p-2ch, etc.
-     * Note: Group indices shift because of the new (!?) capture.
+     * Matches: !-mx-2.5rem, mt-2/3vw, !m-1/2px, etc.
      */
-    test: new RegExp(`^(!?)(-?)(m|mt|mb|ml|mr|mx|my|ms|me)-(\\d*\\.?\\d+)${spacingUnitPattern}$`),
+    test: new RegExp(
+      `^(!?)(-?)(m|mt|mb|ml|mr|mx|my|ms|me)-` +
+        `(\\d+(?:\\/\\d+)?|\\d*\\.?\\d+)` + // Group 4: Fraction OR Decimal
+        `(${spacingUnitPattern})$`, // Group 5: Unit
+    ),
     parse: (match) => {
+      const util = match[0];
       const isImportant = match[1] === "!";
       const isNegative = match[2] === "-";
       const type = match[3];
-      const num = match[4];
-      const unit = match[5]; // spacingUnitPattern provides the next group
+      const rawValue = match[4]; // e.g., "2/3" or "2.5"
+      const unit = match[5];
 
-      const importantSuffix = isImportant ? " !important" : "";
+      // Handle Fraction Logic
+      let numericValue = resolveNumericValue(rawValue);
+
       const negativePrefix = isNegative ? "-" : "";
+      // Round to 6 decimal places to keep CSS clean
+      const finalValue = `${negativePrefix}${Number(numericValue.toFixed(3))}${unit}`;
 
-      const finalValue = `${negativePrefix}${num}${unit}${importantSuffix}`;
-
-      return getProperties(type, finalValue);
+      return {
+        isImportant,
+        rules: [
+          {
+            // Handle selector escaping for fractions and decimals
+            selector: util,
+            declarations: [
+              propertiesLUT[type].reduce((acc, prop) => {
+                acc[prop] = finalValue;
+                return acc;
+              }, {}),
+            ],
+          },
+        ],
+      };
     },
   },
 ];

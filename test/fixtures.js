@@ -1,6 +1,131 @@
 // test/fixtures.js
 export const sampleClasses = [
-  "m-5",
+  // /background/background-color.js
+  // /background/dotted.js
+  // /background/hatching.js
+  // /background/pattern-angle.js
+  // /background/pattern-period.js
+  // /background/pattern-width.js
+  // /background/stripes.js
+
+  // /border/border-color.js
+  "b-yellow",
+  "b-orange-800",
+  "b-red/50",
+  "b-pink-200/30",
+  "b-purple-200/60",
+  "!b-blue-133/12",
+  "dark:landscape:b-cyan-1000/1",
+
+  // /border/border-radius.js
+  // /border/border-radius-unit.js
+  // /border/border-style.js
+  // /border/border-width.js
+  // /border/border-width-unit.js
+  // /components/badge.js
+  // /components/group.js
+  // /components/masonry.js
+  // /effects/blur.js
+  // /effects/brightness.js
+  // /effects/contrast.js
+  // /effects/grayscale.js
+  // /effects/hue-rotate.js
+  // /effects/invert.js
+  // /effects/opacity.js
+  // /effects/saturate.js
+  // /effects/sepia.js
+  // /interactivity/cursor.js
+  // /layout/align-content.js
+  // /layout/align-items.js
+  // /layout/alignment.js
+  // /layout/align-self.js
+  // /layout/aspect-ratio.js
+  // /layout/coordinate.js
+
+  // /layout/display.js
+  "!d-flex",
+  "d-hidden",
+  "!d-none",
+  "d-grid",
+  "dark:sm:d-block",
+
+  // /layout/flex-basis.js
+  // /layout/flex-grow.js
+  // /layout/flex.js
+  // /layout/flex-shrink.js
+  // /layout/gap.js
+  // /layout/grid-cols.js
+  // /layout/grid.js
+  // /layout/grid-rows.js
+  // /layout/grid-span.js
+  // /layout/justify-content.js
+  // /layout/justify-self.js
+  // /layout/object-fit.js
+  // /layout/overflow.js
+  // /layout/position.js
+  // /layout/size.js
+  // /layout/size-unit.js
+  // /layout/transforms.js
+  // /layout/z-index.js
+
+  // /spacing/margin-unit.js
+  "m-2px",
+  "m-4.2px",
+  "m-3/2px",
+  "hover:m-3rem",
+  "dark:md:hover:m-2.5em",
+
+  // /spacing/margin.js
+  "m-0",
+  "!m-0",
+  "md:m-auto",
+  "hover:m-auto",
+  "dark:md:hover:!m-auto",
+  "m-1",
+  "!m-2",
+  "!-m-4",
+  "dark:md:hover:!m-8",
+  "m-2.5",
+  "m-12/3",
+
+  // /spacing/paddding-unit.js
+  "p-4px",
+  "p-3.2px",
+  "p-3/2px",
+  "!p-2",
+  "dark:md:hover:p-4vw",
+
+  // /spacing/padding.js
+  "p-0",
+  "!p-0",
+  "dark:md:hover:!px-0",
+  "p-1",
+  "dark:md:hover:!p-2",
+  "!py-2.5",
+  "p-2/3",
+  "ps-0",
+
+  // /typography/font-family.js
+  // /typography/font-size-fluid.js
+  // /typography/font-size.js
+  // /typography/font-weight.js
+
+  // /typography/heading.js
+  "h1",
+  "h2",
+  "h3",
+  "!h4",
+  "hover:h5",
+  "dark:portrait:hover:!h6",
+
+  // /typography/letter-spacing.js
+  // /typography/line-height.js
+  // /typography/text-alignment.js
+  // /typography/text-color.js
+  // /typography/text-decoration.js
+  // /typography/text-wrap.js
+  // /typography/white-space.js
+  /*
   "p-2",
   "p-1/2",
   "-m-2",
@@ -59,4 +184,6 @@ export const sampleClasses = [
   "align-tl",
   "align-br",
   "align-bl",
+
+  */
 ];

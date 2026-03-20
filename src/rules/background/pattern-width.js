@@ -1,4 +1,4 @@
-import { spacingUnitPattern } from "../constants.js";
+import { spacingUnitPattern } from "../utils.js";
 
 /**
  * Utility for Pattern Width (Density).

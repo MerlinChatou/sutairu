@@ -1,56 +1,75 @@
-const basePaddingRules = {
-  "p-0":  "padding: 0",
-  "pt-0": "padding-top: 0",
-  "pr-0": "padding-right: 0",
-  "pb-0": "padding-bottom: 0",
-  "pl-0": "padding-left: 0",
-  "px-0": "padding-inline: 0",
-  "py-0": "padding-block: 0",
-  "ps-0": "padding-inline-start: 0",
-  "pe-0": "padding-inline-end: 0",
+import { generateRegistry, resolveNumericValue } from "../utils.js";
+
+const baseRules = {
+  "p-0": { rules: [{ selector: "p-0", declarations: [{ padding: "0" }] }] },
+  "pt-0": { rules: [{ selector: "pt-0", declarations: [{ "padding-top": "0" }] }] },
+  "pr-0": { rules: [{ selector: "pr-0", declarations: [{ "padding-right": "0" }] }] },
+  "pb-0": { rules: [{ selector: "pb-0", declarations: [{ "padding-bottom": "0" }] }] },
+  "pl-0": { rules: [{ selector: "pl-0", declarations: [{ "padding-left": "0" }] }] },
+  "px-0": { rules: [{ selector: "px-0", declarations: [{ "padding-inline": "0" }] }] },
+  "py-0": { rules: [{ selector: "py-0", declarations: [{ "padding-block": "0" }] }] },
+  "ps-0": { rules: [{ selector: "ps-0", declarations: [{ "padding-inline-start": "0" }] }] },
+  "pe-0": { rules: [{ selector: "pe-0", declarations: [{ "padding-inline-end": "0" }] }] },
 };
 
-export const rules = Object.entries(basePaddingRules).reduce((acc, [key, value]) => {
-  acc[key] = `${value};`;            // Standard: p-0
-  acc[`!${key}`] = `${value} !important;`; // Important: !p-0
-  return acc;
-}, {});
-
-
+// Generate a full map that includes ! versions
+export const rules = generateRegistry(baseRules);
 
 export const patterns = [
   {
     // Regex breakdown:
     // ^(!?)             -> Group 1: Optional "important" flag
-    // (p|pt|pb|pl|pr|px|py|ps|pe) -> Group 2: The prefix
+    // (-?)              -> Group 2: Optional negative sign
+    // (m|mt|mb|ml|mr|mx|my|ms|me) -> Group 3: The prefix
     // -                 -> The separator
-    // (\d*\.?\d+)       -> Group 3: The number
-    test: /^(!?)(p|pt|pb|pl|pr|px|py|ps|pe)-(\d+)(?:\/(\d+))?$/,
-    
+    // (\d*\.?\d+)       -> Group 4: The number
+    test: /^(!?)(p|pt|pb|pl|pr|px|py|ps|pe)-(\d+(?:\/\d+)?|\d*\.?\d+)$/,
     parse: (match) => {
+      const util = match[0];
       const isImportant = match[1] === "!";
       const type = match[2];
-      const numerator = parseInt(match[3], 10);
-      const denominator = match[4] ? parseInt(match[4], 10) : 1;
+      const rawValue = match[3]; // This could be "4", "2/3" or "2.5"
 
-      // Calculate: (Numerator / Denominator) * 0.25rem
-      const valueMultiplier = numerator / denominator;
-      const suffix = isImportant ? " !important" : "";
-      const finalValue = `${valueMultiplier * 0.25}rem${suffix}`;
+      // Handle Fraction Logic
+      let numericValue = resolveNumericValue(rawValue);
 
-      const map = {
-        p:  `padding: ${finalValue};`,
-        pt: `padding-top: ${finalValue};`,
-        pb: `padding-bottom: ${finalValue};`,
-        pl: `padding-left: ${finalValue};`,
-        pr: `padding-right: ${finalValue};`,
-        px: `padding-inline: ${finalValue};`, 
-        py: `padding-block: ${finalValue};`,
-        ps: `padding-inline-start: ${finalValue};`, 
-        pe: `padding-inline-end: ${finalValue};`,
+      // 2. Calculate rem (1 unit = 0.25rem)
+      const value = parseFloat((numericValue * 0.25).toFixed(3));
+      const finalValue = `${value}rem`;
+
+      // Get the CSS properties based on the prefix (e.g., 'mt' -> ['margin-top'])
+      const props = propertiesLUT[type];
+
+      return {
+        // This matches the structure your CSS generator expects
+        rules: [
+          {
+            // We use the utility name (without the leading '!') as the base selector
+            // Your generateCSS function handles adding the '.' and the '!' back in
+            selector: `${util.replace(/^!/, "")}`,
+            declarations: [
+              props.reduce((acc, prop) => {
+                acc[prop] = finalValue;
+                return acc;
+              }, {}),
+            ],
+          },
+        ],
+        isImportant: isImportant,
       };
-
-      return map[type];
     },
   },
 ];
+
+// Helper for Property Mapping
+const propertiesLUT = {
+  p: ["padding"],
+  pt: ["padding-top"],
+  pb: ["padding-bottom"],
+  pl: ["padding-left"],
+  pr: ["padding-right"],
+  px: ["padding-inline"],
+  py: ["padding-block"],
+  ps: ["padding-inline-start"],
+  pe: ["padding-inline-end"],
+};

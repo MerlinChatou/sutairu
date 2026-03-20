@@ -1,5 +1,5 @@
-import { convertToOklch } from "../../utils/convert-to-oklch.js";
-import { colorsList } from "../constants.js";
+import { convertToOklch } from "../utils.js";
+import { colorsList } from "../utils.js";
 
 
 export const patterns = [

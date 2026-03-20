@@ -22,7 +22,8 @@
   "type": "module",
   "main": "index.js",
   "exports": {
-    ".": "./index.js"
+    ".": "./index.js",
+    "./utils": "./lib/utils/index.js"
   },
   "bin": {
     "sutairu": "./bin/cli.js",

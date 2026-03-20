@@ -3,6 +3,6 @@ export default function dark() {
     // The big outer box
     wrapper: (content) => `:where([data-color-scheme="dark"] *) {\n${content}\n}`,
     // Inside the dark box, we use the nesting selector
-    selector: (sel) => `& ${sel}`
+    selector: (sel) => `&${sel}`,
   };
 }

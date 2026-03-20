@@ -1,3 +1,7 @@
+/**
+ * Display Utility Values
+ * Maps shorthand keys to valid CSS display values.
+ */
 const displayValues = {
   "block": "block",
   "inline-block": "inline-block",
@@ -14,12 +18,39 @@ const displayValues = {
   "flow-root": "flow-root"
 };
 
+/**
+ * Display Registry
+ * Generates both standard (.d-flex) and important (.!d-flex) variants.
+ */
 export const rules = Object.entries(displayValues).reduce((acc, [key, value]) => {
-  // Standard: .d-flex, .d-block
-  acc[`d-${key}`] = `display: ${value};`;
-  
-  // Important: .!d-flex
-  acc[`!d-${key}`] = `display: ${value} !important;`;
-  
+  const baseKey = `d-${key}`;
+
+  const baseConfig = {
+    identifier: ".",
+    rules: [
+      {
+        selector: baseKey, // e.g., "d-flex"
+        declarations: [{ display: value }],
+      },
+    ],
+  };
+
+  // 1. Standard version: .d-flex
+  acc[baseKey] = {
+    ...baseConfig,
+    isImportant: false,
+  };
+
+  // 2. Important version: .!d-flex
+  acc[`!${baseKey}`] = {
+    ...baseConfig,
+    isImportant: true,
+    rules: baseConfig.rules.map((rule) => ({
+      ...rule,
+      // Prepends ! to the selector for the registry
+      selector: `!${rule.selector}`, 
+    })),
+  };
+
   return acc;
 }, {});

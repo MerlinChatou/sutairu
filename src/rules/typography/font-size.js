@@ -1,4 +1,4 @@
-import { spacingUnitPattern } from "../constants.js";
+import { spacingUnitPattern } from "../utils.js";
 
 // 1. Static Keywords
 // Map logical names to specific rem values

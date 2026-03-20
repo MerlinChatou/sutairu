@@ -1,4 +1,4 @@
-import { letterSpacingUnitPattern } from "../constants.js";
+import { letterSpacingUnitPattern } from "../utils.js";
 
 /*
 | Class | Value | Best Use Case |

@@ -1,9 +1,7 @@
 import { variantHandlers } from "./variants/index.js";
 import { resolveCoreStyle } from "./resolver.js";
-import { escapeClassName } from "./utils/escaper.js";
+import { generateCSS } from "./cssGenerator.js";
 import { logger } from "./utils/logger.js";
-
-
 
 /**
  * Walk through the tree and generate the CSS
@@ -19,40 +17,35 @@ export function buildCSS(tree) {
    * @param {Array} path - The chain of variants (e.g., ['dark', 'md'])
    */
   function walk(node, path = []) {
-    //console.log (node);
     // 1. Process Utilities at this level if they exist
     if (node._utilities && node._utilities.length > 0) {
       // Initialize the variant "tools" for this specific branch
-      const tools = path.map((key) => {
-        // Get the variant functions
-        const handler = variantHandlers[key];
-        // Check if the variant exists,
-        if (!handler) {
-          // Log a warning
-          //console.log (path);
-          logger.warn(`Unknown variant "${key}" detected in class chain "${path.join(":")}". ` + `This variant will be ignored.`);
-          return null;
-        }
-
-        return handler();
-      }).filter(tool => tool !== null);
+      const tools = path
+        .map((key) => {
+          // Get the variant functions
+          const handler = variantHandlers[key];
+          // Check if the variant exists,
+          if (!handler) {
+            // Log a warning
+            logger.warn(`Unknown variant "${key}" detected in class chain "${path.join(":")}". ` + `This variant will be ignored.`);
+            return null;
+          }
+          return handler();
+        });
+  
+      // If the tools array contains any nulls, the whole chain is invalid.
+      if (tools.includes(null)) {
+        return null; // Exit early, do not generate CSS for this class
+      }
 
       const rules = node._utilities
         .map((util) => {
-          const body = resolveCoreStyle(util);
-          if (!body) return null;
+          logger.verbose(`Resolve ${util}`);
+          const rulesConfig = resolveCoreStyle(util);
+          if (!rulesConfig) return null;
 
-          // Reconstruct the class name for the CSS selector
-          const fullClass = path.length > 0 ? `${path.join(":")}:${util}` : util;
-          let selector = `.${escapeClassName(fullClass)}`;
-
-          // Transform the Selector (Inside-Out)
-          // e.g., .class -> & .class -> & .class:hover
-          for (const tool of [...tools].reverse()) {
-            selector = tool.selector(selector);
-          }
-
-          return `${selector} {\n  ${body}\n}`;
+          // Generate CSS properties from rules
+          return generateCSS(rulesConfig, path, util, tools);
         })
         .filter(Boolean)
         .join("\n\n");
