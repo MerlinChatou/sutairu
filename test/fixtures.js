@@ -18,6 +18,11 @@ export const sampleClasses = [
   "dark:landscape:b-cyan-1000/1",
 
   // /border/border-radius.js
+  "r-2",
+  "r-3/2",
+  "!r-2.5",
+  "first:rb-2",
+  
   // /border/border-radius-unit.js
   // /border/border-style.js
   // /border/border-width.js
@@ -39,7 +44,7 @@ export const sampleClasses = [
   // /layout/align-content.js
   // /layout/align-items.js
   // /layout/alignment.js
-  
+
   // /layout/align-self.js
   "as-auto",
   "as-flex-start",

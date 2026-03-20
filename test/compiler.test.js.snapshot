@@ -54,6 +54,10 @@ exports[`compiler: !py-2.5 1`] = `
 ".py-2\\\\.5 {\\n  padding-block: 0.625rem !important;\\n}"
 `;
 
+exports[`compiler: !r-2.5 1`] = `
+".r-2\\\\.5 {\\n  border-radius: 0.625rem !important;\\n}"
+`;
+
 exports[`compiler: 2xl:hover:gap-3 1`] = `
 "@media (width >= 96rem) {\\n    .2xl\\\\:hover\\\\:gap-3:hover {\\n      gap: 0.75rem;\\n    }\\n}"
 `;
@@ -140,6 +144,10 @@ exports[`compiler: disabled:as-stretch 1`] = `
 
 exports[`compiler: fd-row 1`] = `
 ".fd-row {\\n  flex-direction: row;\\n}"
+`;
+
+exports[`compiler: first:rb-2 1`] = `
+".first\\\\:rb-2:first-child {\\n    border-bottom-left-radius: 0.5rem;\\n    border-bottom-right-radius: 0.5rem;\\n  }"
 `;
 
 exports[`compiler: flex-y 1`] = `
@@ -264,4 +272,12 @@ exports[`compiler: p-4px 1`] = `
 
 exports[`compiler: ps-0 1`] = `
 ".ps-0 {\\n  padding-inline-start: 0;\\n}"
+`;
+
+exports[`compiler: r-2 1`] = `
+".r-2 {\\n  border-radius: 0.5rem;\\n}"
+`;
+
+exports[`compiler: r-3/2 1`] = `
+".r-3\\\\/2 {\\n  border-radius: 150%;\\n}"
 `;
