@@ -10,6 +10,10 @@ exports[`compiler: !b-blue-133/12 1`] = `
 ".\\\\!b-blue-133\\\\/12 {\\n  border-color: oklch(from color-mix(in oklch, var(--su-blue), #fff 73.4%) l c h / 0.12) !important;\\n}"
 `;
 
+exports[`compiler: !bg-page 1`] = `
+".\\\\!bg-page {\\n  background-color: var(--su-page) !important;\\n}"
+`;
+
 exports[`compiler: !d-flex 1`] = `
 ".\\\\!d-flex {\\n  display: flex !important;\\n}"
 `;
@@ -32,6 +36,10 @@ exports[`compiler: !gap-y-5% 1`] = `
 
 exports[`compiler: !h4 1`] = `
 ".\\\\!h4 {\\n  lineHeight: var(--su-lh-title) !important;\\n  color: var(--su-text-title) !important;\\n  fontSize: var(--su-fs-h4) !important;\\n  letterSpacing: var(--su-ls-h4) !important;\\n  fontWeight: var(--su-fw-h4) !important;\\n}"
+`;
+
+exports[`compiler: !jc-flex-start 1`] = `
+".jc-flex-start {\\n  justify-content: flex-start !important;\\n}"
 `;
 
 exports[`compiler: !m-0 1`] = `
@@ -92,6 +100,22 @@ exports[`compiler: b-red/50 1`] = `
 
 exports[`compiler: b-yellow 1`] = `
 ".b-yellow {\\n  border-color: var(--su-yellow);\\n}"
+`;
+
+exports[`compiler: bg-black-800/80 1`] = `
+".bg-black-800\\\\/80 {\\n  background-color: oklch(from color-mix(in oklch, var(--su-black), #000 60%) l c h / 0.8);\\n}"
+`;
+
+exports[`compiler: bg-gray/50 1`] = `
+".bg-gray\\\\/50 {\\n  background-color: oklch(from var(--su-gray) l c h / 0.5);\\n}"
+`;
+
+exports[`compiler: bg-green 1`] = `
+".bg-green {\\n  background-color: var(--su-green);\\n}"
+`;
+
+exports[`compiler: bg-white-200 1`] = `
+".bg-white-200 {\\n  background-color: color-mix(in oklch, var(--su-white), #fff 60%);\\n}"
 `;
 
 exports[`compiler: d-grid 1`] = `
@@ -158,6 +182,10 @@ exports[`compiler: flex-y 2`] = `
 ".flex-y {\\n  display: flex;\\n  flex-direction: column;\\n}"
 `;
 
+exports[`compiler: focus-visible:jc-center 1`] = `
+".focus-visible\\\\:jc-center:focus-visible {\\n    justify-content: center;\\n  }"
+`;
+
 exports[`compiler: fw-wrap 1`] = `
 ".fw-wrap {\\n  flex-wrap: wrap;\\n}"
 `;
@@ -208,6 +236,18 @@ exports[`compiler: hover:m-3rem 1`] = `
 
 exports[`compiler: hover:m-auto 1`] = `
 ".hover\\\\:m-auto:hover {\\n    margin: auto;\\n  }"
+`;
+
+exports[`compiler: jc-between 1`] = `
+".jc-between {\\n  justify-content: space-between;\\n}"
+`;
+
+exports[`compiler: jc-evenly 1`] = `
+".jc-evenly {\\n  justify-content: space-evenly;\\n}"
+`;
+
+exports[`compiler: jc-start 1`] = `
+".jc-start {\\n  justify-content: start;\\n}"
 `;
 
 exports[`compiler: lg:gap-5/2 1`] = `
@@ -280,4 +320,8 @@ exports[`compiler: r-2 1`] = `
 
 exports[`compiler: r-3/2 1`] = `
 ".r-3\\\\/2 {\\n  border-radius: 150%;\\n}"
+`;
+
+exports[`compiler: sm:bg-subtle 1`] = `
+"@media (width >= 40rem) {\\n  .sm\\\\:bg-subtle {\\n    background-color: var(--su-subtle);\\n  }\\n}"
 `;

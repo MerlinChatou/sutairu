@@ -1,6 +1,13 @@
 // test/fixtures.js
 export const sampleClasses = [
   // /background/background-color.js
+  "bg-green",
+  "bg-white-200",
+  "bg-gray/50",
+  "bg-black-800/80",
+  "!bg-page",
+  "sm:bg-subtle",
+
   // /background/dotted.js
   // /background/hatching.js
   // /background/pattern-angle.js
@@ -22,7 +29,7 @@ export const sampleClasses = [
   "r-3/2",
   "!r-2.5",
   "first:rb-2",
-  
+
   // /border/border-radius-unit.js
   // /border/border-style.js
   // /border/border-width.js
@@ -77,7 +84,14 @@ export const sampleClasses = [
   // /layout/grid.js
   // /layout/grid-rows.js
   // /layout/grid-span.js
+
   // /layout/justify-content.js
+  "jc-start",
+  "!jc-flex-start",
+  "focus-visible:jc-center",
+  "jc-evenly",
+  "jc-between",
+
   // /layout/justify-self.js
   // /layout/object-fit.js
   // /layout/overflow.js

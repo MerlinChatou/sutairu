@@ -1,9 +1,7 @@
 /**
  * Utility for justify-content.
  * Controls the alignment of items along the main axis.
- * Matches: !jc-start, jc-between, !jc-center
  */
-
 const justifyContentMap = {
   start: "start",
   end: "end",
@@ -18,18 +16,35 @@ const justifyContentMap = {
 export const patterns = [
   {
     /**
-     * Regex:
-     * ^(!)?         -> Group 1: Optional "!" for inverted importance
-     * jc-           -> Prefix (Justify Content)
-     * (...)         -> Group 2: Values from the map
+     * Regex Breakdown:
+     * ^(!?)          -> Group 1: Optional importance flag
+     * jc-            -> Prefix
+     * (?:key1|key2)  -> Group 2: The value key from justifyContentMap
      */
-    test: new RegExp(`^(!)?jc-(${Object.keys(justifyContentMap).join("|")})$`),
+    test: new RegExp(`^(!?)jc-(${Object.keys(justifyContentMap).join("|")})$`),
     parse: (match) => {
+      const util = match[0];
       const isImportant = match[1] === "!";
-      const value = justifyContentMap[match[2]];
-      const importantTag = isImportant ? " !important" : "";
+      const key = match[2];
+      const finalValue = justifyContentMap[key];
 
-      return `justify-content: ${value}${importantTag};`;
+      return {
+        isImportant,
+        rules: [
+          {
+            /**
+             * Selector is passed without the leading '!'
+             * Your downstream generator handles escaping and the dot.
+             */
+            selector: util.replace(/^!/, ""),
+            declarations: [
+              {
+                "justify-content": finalValue,
+              },
+            ],
+          },
+        ],
+      };
     },
   },
 ];
