@@ -51,6 +51,10 @@ export const sampleClasses = [
   // :::::::::::::: COMPONENTS ::::::::::::::
 
   // /components/badge.js
+
+  // /components/card.js
+  "card",
+
   // /components/group.js
   // /components/masonry.js
   "masonry",

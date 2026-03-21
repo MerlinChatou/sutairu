@@ -72,6 +72,20 @@
 
   /* Default border colors*/
   --su-border: oklch(from var(--su-accent) 94% 0.01 h);
+
+  --su-card-border-radius: 0.75rem;
+  --su-card-shadow: 0px 0px 1px #00000040;
+  --su-card-header-bg-color: var(--su-container);
+  --su-card-header-padding: 1rem;
+  --su-card-body-bg-color: var(--su-container);
+  --su-card-footer-bg-color: var(--su-container);
+  --su-card-footer-padding: 1rem;
+  --su-card-border-color: var(--su-border);
+  --su-card-header-border-bottom-color: var(--su-border);
+  --su-card-header-border-bottom-style: solid;
+  --su-card-body-border-bottom-color: var(--su-border);
+  --su-card-body-border-bottom-style: solid;
+  --su-card-body-padding: 1rem;
 }
 
 [data-color-scheme="dark"] {

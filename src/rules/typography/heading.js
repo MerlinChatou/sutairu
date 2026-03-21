@@ -4,12 +4,12 @@
  * Using CSS variables allows for fluid scaling (clamp) and centralized theming.
  */
 const baseHeadings = {
-  h1: { fontSize: "var(--su-fs-h1)", letterSpacing: "var(--su-ls-h1)", fontWeight: "var(--su-fw-h1)" },
-  h2: { fontSize: "var(--su-fs-h2)", letterSpacing: "var(--su-ls-h2)", fontWeight: "var(--su-fw-h2)" },
-  h3: { fontSize: "var(--su-fs-h3)", letterSpacing: "var(--su-ls-h3)", fontWeight: "var(--su-fw-h3)" },
-  h4: { fontSize: "var(--su-fs-h4)", letterSpacing: "var(--su-ls-h4)", fontWeight: "var(--su-fw-h4)" },
-  h5: { fontSize: "var(--su-fs-h5)", letterSpacing: "var(--su-ls-h5)", fontWeight: "var(--su-fw-h5)" },
-  h6: { fontSize: "var(--su-fs-h6)", letterSpacing: "var(--su-ls-h6)", fontWeight: "var(--su-fw-h6)" },
+  h1: { "font-size": "var(--su-fs-h1)", "letter-spacing": "var(--su-ls-h1)", "font-weight": "var(--su-fw-h1)" },
+  h2: { "font-size": "var(--su-fs-h2)", "letter-spacing": "var(--su-ls-h2)", "font-weight": "var(--su-fw-h2)" },
+  h3: { "font-size": "var(--su-fs-h3)", "letter-spacing": "var(--su-ls-h3)", "font-weight": "var(--su-fw-h3)" },
+  h4: { "font-size": "var(--su-fs-h4)", "letter-spacing": "var(--su-ls-h4)", "font-weight": "var(--su-fw-h4)" },
+  h5: { "font-size": "var(--su-fs-h5)", "letter-spacing": "var(--su-ls-h5)", "font-weight": "var(--su-fw-h5)" },
+  h6: { "font-size": "var(--su-fs-h6)", "letter-spacing": "var(--su-ls-h6)", "font-weight": "var(--su-fw-h6)" },
 };
 
 // Common shared properties for all titles to keep the baseHeadings map clean

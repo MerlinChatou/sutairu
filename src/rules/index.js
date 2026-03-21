@@ -17,6 +17,7 @@ import * as border_width_unit from "./border/border-width-unit.js";
 
 // Components
 import * as badge from "./components/badge.js";
+import * as card from "./components/card.js";
 import * as group from "./components/group.js";
 import * as masonry from "./components/masonry.js";
 
@@ -58,7 +59,6 @@ import * as overflow from "./layout/overflow.js";
 import * as position from "./layout/position.js";
 import * as size from "./layout/size.js";
 import * as size_unit from "./layout/size-unit.js";
-//import * as transform from "./layout/transforms.js";
 import * as z_index from "./layout/z-index.js";
 
 // Spacing
@@ -121,6 +121,7 @@ const modules = [
 
   // Components
   badge,
+  card,
   group,
   masonry,
 
@@ -161,7 +162,6 @@ const modules = [
   position,
   size,
   size_unit,
-  //transform,
   z_index,
 
   // Spacing

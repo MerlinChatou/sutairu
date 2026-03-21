@@ -107,7 +107,7 @@ exports[`compiler: !grow-1 1`] = `
 `;
 
 exports[`compiler: !h4 1`] = `
-".\\\\!h4 {\\n  lineHeight: var(--su-lh-title) !important;\\n  color: var(--su-text-title) !important;\\n  fontSize: var(--su-fs-h4) !important;\\n  letterSpacing: var(--su-ls-h4) !important;\\n  fontWeight: var(--su-fw-h4) !important;\\n}"
+".\\\\!h4 {\\n  lineHeight: var(--su-lh-title) !important;\\n  color: var(--su-text-title) !important;\\n  font-size: var(--su-fs-h4) !important;\\n  letter-spacing: var(--su-ls-h4) !important;\\n  font-weight: var(--su-fw-h4) !important;\\n}"
 `;
 
 exports[`compiler: !hue-rotate-90deg 1`] = `
@@ -370,6 +370,10 @@ exports[`compiler: brightness-50 1`] = `
 ".brightness-50 {\\n  --su-brightness: brightness(0.5);\\n}"
 `;
 
+exports[`compiler: card 1`] = `
+".card {\\n  border-radius: var(--su-card-border-radius);\\n  border-width: 1px;\\n  border-color: var(--su-card-border-color);\\n  border-style: solid;\\n  box-shadow: var(--su-card-shadow);\\n  background-color: var(--su-card-body-bg-color);\\n  overflow: hidden;\\n}\\n\\n.card:has(> .footer) {\\n  padding: 0;\\n}\\n\\n.card:has(> .header) {\\n  padding: 0;\\n}\\n\\n.card > :is(.header, .body, .footer):first-child {\\n  border-top-left-radius: var(--su-card-border-radius);\\n  border-top-right-radius: var(--su-card-border-radius);\\n}\\n\\n.card > :is(.header, .body, .footer):last-child {\\n  border-bottom-left-radius: var(--su-card-border-radius);\\n  border-bottom-right-radius: var(--su-card-border-radius);\\n}\\n\\n.card > .header {\\n  padding: var(--su-card-header-padding);\\n  background-color: var(--su-card-header-bg-color);\\n}\\n\\n.card > .header:not(:last-child):not(img) {\\n  border-bottom: 1px var(--su-card-header-border-bottom-color) var(--su-card-header-border-bottom-style);\\n}\\n\\n.card > img.header {\\n  padding: 0;\\n  display: block;\\n  max-width: 100%;\\n  border-bottom: 0;\\n}\\n\\n.card > .header > :is(h1, h2, h3, h4, h5, h6) {\\n  margin: 0;\\n}\\n\\n.card > .body {\\n  padding: var(--su-card-body-padding);\\n  background-color: var(--su-card-body-bg-color);\\n}\\n\\n.card > .body:not(:last-child) {\\n  border-bottom: 1px var(--su-card-body-border-bottom-color) var(--su-card-body-border-bottom-style);\\n}\\n\\n.card > .footer {\\n  padding: var(--su-card-footer-padding);\\n  background-color: var(--su-card-footer-bg-color);\\n}"
+`;
+
 exports[`compiler: contrast-0.33333333 1`] = `
 ".contrast-0\\\\.33333333 {\\n  --su-contrast: contrast(0.333);\\n}"
 `;
@@ -427,7 +431,7 @@ exports[`compiler: dark:md:hover:p-4vw 1`] = `
 `;
 
 exports[`compiler: dark:portrait:hover:!h6 1`] = `
-":where([data-color-scheme=\\"dark\\"] *) {\\n  @media (orientation: portrait) {\\n      &.dark\\\\:portrait\\\\:hover\\\\:\\\\!h6:hover {\\n        lineHeight: var(--su-lh-title) !important;\\n        color: var(--su-text-title) !important;\\n        fontSize: var(--su-fs-h6) !important;\\n        letterSpacing: var(--su-ls-h6) !important;\\n        fontWeight: var(--su-fw-h6) !important;\\n      }\\n  }\\n}"
+":where([data-color-scheme=\\"dark\\"] *) {\\n  @media (orientation: portrait) {\\n      &.dark\\\\:portrait\\\\:hover\\\\:\\\\!h6:hover {\\n        lineHeight: var(--su-lh-title) !important;\\n        color: var(--su-text-title) !important;\\n        font-size: var(--su-fs-h6) !important;\\n        letter-spacing: var(--su-ls-h6) !important;\\n        font-weight: var(--su-fw-h6) !important;\\n      }\\n  }\\n}"
 `;
 
 exports[`compiler: dark:sm:d-block 1`] = `
@@ -547,19 +551,19 @@ exports[`compiler: grow-initial 1`] = `
 `;
 
 exports[`compiler: h1 1`] = `
-".h1 {\\n  lineHeight: var(--su-lh-title);\\n  color: var(--su-text-title);\\n  fontSize: var(--su-fs-h1);\\n  letterSpacing: var(--su-ls-h1);\\n  fontWeight: var(--su-fw-h1);\\n}"
+".h1 {\\n  lineHeight: var(--su-lh-title);\\n  color: var(--su-text-title);\\n  font-size: var(--su-fs-h1);\\n  letter-spacing: var(--su-ls-h1);\\n  font-weight: var(--su-fw-h1);\\n}"
 `;
 
 exports[`compiler: h2 1`] = `
-".h2 {\\n  lineHeight: var(--su-lh-title);\\n  color: var(--su-text-title);\\n  fontSize: var(--su-fs-h2);\\n  letterSpacing: var(--su-ls-h2);\\n  fontWeight: var(--su-fw-h2);\\n}"
+".h2 {\\n  lineHeight: var(--su-lh-title);\\n  color: var(--su-text-title);\\n  font-size: var(--su-fs-h2);\\n  letter-spacing: var(--su-ls-h2);\\n  font-weight: var(--su-fw-h2);\\n}"
 `;
 
 exports[`compiler: h3 1`] = `
-".h3 {\\n  lineHeight: var(--su-lh-title);\\n  color: var(--su-text-title);\\n  fontSize: var(--su-fs-h3);\\n  letterSpacing: var(--su-ls-h3);\\n  fontWeight: var(--su-fw-h3);\\n}"
+".h3 {\\n  lineHeight: var(--su-lh-title);\\n  color: var(--su-text-title);\\n  font-size: var(--su-fs-h3);\\n  letter-spacing: var(--su-ls-h3);\\n  font-weight: var(--su-fw-h3);\\n}"
 `;
 
 exports[`compiler: hover:h5 1`] = `
-".hover\\\\:h5:hover {\\n    lineHeight: var(--su-lh-title);\\n    color: var(--su-text-title);\\n    fontSize: var(--su-fs-h5);\\n    letterSpacing: var(--su-ls-h5);\\n    fontWeight: var(--su-fw-h5);\\n  }"
+".hover\\\\:h5:hover {\\n    lineHeight: var(--su-lh-title);\\n    color: var(--su-text-title);\\n    font-size: var(--su-fs-h5);\\n    letter-spacing: var(--su-ls-h5);\\n    font-weight: var(--su-fw-h5);\\n  }"
 `;
 
 exports[`compiler: hover:m-3rem 1`] = `
