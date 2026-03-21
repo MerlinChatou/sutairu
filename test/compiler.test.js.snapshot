@@ -26,6 +26,18 @@ exports[`compiler: !bg-page 1`] = `
 ".\\\\!bg-page {\\n  background-color: var(--su-page) !important;\\n}"
 `;
 
+exports[`compiler: !blur-3/2rem 1`] = `
+".\\\\!blur-3\\\\/2rem {\\n  --su-blur: blur(1.5rem) !important;\\n}"
+`;
+
+exports[`compiler: !brightness-0.6 1`] = `
+".\\\\!brightness-0\\\\.6 {\\n  --su-brightness: brightness(0.6) !important;\\n}"
+`;
+
+exports[`compiler: !contrast-60 1`] = `
+".\\\\!contrast-60 {\\n  --su-contrast: contrast(0.6) !important;\\n}"
+`;
+
 exports[`compiler: !cur-grab 1`] = `
 ".\\\\!cur-grab {\\n  cursor: grab !important;\\n}"
 `;
@@ -70,6 +82,14 @@ exports[`compiler: !h4 1`] = `
 ".\\\\!h4 {\\n  lineHeight: var(--su-lh-title) !important;\\n  color: var(--su-text-title) !important;\\n  fontSize: var(--su-fs-h4) !important;\\n  letterSpacing: var(--su-ls-h4) !important;\\n  fontWeight: var(--su-fw-h4) !important;\\n}"
 `;
 
+exports[`compiler: !hue-rotate-90deg 1`] = `
+".\\\\!hue-rotate-90deg {\\n  --su-hue-rotate: hue-rotate(90deg) !important;\\n}"
+`;
+
+exports[`compiler: !invert-1/2 1`] = `
+".\\\\!invert-1\\\\/2 {\\n  --su-invert: invert(0.5) !important;\\n}"
+`;
+
 exports[`compiler: !jc-flex-start 1`] = `
 ".jc-flex-start {\\n  justify-content: flex-start !important;\\n}"
 `;
@@ -90,6 +110,10 @@ exports[`compiler: !min-w-12vw 1`] = `
 ".\\\\!min-w-12vw {\\n  min-width: 12vw !important;\\n}"
 `;
 
+exports[`compiler: !opacity-1/2 1`] = `
+".\\\\!opacity-1\\\\/2 {\\n  opacity: 0.5 !important;\\n}"
+`;
+
 exports[`compiler: !ov-x-clip 1`] = `
 ".\\\\!ov-x-clip {\\n  overflow-x: clip !important;\\n}"
 `;
@@ -108,6 +132,14 @@ exports[`compiler: !py-2.5 1`] = `
 
 exports[`compiler: !r-2.5 1`] = `
 ".r-2\\\\.5 {\\n  border-radius: 0.625rem !important;\\n}"
+`;
+
+exports[`compiler: !saturate-3/2 1`] = `
+".\\\\!saturate-3\\\\/2 {\\n  --su-saturate: saturate(1.5) !important;\\n}"
+`;
+
+exports[`compiler: !sepia-3/2 1`] = `
+".\\\\!sepia-3\\\\/2 {\\n  --su-sepia: sepia(0.015) !important;\\n}"
 `;
 
 exports[`compiler: !shrink-5 1`] = `
@@ -226,6 +258,42 @@ exports[`compiler: bg-white-200 1`] = `
 ".bg-white-200 {\\n  background-color: color-mix(in oklch, var(--su-white), #fff 60%);\\n}"
 `;
 
+exports[`compiler: blur-12.5px 1`] = `
+".blur-12\\\\.5px {\\n  --su-blur: blur(12.5px);\\n}"
+`;
+
+exports[`compiler: blur-2rem 1`] = `
+".blur-2rem {\\n  --su-blur: blur(2rem);\\n}"
+`;
+
+exports[`compiler: blur-50 1`] = `
+".blur-50 {\\n  --su-blur: blur(50px);\\n}"
+`;
+
+exports[`compiler: brightness-2/3 1`] = `
+".brightness-2\\\\/3 {\\n  --su-brightness: brightness(0.667);\\n}"
+`;
+
+exports[`compiler: brightness-50 1`] = `
+".brightness-50 {\\n  --su-brightness: brightness(0.5);\\n}"
+`;
+
+exports[`compiler: contrast-0.33333333 1`] = `
+".contrast-0\\\\.33333333 {\\n  --su-contrast: contrast(0.333);\\n}"
+`;
+
+exports[`compiler: contrast-0.7 1`] = `
+".contrast-0\\\\.7 {\\n  --su-contrast: contrast(0.7);\\n}"
+`;
+
+exports[`compiler: contrast-2/3 1`] = `
+".contrast-2\\\\/3 {\\n  --su-contrast: contrast(0.667);\\n}"
+`;
+
+exports[`compiler: contrast-50 1`] = `
+".contrast-50 {\\n  --su-contrast: contrast(0.5);\\n}"
+`;
+
 exports[`compiler: cur-wait 1`] = `
 ".cur-wait {\\n  cursor: wait;\\n}"
 `;
@@ -338,6 +406,18 @@ exports[`compiler: gap-x-2.5 1`] = `
 ".gap-x-2\\\\.5 {\\n  column-gap: 0.625rem;\\n}"
 `;
 
+exports[`compiler: grayscale-0.6 1`] = `
+".grayscale-0\\\\.6 {\\n  --su-grayscale: grayscale(0.6);\\n}"
+`;
+
+exports[`compiler: grayscale-5/2 1`] = `
+".grayscale-5\\\\/2 {\\n  --su-grayscale: grayscale(0.025);\\n}"
+`;
+
+exports[`compiler: grayscale-50 1`] = `
+".grayscale-50 {\\n  --su-grayscale: grayscale(0.5);\\n}"
+`;
+
 exports[`compiler: group-hover:!ac-evenly 1`] = `
 ".group:hover .group-hover\\\\:\\\\!ac-evenly {\\n    align-content: space-evenly !important;\\n  }"
 `;
@@ -376,6 +456,30 @@ exports[`compiler: hover:m-3rem 1`] = `
 
 exports[`compiler: hover:m-auto 1`] = `
 ".hover\\\\:m-auto:hover {\\n    margin: auto;\\n  }"
+`;
+
+exports[`compiler: hue-rotate-1/4turn 1`] = `
+".hue-rotate-1\\\\/4turn {\\n  --su-hue-rotate: hue-rotate(0.25turn);\\n}"
+`;
+
+exports[`compiler: hue-rotate-180/2 1`] = `
+".hue-rotate-180\\\\/2 {\\n  --su-hue-rotate: hue-rotate(90deg);\\n}"
+`;
+
+exports[`compiler: hue-rotate-3.6rad 1`] = `
+".hue-rotate-3\\\\.6rad {\\n  --su-hue-rotate: hue-rotate(3.6rad);\\n}"
+`;
+
+exports[`compiler: hue-rotate-90 1`] = `
+".hue-rotate-90 {\\n  --su-hue-rotate: hue-rotate(90deg);\\n}"
+`;
+
+exports[`compiler: invert-0.8333333 1`] = `
+".invert-0\\\\.8333333 {\\n  --su-invert: invert(0.833);\\n}"
+`;
+
+exports[`compiler: invert-80 1`] = `
+".invert-80 {\\n  --su-invert: invert(0.8);\\n}"
 `;
 
 exports[`compiler: jc-between 1`] = `
@@ -450,6 +554,14 @@ exports[`compiler: odd:!ov-visible 1`] = `
 ".odd\\\\:\\\\!ov-visible:nth-child(odd) {\\n    overflow: visible !important;\\n  }"
 `;
 
+exports[`compiler: opacity-0.5 1`] = `
+".opacity-0\\\\.5 {\\n  opacity: 0.5;\\n}"
+`;
+
+exports[`compiler: opacity-50 1`] = `
+".opacity-50 {\\n  opacity: 0.5;\\n}"
+`;
+
 exports[`compiler: ov-hidden 1`] = `
 ".ov-hidden {\\n  overflow: hidden;\\n}"
 `;
@@ -490,8 +602,24 @@ exports[`compiler: r-3/2 1`] = `
 ".r-3\\\\/2 {\\n  border-radius: 150%;\\n}"
 `;
 
+exports[`compiler: saturate-0.2 1`] = `
+".saturate-0\\\\.2 {\\n  --su-saturate: saturate(0.2);\\n}"
+`;
+
+exports[`compiler: saturate-200 1`] = `
+".saturate-200 {\\n  --su-saturate: saturate(2);\\n}"
+`;
+
 exports[`compiler: selected:!fw-bold 1`] = `
 ".selected\\\\:\\\\!fw-bold.selected {\\n    font-weight: 700 !important;\\n  }"
+`;
+
+exports[`compiler: sepia-0.2 1`] = `
+".sepia-0\\\\.2 {\\n  --su-sepia: sepia(0.2);\\n}"
+`;
+
+exports[`compiler: sepia-200 1`] = `
+".sepia-200 {\\n  --su-sepia: sepia(2);\\n}"
 `;
 
 exports[`compiler: shrink-0 1`] = `
@@ -500,6 +628,10 @@ exports[`compiler: shrink-0 1`] = `
 
 exports[`compiler: shrink-inherit 1`] = `
 ".shrink-inherit {\\n  flex-shrink: inherit;\\n}"
+`;
+
+exports[`compiler: sm:!grayscale-80 1`] = `
+"@media (width >= 40rem) {\\n  .sm\\\\:\\\\!grayscale-80 {\\n    --su-grayscale: grayscale(0.8) !important;\\n  }\\n}"
 `;
 
 exports[`compiler: sm:bg-subtle 1`] = `

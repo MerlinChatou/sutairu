@@ -72,13 +72,17 @@ export const patterns = [
       let finalValue;
       if (rawValue.includes("/")) {
         // Fraction -> Percentage (1/2 = 50%)
-        const numericValue = resolveNumericValue(rawValue);
-        finalValue = `${Number((numericValue * 100).toFixed(3))}%`;
+        const numericValue = resolveNumericValue(rawValue,6);
+        finalValue = `${Number((numericValue * 100).toFixed(3) * 1)}%`;
       } else {
         // Step -> Rem (4 = 1rem)
         const numericValue = parseFloat(rawValue);
         finalValue = numericValue === 0 ? "0" : `${numericValue * 0.25}rem`;
       }
+
+            // const numericValue = resolveNumericValue(rawValue);
+      // const finalValue = numericValue === 0 ? "0" : `${numericValue * 0.25}rem`;
+      
 
       return {
         isImportant,

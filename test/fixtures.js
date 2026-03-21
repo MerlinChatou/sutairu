@@ -48,14 +48,55 @@ export const sampleClasses = [
   // :::::::::::::: EFFECTS ::::::::::::::
 
   // /effects/blur.js
+  "blur-50",
+  "blur-2rem",
+  "!blur-3/2rem",
+  "blur-12.5px",
+
   // /effects/brightness.js
+  "brightness-50",
+  "brightness-2/3",
+  "!brightness-0.6",
+
   // /effects/contrast.js
+  "contrast-50",
+  "contrast-0.7",
+  "contrast-0.33333333",
+  "contrast-2/3",
+  "!contrast-60",
+
   // /effects/grayscale.js
+  "grayscale-50",
+  "grayscale-5/2",
+  "grayscale-0.6",
+  "sm:!grayscale-80",
+
   // /effects/hue-rotate.js
+  "hue-rotate-90",
+  "!hue-rotate-90deg",
+  "hue-rotate-3.6rad",
+  "hue-rotate-180/2",
+  "hue-rotate-1/4turn",
+
   // /effects/invert.js
+  "invert-80",
+  "invert-0.8333333",
+  "!invert-1/2",
+
   // /effects/opacity.js
+  "opacity-0.5",
+  "opacity-50",
+  "!opacity-1/2",
+
   // /effects/saturate.js
+  "saturate-200",
+  "saturate-0.2",
+  "!saturate-3/2",
+
   // /effects/sepia.js
+  "sepia-200",
+  "sepia-0.2",
+  "!sepia-3/2",
 
   // :::::::::::::: INTERACTIVITY ::::::::::::::
 

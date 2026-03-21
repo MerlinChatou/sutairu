@@ -84,15 +84,25 @@ export const generateRegistry = (rulesObj) => {
 
 /**
  * Resolves a numeric string (decimal or fraction) into a number.
- * @param {string} value - e.g., "2.5", "2/3", or "4"
+ * Limits the output to a specified number of decimal places.
+ * @param {string} value - e.g., "2/3"
+ * @param {number} precision - Max decimal places (default is 3)
  * @returns {number}
  */
-export function resolveNumericValue(value) {
+export function resolveNumericValue(value, precision = 3) {
+  if (!value) return 0;
+
+  let result;
+
   if (value.includes("/")) {
     const [num, den] = value.split("/").map(Number);
-    // Return 0 if denominator is 0 to avoid Infinity
-    return den === 0 ? 0 : num / den;
+    result = (isNaN(num) || isNaN(den) || den === 0) ? 0 : num / den;
+  } else {
+    const parsed = parseFloat(value);
+    result = isNaN(parsed) ? 0 : parsed;
   }
-  const parsed = parseFloat(value);
-  return isNaN(parsed) ? 0 : parsed;
+
+  // Use a power of 10 to shift, round, and shift back
+  const factor = Math.pow(10, precision);
+  return Math.round(result * factor) / factor;
 }
