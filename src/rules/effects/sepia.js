@@ -3,23 +3,21 @@ import { resolveNumericValue } from "../utils.js";
 /**
  * Utility for Sepia.
  * Maps values to the --su-sepia CSS variable.
- * Matches: sepia-100 (vintage), !sepia-50, hover:sepia-1/4
+ * Matches: sepia-100 (vintage), !sepia-50, sepia-1/4
  */
 export const patterns = [
   {
     /**
      * Regex Breakdown:
      * ^(!?)             -> Group 1: Optional importance flag
-     * (hover:)?         -> Group 3: Optional hover prefix
      * sepia-            -> Prefix
      * ([0-9./]+)        -> Group 4: The value (Integer, Decimal, or Fraction)
      */
-    test: /^(!?)(hover:)?sepia-([0-9./]+)$/,
+    test: /^(!?)sepia-([0-9./]+)$/,
     parse: (match) => {
-      const util = match[0]; // Full string: "hover:sepia-100"
+      const util = match[0]; // Full string: "sepia-100"
       const isImportant = match[1] === "!";
-      const isHover = match[2] === "hover:";
-      const rawValue = match[3];
+      const rawValue = match[2];
 
       // Resolve numeric value with 3-digit precision (e.g., "2/3" -> 0.667)
       const numeric = resolveNumericValue(rawValue, 3);
@@ -33,7 +31,6 @@ export const patterns = [
 
       return {
         isImportant,
-        isHover,
         rules: [
           {
             selector: util,

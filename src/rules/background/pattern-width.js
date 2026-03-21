@@ -13,17 +13,15 @@ export const patterns = [
     /**
      * Regex Breakdown:
      * ^(!?)               -> Group 1: Important
-     * (hover:)?           -> Group 2: Hover
      * (pattern-width|pw)- -> Group 3: Flexible prefix
      * ([0-9]+(?:\/[0-9]+)?) -> Group 4: Value/Fraction
      * ${spacingUnitPattern}? -> Group 5: Optional units from constants
      */
-    test: new RegExp(`^(!?)(hover:)?(?:pattern-width|pw)-([0-9]+(?:\\/[0-9]+)?)${spacingUnitPattern}?$`),
+    test: new RegExp(`^(!?)(?:pattern-width|pw)-([0-9]+(?:\\/[0-9]+)?)${spacingUnitPattern}?$`),
     parse: (match) => {
       const isImportant = match[1] === "!";
-      const isHover = match[2] === "hover:";
-      const rawValue = match[3];
-      const hasExplicitUnit = !!match[4];
+      const rawValue = match[2];
+      const hasExplicitUnit = !!match[3];
       const importantTag = isImportant ? " !important" : "";
 
       let value;

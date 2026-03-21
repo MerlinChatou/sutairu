@@ -25,23 +25,21 @@ export const rules = generateRegistry(baseRules);
 
 /**
  * 2. Dynamic Opacity Patterns
- * Matches: opacity-50, !opacity-1/2, hover:opacity-0.75
+ * Matches: opacity-50, !opacity-1/2, opacity-0.75
  */
 export const patterns = [
   {
     /**
      * Regex Breakdown:
      * ^(!?)       -> Group 1: Optional importance flag
-     * (hover:)?   -> Group 2: Optional hover prefix
      * opacity-    -> Prefix
      * ([0-9./]+)  -> Group 3: Value (Integer, Fraction, or Decimal)
      */
-    test: /^(!?)(hover:)?opacity-([0-9./]+)$/,
+    test: /^(!?)opacity-([0-9./]+)$/,
     parse: (match) => {
-      const util = match[0]; // Full string: "!hover:opacity-1/2"
+      const util = match[0]; // Full string: "!opacity-1/2"
       const isImportant = match[1] === "!";
-      const isHover = match[2] === "hover:";
-      const rawValue = match[3];
+      const rawValue = match[2];
 
       // Resolve numeric value with 3-digit precision
       const numeric = resolveNumericValue(rawValue, 3);
@@ -56,7 +54,6 @@ export const patterns = [
 
       return {
         isImportant,
-        isHover,
         rules: [
           {
             selector: util,

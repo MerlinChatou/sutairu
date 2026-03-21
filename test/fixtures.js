@@ -310,7 +310,10 @@ export const sampleClasses = [
   "!td-y-3.6vw",
 
   // /typography/text-wrap.js
+
   // /typography/white-space.js
+  "ws-normal",
+  "!ws-pre",
 
   /*
   "p-2",

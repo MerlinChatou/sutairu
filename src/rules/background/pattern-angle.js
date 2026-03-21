@@ -21,9 +21,8 @@ export const patterns = [
     parse: (match) => {
       const isImportant = match[1] === "!";
       const isNegative = match[2] === "-";
-      const isHover = match[3] === "hover:";
-      const rawValue = match[4];
-      const hasExplicitUnit = !!match[5];
+      const rawValue = match[3];
+      const hasExplicitUnit = !!match[4];
       const importantTag = isImportant ? " !important" : "";
 
       let value;
@@ -49,11 +48,6 @@ export const patterns = [
 
       const declaration = `--su-pattern-angle: ${value}${unit}${importantTag};`;
 
-      if (isHover) {
-        const prefix = match[4]; // handles 'pa' or 'pattern-angle'
-        const fullClass = `${isNegative ? "-" : ""}${prefix}-${rawValue}${match[5] || ""}`;
-        return `.hover\\:${fullClass}:hover { ${declaration} }`;
-      }
 
       return declaration;
     },

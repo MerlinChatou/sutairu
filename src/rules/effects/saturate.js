@@ -3,23 +3,21 @@ import { resolveNumericValue } from "../utils.js";
 /**
  * Utility for Saturation.
  * Maps values to the --su-saturate CSS variable.
- * Matches: saturate-0 (B&W), saturate-100 (normal), !saturate-200, hover:saturate-1/2
+ * Matches: saturate-0 (B&W), saturate-100 (normal), !saturate-200, saturate-1/2
  */
 export const patterns = [
   {
     /**
      * Regex Breakdown:
      * ^(!?)             -> Group 1: Optional importance flag
-     * (hover:)?         -> Group 2: Optional hover prefix
      * saturate-         -> Prefix
      * ([0-9./]+)        -> Group 3: The value (Integer, Decimal, or Fraction)
      */
-    test: /^(!?)(hover:)?saturate-([0-9./]+)$/,
+    test: /^(!?)saturate-([0-9./]+)$/,
     parse: (match) => {
-      const util = match[0]; // Full string: "!hover:saturate-150"
+      const util = match[0]; // Full string: "!saturate-150"
       const isImportant = match[1] === "!";
-      const isHover = match[2] === "hover:";
-      const rawValue = match[3];
+      const rawValue = match[2];
 
       // Resolve numeric value with 3-digit precision
       const numeric = resolveNumericValue(rawValue, 3);
@@ -34,7 +32,6 @@ export const patterns = [
 
       return {
         isImportant,
-        isHover, // Metadata for the engine to handle the :hover pseudo-class
         rules: [
           {
             selector: util, // Preserving original utility string for the engine

@@ -174,6 +174,10 @@ exports[`compiler: !w-screen-h 1`] = `
 ".\\\\!w-screen-h {\\n  width: 100vh !important;\\n}"
 `;
 
+exports[`compiler: !ws-pre 1`] = `
+".\\\\!ws-pre {\\n  white-space: pre !important;\\n}"
+`;
+
 exports[`compiler: 2xl:hover:gap-3 1`] = `
 "@media (width >= 96rem) {\\n    .2xl\\\\:hover\\\\:gap-3:hover {\\n      gap: 0.75rem;\\n    }\\n}"
 `;
@@ -704,6 +708,10 @@ exports[`compiler: w-full 1`] = `
 
 exports[`compiler: w-screen 1`] = `
 ".w-screen {\\n  width: 100vw;\\n}"
+`;
+
+exports[`compiler: ws-normal 1`] = `
+".ws-normal {\\n  white-space: normal;\\n}"
 `;
 
 exports[`compiler: xl:!shrink-2 1`] = `
