@@ -1,28 +1,42 @@
-const baseRules = {
-  // The Stage
+/**
+ * Utility for Masonry layouts.
+ * Uses 'suffix' to prevent escaping the child combinator.
+ */
+
+const masonryDecls = {
+  container: { "position": "relative" },
+  item:      { "position": "absolute" }
+};
+
+export const rules = {
+  // 1. Standard 'masonry' class
   "masonry": {
-    "position": "relative",
+    rules: [
+      {
+        selector: "masonry",
+        declarations: [masonryDecls.container]
+      },
+      {
+        selector: "masonry",
+        suffix: " > *",
+        declarations: [masonryDecls.item]
+      }
+    ]
   },
 
-  // The Actor
-  "masonry-item": {
-    "position": "absolute",
-  },
+  // 2. Important '!masonry' class
+  "!masonry": {
+    isImportant: true,
+    rules: [
+      {
+        selector: "!masonry",
+        declarations: [masonryDecls.container]
+      },
+      {
+        selector: "!masonry",
+        suffix: " > *",
+        declarations: [masonryDecls.item]
+      }
+    ]
+  }
 };
-
-const build = (props, imp = false) => {
-  const suffix = imp ? " !important" : "";
-  return Object.entries(props)
-    .map(([k, v]) => `${k}: ${v}${suffix};`)
-    .join(" ");
-};
-
-export const rules = Object.entries(baseRules).reduce((acc, [key, props]) => {
-  // Standard: .masonry, .masonry-item
-  acc[key] = build(props, false);
-  
-  // Important: !masonry, !masonry-item
-  acc[`!${key}`] = build(props, true);
-  
-  return acc;
-}, {});

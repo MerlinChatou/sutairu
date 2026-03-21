@@ -20,6 +20,7 @@ import placeholder from './placeholder.js';
 import first from './first.js';
 import last from './last.js';
 import odd from './odd.js';
+import even from './even.js';
 
 import group_hover from './group-hover.js';
 import group_selected from './group-selected.js';
@@ -48,6 +49,7 @@ export const variantHandlers = {
   'first': first,
   'last': last,
   'odd': odd,
+  'even': even,
 
   'group-hover': group_hover,
   'group-selected': group_selected,

@@ -16,22 +16,35 @@ export const patterns = [
   {
     /**
      * Matches: !z-modal, !-z-50, z-10, !z-auto
-     * 1: !, 2: -, 3: key (word or digit)
+     * Group 1: Optional "!"
+     * Group 2: Optional "-"
+     * Group 3: key (word or digit)
      */
-    test: /^(!)?(-)?z-([a-z0-9-]+)$/,
+    test: /^(!?)(-)?z-([a-z0-9-]+)$/,
     parse: (match) => {
+      const util = match[0];
       const isImportant = match[1] === "!";
       const isNegative = match[2] === "-";
       const key = match[3];
       
       const value = zScale[key] || key;
-      const importantTag = isImportant ? " !important" : "";
 
       // Logic for negative values
-            // We can wrap in calc for safety or just prepend the dash for raw numbers.
       const finalValue = isNegative ? `calc(${value} * -1)` : value;
 
-      return `z-index: ${finalValue}${importantTag};`;
+      return {
+        isImportant,
+        rules: [
+          {
+            selector: util,
+            declarations: [
+              {
+                "z-index": finalValue,
+              },
+            ],
+          },
+        ],
+      };
     },
   },
 ];

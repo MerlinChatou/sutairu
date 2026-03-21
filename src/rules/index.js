@@ -58,7 +58,7 @@ import * as overflow from "./layout/overflow.js";
 import * as position from "./layout/position.js";
 import * as size from "./layout/size.js";
 import * as size_unit from "./layout/size-unit.js";
-import * as transform from "./layout/transforms.js";
+//import * as transform from "./layout/transforms.js";
 import * as z_index from "./layout/z-index.js";
 
 // Spacing
@@ -68,6 +68,11 @@ import * as margin from "./spacing/margin.js";
 import * as margin_unit from "./spacing/margin-unit.js";
 import * as padding from "./spacing/padding.js";
 import * as padding_unit from "./spacing/paddding-unit.js";
+
+// Transform
+import * as rotate from "./transform/rotate.js";
+import * as scale from "./transform/scale.js";
+import * as translate from "./transform/translate.js";
 
 // Typography
 import * as font_family from "./typography/font-family.js";
@@ -156,7 +161,7 @@ const modules = [
   position,
   size,
   size_unit,
-  transform,
+  //transform,
   z_index,
 
   // Spacing
@@ -166,6 +171,11 @@ const modules = [
   margin_unit,
   padding,
   padding_unit,
+
+  // Transform
+  rotate,
+  scale, 
+  translate,
 
   // Typography
   font_family,

@@ -14,7 +14,6 @@ const matrix = {
   right:  'flex-end'
 };
 
-// All 9 coordinate pairs
 const pairs = [
   ['t', 'l'], ['t', 'c'], ['t', 'r'],
   ['c', 'l'], ['c', 'c'], ['c', 'r'],
@@ -25,24 +24,33 @@ export const rules = pairs.reduce((acc, [yKey, xKey]) => {
   const yName = terms[yKey];
   const xName = terms[xKey];
   
-  const props = {
-    'display': 'flex',
-    'justify-content': matrix[xName],
-    'align-items': matrix[yName]
-  };
+  const declarations = [
+    {
+      'display': 'flex',
+      'justify-content': matrix[xName],
+      'align-items': matrix[yName]
+    }
+  ];
 
-  const build = (p, imp) => Object.entries(p)
-    .map(([k, v]) => `${k}: ${v}${imp ? ' !important' : ''};`).join(' ');
+  const createEntry = (key, isImportant) => ({
+    isImportant,
+    rules: [
+      {
+        selector: isImportant ? `!${key}` : key,
+        declarations
+      }
+    ]
+  });
 
-  // 1. Shorthand: align-cc
+  // 1. Shorthand: align-tl, !align-tl
   const shortKey = `align-${yKey}${xKey}`;
-  acc[shortKey] = build(props, false);
-  acc[`!${shortKey}`] = build(props, true);
+  acc[shortKey] = createEntry(shortKey, false);
+  acc[`!${shortKey}`] = createEntry(shortKey, true);
 
-  // 2. Full Name: align-center-center
+  // 2. Full Name: align-top-left, !align-top-left
   const fullKey = `align-${yName}-${xName}`;
-  acc[fullKey] = build(props, false);
-  acc[`!${fullKey}`] = build(props, true);
+  acc[fullKey] = createEntry(fullKey, false);
+  acc[`!${fullKey}`] = createEntry(fullKey, true);
   
   return acc;
 }, {});

@@ -37,13 +37,24 @@ export const sampleClasses = [
   // /border/border-radius-unit.js
   // /border/border-style.js
   // /border/border-width.js
+  "b-1",
+  "!b-3/2",
+  "b-0.5",
+  "even:b-7",
+
   // /border/border-width-unit.js
+  "b-1px",
+  "!b-1.5rem",
+  "b-1/3cqw",
+  "even:b-7vw",
 
   // :::::::::::::: COMPONENTS ::::::::::::::
 
   // /components/badge.js
   // /components/group.js
   // /components/masonry.js
+  "masonry",
+  "!masonry",
 
   // :::::::::::::: EFFECTS ::::::::::::::
 
@@ -119,6 +130,9 @@ export const sampleClasses = [
   "ai-stretch",
 
   // /layout/alignment.js
+  "align-cc",
+  "!align-tr",
+  "!align-bottom-left",
 
   // /layout/align-self.js
   "as-auto",
@@ -164,6 +178,11 @@ export const sampleClasses = [
   "xl:!shrink-2",
 
   // /layout/grid-cols.js
+  "grid-cols-12",
+  "!grid-cols-2",
+  "grid-cols-subgrid",
+  "!grid-cols-none",
+
   // /layout/grid.js
   // /layout/grid-rows.js
   // /layout/grid-span.js
@@ -203,7 +222,11 @@ export const sampleClasses = [
   "group-selected:!max-h-26cm",
 
   // /layout/transforms.js
+
   // /layout/z-index.js
+  "z-base",
+  "z-sticky",
+  "even:!z-100",
 
   // :::::::::::::: SPACING ::::::::::::::
 
@@ -258,6 +281,26 @@ export const sampleClasses = [
   "p-2/3",
   "ps-0",
 
+  // :::::::::::::: TRANSFORM ::::::::::::::
+
+  // /transform/rotate.js
+  "rot-45",
+  "rot-1/4turn",
+  "-rot-180/3deg",
+  "!rot-1/3  ",
+
+  // /transform/scale.js
+  "sc-110",
+  "sc-15",
+  "sc-x-12",
+  "!sc-y-50.5",
+  "sc-x-3/2",
+
+  // /transform/translate.js
+  "mv-x-10",
+  "mv-y-20px",
+  "-mv-x-10%",
+  "!mv-x-50%",
   // :::::::::::::: TYPOGRAPHY ::::::::::::::
 
   // /typography/font-family.js
@@ -285,6 +328,15 @@ export const sampleClasses = [
   "dark:portrait:hover:!h6",
 
   // /typography/letter-spacing.js
+  "ls-md",
+  "-ls-xl",
+  "ls-12rem",
+  "!ls-5.2px",
+  "ls-5",
+  "ls-3/2",
+  "ls-0.5",
+  "ls-12.3rem",
+
   // /typography/line-height.js
 
   // /typography/text-alignment.js

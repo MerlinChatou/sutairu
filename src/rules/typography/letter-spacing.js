@@ -1,17 +1,10 @@
-import { letterSpacingUnitPattern } from "../utils.js";
+import { letterSpacingUnitPattern, resolveNumericValue, generateRegistry } from "../utils.js";
 
-/*
-| Class | Value | Best Use Case |
-| :--- | :--- | :--- |
-| **`ls-xs`** | `0.01em` | Micro-tuning for body text. |
-| **`ls-sm`** | `0.025em` | Subtle breath for sub-headers. |
-| **`ls-md`** | `0.05em` | Standard for small all-caps tags. |
-| **`ls-lg`** | `0.1em` | Wide-spaced headings or navigation. |
-| **`ls-xl`** | `0.25em` | Highly stylized, airy display text. |
-*/
-
-// 1. Static Keyword Rules (Positive Magnitudes)
-const baseRules = {
+/**
+ * 1. Static Keyword Rules
+ * Matches: ls-xs, -ls-sm, !ls-lg
+ */
+const baseSpacing = {
   "ls-xs": { "letter-spacing": "0.01em" },
   "ls-sm": { "letter-spacing": "0.025em" },
   "ls-md": { "letter-spacing": "0.05em" },
@@ -19,53 +12,79 @@ const baseRules = {
   "ls-xl": { "letter-spacing": "0.25em" },
 };
 
-const build = (props, imp) => Object.entries(props)
-  .map(([k, v]) => `${k}: ${v}${imp ? " !important" : ""};`).join(" ");
-
-export const rules = Object.entries(baseRules).reduce((acc, [key, props]) => {
-  // Positive: ls-sm -> 0.05em
-  acc[key] = build(props, false);
-  acc[`!${key}`] = build(props, true);
+// Create the registry including negative and important versions
+const staticRules = Object.entries(baseSpacing).reduce((acc, [key, decl]) => {
+  const value = decl["letter-spacing"];
   
-  // Negative: -ls-sm -> -0.05em
-  const negProps = { "letter-spacing": `-${props["letter-spacing"]}` };
-  acc[`-${key}`] = build(negProps, false);
-  acc[`!-${key}`] = build(negProps, true);
+  // Standard entry
+  acc[key] = { rules: [{ selector: key, declarations: [decl] }] };
+  
+  // Negative entry
+  const negKey = `-${key}`;
+  acc[negKey] = { 
+    rules: [{ 
+      selector: negKey, 
+      declarations: [{ "letter-spacing": `-${value}` }] 
+    }] 
+  };
   
   return acc;
 }, {});
 
-// 2. Dynamic Patterns
+export const rules = generateRegistry(staticRules);
+
+/**
+ * 2. Dynamic Patterns
+ * Matches: ls-1 (0.01em), -ls-10 (0.1em), !-ls-3/2rem, ls-2px
+ */
 export const patterns = [
   {
     /**
-     * Matches: ls-1px, -ls-10, !-ls-1/2rem
+     * Regex Breakdown:
+     * ^(!?)             -> Group 1: Optional "!"
+     * (-?)              -> Group 2: Optional "-"
+     * ls-               -> Prefix
+     * ([0-9./]+)        -> Group 3: Numeric value (Int, Fraction, Decimal)
+     * ${...}?           -> Group 4: Optional Unit pattern
      */
-    test: new RegExp(`^(!?)(-?)ls-([0-9]+(?:\\/[0-9]+)?)${letterSpacingUnitPattern}?$`),
+    test: new RegExp(`^(!?)(-?)ls-([0-9./]+)${letterSpacingUnitPattern}?$`),
     parse: (match) => {
+      const util = match[0];
       const isImportant = match[1] === "!";
       const isNegative = match[2] === "-";
       const rawValue = match[3];
       const unit = match[4];
 
-      let val;
+      // Resolve numeric value (e.g., "3/2" -> 1.5)
+      const numeric = resolveNumericValue(rawValue, 3);
+      
+      let finalValue;
 
-      // Fraction logic (e.g., 1/2rem)
-      if (rawValue.includes("/")) {
-        const [num, den] = rawValue.split("/").map(Number);
-        val = `${num / den}${unit || "em"}`;
-      } 
-      // Unitless Step logic (ls-1 -> 0.01em)
-      else if (!unit) {
-        val = `${parseFloat(rawValue) * 0.01}em`;
-      } 
-      // Standard Unit logic (ls-2px)
-      else {
-        val = `${rawValue}${unit}`;
+      if (!unit) {
+        // Unitless logic: 1 unit = 0.01em
+        const calculated = resolveNumericValue(numeric * 0.01, 3);
+        finalValue = `${calculated}em`;
+      } else {
+        // Explicit unit logic: ls-2px -> 2px
+        finalValue = `${numeric}${unit}`;
       }
 
-      const finalValue = isNegative ? `-${val}` : val;
-      return `letter-spacing: ${finalValue}${isImportant ? " !important" : ""};`;
-    }
-  }
+      // Prepend negative sign if applicable
+      const cssValue = isNegative ? `-${finalValue}` : finalValue;
+
+      return {
+        isImportant,
+        rules: [
+          {
+            selector: util,
+            declarations: [
+              {
+                "letter-spacing": cssValue,
+              },
+            ],
+          },
+        ],
+      };
+    },
+  },
 ];

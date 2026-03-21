@@ -83,26 +83,34 @@ export const generateRegistry = (rulesObj) => {
 };
 
 /**
- * Resolves a numeric string (decimal or fraction) into a number.
- * Limits the output to a specified number of decimal places.
- * @param {string} value - e.g., "2/3"
+ * Resolves a value into a number and applies precision rounding.
+ * Handles strings (decimals/fractions), integers, and floats.
+ * @param {string|number} value - e.g., "2/3", 0.6666, or 10
  * @param {number} precision - Max decimal places (default is 3)
  * @returns {number}
  */
 export function resolveNumericValue(value, precision = 3) {
-  if (!value) return 0;
+  // Handle null, undefined, or empty string
+  if (value === null || value === undefined || value === "") return 0;
 
   let result;
 
-  if (value.includes("/")) {
-    const [num, den] = value.split("/").map(Number);
-    result = (isNaN(num) || isNaN(den) || den === 0) ? 0 : num / den;
+  if (typeof value === "number") {
+    result = value;
+  } else if (typeof value === "string") {
+    if (value.includes("/")) {
+      const [num, den] = value.split("/").map(Number);
+      result = (isNaN(num) || isNaN(den) || den === 0) ? 0 : num / den;
+    } else {
+      const parsed = parseFloat(value);
+      result = isNaN(parsed) ? 0 : parsed;
+    }
   } else {
-    const parsed = parseFloat(value);
-    result = isNaN(parsed) ? 0 : parsed;
+    // Fallback for unexpected types
+    return 0;
   }
 
-  // Use a power of 10 to shift, round, and shift back
+  // Apply precision rounding
   const factor = Math.pow(10, precision);
   return Math.round(result * factor) / factor;
 }

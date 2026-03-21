@@ -10,12 +10,28 @@ exports[`compiler: !ai-flex-start 1`] = `
 ".\\\\!ai-flex-start {\\n  align-items: flex-start !important;\\n}"
 `;
 
+exports[`compiler: !align-bottom-left 1`] = `
+".\\\\!align-bottom-left {\\n  display: flex !important;\\n  justify-content: flex-start !important;\\n  align-items: flex-end !important;\\n}"
+`;
+
+exports[`compiler: !align-tr 1`] = `
+".\\\\!align-tr {\\n  display: flex !important;\\n  justify-content: flex-end !important;\\n  align-items: flex-start !important;\\n}"
+`;
+
 exports[`compiler: !ar-2/3 1`] = `
 ".\\\\!ar-2\\\\/3 {\\n  aspect-ratio: 2/3 !important;\\n}"
 `;
 
 exports[`compiler: !as-center 1`] = `
 ".as-center {\\n  align-self: center !important;\\n}"
+`;
+
+exports[`compiler: !b-1.5rem 1`] = `
+".\\\\!b-1\\\\.5rem {\\n  border-width: 1.5rem !important;\\n}"
+`;
+
+exports[`compiler: !b-3/2 1`] = `
+".\\\\!b-3\\\\/2 {\\n  border-width: 0.375rem !important;\\n}"
 `;
 
 exports[`compiler: !b-blue-133/12 1`] = `
@@ -74,6 +90,14 @@ exports[`compiler: !gap-y-5% 1`] = `
 ".\\\\!gap-y-5\\\\% {\\n  row-gap: 5% !important;\\n}"
 `;
 
+exports[`compiler: !grid-cols-2 1`] = `
+".\\\\!grid-cols-2 {\\n  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;\\n}"
+`;
+
+exports[`compiler: !grid-cols-none 1`] = `
+".\\\\!grid-cols-none {\\n  grid-template-columns: none !important;\\n}"
+`;
+
 exports[`compiler: !grow-1 1`] = `
 ".\\\\!grow-1 {\\n  flex-grow: 1 !important;\\n}"
 `;
@@ -94,6 +118,10 @@ exports[`compiler: !jc-flex-start 1`] = `
 ".jc-flex-start {\\n  justify-content: flex-start !important;\\n}"
 `;
 
+exports[`compiler: !ls-5.2px 1`] = `
+".\\\\!ls-5\\\\.2px {\\n  letter-spacing: 5.2px !important;\\n}"
+`;
+
 exports[`compiler: !m-0 1`] = `
 ".\\\\!m-0 {\\n  margin: 0 !important;\\n}"
 `;
@@ -102,12 +130,20 @@ exports[`compiler: !m-2 1`] = `
 ".\\\\!m-2 {\\n  margin: 0.5rem !important;\\n}"
 `;
 
+exports[`compiler: !masonry 1`] = `
+".\\\\!masonry {\\n  position: relative !important;\\n}\\n\\n.\\\\!masonry > * {\\n  position: absolute !important;\\n}"
+`;
+
 exports[`compiler: !max-w-sm 1`] = `
 ".\\\\!max-w-sm {\\n  max-width: 32rem !important;\\n}"
 `;
 
 exports[`compiler: !min-w-12vw 1`] = `
 ".\\\\!min-w-12vw {\\n  min-width: 12vw !important;\\n}"
+`;
+
+exports[`compiler: !mv-x-50% 1`] = `
+".\\\\!mv-x-50\\\\% {\\n  --su-tr-x: 50% !important;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1))) !important;\\n}"
 `;
 
 exports[`compiler: !opacity-1/2 1`] = `
@@ -132,6 +168,10 @@ exports[`compiler: !py-2.5 1`] = `
 
 exports[`compiler: !r-2.5 1`] = `
 ".r-2\\\\.5 {\\n  border-radius: 0.625rem !important;\\n}"
+`;
+
+exports[`compiler: !rot-1/3   1`] = `
+""
 `;
 
 exports[`compiler: !saturate-3/2 1`] = `
@@ -178,6 +218,18 @@ exports[`compiler: !ws-pre 1`] = `
 ".\\\\!ws-pre {\\n  white-space: pre !important;\\n}"
 `;
 
+exports[`compiler: -ls-xl 1`] = `
+".\\\\-ls-xl {\\n  letter-spacing: -0.25em;\\n}"
+`;
+
+exports[`compiler: -mv-x-10% 1`] = `
+".\\\\-mv-x-10\\\\% {\\n  --su-tr-x: -10%;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));\\n}"
+`;
+
+exports[`compiler: -rot-180/3deg 1`] = `
+".\\\\-rot-180\\\\/3deg {\\n  --su-rot: -60deg;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));\\n}"
+`;
+
 exports[`compiler: 2xl:hover:gap-3 1`] = `
 "@media (width >= 96rem) {\\n    .2xl\\\\:hover\\\\:gap-3:hover {\\n      gap: 0.75rem;\\n    }\\n}"
 `;
@@ -196,6 +248,10 @@ exports[`compiler: ai-start 1`] = `
 
 exports[`compiler: ai-stretch 1`] = `
 ".ai-stretch {\\n  align-items: stretch;\\n}"
+`;
+
+exports[`compiler: align-cc 1`] = `
+".align-cc {\\n  display: flex;\\n  justify-content: center;\\n  align-items: center;\\n}"
 `;
 
 exports[`compiler: ar-0.5 1`] = `
@@ -224,6 +280,22 @@ exports[`compiler: as-auto 1`] = `
 
 exports[`compiler: as-flex-start 1`] = `
 ".as-flex-start {\\n  align-self: flex-start;\\n}"
+`;
+
+exports[`compiler: b-0.5 1`] = `
+".b-0\\\\.5 {\\n  border-width: 0.125rem;\\n}"
+`;
+
+exports[`compiler: b-1 1`] = `
+".b-1 {\\n  border-width: 0.25rem;\\n}"
+`;
+
+exports[`compiler: b-1/3cqw 1`] = `
+".b-1\\\\/3cqw {\\n  border-width: 0.333cqw;\\n}"
+`;
+
+exports[`compiler: b-1px 1`] = `
+".b-1px {\\n  border-width: 1px;\\n}"
 `;
 
 exports[`compiler: b-orange-800 1`] = `
@@ -350,6 +422,18 @@ exports[`compiler: disabled:as-stretch 1`] = `
 ".disabled\\\\:as-stretch:is(:disabled, [aria-disabled=\\"true\\"]) {\\n    align-self: stretch;\\n  }"
 `;
 
+exports[`compiler: even:!z-100 1`] = `
+".even\\\\:\\\\!z-100:nth-child(even) {\\n    z-index: 100 !important;\\n  }"
+`;
+
+exports[`compiler: even:b-7 1`] = `
+".even\\\\:b-7:nth-child(even) {\\n    border-width: 1.75rem;\\n  }"
+`;
+
+exports[`compiler: even:b-7vw 1`] = `
+".even\\\\:b-7vw:nth-child(even) {\\n    border-width: 7vw;\\n  }"
+`;
+
 exports[`compiler: fd-row 1`] = `
 ".fd-row {\\n  flex-direction: row;\\n}"
 `;
@@ -420,6 +504,14 @@ exports[`compiler: grayscale-5/2 1`] = `
 
 exports[`compiler: grayscale-50 1`] = `
 ".grayscale-50 {\\n  --su-grayscale: grayscale(0.5);\\n}"
+`;
+
+exports[`compiler: grid-cols-12 1`] = `
+".grid-cols-12 {\\n  grid-template-columns: repeat(12, minmax(0, 1fr));\\n}"
+`;
+
+exports[`compiler: grid-cols-subgrid 1`] = `
+".grid-cols-subgrid {\\n  grid-template-columns: subgrid;\\n}"
 `;
 
 exports[`compiler: group-hover:!ac-evenly 1`] = `
@@ -506,6 +598,30 @@ exports[`compiler: lg:gap-5/2 1`] = `
 "@media (width >= 64rem) {\\n  .lg\\\\:gap-5\\\\/2 {\\n    gap: 0.625rem;\\n  }\\n}"
 `;
 
+exports[`compiler: ls-0.5 1`] = `
+".ls-0\\\\.5 {\\n  letter-spacing: 0.005em;\\n}"
+`;
+
+exports[`compiler: ls-12.3rem 1`] = `
+".ls-12\\\\.3rem {\\n  letter-spacing: 12.3rem;\\n}"
+`;
+
+exports[`compiler: ls-12rem 1`] = `
+".ls-12rem {\\n  letter-spacing: 12rem;\\n}"
+`;
+
+exports[`compiler: ls-3/2 1`] = `
+".ls-3\\\\/2 {\\n  letter-spacing: 0.015em;\\n}"
+`;
+
+exports[`compiler: ls-5 1`] = `
+".ls-5 {\\n  letter-spacing: 0.05em;\\n}"
+`;
+
+exports[`compiler: ls-md 1`] = `
+".ls-md {\\n  letter-spacing: 0.05em;\\n}"
+`;
+
 exports[`compiler: m-0 1`] = `
 ".m-0 {\\n  margin: 0;\\n}"
 `;
@@ -534,6 +650,10 @@ exports[`compiler: m-4.2px 1`] = `
 ".m-4\\\\.2px {\\n  margin: 4.2px;\\n}"
 `;
 
+exports[`compiler: masonry 1`] = `
+".masonry {\\n  position: relative;\\n}\\n\\n.masonry > * {\\n  position: absolute;\\n}"
+`;
+
 exports[`compiler: md:!cur-copy 1`] = `
 "@media (width >= 48rem) {\\n  .md\\\\:\\\\!cur-copy {\\n    cursor: copy !important;\\n  }\\n}"
 `;
@@ -552,6 +672,14 @@ exports[`compiler: md:m-auto 1`] = `
 
 exports[`compiler: min-w-3 1`] = `
 ".min-w-3 {\\n  min-width: 0.75rem;\\n}"
+`;
+
+exports[`compiler: mv-x-10 1`] = `
+".mv-x-10 {\\n  --su-tr-x: 10px;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));\\n}"
+`;
+
+exports[`compiler: mv-y-20px 1`] = `
+".mv-y-20px {\\n  --su-tr-y: 20px;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));\\n}"
 `;
 
 exports[`compiler: odd:!ov-visible 1`] = `
@@ -604,6 +732,14 @@ exports[`compiler: r-2 1`] = `
 
 exports[`compiler: r-3/2 1`] = `
 ".r-3\\\\/2 {\\n  border-radius: 150%;\\n}"
+`;
+
+exports[`compiler: rot-1/4turn 1`] = `
+".rot-1\\\\/4turn {\\n  --su-rot: 0.25turn;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));\\n}"
+`;
+
+exports[`compiler: rot-45 1`] = `
+".rot-45 {\\n  --su-rot: 45deg;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));\\n}"
 `;
 
 exports[`compiler: saturate-0.2 1`] = `
@@ -716,4 +852,12 @@ exports[`compiler: ws-normal 1`] = `
 
 exports[`compiler: xl:!shrink-2 1`] = `
 "@media (width >= 80rem) {\\n  .xl\\\\:\\\\!shrink-2 {\\n    flex-shrink: 2 !important;\\n  }\\n}"
+`;
+
+exports[`compiler: z-base 1`] = `
+".z-base {\\n  z-index: 0;\\n}"
+`;
+
+exports[`compiler: z-sticky 1`] = `
+".z-sticky {\\n  z-index: 200;\\n}"
 `;
