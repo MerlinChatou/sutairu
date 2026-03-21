@@ -1,10 +1,8 @@
 import { spacingUnitPattern } from "../utils.js";
 
-/**
- * The Transform Engine String
- * Injected into every utility that affects the transform stack.
- */
-const transformEngine = "transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scale(var(--su-sc, 1));";
+const getTransformEngine = () => ({
+  "transform": `translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)))`
+});
 
 const coordAliases = {
   middle: "50%",
@@ -12,85 +10,58 @@ const coordAliases = {
   auto: "auto",
 };
 
-const computeCoordValue = (value, unit, isNegative, isImportant) => {
-  const importantTag = isImportant ? " !important" : "";
-
+const getCoordValue = (value, unit, isNegative) => {
   if (coordAliases[value]) {
     const aliasVal = coordAliases[value];
-    return isNegative 
-      ? `calc(${aliasVal} * -1)${importantTag}` 
-      : `${aliasVal}${importantTag}`;
+    return isNegative ? `calc(${aliasVal} * -1)` : aliasVal;
   }
-
-  if (value === "0") return `0${importantTag}`;
-
+  if (value === "0") return "0";
   if (!unit) {
     const num = parseFloat(value);
-    const multiplier = isNegative ? -0.25 : 0.25;
-    return `${num * multiplier}rem${importantTag}`;
+    return `${num * (isNegative ? -0.25 : 0.25)}rem`;
   }
-
-  const leadingDash = isNegative ? "-" : "";
-  return `${leadingDash}${value}${unit}${importantTag}`;
-};
-
-/**
- * Builds the declaration block. 
- * If 'middle' is used, it injects the variable update and the transform engine.
- */
-const buildRule = (prop, valueStr, unit, isNegative, isImportant) => {
-  const val = computeCoordValue(valueStr, unit, isNegative, isImportant);
-  const importantTag = isImportant ? " !important" : "";
-  let declarations = `${prop}: ${val};`;
-
-  if (valueStr === "middle") {
-    // Determine axis and direction for the translation
-    const isHorizontal = prop === "left" || prop === "right";
-    const axis = isHorizontal ? "x" : "y";
-    const sign = (prop === "left" || prop === "top") ? "-" : "";
-    
-    // 1. Update the specific transform variable
-    declarations += ` --su-tr-${axis}: ${sign}50%${importantTag};`;
-    
-    // 2. Inject the transform property itself (applying !important if needed)
-    const injectedEngine = transformEngine.replace(';', `${importantTag};`);
-    declarations += ` ${injectedEngine}`;
-  }
-
-  return declarations;
+  return `${isNegative ? "-" : ""}${value}${unit}`;
 };
 
 export const patterns = [
   {
-    /**
-     * Matches: !top-middle, -left-4, bottom-10px, !inset-0
-     * Groups: 1:!, 2:-, 3:prop, 4:value, 5:unit
-     */
-    test: new RegExp(`^(!)?(-)?(top|right|bottom|left|inset)-([a-z]+|\\d*\\.?\\d+)(${spacingUnitPattern})?$`),
+    // Matches: !top-middle, -left-4, inset-0, !inset-middle
+    test: new RegExp(`^(!?)(-?)(top|right|bottom|left|inset)-([a-z]+|\\d*\\.?\\d+)(${spacingUnitPattern})?$`),
     parse: (match) => {
-      return buildRule(match[3], match[4], match[5], match[2] === "-", match[1] === "!");
+      const [util, isImp, isNeg, prop, rawValue, unit] = [match[0], match[1] === "!", match[2] === "-", match[3], match[4], match[5]];
+      
+      const val = getCoordValue(rawValue, unit, isNeg);
+      const declarations = [{ [prop]: val }];
+
+      if (rawValue === "middle") {
+        if (prop === "inset") {
+          declarations.push({ "--su-tr-x": "-50%" }, { "--su-tr-y": "-50%" });
+        } else {
+          const axis = (prop === "left" || prop === "right") ? "x" : "y";
+          declarations.push({ [`--su-tr-${axis}`]: "-50%" });
+        }
+        declarations.push(getTransformEngine());
+      }
+
+      return { isImportant: isImp, rules: [{ selector: util, declarations }] };
     },
   },
   {
-    /**
-     * Matches: !inset-y-middle, inset-y-4
-     */
-    test: new RegExp(`^(!)?(-)?inset-y-([a-z]+|\\d*\\.?\\d+)(${spacingUnitPattern})?$`),
+    // Matches: inset-y-4 (top/bottom shorthand)
+    test: new RegExp(`^(!?)(-?)inset-(y|x)-([a-z]+|\\d*\\.?\\d+)(${spacingUnitPattern})?$`),
     parse: (match) => {
-      const isImp = match[1] === "!";
-      const isNeg = match[2] === "-";
-      return `${buildRule("top", match[3], match[4], isNeg, isImp)} ${buildRule("bottom", match[3], match[4], isNeg, isImp)}`;
-    },
-  },
-  {
-    /**
-     * Matches: !inset-x-middle, inset-x-0
-     */
-    test: new RegExp(`^(!)?(-)?inset-x-([a-z]+|\\d*\\.?\\d+)(${spacingUnitPattern})?$`),
-    parse: (match) => {
-      const isImp = match[1] === "!";
-      const isNeg = match[2] === "-";
-      return `${buildRule("left", match[3], match[4], isNeg, isImp)} ${buildRule("right", match[3], match[4], isNeg, isImp)}`;
-    },
-  },
+      const [util, isImp, isNeg, axis, rawValue, unit] = [match[0], match[1] === "!", match[2] === "-", match[3], match[4], match[5]];
+      const val = getCoordValue(rawValue, unit, isNeg);
+      
+      // Map x/y to logical shorthand properties
+      const prop = axis === "y" ? "inset-block" : "inset-inline";
+      const declarations = [{ [prop]: val }];
+
+      if (rawValue === "middle") {
+        declarations.push({ [`--su-tr-${axis}`]: "-50%" }, getTransformEngine());
+      }
+
+      return { isImportant: isImp, rules: [{ selector: util, declarations }] };
+    }
+  }
 ];

@@ -149,6 +149,12 @@ export const sampleClasses = [
   "ar-cinema",
 
   // /layout/coordinate.js
+  "top-50%",
+  "top-middle",
+  "!-left-20rem",
+  "inset-middle",
+  "inset-x-20%",
+  "!inset-y-20vw",
 
   // /layout/display.js
   "!d-flex",
@@ -203,6 +209,9 @@ export const sampleClasses = [
   "odd:!ov-visible",
 
   // /layout/position.js
+  "pos-static",
+  "!pos-rel",
+  "md:!pos-sticky",
 
   // /layout/size.js
   "w-4",
