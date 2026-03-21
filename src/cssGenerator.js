@@ -1,13 +1,14 @@
 import { escapeClassName } from "./utils/escaper.js";
 
 export const generateCSS = (ruleConfig, path, util, tools) => {
+  
   const isImportant = ruleConfig.isImportant;
   const suffix = isImportant ? " !important" : "";
 
   // Loop through each rule in the object
   return ruleConfig.rules
     .map((rule) => {
-
+      
       // Prepend path to selector
       let selector = path.length > 0 ? `${path.join(":")}:${rule.selector}` : `${rule.selector}`;
 
@@ -18,7 +19,6 @@ export const generateCSS = (ruleConfig, path, util, tools) => {
       for (const tool of [...tools].reverse()) {
         selector = tool.selector(selector);
       }
-
       // Add suffix
       selector = `${selector}${rule.suffix || ""}`;
 

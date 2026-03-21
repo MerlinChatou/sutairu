@@ -58,7 +58,7 @@ export const patterns = [
           {
             // We use the utility name (without the leading '!') as the base selector
             // Your generateCSS function handles adding the '.' and the '!' back in
-            selector: `${util.replace(/^!/, "")}`,
+            selector: util,
             declarations: [
               props.reduce((acc, prop) => {
                 acc[prop] = finalValue;

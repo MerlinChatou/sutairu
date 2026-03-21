@@ -1,5 +1,17 @@
 exports[`compiler: !-m-4 1`] = `
-".\\\\-m-4 {\\n  margin: -1rem !important;\\n}"
+".\\\\!-m-4 {\\n  margin: -1rem !important;\\n}"
+`;
+
+exports[`compiler: !ac-center 1`] = `
+".\\\\!ac-center {\\n  align-content: center !important;\\n}"
+`;
+
+exports[`compiler: !ai-flex-start 1`] = `
+".\\\\!ai-flex-start {\\n  align-items: flex-start !important;\\n}"
+`;
+
+exports[`compiler: !ar-2/3 1`] = `
+".\\\\!ar-2\\\\/3 {\\n  aspect-ratio: 2/3 !important;\\n}"
 `;
 
 exports[`compiler: !as-center 1`] = `
@@ -14,6 +26,10 @@ exports[`compiler: !bg-page 1`] = `
 ".\\\\!bg-page {\\n  background-color: var(--su-page) !important;\\n}"
 `;
 
+exports[`compiler: !cur-grab 1`] = `
+".\\\\!cur-grab {\\n  cursor: grab !important;\\n}"
+`;
+
 exports[`compiler: !d-flex 1`] = `
 ".\\\\!d-flex {\\n  display: flex !important;\\n}"
 `;
@@ -22,16 +38,32 @@ exports[`compiler: !d-none 1`] = `
 ".\\\\!d-none {\\n  display: none !important;\\n}"
 `;
 
+exports[`compiler: !ff-handwritten 1`] = `
+".\\\\!ff-handwritten {\\n  font-family: var(--su-ff-handwritten) !important;\\n  font-size-adjust: var(--su-fs-adjust-handwritten) !important;\\n}"
+`;
+
 exports[`compiler: !flex-row 1`] = `
 ".\\\\!flex-row {\\n  display: flex !important;\\n  flex-direction: row !important;\\n}"
 `;
 
+exports[`compiler: !fs-xl 1`] = `
+".\\\\!fs-xl {\\n  font-size: 1.25rem !important;\\n}"
+`;
+
+exports[`compiler: !fw-350 1`] = `
+".\\\\!fw-350 {\\n  font-weight: 350 !important;\\n}"
+`;
+
 exports[`compiler: !gap-2 1`] = `
-".gap-2 {\\n  gap: 0.5rem !important;\\n}"
+".\\\\!gap-2 {\\n  gap: 0.5rem !important;\\n}"
 `;
 
 exports[`compiler: !gap-y-5% 1`] = `
 ".\\\\!gap-y-5\\\\% {\\n  row-gap: 5% !important;\\n}"
+`;
+
+exports[`compiler: !grow-1 1`] = `
+".\\\\!grow-1 {\\n  flex-grow: 1 !important;\\n}"
 `;
 
 exports[`compiler: !h4 1`] = `
@@ -47,7 +79,19 @@ exports[`compiler: !m-0 1`] = `
 `;
 
 exports[`compiler: !m-2 1`] = `
-".m-2 {\\n  margin: 0.5rem !important;\\n}"
+".\\\\!m-2 {\\n  margin: 0.5rem !important;\\n}"
+`;
+
+exports[`compiler: !max-w-sm 1`] = `
+".\\\\!max-w-sm {\\n  max-width: 32rem !important;\\n}"
+`;
+
+exports[`compiler: !min-w-12vw 1`] = `
+".\\\\!min-w-12vw {\\n  min-width: 12vw !important;\\n}"
+`;
+
+exports[`compiler: !ov-x-clip 1`] = `
+".\\\\!ov-x-clip {\\n  overflow-x: clip !important;\\n}"
 `;
 
 exports[`compiler: !p-0 1`] = `
@@ -55,23 +99,87 @@ exports[`compiler: !p-0 1`] = `
 `;
 
 exports[`compiler: !p-2 1`] = `
-".p-2 {\\n  padding: 0.5rem !important;\\n}"
+".\\\\!p-2 {\\n  padding: 0.5rem !important;\\n}"
 `;
 
 exports[`compiler: !py-2.5 1`] = `
-".py-2\\\\.5 {\\n  padding-block: 0.625rem !important;\\n}"
+".\\\\!py-2\\\\.5 {\\n  padding-block: 0.625rem !important;\\n}"
 `;
 
 exports[`compiler: !r-2.5 1`] = `
 ".r-2\\\\.5 {\\n  border-radius: 0.625rem !important;\\n}"
 `;
 
+exports[`compiler: !shrink-5 1`] = `
+".\\\\!shrink-5 {\\n  flex-shrink: 5 !important;\\n}"
+`;
+
+exports[`compiler: !td-s 1`] = `
+".\\\\!td-s {\\n  text-decoration-line: line-through !important;\\n}"
+`;
+
+exports[`compiler: !td-w-5.5 1`] = `
+".\\\\!td-w-5\\\\.5 {\\n  text-decoration-thickness: 5.5px !important;\\n}"
+`;
+
+exports[`compiler: !td-y-3.6 1`] = `
+".\\\\!td-y-3\\\\.6 {\\n  text-underline-offset: 3.6px !important;\\n}"
+`;
+
+exports[`compiler: !td-y-3.6vw 1`] = `
+".\\\\!td-y-3\\\\.6vw {\\n  text-underline-offset: 3.6vw !important;\\n}"
+`;
+
+exports[`compiler: !text-container-300/10 1`] = `
+".\\\\!text-container-300\\\\/10 {\\n  color: oklch(from color-mix(in oklch, var(--su-container), #fff 40%) l c h / 0.1) !important;\\n}"
+`;
+
+exports[`compiler: !text-end 1`] = `
+".text-end {\\n  text-align: end !important;\\n}"
+`;
+
+exports[`compiler: !w-screen-h 1`] = `
+".\\\\!w-screen-h {\\n  width: 100vh !important;\\n}"
+`;
+
 exports[`compiler: 2xl:hover:gap-3 1`] = `
 "@media (width >= 96rem) {\\n    .2xl\\\\:hover\\\\:gap-3:hover {\\n      gap: 0.75rem;\\n    }\\n}"
 `;
 
+exports[`compiler: ac-start 1`] = `
+".ac-start {\\n  align-content: start;\\n}"
+`;
+
 exports[`compiler: active:fw-nowrap 1`] = `
 ".active\\\\:fw-nowrap:active {\\n    flex-wrap: nowrap;\\n  }"
+`;
+
+exports[`compiler: ai-start 1`] = `
+".ai-start {\\n  align-items: start;\\n}"
+`;
+
+exports[`compiler: ai-stretch 1`] = `
+".ai-stretch {\\n  align-items: stretch;\\n}"
+`;
+
+exports[`compiler: ar-0.5 1`] = `
+".ar-0\\\\.5 {\\n  aspect-ratio: 0.5;\\n}"
+`;
+
+exports[`compiler: ar-1 1`] = `
+".ar-1 {\\n  aspect-ratio: 1;\\n}"
+`;
+
+exports[`compiler: ar-1/2 1`] = `
+".ar-1\\\\/2 {\\n  aspect-ratio: 1/2;\\n}"
+`;
+
+exports[`compiler: ar-auto 1`] = `
+".ar-auto {\\n  aspect-ratio: auto;\\n}"
+`;
+
+exports[`compiler: ar-cinema 1`] = `
+".ar-cinema {\\n  aspect-ratio: 21 / 9;\\n}"
 `;
 
 exports[`compiler: as-auto 1`] = `
@@ -118,6 +226,10 @@ exports[`compiler: bg-white-200 1`] = `
 ".bg-white-200 {\\n  background-color: color-mix(in oklch, var(--su-white), #fff 60%);\\n}"
 `;
 
+exports[`compiler: cur-wait 1`] = `
+".cur-wait {\\n  cursor: wait;\\n}"
+`;
+
 exports[`compiler: d-grid 1`] = `
 ".d-grid {\\n  display: grid;\\n}"
 `;
@@ -131,7 +243,7 @@ exports[`compiler: dark:landscape:b-cyan-1000/1 1`] = `
 `;
 
 exports[`compiler: dark:md:hover:!m-8 1`] = `
-":where([data-color-scheme=\\"dark\\"] *) {\\n  @media (width >= 48rem) {\\n      &.dark\\\\:md\\\\:hover\\\\:m-8:hover {\\n        margin: 2rem !important;\\n      }\\n  }\\n}"
+":where([data-color-scheme=\\"dark\\"] *) {\\n  @media (width >= 48rem) {\\n      &.dark\\\\:md\\\\:hover\\\\:\\\\!m-8:hover {\\n        margin: 2rem !important;\\n      }\\n  }\\n}"
 `;
 
 exports[`compiler: dark:md:hover:!m-auto 1`] = `
@@ -139,7 +251,7 @@ exports[`compiler: dark:md:hover:!m-auto 1`] = `
 `;
 
 exports[`compiler: dark:md:hover:!p-2 1`] = `
-":where([data-color-scheme=\\"dark\\"] *) {\\n  @media (width >= 48rem) {\\n      &.dark\\\\:md\\\\:hover\\\\:p-2:hover {\\n        padding: 0.5rem !important;\\n      }\\n  }\\n}"
+":where([data-color-scheme=\\"dark\\"] *) {\\n  @media (width >= 48rem) {\\n      &.dark\\\\:md\\\\:hover\\\\:\\\\!p-2:hover {\\n        padding: 0.5rem !important;\\n      }\\n  }\\n}"
 `;
 
 exports[`compiler: dark:md:hover:!px-0 1`] = `
@@ -170,6 +282,10 @@ exports[`compiler: fd-row 1`] = `
 ".fd-row {\\n  flex-direction: row;\\n}"
 `;
 
+exports[`compiler: ff-mono 1`] = `
+".ff-mono {\\n  font-family: var(--su-ff-mono);\\n  font-size-adjust: var(--su-fs-adjust-mono);\\n}"
+`;
+
 exports[`compiler: first:rb-2 1`] = `
 ".first\\\\:rb-2:first-child {\\n    border-bottom-left-radius: 0.5rem;\\n    border-bottom-right-radius: 0.5rem;\\n  }"
 `;
@@ -184,6 +300,14 @@ exports[`compiler: flex-y 2`] = `
 
 exports[`compiler: focus-visible:jc-center 1`] = `
 ".focus-visible\\\\:jc-center:focus-visible {\\n    justify-content: center;\\n  }"
+`;
+
+exports[`compiler: fs-sm 1`] = `
+".fs-sm {\\n  font-size: 0.875rem;\\n}"
+`;
+
+exports[`compiler: fw-thin 1`] = `
+".fw-thin {\\n  font-weight: 100;\\n}"
 `;
 
 exports[`compiler: fw-wrap 1`] = `
@@ -212,6 +336,22 @@ exports[`compiler: gap-x-12vw 1`] = `
 
 exports[`compiler: gap-x-2.5 1`] = `
 ".gap-x-2\\\\.5 {\\n  column-gap: 0.625rem;\\n}"
+`;
+
+exports[`compiler: group-hover:!ac-evenly 1`] = `
+".group:hover .group-hover\\\\:\\\\!ac-evenly {\\n    align-content: space-evenly !important;\\n  }"
+`;
+
+exports[`compiler: group-selected:!max-h-26cm 1`] = `
+".group.selected .group-selected\\\\:\\\\!max-h-26cm {\\n    max-height: 26cm !important;\\n  }"
+`;
+
+exports[`compiler: grow-0 1`] = `
+".grow-0 {\\n  flex-grow: 0;\\n}"
+`;
+
+exports[`compiler: grow-initial 1`] = `
+".grow-initial {\\n  flex-grow: initial;\\n}"
 `;
 
 exports[`compiler: h1 1`] = `
@@ -250,6 +390,10 @@ exports[`compiler: jc-start 1`] = `
 ".jc-start {\\n  justify-content: start;\\n}"
 `;
 
+exports[`compiler: last:h-12 1`] = `
+".last\\\\:h-12:last-child {\\n    height: 3rem;\\n  }"
+`;
+
 exports[`compiler: lg:gap-5/2 1`] = `
 "@media (width >= 64rem) {\\n  .lg\\\\:gap-5\\\\/2 {\\n    gap: 0.625rem;\\n  }\\n}"
 `;
@@ -282,8 +426,32 @@ exports[`compiler: m-4.2px 1`] = `
 ".m-4\\\\.2px {\\n  margin: 4.2px;\\n}"
 `;
 
+exports[`compiler: md:!cur-copy 1`] = `
+"@media (width >= 48rem) {\\n  .md\\\\:\\\\!cur-copy {\\n    cursor: copy !important;\\n  }\\n}"
+`;
+
+exports[`compiler: md:!fs-5xl 1`] = `
+"@media (width >= 48rem) {\\n  .md\\\\:\\\\!fs-5xl {\\n    font-size: 3rem !important;\\n  }\\n}"
+`;
+
+exports[`compiler: md:ai-center 1`] = `
+"@media (width >= 48rem) {\\n  .md\\\\:ai-center {\\n    align-items: center;\\n  }\\n}"
+`;
+
 exports[`compiler: md:m-auto 1`] = `
 "@media (width >= 48rem) {\\n  .md\\\\:m-auto {\\n    margin: auto;\\n  }\\n}"
+`;
+
+exports[`compiler: min-w-3 1`] = `
+".min-w-3 {\\n  min-width: 0.75rem;\\n}"
+`;
+
+exports[`compiler: odd:!ov-visible 1`] = `
+".odd\\\\:\\\\!ov-visible:nth-child(odd) {\\n    overflow: visible !important;\\n  }"
+`;
+
+exports[`compiler: ov-hidden 1`] = `
+".ov-hidden {\\n  overflow: hidden;\\n}"
 `;
 
 exports[`compiler: p-0 1`] = `
@@ -322,6 +490,90 @@ exports[`compiler: r-3/2 1`] = `
 ".r-3\\\\/2 {\\n  border-radius: 150%;\\n}"
 `;
 
+exports[`compiler: selected:!fw-bold 1`] = `
+".selected\\\\:\\\\!fw-bold.selected {\\n    font-weight: 700 !important;\\n  }"
+`;
+
+exports[`compiler: shrink-0 1`] = `
+".shrink-0 {\\n  flex-shrink: 0;\\n}"
+`;
+
+exports[`compiler: shrink-inherit 1`] = `
+".shrink-inherit {\\n  flex-shrink: inherit;\\n}"
+`;
+
 exports[`compiler: sm:bg-subtle 1`] = `
 "@media (width >= 40rem) {\\n  .sm\\\\:bg-subtle {\\n    background-color: var(--su-subtle);\\n  }\\n}"
+`;
+
+exports[`compiler: td-u 1`] = `
+".td-u {\\n  text-decoration-line: underline;\\n}"
+`;
+
+exports[`compiler: td-w-2 1`] = `
+".td-w-2 {\\n  text-decoration-thickness: 2px;\\n}"
+`;
+
+exports[`compiler: td-w-3/2rem 1`] = `
+".td-w-3\\\\/2rem {\\n  text-decoration-thickness: 1.5rem;\\n}"
+`;
+
+exports[`compiler: td-y-12 1`] = `
+".td-y-12 {\\n  text-underline-offset: 12px;\\n}"
+`;
+
+exports[`compiler: text-body-200 1`] = `
+".text-body-200 {\\n  color: color-mix(in oklch, var(--su-body), #fff 60%);\\n}"
+`;
+
+exports[`compiler: text-center 1`] = `
+".text-center {\\n  text-align: center;\\n}"
+`;
+
+exports[`compiler: text-justify 1`] = `
+".text-justify {\\n  text-align: justify;\\n}"
+`;
+
+exports[`compiler: text-red 1`] = `
+".text-red {\\n  color: var(--su-red);\\n}"
+`;
+
+exports[`compiler: text-start 1`] = `
+".text-start {\\n  text-align: start;\\n}"
+`;
+
+exports[`compiler: text-title/50 1`] = `
+".text-title\\\\/50 {\\n  color: oklch(from var(--su-title) l c h / 0.5);\\n}"
+`;
+
+exports[`compiler: w-2.5 1`] = `
+".w-2\\\\.5 {\\n  width: 0.625rem;\\n}"
+`;
+
+exports[`compiler: w-2/3 1`] = `
+".w-2\\\\/3 {\\n  width: 66.667%;\\n}"
+`;
+
+exports[`compiler: w-4 1`] = `
+".w-4 {\\n  width: 1rem;\\n}"
+`;
+
+exports[`compiler: w-48px 1`] = `
+".w-48px {\\n  width: 48px;\\n}"
+`;
+
+exports[`compiler: w-fit 1`] = `
+".w-fit {\\n  width: fit-content;\\n}"
+`;
+
+exports[`compiler: w-full 1`] = `
+".w-full {\\n  width: 100%;\\n}"
+`;
+
+exports[`compiler: w-screen 1`] = `
+".w-screen {\\n  width: 100vw;\\n}"
+`;
+
+exports[`compiler: xl:!shrink-2 1`] = `
+"@media (width >= 80rem) {\\n  .xl\\\\:\\\\!shrink-2 {\\n    flex-shrink: 2 !important;\\n  }\\n}"
 `;

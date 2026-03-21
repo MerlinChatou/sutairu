@@ -2,7 +2,6 @@
  * Utility for align-items.
  * Positions flex/grid items along the cross-axis.
  */
-
 const alignItemsMap = {
   start: "start",
   end: "end",
@@ -15,22 +14,38 @@ const alignItemsMap = {
   stretch: "stretch",
 };
 
-
 export const patterns = [
   {
     /**
-     * Regex:
-     * ^(!)?         -> Group 1: Optional "!" for inverted importance
-     * ai-           -> Prefix (Align Items)
-     * (...)         -> Group 2: Values from the map
+     * Regex Breakdown:
+     * ^(!?)          -> Group 1: Optional importance flag
+     * ai-            -> Prefix
+     * (?:key1|key2)  -> Group 2: The value key from alignItemsMap
      */
-    test: new RegExp(`^(!)?ai-(${Object.keys(alignItemsMap).join("|")})$`),
+    test: new RegExp(`^(!?)ai-(${Object.keys(alignItemsMap).join("|")})$`),
     parse: (match) => {
+      const util = match[0];
       const isImportant = match[1] === "!";
-      const value = alignItemsMap[match[2]];
-      const importantTag = isImportant ? " !important" : "";
-      
-      return `align-items: ${value}${importantTag};`;
+      const key = match[2];
+      const finalValue = alignItemsMap[key];
+ 
+      return {
+        isImportant,
+        rules: [
+          {
+            /**
+             * Selector is the utility string without the leading '!'.
+             * This allows the generator to handle escaping (e.g., .\!ai-start).
+             */
+            selector: util,
+            declarations: [
+              {
+                "align-items": finalValue,
+              },
+            ],
+          },
+        ],
+      };
     },
   },
 ];

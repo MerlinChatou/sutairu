@@ -1,5 +1,7 @@
 // test/fixtures.js
 export const sampleClasses = [
+  // :::::::::::::: BACKGROUND ::::::::::::::
+
   // /background/background-color.js
   "bg-green",
   "bg-white-200",
@@ -14,6 +16,8 @@ export const sampleClasses = [
   // /background/pattern-period.js
   // /background/pattern-width.js
   // /background/stripes.js
+
+  // :::::::::::::: BORDER ::::::::::::::
 
   // /border/border-color.js
   "b-yellow",
@@ -34,9 +38,15 @@ export const sampleClasses = [
   // /border/border-style.js
   // /border/border-width.js
   // /border/border-width-unit.js
+
+  // :::::::::::::: COMPONENTS ::::::::::::::
+
   // /components/badge.js
   // /components/group.js
   // /components/masonry.js
+
+  // :::::::::::::: EFFECTS ::::::::::::::
+
   // /effects/blur.js
   // /effects/brightness.js
   // /effects/contrast.js
@@ -46,10 +56,27 @@ export const sampleClasses = [
   // /effects/opacity.js
   // /effects/saturate.js
   // /effects/sepia.js
+
+  // :::::::::::::: INTERACTIVITY ::::::::::::::
+
   // /interactivity/cursor.js
+  "cur-wait",
+  "!cur-grab",
+  "md:!cur-copy",
+
+  // :::::::::::::: LAYOUT ::::::::::::::
 
   // /layout/align-content.js
+  "ac-start",
+  "!ac-center",
+  "group-hover:!ac-evenly",
+
   // /layout/align-items.js
+  "ai-start",
+  "!ai-flex-start",
+  "md:ai-center",
+  "ai-stretch",
+
   // /layout/alignment.js
 
   // /layout/align-self.js
@@ -59,6 +86,13 @@ export const sampleClasses = [
   "disabled:as-stretch",
 
   // /layout/aspect-ratio.js
+  "ar-1",
+  "ar-1/2",
+  "ar-0.5",
+  "!ar-2/3",
+  "ar-auto",
+  "ar-cinema",
+
   // /layout/coordinate.js
 
   // /layout/display.js
@@ -70,6 +104,9 @@ export const sampleClasses = [
 
   // /layout/flex-basis.js
   // /layout/flex-grow.js
+  "grow-initial",
+  "grow-0",
+  "!grow-1",
 
   // /layout/flex.js
   "flex-y",
@@ -80,6 +117,11 @@ export const sampleClasses = [
   "active:fw-nowrap",
 
   // /layout/flex-shrink.js
+  "shrink-0",
+  "shrink-inherit",
+  "!shrink-5",
+  "xl:!shrink-2",
+
   // /layout/grid-cols.js
   // /layout/grid.js
   // /layout/grid-rows.js
@@ -94,12 +136,35 @@ export const sampleClasses = [
 
   // /layout/justify-self.js
   // /layout/object-fit.js
+
   // /layout/overflow.js
+  "ov-hidden",
+  "!ov-x-clip",
+  "odd:!ov-visible",
+
   // /layout/position.js
+
   // /layout/size.js
+  "w-4",
+  "min-w-3",
+  "w-2/3",
+  "w-2.5",
+  "!max-w-sm",
+  "w-fit",
+  "w-full",
+  "w-screen",
+  "!w-screen-h",
+  "last:h-12",
+
   // /layout/size-unit.js
+  "w-48px",
+  "!min-w-12vw",
+  "group-selected:!max-h-26cm",
+
   // /layout/transforms.js
   // /layout/z-index.js
+
+  // :::::::::::::: SPACING ::::::::::::::
 
   // /spacing/gap.js
   "gap-0",
@@ -152,10 +217,23 @@ export const sampleClasses = [
   "p-2/3",
   "ps-0",
 
+  // :::::::::::::: TYPOGRAPHY ::::::::::::::
+
   // /typography/font-family.js
+  "ff-mono",
+  "!ff-handwritten",
+
   // /typography/font-size-fluid.js
+
   // /typography/font-size.js
+  "fs-sm",
+  "!fs-xl",
+  "md:!fs-5xl",
+
   // /typography/font-weight.js
+  "fw-thin",
+  "!fw-350",
+  "selected:!fw-bold",
 
   // /typography/heading.js
   "h1",
@@ -167,11 +245,32 @@ export const sampleClasses = [
 
   // /typography/letter-spacing.js
   // /typography/line-height.js
+
   // /typography/text-alignment.js
+  "text-center",
+  "text-start",
+  "text-justify",
+  "!text-end",
+
   // /typography/text-color.js
+  "text-red",
+  "text-title/50",
+  "text-body-200",
+  "!text-container-300/10",
+
   // /typography/text-decoration.js
+  "td-u",
+  "!td-s",
+  "td-w-2",
+  "!td-w-5.5",
+  "td-w-3/2rem",
+  "td-y-12",
+  "!td-y-3.6",
+  "!td-y-3.6vw",
+
   // /typography/text-wrap.js
   // /typography/white-space.js
+
   /*
   "p-2",
   "p-1/2",

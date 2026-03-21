@@ -1,52 +1,69 @@
-import { spacingUnitPattern } from "../utils.js";
+import { generateRegistry, spacingUnitPattern } from "../utils.js";
 
-// 1. Static Keywords
-// Map logical names to specific rem values
+/**
+ * 1. Static Font Scale
+ * Standard T-shirt sizing for typography.
+ */
 const baseFontSizes = {
-  "fs-xs":   "font-size: 0.75rem",
-  "fs-sm":   "font-size: 0.875rem",
-  "fs-base": "font-size: 1rem",
-  "fs-lg":   "font-size: 1.125rem",
-  "fs-xl":   "font-size: 1.25rem",
-  "fs-2xl":  "font-size: 1.5rem",
-  "fs-3xl":  "font-size: 1.875rem",
-  "fs-4xl":  "font-size: 2.25rem",
-  "fs-5xl":  "font-size: 3rem",
+  "fs-xs":   "0.75rem",
+  "fs-sm":   "0.875rem",
+  "fs-base": "1rem",
+  "fs-lg":   "1.125rem",
+  "fs-xl":   "1.25rem",
+  "fs-2xl":  "1.5rem",
+  "fs-3xl":  "1.875rem",
+  "fs-4xl":  "2.25rem",
+  "fs-5xl":  "3rem",
 };
 
-export const rules = Object.entries(baseFontSizes).reduce((acc, [key, value]) => {
-  acc[key] = `${value};`;
-  acc[`!${key}`] = `${value} !important;`;
+const baseRules = Object.entries(baseFontSizes).reduce((acc, [key, value]) => {
+  acc[key] = {
+    rules: [{
+      selector: key,
+      declarations: [{ "font-size": value }]
+    }]
+  };
   return acc;
 }, {});
 
-// 2. Dynamic Patterns
+export const rules = generateRegistry(baseRules);
+
+/**
+ * 2. Dynamic Patterns
+ */
 export const patterns = [
   {
     /**
-     * Pattern A: Numeric Scaling (fs-4 -> 1rem)
-     * Matches: fs-4, !fs-16
+     * Matches: fs-4 (1rem), !fs-16px, fs-2rem, !fs-1.5vh
+     * 
+     * Group 1: (!?)       -> Importance
+     * Group 2: (\d...)    -> Numeric value
+     * Group 3: (unit?)    -> Optional unit from spacingUnitPattern
      */
-    test: /^(!?)fs-(\d*\.?\d+)$/,
+    test: new RegExp(`^(!?)fs-(\\d*\\.?\\d+)(${spacingUnitPattern})?$`),
     parse: (match) => {
+      const util = match[0];
       const isImportant = match[1] === "!";
-      const num = parseFloat(match[2]);
-      const suffix = isImportant ? " !important" : "";
-      return `font-size: ${num * 0.25}rem${suffix};`;
-    },
-  },
-  {
-    /**
-     * Pattern B: Explicit Units (fs-14px, !fs-2rem)
-     * spacingUnitPattern should be your variable containing: (px|rem|em|vw|vh|...)
-     */
-    test: new RegExp(`^(!?)fs-(\\d*\\.?\\d+)${spacingUnitPattern}$`),
-    parse: (match) => {
-      const isImportant = match[1] === "!";
-      const num = match[2];
+      const rawValue = match[2];
       const unit = match[3];
-      const suffix = isImportant ? " !important" : "";
-      return `font-size: ${num}${unit}${suffix};`;
+
+      let finalValue;
+      if (!unit) {
+        // Unitless Step (e.g., fs-4 -> 1rem)
+        const num = parseFloat(rawValue);
+        finalValue = num === 0 ? "0" : `${num * 0.25}rem`;
+      } else {
+        // Explicit Unit (e.g., fs-14px)
+        finalValue = `${rawValue}${unit}`;
+      }
+
+      return {
+        isImportant,
+        rules: [{
+          selector: util,
+          declarations: [{ "font-size": finalValue }]
+        }]
+      };
     },
   },
 ];

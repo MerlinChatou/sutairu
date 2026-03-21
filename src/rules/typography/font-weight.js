@@ -1,36 +1,56 @@
+import { generateRegistry } from "../utils.js";
+
+/**
+ * 1. Static Font Weight Scale
+ * Maps logical names to standard CSS weight integers.
+ */
 const baseFontWeights = {
-  "fw-thin": "font-weight: 100",
-  "fw-extralight": "font-weight: 200",
-  "fw-light": "font-weight: 300",
-  "fw-normal": "font-weight: 400",
-  "fw-medium": "font-weight: 500",
-  "fw-semibold": "font-weight: 600",
-  "fw-bold": "font-weight: 700",
-  "fw-extrabold": "font-weight: 800",
-  "fw-black": "font-weight: 900",
+  "fw-thin": "100",
+  "fw-extralight": "200",
+  "fw-light": "300",
+  "fw-normal": "400",
+  "fw-medium": "500",
+  "fw-semibold": "600",
+  "fw-bold": "700",
+  "fw-extrabold": "800",
+  "fw-black": "900",
 };
 
-export const rules = Object.entries(baseFontWeights).reduce((acc, [key, value]) => {
-  acc[key] = `${value};`;
-  acc[`!${key}`] = `${value} !important;`;
+const baseRules = Object.entries(baseFontWeights).reduce((acc, [key, value]) => {
+  acc[key] = {
+    rules: [{
+      selector: key, // e.g., "fw-bold"
+      declarations: [{ "font-weight": value }]
+    }]
+  };
   return acc;
-}, {});
+}, { });
 
+// generateRegistry creates both standard and !important versions
+export const rules = generateRegistry(baseRules);
+
+/**
+ * 2. Dynamic Patterns
+ */
 export const patterns = [
   {
     /**
-     * Matches: fw-400, !fw-700
-     * Regex: ^(!?) -> Optional important flag
-     * fw-   -> Selector prefix
-     * (\d+) -> Weight number
+     * Matches: fw-400, !fw-750, fw-900
+     * Allows for custom numeric weights (useful for variable fonts).
      */
     test: /^(!?)fw-(\d+)$/,
     parse: (match) => {
+      const util = match[0]; // Full string: "!fw-700"
       const isImportant = match[1] === "!";
       const weight = match[2];
-      
-      const suffix = isImportant ? " !important" : "";
-      return `font-weight: ${weight}${suffix};`;
+
+      return {
+        isImportant,
+        rules: [{
+          selector: util, // Preserving original utility string
+          declarations: [{ "font-weight": weight }]
+        }]
+      };
     },
   },
 ];

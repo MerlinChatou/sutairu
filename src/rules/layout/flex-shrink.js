@@ -1,25 +1,40 @@
 /**
  * Utility for Flex Shrink.
- * Matches: 
- * - fsr-1 (flex-shrink: 1) - Default browser behavior
- * - fsr-0 (flex-shrink: 0) - Prevents element from squishing
- * - !fsr-2 (flex-shrink: 2 !important)
- * - fsr-inherit (flex-shrink: inherit)
+ * Defines how much a flex item will shrink relative to the rest of the flex items 
+ * when there is a negative free space.
  */
+
 export const patterns = [
   {
     /**
      * Regex Breakdown:
-     * ^(!?)                 -> Group 1: Important flag
-     * fsr-                  -> Prefix (Flex ShRink)
+     * ^(!?)                             -> Group 1: Important flag
+     * fsr-                              -> Prefix (Flex ShRink)
      * (\d+|inherit|initial|unset|revert) -> Group 2: Integer OR CSS Keyword
      */
-    test: /^(!?)fsr-(\d+|inherit|initial|unset|revert)$/,
+    test: /^(!?)shrink-(\d+|inherit|initial|unset|revert)$/,
     parse: (match) => {
+      const util = match[0]; // Full string: "!fsr-0"
       const isImportant = match[1] === "!";
       const value = match[2];
 
-      return `flex-shrink: ${value}${isImportant ? " !important" : ""};`;
+      return {
+        isImportant,
+        rules: [
+          {
+            /**
+             * Selector stores the exact string from HTML.
+             * Your generator handles prefixing with '.' and escaping '!'.
+             */
+            selector: util,
+            declarations: [
+              {
+                "flex-shrink": value,
+              },
+            ],
+          },
+        ],
+      };
     },
   },
 ];

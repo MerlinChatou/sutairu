@@ -93,5 +93,6 @@ export function resolveNumericValue(value) {
     // Return 0 if denominator is 0 to avoid Infinity
     return den === 0 ? 0 : num / den;
   }
-  return parseFloat(value);
+  const parsed = parseFloat(value);
+  return isNaN(parsed) ? 0 : parsed;
 }

@@ -1,9 +1,7 @@
 /**
  * Utility for align-content.
- * Controls how rows are distributed in a multi-line container.
- * Matches: !ac-start, ac-between, !ac-stretch
+ * Controls how rows are distributed in a multi-line container (flex-wrap: wrap).
  */
-
 const alignContentMap = {
   start: "start",
   end: "end",
@@ -17,18 +15,35 @@ const alignContentMap = {
 export const patterns = [
   {
     /**
-     * Regex:
-     * ^(!)?         -> Group 1: Optional "!" for importance
-     * ac-           -> Prefix (Align Content)
-     * (...)         -> Group 2: Values from the map
+     * Regex Breakdown:
+     * ^(!?)          -> Group 1: Optional importance flag
+     * ac-            -> Prefix
+     * (?:key1|key2)  -> Group 2: The value key from alignContentMap
      */
-    test: new RegExp(`^(!)?ac-(${Object.keys(alignContentMap).join("|")})$`),
+    test: new RegExp(`^(!?)ac-(${Object.keys(alignContentMap).join("|")})$`),
     parse: (match) => {
+      const util = match[0]; // Full string: "!ac-between"
       const isImportant = match[1] === "!";
-      const value = alignContentMap[match[2]];
-      const importantTag = isImportant ? " !important" : "";
-      
-      return `align-content: ${value}${importantTag};`;
+      const key = match[2];
+      const finalValue = alignContentMap[key];
+
+      return {
+        isImportant,
+        rules: [
+          {
+            /**
+             * Selector stores the exact string from HTML.
+             * Your generator handles prefixing with '.' and escaping '!'.
+             */
+            selector: util,
+            declarations: [
+              {
+                "align-content": finalValue,
+              },
+            ],
+          },
+        ],
+      };
     },
   },
 ];
