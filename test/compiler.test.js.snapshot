@@ -107,7 +107,7 @@ exports[`compiler: !grow-1 1`] = `
 `;
 
 exports[`compiler: !h4 1`] = `
-".\\\\!h4 {\\n  lineHeight: var(--su-lh-title) !important;\\n  color: var(--su-text-title) !important;\\n  font-size: var(--su-fs-h4) !important;\\n  letter-spacing: var(--su-ls-h4) !important;\\n  font-weight: var(--su-fw-h4) !important;\\n}"
+".\\\\!h4 {\\n  line-height: var(--su-lh-title) !important;\\n  color: var(--su-text-title) !important;\\n  font-size: var(--su-fs-h4) !important;\\n  letter-spacing: var(--su-ls-h4) !important;\\n  font-weight: var(--su-fw-h4) !important;\\n}"
 `;
 
 exports[`compiler: !hue-rotate-90deg 1`] = `
@@ -431,7 +431,7 @@ exports[`compiler: dark:md:hover:p-4vw 1`] = `
 `;
 
 exports[`compiler: dark:portrait:hover:!h6 1`] = `
-":where([data-color-scheme=\\"dark\\"] *) {\\n  @media (orientation: portrait) {\\n      &.dark\\\\:portrait\\\\:hover\\\\:\\\\!h6:hover {\\n        lineHeight: var(--su-lh-title) !important;\\n        color: var(--su-text-title) !important;\\n        font-size: var(--su-fs-h6) !important;\\n        letter-spacing: var(--su-ls-h6) !important;\\n        font-weight: var(--su-fw-h6) !important;\\n      }\\n  }\\n}"
+":where([data-color-scheme=\\"dark\\"] *) {\\n  @media (orientation: portrait) {\\n      &.dark\\\\:portrait\\\\:hover\\\\:\\\\!h6:hover {\\n        line-height: var(--su-lh-title) !important;\\n        color: var(--su-text-title) !important;\\n        font-size: var(--su-fs-h6) !important;\\n        letter-spacing: var(--su-ls-h6) !important;\\n        font-weight: var(--su-fw-h6) !important;\\n      }\\n  }\\n}"
 `;
 
 exports[`compiler: dark:sm:d-block 1`] = `
@@ -551,19 +551,19 @@ exports[`compiler: grow-initial 1`] = `
 `;
 
 exports[`compiler: h1 1`] = `
-".h1 {\\n  lineHeight: var(--su-lh-title);\\n  color: var(--su-text-title);\\n  font-size: var(--su-fs-h1);\\n  letter-spacing: var(--su-ls-h1);\\n  font-weight: var(--su-fw-h1);\\n}"
+".h1 {\\n  line-height: var(--su-lh-title);\\n  color: var(--su-text-title);\\n  font-size: var(--su-fs-h1);\\n  letter-spacing: var(--su-ls-h1);\\n  font-weight: var(--su-fw-h1);\\n}"
 `;
 
 exports[`compiler: h2 1`] = `
-".h2 {\\n  lineHeight: var(--su-lh-title);\\n  color: var(--su-text-title);\\n  font-size: var(--su-fs-h2);\\n  letter-spacing: var(--su-ls-h2);\\n  font-weight: var(--su-fw-h2);\\n}"
+".h2 {\\n  line-height: var(--su-lh-title);\\n  color: var(--su-text-title);\\n  font-size: var(--su-fs-h2);\\n  letter-spacing: var(--su-ls-h2);\\n  font-weight: var(--su-fw-h2);\\n}"
 `;
 
 exports[`compiler: h3 1`] = `
-".h3 {\\n  lineHeight: var(--su-lh-title);\\n  color: var(--su-text-title);\\n  font-size: var(--su-fs-h3);\\n  letter-spacing: var(--su-ls-h3);\\n  font-weight: var(--su-fw-h3);\\n}"
+".h3 {\\n  line-height: var(--su-lh-title);\\n  color: var(--su-text-title);\\n  font-size: var(--su-fs-h3);\\n  letter-spacing: var(--su-ls-h3);\\n  font-weight: var(--su-fw-h3);\\n}"
 `;
 
 exports[`compiler: hover:h5 1`] = `
-".hover\\\\:h5:hover {\\n    lineHeight: var(--su-lh-title);\\n    color: var(--su-text-title);\\n    font-size: var(--su-fs-h5);\\n    letter-spacing: var(--su-ls-h5);\\n    font-weight: var(--su-fw-h5);\\n  }"
+".hover\\\\:h5:hover {\\n    line-height: var(--su-lh-title);\\n    color: var(--su-text-title);\\n    font-size: var(--su-fs-h5);\\n    letter-spacing: var(--su-ls-h5);\\n    font-weight: var(--su-fw-h5);\\n  }"
 `;
 
 exports[`compiler: hover:m-3rem 1`] = `
@@ -876,6 +876,30 @@ exports[`compiler: top-50% 1`] = `
 
 exports[`compiler: top-middle 1`] = `
 ".top-middle {\\n  top: 50%;\\n  --su-tr-y: -50%;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));\\n}"
+`;
+
+exports[`compiler: tr-bg-500-ease-in 1`] = `
+".tr-bg-500-ease-in {\\n  transition: background-color 500ms ease-in ;\\n}"
+`;
+
+exports[`compiler: tr-colors 1`] = `
+".tr-colors {\\n  transition: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke 150ms ease ;\\n}"
+`;
+
+exports[`compiler: tr-colors-200-ease-out 1`] = `
+".tr-colors-200-ease-out {\\n  transition: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke 200ms ease-out ;\\n}"
+`;
+
+exports[`compiler: tr-opacity-200-150-ease-in 1`] = `
+".tr-opacity-200-150-ease-in {\\n  transition: opacity 200ms ease-in  150ms;\\n}"
+`;
+
+exports[`compiler: tr-opacity-200-cubic(0.1,0.7,1.0,0.1) 1`] = `
+".tr-opacity-200-cubic\\\\(0\\\\.1\\\\,0\\\\.7\\\\,1\\\\.0\\\\,0\\\\.1\\\\) {\\n  transition: opacity 200ms cubic-bezier(0.1,0.7,1.0,0.1) ;\\n}"
+`;
+
+exports[`compiler: tr-shadow-step(1,end) 1`] = `
+".tr-shadow-step\\\\(1\\\\,end\\\\) {\\n  transition: box-shadow 150ms steps(1,end) ;\\n}"
 `;
 
 exports[`compiler: w-2.5 1`] = `

@@ -113,6 +113,14 @@ export const sampleClasses = [
   "sepia-0.2",
   "!sepia-3/2",
 
+  // /effects/transitions.js
+  "tr-colors",
+  "tr-colors-200-ease-out",
+  "tr-opacity-200-150-ease-in",
+  "tr-bg-500-ease-in",
+  "tr-opacity-200-cubic(0.1,0.7,1.0,0.1)",
+  "tr-shadow-step(1,end)",
+  
   // :::::::::::::: INTERACTIVITY ::::::::::::::
 
   // /interactivity/cursor.js

@@ -31,6 +31,7 @@ import * as invert from "./effects/invert.js";
 import * as opacity from "./effects/opacity.js";
 import * as saturate from "./effects/saturate.js";
 import * as sepia from "./effects/sepia.js";
+import * as transitions from "./effects/transitions.js";
 
 
 // Interactivity
@@ -135,6 +136,7 @@ const modules = [
   opacity,
   saturate,
   sepia,
+  transitions,
 
   // Interactivity
   cursor,
