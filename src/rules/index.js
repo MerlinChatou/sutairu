@@ -17,6 +17,8 @@ import * as border_width_unit from "./border/border-width-unit.js";
 
 // Components
 import * as badge from "./components/badge.js";
+import * as button from "./components/button.js"
+import * as button_base from "./components/button-base.js"
 import * as card from "./components/card.js";
 import * as group from "./components/group.js";
 import * as masonry from "./components/masonry.js";
@@ -122,6 +124,8 @@ const modules = [
 
   // Components
   badge,
+  button,
+  button_base,
   card,
   group,
   masonry,

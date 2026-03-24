@@ -1,0 +1,286 @@
+:root {
+  --su-btn-x-padding: 0.5em;
+  --su-btn-y-padding: 1em;
+  --su-btn-border-width: 1px;
+  --su-btn-radius: 0.375rem;
+
+  --su-btn-primary-bg: var(--su-blue);
+  --su-btn-primary-text: var(--su-white);
+  --su-btn-primary-border: var(--su-blue);
+  --su-btn-primary-outline: 0;
+
+  --su-btn-primary-bg-hover: color-mix(var(--su-btn-primary-bg), #000 10%);
+  --su-btn-primary-text-hover: var(--su-btn-primary-text);
+  --su-btn-primary-border-hover: var(--su-btn-primary-bg-hover);
+  --su-btn-primary-outline-hover: 0;
+
+  --su-btn-primary-bg-focus: var(--su-btn-primary-bg);
+  --su-btn-primary-text-focus: var(--su-btn-primary-text);
+  --su-btn-primary-border-focus: var(--su-btn-primary-bg-focus);
+  --su-btn-primary-outline-focus: 0;
+
+  --su-btn-primary-bg-focus-visible: var(--su-btn-primary-bg-hover);
+  --su-btn-primary-text-focus-visible: var(--su-btn-primary-text);
+  --su-btn-primary-border-focus-visible: var(--su-btn-secondary-bg-hover);
+  --su-btn-primary-outline-focus-visible: 4px solid oklch(from var(--su-blue) l c h / 30%);
+
+  --su-btn-primary-bg-active: color-mix(var(--su-btn-primary-bg), #000 20%);
+  --su-btn-primary-text-active: var(--su-btn-primary-text);
+  --su-btn-primary-border-active: var(--su-btn-primary-bg-active);
+  --su-btn-primary-outline-active: inherit;
+
+  --su-btn-primary-bg-selected: color-mix(var(--su-btn-primary-bg), #000 20%);
+  --su-btn-primary-text-selected: var(--su-btn-primary-text);
+  --su-btn-primary-border-selected: var(--su-btn-primary-bg-selected);
+  --su-btn-primary-outline-selected: inherit;
+
+  --su-btn-primary-bg-disabled: color-mix(var(--su-btn-primary-bg), #fff 50%);
+  --su-btn-primary-text-disabled: var(--su-btn-primary-text);
+  --su-btn-primary-border-disabled: var(--su-btn-primary-bg-disabled);
+  --su-btn-primary-outline-disabled: 0;
+
+  --su-btn-secondary-bg: var(--su-white);
+  --su-btn-secondary-text: var(--su-black);
+  --su-btn-secondary-border: color-mix(var(--su-white), #000 15%);
+  --su-btn-secondary-outline: 0;
+
+  --su-btn-secondary-bg-hover: color-mix(var(--su-btn-secondary-bg), #000 5%);
+  --su-btn-secondary-text-hover: var(--su-title);
+  --su-btn-secondary-border-hover: color-mix(var(--su-btn-secondary-bg), #000 10%);
+  --su-btn-secondary-outline-hover: 0;
+
+  --su-btn-secondary-bg-focus: var(--su-btn-secondary-bg);
+  --su-btn-secondary-text-focus: var(--su-btn-secondary-text);
+  --su-btn-secondary-border-focus: var(--su-btn-secondary-border);
+  --su-btn-secondary-outline-focus: 0;
+
+  --su-btn-secondary-bg-focus-visible: var(--su-btn-secondary-bg-hover);
+  --su-btn-secondary-text-focus-visible: var(--su-btn-secondary-text);
+  --su-btn-secondary-border-focus-visible: var(--su-btn-secondary-border);
+  --su-btn-secondary-outline-focus-visible: 4px solid oklch(from var(--su-gray) l c h / 10%);
+
+  --su-btn-secondary-bg-active: color-mix(var(--su-btn-secondary-bg), #000 10%);
+  --su-btn-secondary-text-active: var(--su-btn-secondary-text);
+  --su-btn-secondary-border-active: color-mix(var(--su-btn-secondary-bg), #000 15%);
+  --su-btn-secondary-outline-active: 0;
+
+  --su-btn-secondary-bg-selected: color-mix(var(--su-btn-secondary-bg), #000 10%);
+  --su-btn-secondary-text-selected: var(--su-btn-secondary-text);
+  --su-btn-secondary-border-selected: color-mix(var(--su-btn-secondary-bg), #000 15%);
+  --su-btn-secondary-outline-selected: 0;
+
+  --su-btn-secondary-bg-disabled: var(--su-btn-secondary-bg);
+  --su-btn-secondary-text-disabled: color-mix(var(--su-btn-secondary-text-hover), #fff 80%);
+  --su-btn-secondary-border-disabled: color-mix(var(--su-btn-secondary-text-hover), #fff 80%);
+  --su-btn-secondary-outline-disabled: 0;
+
+  --su-btn-success-bg: var(--su-green);
+  --su-btn-success-text: var(--su-white);
+  --su-btn-success-border: var(--su-green);
+  --su-btn-success-outline: 0;
+
+  --su-btn-success-bg-hover: color-mix(var(--su-btn-success-bg), #000 10%);
+  --su-btn-success-text-hover: var(--su-btn-success-text);
+  --su-btn-success-border-hover: var(--su-btn-success-bg-hover);
+  --su-btn-success-outline-hover: 0;
+
+  --su-btn-success-bg-focus: var(--su-btn-success-bg);
+  --su-btn-success-text-focus: var(--su-btn-success-text);
+  --su-btn-success-border-focus: var(--su-btn-success-bg-focus);
+  --su-btn-success-outline-focus: 0;
+
+  --su-btn-success-bg-focus-visible: var(--su-btn-success-bg-hover);
+  --su-btn-success-text-focus-visible: var(--su-btn-success-text);
+  --su-btn-success-border-focus-visible: var(--su-btn-secondary-bg-hover);
+  --su-btn-success-outline-focus-visible: 4px solid oklch(from var(--su-green) l c h / 30%);
+
+  --su-btn-success-bg-active: color-mix(var(--su-btn-success-bg), #000 20%);
+  --su-btn-success-text-active: var(--su-btn-success-text);
+  --su-btn-success-border-active: var(--su-btn-success-bg-active);
+  --su-btn-success-outline-active: inherit;
+
+  --su-btn-success-bg-selected: color-mix(var(--su-btn-success-bg), #000 20%);
+  --su-btn-success-text-selected: var(--su-btn-success-text);
+  --su-btn-success-border-selected: var(--su-btn-success-bg-selected);
+  --su-btn-success-outline-selected: inherit;
+
+  --su-btn-success-bg-disabled: color-mix(var(--su-btn-success-bg), #fff 50%);
+  --su-btn-success-text-disabled: var(--su-btn-success-text);
+  --su-btn-success-border-disabled: var(--su-btn-success-bg-disabled);
+  --su-btn-success-outline-disabled: 0;
+
+  --su-btn-danger-bg: var(--su-red);
+  --su-btn-danger-text: var(--su-white);
+  --su-btn-danger-border: var(--su-red);
+  --su-btn-danger-outline: 0;
+
+  --su-btn-danger-bg-hover: color-mix(var(--su-btn-danger-bg), #000 7%);
+  --su-btn-danger-text-hover: var(--su-btn-danger-text);
+  --su-btn-danger-border-hover: var(--su-btn-danger-bg-hover);
+  --su-btn-danger-outline-hover: 0;
+
+  --su-btn-danger-bg-focus: var(--su-btn-danger-bg);
+  --su-btn-danger-text-focus: var(--su-btn-danger-text);
+  --su-btn-danger-border-focus: var(--su-btn-danger-bg-focus);
+  --su-btn-danger-outline-focus: 0;
+
+  --su-btn-danger-bg-focus-visible: var(--su-btn-danger-bg-hover);
+  --su-btn-danger-text-focus-visible: var(--su-btn-danger-text);
+  --su-btn-danger-border-focus-visible: var(--su-btn-secondary-bg-hover);
+  --su-btn-danger-outline-focus-visible: 4px solid oklch(from var(--su-btn-danger-bg) l c h / 30%);
+
+  --su-btn-danger-bg-active: color-mix(var(--su-btn-danger-bg), #000 10%);
+  --su-btn-danger-text-active: var(--su-btn-danger-text);
+  --su-btn-danger-border-active: var(--su-btn-danger-bg-active);
+  --su-btn-danger-outline-active: inherit;
+
+  --su-btn-danger-bg-selected: color-mix(var(--su-btn-danger-bg), #000 10%);
+  --su-btn-danger-text-selected: var(--su-btn-danger-text);
+  --su-btn-danger-border-selected: var(--su-btn-danger-bg-selected);
+  --su-btn-danger-outline-selected: inherit;
+
+  --su-btn-danger-bg-disabled: color-mix(var(--su-btn-danger-bg), #fff 50%);
+  --su-btn-danger-text-disabled: var(--su-btn-danger-text);
+  --su-btn-danger-border-disabled: var(--su-btn-danger-bg-disabled);
+  --su-btn-danger-outline-disabled: 0;
+
+  --su-btn-warning-bg: color-mix(var(--su-orange), #fff 10%);
+  --su-btn-warning-text: var(--su-white);
+  --su-btn-warning-border: var(--su-btn-warning-bg);
+  --su-btn-warning-outline: 0;
+
+  --su-btn-warning-bg-hover: color-mix(var(--su-btn-warning-bg), #000 5%);
+  --su-btn-warning-text-hover: var(--su-btn-warning-text);
+  --su-btn-warning-border-hover: var(--su-btn-warning-bg-hover);
+  --su-btn-warning-outline-hover: 0;
+
+  --su-btn-warning-bg-focus: var(--su-btn-warning-bg);
+  --su-btn-warning-text-focus: var(--su-btn-warning-text);
+  --su-btn-warning-border-focus: var(--su-btn-warning-bg-focus);
+  --su-btn-warning-outline-focus: 0;
+
+  --su-btn-warning-bg-focus-visible: var(--su-btn-warning-bg-hover);
+  --su-btn-warning-text-focus-visible: var(--su-btn-warning-text);
+  --su-btn-warning-border-focus-visible: var(--su-btn-secondary-bg-hover);
+  --su-btn-warning-outline-focus-visible: 4px solid oklch(from var(--su-btn-warning-bg) l c h / 30%);
+
+  --su-btn-warning-bg-active: color-mix(var(--su-btn-warning-bg), #000 10%);
+  --su-btn-warning-text-active: var(--su-btn-warning-text);
+  --su-btn-warning-border-active: var(--su-btn-warning-bg-active);
+  --su-btn-warning-outline-active: inherit;
+
+  --su-btn-warning-bg-selected: color-mix(var(--su-btn-warning-bg), #000 10%);
+  --su-btn-warning-text-selected: var(--su-btn-warning-text);
+  --su-btn-warning-border-selected: var(--su-btn-warning-bg-selected);
+  --su-btn-warning-outline-selected: inherit;
+
+  --su-btn-warning-bg-disabled: color-mix(var(--su-btn-warning-bg), #fff 50%);
+  --su-btn-warning-text-disabled: var(--su-btn-warning-text);
+  --su-btn-warning-border-disabled: var(--su-btn-warning-bg-disabled);
+  --su-btn-warning-outline-disabled: 0;
+
+  --su-btn-info-bg: var(--su-cyan);
+  --su-btn-info-text: var(--su-white);
+  --su-btn-info-border: var(--su-btn-info-bg);
+  --su-btn-info-outline: 0;
+
+  --su-btn-info-bg-hover: color-mix(var(--su-btn-info-bg), #000 7%);
+  --su-btn-info-text-hover: var(--su-btn-info-text);
+  --su-btn-info-border-hover: var(--su-btn-info-bg-hover);
+  --su-btn-info-outline-hover: 0;
+
+  --su-btn-info-bg-focus: var(--su-btn-info-bg);
+  --su-btn-info-text-focus: var(--su-btn-info-text);
+  --su-btn-info-border-focus: var(--su-btn-info-bg-focus);
+  --su-btn-info-outline-focus: 0;
+
+  --su-btn-info-bg-focus-visible: var(--su-btn-info-bg-hover);
+  --su-btn-info-text-focus-visible: var(--su-btn-info-text);
+  --su-btn-info-border-focus-visible: var(--su-btn-secondary-bg-hover);
+  --su-btn-info-outline-focus-visible: 4px solid oklch(from var(--su-btn-info-bg) l c h / 30%);
+
+  --su-btn-info-bg-active: color-mix(var(--su-btn-info-bg), #000 12%);
+  --su-btn-info-text-active: var(--su-btn-info-text);
+  --su-btn-info-border-active: var(--su-btn-info-bg-active);
+  --su-btn-info-outline-active: inherit;
+
+  --su-btn-info-bg-selected: color-mix(var(--su-btn-info-bg), #000 12%);
+  --su-btn-info-text-selected: var(--su-btn-info-text);
+  --su-btn-info-border-selected: var(--su-btn-info-bg-selected);
+  --su-btn-info-outline-selected: inherit;
+
+  --su-btn-info-bg-disabled: color-mix(var(--su-btn-info-bg), #fff 50%);
+  --su-btn-info-text-disabled: var(--su-btn-info-text);
+  --su-btn-info-border-disabled: var(--su-btn-info-bg-disabled);
+  --su-btn-info-outline-disabled: 0;
+
+  --su-btn-neutral-bg: var(--su-gray);
+  --su-btn-neutral-text: var(--su-white);
+  --su-btn-neutral-border: var(--su-btn-neutral-bg);
+  --su-btn-neutral-outline: 0;
+
+  --su-btn-neutral-bg-hover: color-mix(var(--su-btn-neutral-bg), #000 8%);
+  --su-btn-neutral-text-hover: var(--su-btn-neutral-text);
+  --su-btn-neutral-border-hover: var(--su-btn-neutral-bg-hover);
+  --su-btn-neutral-outline-hover: 0;
+
+  --su-btn-neutral-bg-focus: var(--su-btn-neutral-bg);
+  --su-btn-neutral-text-focus: var(--su-btn-neutral-text);
+  --su-btn-neutral-border-focus: var(--su-btn-neutral-bg-focus);
+  --su-btn-neutral-outline-focus: 0;
+
+  --su-btn-neutral-bg-focus-visible: var(--su-btn-neutral-bg-hover);
+  --su-btn-neutral-text-focus-visible: var(--su-btn-neutral-text);
+  --su-btn-neutral-border-focus-visible: var(--su-btn-secondary-bg-hover);
+  --su-btn-neutral-outline-focus-visible: 4px solid oklch(from var(--su-btn-neutral-bg) l c h / 35%);
+
+  --su-btn-neutral-bg-active: color-mix(var(--su-btn-neutral-bg), #000 12%);
+  --su-btn-neutral-text-active: var(--su-btn-neutral-text);
+  --su-btn-neutral-border-active: var(--su-btn-neutral-bg-active);
+  --su-btn-neutral-outline-active: inherit;
+
+  --su-btn-neutral-bg-selected: color-mix(var(--su-btn-neutral-bg), #000 12%);
+  --su-btn-neutral-text-selected: var(--su-btn-neutral-text);
+  --su-btn-neutral-border-selected: var(--su-btn-neutral-bg-selected);
+  --su-btn-neutral-outline-selected: inherit;
+
+  --su-btn-neutral-bg-disabled: color-mix(var(--su-btn-neutral-bg), #fff 50%);
+  --su-btn-neutral-text-disabled: var(--su-btn-neutral-text);
+  --su-btn-neutral-border-disabled: var(--su-btn-neutral-bg-disabled);
+  --su-btn-neutral-outline-disabled: 0;
+
+  --su-btn-dark-bg: var(--su-black);
+  --su-btn-dark-text: var(--su-white);
+  --su-btn-dark-border: var(--su-btn-dark-bg);
+  --su-btn-dark-outline: 0;
+
+  --su-btn-dark-bg-hover: color-mix(var(--su-btn-dark-bg), #fff 12%);
+  --su-btn-dark-text-hover: var(--su-btn-dark-text);
+  --su-btn-dark-border-hover: var(--su-btn-dark-bg-hover);
+  --su-btn-dark-outline-hover: 0;
+
+  --su-btn-dark-bg-focus: var(--su-btn-dark-bg);
+  --su-btn-dark-text-focus: var(--su-btn-dark-text);
+  --su-btn-dark-border-focus: var(--su-btn-dark-bg-focus);
+  --su-btn-dark-outline-focus: 0;
+
+  --su-btn-dark-bg-focus-visible: var(--su-btn-dark-bg-hover);
+  --su-btn-dark-text-focus-visible: var(--su-btn-dark-text);
+  --su-btn-dark-border-focus-visible: var(--su-btn-secondary-bg-hover);
+  --su-btn-dark-outline-focus-visible: 4px solid oklch(from var(--su-btn-dark-bg) l c h / 35%);
+
+  --su-btn-dark-bg-active: color-mix(var(--su-btn-dark-bg), #fff 20%);
+  --su-btn-dark-text-active: var(--su-btn-dark-text);
+  --su-btn-dark-border-active: var(--su-btn-dark-bg-active);
+  --su-btn-dark-outline-active: inherit;
+
+  --su-btn-dark-bg-selected: color-mix(var(--su-btn-dark-bg), #fff 20%);
+  --su-btn-dark-text-selected: var(--su-btn-dark-text);
+  --su-btn-dark-border-selected: var(--su-btn-dark-bg-selected);
+  --su-btn-dark-outline-selected: inherit;
+
+  --su-btn-dark-bg-disabled: color-mix(var(--su-btn-dark-bg), #fff 55%);
+  --su-btn-dark-text-disabled: var(--su-btn-dark-text);
+  --su-btn-dark-border-disabled: var(--su-btn-dark-bg-disabled);
+  --su-btn-dark-outline-disabled: 0;
+}

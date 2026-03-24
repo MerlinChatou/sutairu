@@ -33,7 +33,7 @@ export function scanFile(filePath) {
         individualClasses.forEach((cls) => {
           const cleanCls = cls.trim();
           // Ignore single chars like ":" or " "
-          if (cleanCls && cleanCls.length>1) {
+          if (cleanCls && cleanCls.length > 1) {
             classes.add(cleanCls);
             logger.verbose(`Captured class: ${cleanCls}`);
           }
@@ -46,8 +46,6 @@ export function scanFile(filePath) {
     console.error(`Error: ${filePath}`, err.message);
   }
 }
-
-
 
 export async function generateCSS(config, safeList) {
   logger.verbose("Start generating CSS");
@@ -62,10 +60,15 @@ export async function generateCSS(config, safeList) {
   logger.info(`${allUniqueClasses.size} classes found`);
 
   // 2. Build css from class list
-  const onDemandCSS = compileCSS(Array.from(allUniqueClasses))
+  const onDemandCSS = compileCSS(Array.from(allUniqueClasses));
 
   // 3. Load static CSS (reset.css and required themes) and prepare final CSS
-  const staticCss = await getStaticStyles(["base/reset.css", "base/base.css", ...config.themes.map((t) => `themes/${t}.css`)]);
+  const staticCss = await getStaticStyles([
+    "base/reset.css",
+    "base/base.css",
+    ...config.themes.map((t) => `themes/${t}/core.css`),
+    ...config.themes.map((t) => `themes/${t}/button.css`),
+  ]);
   let finalCSS = `${staticCss}\n\n${onDemandCSS}`;
 
   // 4. Move all @import at the very top of the CSS
