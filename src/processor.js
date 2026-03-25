@@ -3,7 +3,7 @@ import { getStaticStyles } from "./utils/css-loader.js";
 import { hoistImports } from "./utils/css-hoist.js";
 import { classRegex, getClassNameFromMatch } from "./patterns.js";
 import fs from "fs-extra";
-import CleanCSS from "clean-css";
+import { transform } from "lightningcss";
 import { compileCSS } from "./compiler.js";
 
 const fileClassMap = new Map();
@@ -16,7 +16,7 @@ export function scanFile(filePath) {
     const content = fs.readFileSync(filePath, "utf-8");
     const classes = new Set();
 
-    //
+
     let match;
     // Reset regex index for safety if using 'g' flag across multiple files
     classRegex.lastIndex = 0;
@@ -75,11 +75,12 @@ export async function generateCSS(config, safeList) {
   finalCSS = hoistImports(finalCSS);
 
   // 5. Minify
-  const minified = new CleanCSS({
-    level: 2,
-    inline: false,
-    rebase: false,
-  }).minify(finalCSS).styles;
+  const { code } = transform({
+    code: Buffer.from(finalCSS),
+    minify: true,
+  });
+
+  const minified = code.toString();
 
   // Save to files .css and .min.css
   const outputPath = config.output;

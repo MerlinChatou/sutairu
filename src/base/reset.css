@@ -1,52 +1,57 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  border-width: 0;
-  border-style: solid;
-  border-color: var(--su-border);
-}
-:root {
-  /* thumb color | track color */
-  scrollbar-color: var(--su-sb-thumb-color) var(--su-sb-track-color);
-}
-body {
-  margin: 0;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  font-family: var(--su-ff-base);
-  font-size-adjust: var(--su-fs-adjust-base);
-  background-color: var(--su-page);
-  color: var(--su-body);
-}
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  font-family: var(--su-ff-title);
-}
-hr {
-  border-style: inset;
-  border-width: 1px;
-  border-color: var(--su-border);
-}
-p {
-  line-height: var(--su-lh-base);
+/* Define the order upfront (Weakest to Strongest) */
+@layer reset, components;
+
+@layer reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: var(--su-border);
+  }
+  :root {
+    /* thumb color | track color */
+    scrollbar-color: var(--su-sb-thumb-color) var(--su-sb-track-color);
+  }
+  body {
+    margin: 0;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    font-family: var(--su-ff-base);
+    font-size-adjust: var(--su-fs-adjust-base);
+    background-color: var(--su-page);
+    color: var(--su-body);
+  }
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+    font-family: var(--su-ff-title);
+  }
+  hr {
+    border-style: inset;
+    border-width: 1px;
+    border-color: var(--su-border);
+  }
+  p {
+    line-height: var(--su-lh-base);
+  }
 }

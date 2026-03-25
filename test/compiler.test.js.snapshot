@@ -1,971 +1,971 @@
 exports[`compiler: !-left-20rem 1`] = `
-".\\\\!-left-20rem {\\n  left: -20rem !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!-left-20rem {\\n  left: -20rem !important;\\n}"
 `;
 
 exports[`compiler: !-m-4 1`] = `
-".\\\\!-m-4 {\\n  margin: -1rem !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!-m-4 {\\n  margin: -1rem !important;\\n}"
 `;
 
 exports[`compiler: !ac-center 1`] = `
-".\\\\!ac-center {\\n  align-content: center !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!ac-center {\\n  align-content: center !important;\\n}"
 `;
 
 exports[`compiler: !ai-flex-start 1`] = `
-".\\\\!ai-flex-start {\\n  align-items: flex-start !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!ai-flex-start {\\n  align-items: flex-start !important;\\n}"
 `;
 
 exports[`compiler: !align-bottom-left 1`] = `
-".\\\\!align-bottom-left {\\n  display: flex !important;\\n  justify-content: flex-start !important;\\n  align-items: flex-end !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!align-bottom-left {\\n  display: flex !important;\\n  justify-content: flex-start !important;\\n  align-items: flex-end !important;\\n}"
 `;
 
 exports[`compiler: !align-tr 1`] = `
-".\\\\!align-tr {\\n  display: flex !important;\\n  justify-content: flex-end !important;\\n  align-items: flex-start !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!align-tr {\\n  display: flex !important;\\n  justify-content: flex-end !important;\\n  align-items: flex-start !important;\\n}"
 `;
 
 exports[`compiler: !ar-2/3 1`] = `
-".\\\\!ar-2\\\\/3 {\\n  aspect-ratio: 2/3 !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!ar-2\\\\/3 {\\n  aspect-ratio: 2/3 !important;\\n}"
 `;
 
 exports[`compiler: !as-center 1`] = `
-".as-center {\\n  align-self: center !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.as-center {\\n  align-self: center !important;\\n}"
 `;
 
 exports[`compiler: !b-1.5rem 1`] = `
-".\\\\!b-1\\\\.5rem {\\n  border-width: 1.5rem !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!b-1\\\\.5rem {\\n  border-width: 1.5rem !important;\\n}"
 `;
 
 exports[`compiler: !b-3/2 1`] = `
-".\\\\!b-3\\\\/2 {\\n  border-width: 1.5px !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!b-3\\\\/2 {\\n  border-width: 1.5px !important;\\n}"
 `;
 
 exports[`compiler: !b-blue-133/12 1`] = `
-".\\\\!b-blue-133\\\\/12 {\\n  border-color: oklch(from color-mix(in oklch, var(--su-blue), #fff 73.4%) l c h / 0.12) !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!b-blue-133\\\\/12 {\\n  border-color: oklch(from color-mix(in oklch, var(--su-blue), #fff 73.4%) l c h / 0.12) !important;\\n}"
 `;
 
 exports[`compiler: !bg-page 1`] = `
-".\\\\!bg-page {\\n  background-color: var(--su-page) !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!bg-page {\\n  background-color: var(--su-page) !important;\\n}"
 `;
 
 exports[`compiler: !blur-3/2rem 1`] = `
-".\\\\!blur-3\\\\/2rem {\\n  --su-blur: blur(1.5rem) !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!blur-3\\\\/2rem {\\n  --su-blur: blur(1.5rem) !important;\\n}"
 `;
 
 exports[`compiler: !brightness-0.6 1`] = `
-".\\\\!brightness-0\\\\.6 {\\n  --su-brightness: brightness(0.6) !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!brightness-0\\\\.6 {\\n  --su-brightness: brightness(0.6) !important;\\n}"
 `;
 
 exports[`compiler: !contrast-60 1`] = `
-".\\\\!contrast-60 {\\n  --su-contrast: contrast(0.6) !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!contrast-60 {\\n  --su-contrast: contrast(0.6) !important;\\n}"
 `;
 
 exports[`compiler: !cur-grab 1`] = `
-".\\\\!cur-grab {\\n  cursor: grab !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!cur-grab {\\n  cursor: grab !important;\\n}"
 `;
 
 exports[`compiler: !d-flex 1`] = `
-".\\\\!d-flex {\\n  display: flex !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!d-flex {\\n  display: flex !important;\\n}"
 `;
 
 exports[`compiler: !d-none 1`] = `
-".\\\\!d-none {\\n  display: none !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!d-none {\\n  display: none !important;\\n}"
 `;
 
 exports[`compiler: !ff-handwritten 1`] = `
-".\\\\!ff-handwritten {\\n  font-family: var(--su-ff-handwritten) !important;\\n  font-size-adjust: var(--su-fs-adjust-handwritten) !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!ff-handwritten {\\n  font-family: var(--su-ff-handwritten) !important;\\n  font-size-adjust: var(--su-fs-adjust-handwritten) !important;\\n}"
 `;
 
 exports[`compiler: !flex-row 1`] = `
-".\\\\!flex-row {\\n  display: flex !important;\\n  flex-direction: row !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!flex-row {\\n  display: flex !important;\\n  flex-direction: row !important;\\n}"
 `;
 
 exports[`compiler: !fs-xl 1`] = `
-".\\\\!fs-xl {\\n  font-size: 1.25rem !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!fs-xl {\\n  font-size: 1.25rem !important;\\n}"
 `;
 
 exports[`compiler: !fw-350 1`] = `
-".\\\\!fw-350 {\\n  font-weight: 350 !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!fw-350 {\\n  font-weight: 350 !important;\\n}"
 `;
 
 exports[`compiler: !gap-2 1`] = `
-".\\\\!gap-2 {\\n  gap: 0.5rem !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!gap-2 {\\n  gap: 0.5rem !important;\\n}"
 `;
 
 exports[`compiler: !gap-y-5% 1`] = `
-".\\\\!gap-y-5\\\\% {\\n  row-gap: 5% !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!gap-y-5\\\\% {\\n  row-gap: 5% !important;\\n}"
 `;
 
 exports[`compiler: !grid-cols-2 1`] = `
-".\\\\!grid-cols-2 {\\n  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!grid-cols-2 {\\n  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;\\n}"
 `;
 
 exports[`compiler: !grid-cols-none 1`] = `
-".\\\\!grid-cols-none {\\n  grid-template-columns: none !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!grid-cols-none {\\n  grid-template-columns: none !important;\\n}"
 `;
 
 exports[`compiler: !grow-1 1`] = `
-".\\\\!grow-1 {\\n  flex-grow: 1 !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!grow-1 {\\n  flex-grow: 1 !important;\\n}"
 `;
 
 exports[`compiler: !h4 1`] = `
-".\\\\!h4 {\\n  line-height: var(--su-lh-title) !important;\\n  color: var(--su-title) !important;\\n  font-size: var(--su-fs-h4) !important;\\n  letter-spacing: var(--su-ls-h4) !important;\\n  font-weight: var(--su-fw-h4) !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!h4 {\\n  line-height: var(--su-lh-title) !important;\\n  color: var(--su-title) !important;\\n  font-size: var(--su-fs-h4) !important;\\n  letter-spacing: var(--su-ls-h4) !important;\\n  font-weight: var(--su-fw-h4) !important;\\n}"
 `;
 
 exports[`compiler: !hue-rotate-90deg 1`] = `
-".\\\\!hue-rotate-90deg {\\n  --su-hue-rotate: hue-rotate(90deg) !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!hue-rotate-90deg {\\n  --su-hue-rotate: hue-rotate(90deg) !important;\\n}"
 `;
 
 exports[`compiler: !inset-y-20vw 1`] = `
-".\\\\!inset-y-20vw {\\n  inset-block: 20vw !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!inset-y-20vw {\\n  inset-block: 20vw !important;\\n}"
 `;
 
 exports[`compiler: !invert-1/2 1`] = `
-".\\\\!invert-1\\\\/2 {\\n  --su-invert: invert(0.5) !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!invert-1\\\\/2 {\\n  --su-invert: invert(0.5) !important;\\n}"
 `;
 
 exports[`compiler: !jc-flex-start 1`] = `
-".jc-flex-start {\\n  justify-content: flex-start !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.jc-flex-start {\\n  justify-content: flex-start !important;\\n}"
 `;
 
 exports[`compiler: !lh-xs 1`] = `
-".\\\\!lh-xs {\\n  line-height: 1.25 !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!lh-xs {\\n  line-height: 1.25 !important;\\n}"
 `;
 
 exports[`compiler: !ls-5.2px 1`] = `
-".\\\\!ls-5\\\\.2px {\\n  letter-spacing: 5.2px !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!ls-5\\\\.2px {\\n  letter-spacing: 5.2px !important;\\n}"
 `;
 
 exports[`compiler: !m-0 1`] = `
-".\\\\!m-0 {\\n  margin: 0 !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!m-0 {\\n  margin: 0 !important;\\n}"
 `;
 
 exports[`compiler: !m-2 1`] = `
-".\\\\!m-2 {\\n  margin: 0.5rem !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!m-2 {\\n  margin: 0.5rem !important;\\n}"
 `;
 
 exports[`compiler: !masonry 1`] = `
-".\\\\!masonry {\\n  position: relative !important;\\n}\\n\\n.\\\\!masonry > * {\\n  position: absolute !important;\\n}"
+"@layer components {\\n .\\\\!masonry {\\n  position: relative !important;\\n}\\n\\n.\\\\!masonry > * {\\n  position: absolute !important;\\n}\\n\\n\\n}"
 `;
 
 exports[`compiler: !max-w-sm 1`] = `
-".\\\\!max-w-sm {\\n  max-width: 32rem !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!max-w-sm {\\n  max-width: 32rem !important;\\n}"
 `;
 
 exports[`compiler: !min-w-12vw 1`] = `
-".\\\\!min-w-12vw {\\n  min-width: 12vw !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!min-w-12vw {\\n  min-width: 12vw !important;\\n}"
 `;
 
 exports[`compiler: !mv-x-50% 1`] = `
-".\\\\!mv-x-50\\\\% {\\n  --su-tr-x: 50% !important;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1))) !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!mv-x-50\\\\% {\\n  --su-tr-x: 50% !important;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1))) !important;\\n}"
 `;
 
 exports[`compiler: !opacity-1/2 1`] = `
-".\\\\!opacity-1\\\\/2 {\\n  opacity: 0.5 !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!opacity-1\\\\/2 {\\n  opacity: 0.5 !important;\\n}"
 `;
 
 exports[`compiler: !ov-x-clip 1`] = `
-".\\\\!ov-x-clip {\\n  overflow-x: clip !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!ov-x-clip {\\n  overflow-x: clip !important;\\n}"
 `;
 
 exports[`compiler: !p-0 1`] = `
-".\\\\!p-0 {\\n  padding: 0 !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!p-0 {\\n  padding: 0 !important;\\n}"
 `;
 
 exports[`compiler: !p-2 1`] = `
-".\\\\!p-2 {\\n  padding: 0.5rem !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!p-2 {\\n  padding: 0.5rem !important;\\n}"
 `;
 
 exports[`compiler: !pos-rel 1`] = `
-".\\\\!pos-rel {\\n  position: relative !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!pos-rel {\\n  position: relative !important;\\n}"
 `;
 
 exports[`compiler: !py-2.5 1`] = `
-".\\\\!py-2\\\\.5 {\\n  padding-block: 0.625rem !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!py-2\\\\.5 {\\n  padding-block: 0.625rem !important;\\n}"
 `;
 
 exports[`compiler: !r-2.5 1`] = `
-".r-2\\\\.5 {\\n  border-radius: 0.625rem !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.r-2\\\\.5 {\\n  border-radius: 0.625rem !important;\\n}"
 `;
 
 exports[`compiler: !rot-1/3   1`] = `
-""
+"@layer components {\\n \\n}"
 `;
 
 exports[`compiler: !saturate-3/2 1`] = `
-".\\\\!saturate-3\\\\/2 {\\n  --su-saturate: saturate(1.5) !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!saturate-3\\\\/2 {\\n  --su-saturate: saturate(1.5) !important;\\n}"
 `;
 
 exports[`compiler: !sc-y-50.5 1`] = `
-".\\\\!sc-y-50\\\\.5 {\\n  --su-sc-y: 50.5 !important;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1))) !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!sc-y-50\\\\.5 {\\n  --su-sc-y: 50.5 !important;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1))) !important;\\n}"
 `;
 
 exports[`compiler: !sepia-3/2 1`] = `
-".\\\\!sepia-3\\\\/2 {\\n  --su-sepia: sepia(0.015) !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!sepia-3\\\\/2 {\\n  --su-sepia: sepia(0.015) !important;\\n}"
 `;
 
 exports[`compiler: !shrink-5 1`] = `
-".\\\\!shrink-5 {\\n  flex-shrink: 5 !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!shrink-5 {\\n  flex-shrink: 5 !important;\\n}"
 `;
 
 exports[`compiler: !td-s 1`] = `
-".\\\\!td-s {\\n  text-decoration-line: line-through !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!td-s {\\n  text-decoration-line: line-through !important;\\n}"
 `;
 
 exports[`compiler: !td-w-5.5 1`] = `
-".\\\\!td-w-5\\\\.5 {\\n  text-decoration-thickness: 5.5px !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!td-w-5\\\\.5 {\\n  text-decoration-thickness: 5.5px !important;\\n}"
 `;
 
 exports[`compiler: !td-y-3.6 1`] = `
-".\\\\!td-y-3\\\\.6 {\\n  text-underline-offset: 3.6px !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!td-y-3\\\\.6 {\\n  text-underline-offset: 3.6px !important;\\n}"
 `;
 
 exports[`compiler: !td-y-3.6vw 1`] = `
-".\\\\!td-y-3\\\\.6vw {\\n  text-underline-offset: 3.6vw !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!td-y-3\\\\.6vw {\\n  text-underline-offset: 3.6vw !important;\\n}"
 `;
 
 exports[`compiler: !text-container-300/10 1`] = `
-".\\\\!text-container-300\\\\/10 {\\n  color: oklch(from color-mix(in oklch, var(--su-container), #fff 40%) l c h / 0.1) !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!text-container-300\\\\/10 {\\n  color: oklch(from color-mix(in oklch, var(--su-container), #fff 40%) l c h / 0.1) !important;\\n}"
 `;
 
 exports[`compiler: !text-end 1`] = `
-".text-end {\\n  text-align: end !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.text-end {\\n  text-align: end !important;\\n}"
 `;
 
 exports[`compiler: !w-screen-h 1`] = `
-".\\\\!w-screen-h {\\n  width: 100vh !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!w-screen-h {\\n  width: 100vh !important;\\n}"
 `;
 
 exports[`compiler: !ws-pre 1`] = `
-".\\\\!ws-pre {\\n  white-space: pre !important;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\!ws-pre {\\n  white-space: pre !important;\\n}"
 `;
 
 exports[`compiler: -ls-xl 1`] = `
-".\\\\-ls-xl {\\n  letter-spacing: -0.25em;\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\-ls-xl {\\n  letter-spacing: -0.25em;\\n}"
 `;
 
 exports[`compiler: -mv-x-10% 1`] = `
-".\\\\-mv-x-10\\\\% {\\n  --su-tr-x: -10%;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\-mv-x-10\\\\% {\\n  --su-tr-x: -10%;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));\\n}"
 `;
 
 exports[`compiler: -rot-180/3deg 1`] = `
-".\\\\-rot-180\\\\/3deg {\\n  --su-rot: -60deg;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));\\n}"
+"@layer components {\\n \\n}\\n\\n.\\\\-rot-180\\\\/3deg {\\n  --su-rot: -60deg;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));\\n}"
 `;
 
 exports[`compiler: 2xl:hover:gap-3 1`] = `
-"@media (width >= 96rem) {\\n    .2xl\\\\:hover\\\\:gap-3:hover {\\n      gap: 0.75rem;\\n    }\\n}"
+"@layer components {\\n \\n}\\n\\n@media (width >= 96rem) {\\n    .2xl\\\\:hover\\\\:gap-3:hover {\\n      gap: 0.75rem;\\n    }\\n}"
 `;
 
 exports[`compiler: ac-start 1`] = `
-".ac-start {\\n  align-content: start;\\n}"
+"@layer components {\\n \\n}\\n\\n.ac-start {\\n  align-content: start;\\n}"
 `;
 
 exports[`compiler: active:fw-nowrap 1`] = `
-".active\\\\:fw-nowrap:active {\\n    flex-wrap: nowrap;\\n  }"
+"@layer components {\\n \\n}\\n\\n  .active\\\\:fw-nowrap:active {\\n    flex-wrap: nowrap;\\n  }"
 `;
 
 exports[`compiler: ai-start 1`] = `
-".ai-start {\\n  align-items: start;\\n}"
+"@layer components {\\n \\n}\\n\\n.ai-start {\\n  align-items: start;\\n}"
 `;
 
 exports[`compiler: ai-stretch 1`] = `
-".ai-stretch {\\n  align-items: stretch;\\n}"
+"@layer components {\\n \\n}\\n\\n.ai-stretch {\\n  align-items: stretch;\\n}"
 `;
 
 exports[`compiler: align-cc 1`] = `
-".align-cc {\\n  display: flex;\\n  justify-content: center;\\n  align-items: center;\\n}"
+"@layer components {\\n \\n}\\n\\n.align-cc {\\n  display: flex;\\n  justify-content: center;\\n  align-items: center;\\n}"
 `;
 
 exports[`compiler: ar-0.5 1`] = `
-".ar-0\\\\.5 {\\n  aspect-ratio: 0.5;\\n}"
+"@layer components {\\n \\n}\\n\\n.ar-0\\\\.5 {\\n  aspect-ratio: 0.5;\\n}"
 `;
 
 exports[`compiler: ar-1 1`] = `
-".ar-1 {\\n  aspect-ratio: 1;\\n}"
+"@layer components {\\n \\n}\\n\\n.ar-1 {\\n  aspect-ratio: 1;\\n}"
 `;
 
 exports[`compiler: ar-1/2 1`] = `
-".ar-1\\\\/2 {\\n  aspect-ratio: 1/2;\\n}"
+"@layer components {\\n \\n}\\n\\n.ar-1\\\\/2 {\\n  aspect-ratio: 1/2;\\n}"
 `;
 
 exports[`compiler: ar-auto 1`] = `
-".ar-auto {\\n  aspect-ratio: auto;\\n}"
+"@layer components {\\n \\n}\\n\\n.ar-auto {\\n  aspect-ratio: auto;\\n}"
 `;
 
 exports[`compiler: ar-cinema 1`] = `
-".ar-cinema {\\n  aspect-ratio: 21 / 9;\\n}"
+"@layer components {\\n \\n}\\n\\n.ar-cinema {\\n  aspect-ratio: 21 / 9;\\n}"
 `;
 
 exports[`compiler: as-auto 1`] = `
-".as-auto {\\n  align-self: auto;\\n}"
+"@layer components {\\n \\n}\\n\\n.as-auto {\\n  align-self: auto;\\n}"
 `;
 
 exports[`compiler: as-flex-start 1`] = `
-".as-flex-start {\\n  align-self: flex-start;\\n}"
+"@layer components {\\n \\n}\\n\\n.as-flex-start {\\n  align-self: flex-start;\\n}"
 `;
 
 exports[`compiler: b-0.5 1`] = `
-".b-0\\\\.5 {\\n  border-width: 0.5px;\\n}"
+"@layer components {\\n \\n}\\n\\n.b-0\\\\.5 {\\n  border-width: 0.5px;\\n}"
 `;
 
 exports[`compiler: b-1 1`] = `
-".b-1 {\\n  border-width: 1px;\\n}"
+"@layer components {\\n \\n}\\n\\n.b-1 {\\n  border-width: 1px;\\n}"
 `;
 
 exports[`compiler: b-1/3cqw 1`] = `
-".b-1\\\\/3cqw {\\n  border-width: 0.333cqw;\\n}"
+"@layer components {\\n \\n}\\n\\n.b-1\\\\/3cqw {\\n  border-width: 0.333cqw;\\n}"
 `;
 
 exports[`compiler: b-1px 1`] = `
-".b-1px {\\n  border-width: 1px;\\n}"
+"@layer components {\\n \\n}\\n\\n.b-1px {\\n  border-width: 1px;\\n}"
 `;
 
 exports[`compiler: b-orange-800 1`] = `
-".b-orange-800 {\\n  border-color: color-mix(in oklch, var(--su-orange), #000 60%);\\n}"
+"@layer components {\\n \\n}\\n\\n.b-orange-800 {\\n  border-color: color-mix(in oklch, var(--su-orange), #000 60%);\\n}"
 `;
 
 exports[`compiler: b-pink-200/30 1`] = `
-".b-pink-200\\\\/30 {\\n  border-color: oklch(from color-mix(in oklch, var(--su-pink), #fff 60%) l c h / 0.3);\\n}"
+"@layer components {\\n \\n}\\n\\n.b-pink-200\\\\/30 {\\n  border-color: oklch(from color-mix(in oklch, var(--su-pink), #fff 60%) l c h / 0.3);\\n}"
 `;
 
 exports[`compiler: b-purple-200/60 1`] = `
-".b-purple-200\\\\/60 {\\n  border-color: oklch(from color-mix(in oklch, var(--su-purple), #fff 60%) l c h / 0.6);\\n}"
+"@layer components {\\n \\n}\\n\\n.b-purple-200\\\\/60 {\\n  border-color: oklch(from color-mix(in oklch, var(--su-purple), #fff 60%) l c h / 0.6);\\n}"
 `;
 
 exports[`compiler: b-red/50 1`] = `
-".b-red\\\\/50 {\\n  border-color: oklch(from var(--su-red) l c h / 0.5);\\n}"
+"@layer components {\\n \\n}\\n\\n.b-red\\\\/50 {\\n  border-color: oklch(from var(--su-red) l c h / 0.5);\\n}"
 `;
 
 exports[`compiler: b-yellow 1`] = `
-".b-yellow {\\n  border-color: var(--su-yellow);\\n}"
+"@layer components {\\n \\n}\\n\\n.b-yellow {\\n  border-color: var(--su-yellow);\\n}"
 `;
 
 exports[`compiler: bg-black-800/80 1`] = `
-".bg-black-800\\\\/80 {\\n  background-color: oklch(from color-mix(in oklch, var(--su-black), #000 60%) l c h / 0.8);\\n}"
+"@layer components {\\n \\n}\\n\\n.bg-black-800\\\\/80 {\\n  background-color: oklch(from color-mix(in oklch, var(--su-black), #000 60%) l c h / 0.8);\\n}"
 `;
 
 exports[`compiler: bg-gray/50 1`] = `
-".bg-gray\\\\/50 {\\n  background-color: oklch(from var(--su-gray) l c h / 0.5);\\n}"
+"@layer components {\\n \\n}\\n\\n.bg-gray\\\\/50 {\\n  background-color: oklch(from var(--su-gray) l c h / 0.5);\\n}"
 `;
 
 exports[`compiler: bg-green 1`] = `
-".bg-green {\\n  background-color: var(--su-green);\\n}"
+"@layer components {\\n \\n}\\n\\n.bg-green {\\n  background-color: var(--su-green);\\n}"
 `;
 
 exports[`compiler: bg-white-200 1`] = `
-".bg-white-200 {\\n  background-color: color-mix(in oklch, var(--su-white), #fff 60%);\\n}"
+"@layer components {\\n \\n}\\n\\n.bg-white-200 {\\n  background-color: color-mix(in oklch, var(--su-white), #fff 60%);\\n}"
 `;
 
 exports[`compiler: blur-12.5px 1`] = `
-".blur-12\\\\.5px {\\n  --su-blur: blur(12.5px);\\n}"
+"@layer components {\\n \\n}\\n\\n.blur-12\\\\.5px {\\n  --su-blur: blur(12.5px);\\n}"
 `;
 
 exports[`compiler: blur-2rem 1`] = `
-".blur-2rem {\\n  --su-blur: blur(2rem);\\n}"
+"@layer components {\\n \\n}\\n\\n.blur-2rem {\\n  --su-blur: blur(2rem);\\n}"
 `;
 
 exports[`compiler: blur-50 1`] = `
-".blur-50 {\\n  --su-blur: blur(50px);\\n}"
+"@layer components {\\n \\n}\\n\\n.blur-50 {\\n  --su-blur: blur(50px);\\n}"
 `;
 
 exports[`compiler: brightness-2/3 1`] = `
-".brightness-2\\\\/3 {\\n  --su-brightness: brightness(0.667);\\n}"
+"@layer components {\\n \\n}\\n\\n.brightness-2\\\\/3 {\\n  --su-brightness: brightness(0.667);\\n}"
 `;
 
 exports[`compiler: brightness-50 1`] = `
-".brightness-50 {\\n  --su-brightness: brightness(0.5);\\n}"
+"@layer components {\\n \\n}\\n\\n.brightness-50 {\\n  --su-brightness: brightness(0.5);\\n}"
 `;
 
 exports[`compiler: card 1`] = `
-".card {\\n  border-radius: var(--su-card-border-radius);\\n  border-width: 1px;\\n  border-color: var(--su-card-border-color);\\n  border-style: solid;\\n  box-shadow: var(--su-card-shadow);\\n  background-color: var(--su-card-body-bg-color);\\n  overflow: hidden;\\n}\\n\\n.card:has(> .footer) {\\n  padding: 0;\\n}\\n\\n.card:has(> .header) {\\n  padding: 0;\\n}\\n\\n.card > :is(.header, .body, .footer):first-child {\\n  border-top-left-radius: var(--su-card-border-radius);\\n  border-top-right-radius: var(--su-card-border-radius);\\n}\\n\\n.card > :is(.header, .body, .footer):last-child {\\n  border-bottom-left-radius: var(--su-card-border-radius);\\n  border-bottom-right-radius: var(--su-card-border-radius);\\n}\\n\\n.card > .header {\\n  padding: var(--su-card-header-padding);\\n  background-color: var(--su-card-header-bg-color);\\n}\\n\\n.card > .header:not(:last-child):not(img) {\\n  border-bottom: 1px var(--su-card-header-border-bottom-color) var(--su-card-header-border-bottom-style);\\n}\\n\\n.card > img.header {\\n  padding: 0;\\n  display: block;\\n  max-width: 100%;\\n  border-bottom: 0;\\n}\\n\\n.card > .header > :is(h1, h2, h3, h4, h5, h6) {\\n  margin: 0;\\n}\\n\\n.card > .body {\\n  padding: var(--su-card-body-padding);\\n  background-color: var(--su-card-body-bg-color);\\n}\\n\\n.card > .body:not(:last-child) {\\n  border-bottom: 1px var(--su-card-body-border-bottom-color) var(--su-card-body-border-bottom-style);\\n}\\n\\n.card > .footer {\\n  padding: var(--su-card-footer-padding);\\n  background-color: var(--su-card-footer-bg-color);\\n}"
+"@layer components {\\n .card {\\n  border-radius: var(--su-card-border-radius);\\n  border-width: 1px;\\n  border-color: var(--su-card-border-color);\\n  border-style: solid;\\n  box-shadow: var(--su-card-shadow);\\n  background-color: var(--su-card-body-bg-color);\\n  overflow: hidden;\\n}\\n\\n.card:has(> .footer) {\\n  padding: 0;\\n}\\n\\n.card:has(> .header) {\\n  padding: 0;\\n}\\n\\n.card > :is(.header, .body, .footer):first-child {\\n  border-top-left-radius: var(--su-card-border-radius);\\n  border-top-right-radius: var(--su-card-border-radius);\\n}\\n\\n.card > :is(.header, .body, .footer):last-child {\\n  border-bottom-left-radius: var(--su-card-border-radius);\\n  border-bottom-right-radius: var(--su-card-border-radius);\\n}\\n\\n.card > .header {\\n  padding: var(--su-card-header-padding);\\n  background-color: var(--su-card-header-bg-color);\\n}\\n\\n.card > .header:not(:last-child):not(img) {\\n  border-bottom: 1px var(--su-card-header-border-bottom-color) var(--su-card-header-border-bottom-style);\\n}\\n\\n.card > img.header {\\n  padding: 0;\\n  display: block;\\n  max-width: 100%;\\n  border-bottom: 0;\\n}\\n\\n.card > .header > :is(h1, h2, h3, h4, h5, h6) {\\n  margin: 0;\\n}\\n\\n.card > .body {\\n  padding: var(--su-card-body-padding);\\n  background-color: var(--su-card-body-bg-color);\\n}\\n\\n.card > .body:not(:last-child) {\\n  border-bottom: 1px var(--su-card-body-border-bottom-color) var(--su-card-body-border-bottom-style);\\n}\\n\\n.card > .footer {\\n  padding: var(--su-card-footer-padding);\\n  background-color: var(--su-card-footer-bg-color);\\n}\\n\\n\\n}"
 `;
 
 exports[`compiler: contrast-0.33333333 1`] = `
-".contrast-0\\\\.33333333 {\\n  --su-contrast: contrast(0.333);\\n}"
+"@layer components {\\n \\n}\\n\\n.contrast-0\\\\.33333333 {\\n  --su-contrast: contrast(0.333);\\n}"
 `;
 
 exports[`compiler: contrast-0.7 1`] = `
-".contrast-0\\\\.7 {\\n  --su-contrast: contrast(0.7);\\n}"
+"@layer components {\\n \\n}\\n\\n.contrast-0\\\\.7 {\\n  --su-contrast: contrast(0.7);\\n}"
 `;
 
 exports[`compiler: contrast-2/3 1`] = `
-".contrast-2\\\\/3 {\\n  --su-contrast: contrast(0.667);\\n}"
+"@layer components {\\n \\n}\\n\\n.contrast-2\\\\/3 {\\n  --su-contrast: contrast(0.667);\\n}"
 `;
 
 exports[`compiler: contrast-50 1`] = `
-".contrast-50 {\\n  --su-contrast: contrast(0.5);\\n}"
+"@layer components {\\n \\n}\\n\\n.contrast-50 {\\n  --su-contrast: contrast(0.5);\\n}"
 `;
 
 exports[`compiler: cur-wait 1`] = `
-".cur-wait {\\n  cursor: wait;\\n}"
+"@layer components {\\n \\n}\\n\\n.cur-wait {\\n  cursor: wait;\\n}"
 `;
 
 exports[`compiler: d-grid 1`] = `
-".d-grid {\\n  display: grid;\\n}"
+"@layer components {\\n \\n}\\n\\n.d-grid {\\n  display: grid;\\n}"
 `;
 
 exports[`compiler: d-hidden 1`] = `
-".d-hidden {\\n  display: none;\\n}"
+"@layer components {\\n \\n}\\n\\n.d-hidden {\\n  display: none;\\n}"
 `;
 
 exports[`compiler: dark:landscape:b-cyan-1000/1 1`] = `
-":where([data-color-scheme=\\"dark\\"] *) {\\n  @media (orientation: landscape) {\\n    &.dark\\\\:landscape\\\\:b-cyan-1000\\\\/1 {\\n      border-color: oklch(from color-mix(in oklch, var(--su-cyan), #000 100%) l c h / 0.01);\\n    }\\n  }\\n}"
+"@layer components {\\n \\n}\\n\\n:where([data-color-scheme=\\"dark\\"] *) {\\n  @media (orientation: landscape) {\\n    &.dark\\\\:landscape\\\\:b-cyan-1000\\\\/1 {\\n      border-color: oklch(from color-mix(in oklch, var(--su-cyan), #000 100%) l c h / 0.01);\\n    }\\n  }\\n}"
 `;
 
 exports[`compiler: dark:md:hover:!m-8 1`] = `
-":where([data-color-scheme=\\"dark\\"] *) {\\n  @media (width >= 48rem) {\\n      &.dark\\\\:md\\\\:hover\\\\:\\\\!m-8:hover {\\n        margin: 2rem !important;\\n      }\\n  }\\n}"
+"@layer components {\\n \\n}\\n\\n:where([data-color-scheme=\\"dark\\"] *) {\\n  @media (width >= 48rem) {\\n      &.dark\\\\:md\\\\:hover\\\\:\\\\!m-8:hover {\\n        margin: 2rem !important;\\n      }\\n  }\\n}"
 `;
 
 exports[`compiler: dark:md:hover:!m-auto 1`] = `
-":where([data-color-scheme=\\"dark\\"] *) {\\n  @media (width >= 48rem) {\\n      &.dark\\\\:md\\\\:hover\\\\:\\\\!m-auto:hover {\\n        margin: auto !important;\\n      }\\n  }\\n}"
+"@layer components {\\n \\n}\\n\\n:where([data-color-scheme=\\"dark\\"] *) {\\n  @media (width >= 48rem) {\\n      &.dark\\\\:md\\\\:hover\\\\:\\\\!m-auto:hover {\\n        margin: auto !important;\\n      }\\n  }\\n}"
 `;
 
 exports[`compiler: dark:md:hover:!p-2 1`] = `
-":where([data-color-scheme=\\"dark\\"] *) {\\n  @media (width >= 48rem) {\\n      &.dark\\\\:md\\\\:hover\\\\:\\\\!p-2:hover {\\n        padding: 0.5rem !important;\\n      }\\n  }\\n}"
+"@layer components {\\n \\n}\\n\\n:where([data-color-scheme=\\"dark\\"] *) {\\n  @media (width >= 48rem) {\\n      &.dark\\\\:md\\\\:hover\\\\:\\\\!p-2:hover {\\n        padding: 0.5rem !important;\\n      }\\n  }\\n}"
 `;
 
 exports[`compiler: dark:md:hover:!px-0 1`] = `
-":where([data-color-scheme=\\"dark\\"] *) {\\n  @media (width >= 48rem) {\\n      &.dark\\\\:md\\\\:hover\\\\:\\\\!px-0:hover {\\n        padding-inline: 0 !important;\\n      }\\n  }\\n}"
+"@layer components {\\n \\n}\\n\\n:where([data-color-scheme=\\"dark\\"] *) {\\n  @media (width >= 48rem) {\\n      &.dark\\\\:md\\\\:hover\\\\:\\\\!px-0:hover {\\n        padding-inline: 0 !important;\\n      }\\n  }\\n}"
 `;
 
 exports[`compiler: dark:md:hover:m-2.5em 1`] = `
-":where([data-color-scheme=\\"dark\\"] *) {\\n  @media (width >= 48rem) {\\n      &.dark\\\\:md\\\\:hover\\\\:m-2\\\\.5em:hover {\\n        margin: 2.5em;\\n      }\\n  }\\n}"
+"@layer components {\\n \\n}\\n\\n:where([data-color-scheme=\\"dark\\"] *) {\\n  @media (width >= 48rem) {\\n      &.dark\\\\:md\\\\:hover\\\\:m-2\\\\.5em:hover {\\n        margin: 2.5em;\\n      }\\n  }\\n}"
 `;
 
 exports[`compiler: dark:md:hover:p-4vw 1`] = `
-":where([data-color-scheme=\\"dark\\"] *) {\\n  @media (width >= 48rem) {\\n      &.dark\\\\:md\\\\:hover\\\\:p-4vw:hover {\\n        padding: 4vw;\\n      }\\n  }\\n}"
+"@layer components {\\n \\n}\\n\\n:where([data-color-scheme=\\"dark\\"] *) {\\n  @media (width >= 48rem) {\\n      &.dark\\\\:md\\\\:hover\\\\:p-4vw:hover {\\n        padding: 4vw;\\n      }\\n  }\\n}"
 `;
 
 exports[`compiler: dark:portrait:hover:!h6 1`] = `
-":where([data-color-scheme=\\"dark\\"] *) {\\n  @media (orientation: portrait) {\\n      &.dark\\\\:portrait\\\\:hover\\\\:\\\\!h6:hover {\\n        line-height: var(--su-lh-title) !important;\\n        color: var(--su-title) !important;\\n        font-size: var(--su-fs-h6) !important;\\n        letter-spacing: var(--su-ls-h6) !important;\\n        font-weight: var(--su-fw-h6) !important;\\n      }\\n  }\\n}"
+"@layer components {\\n \\n}\\n\\n:where([data-color-scheme=\\"dark\\"] *) {\\n  @media (orientation: portrait) {\\n      &.dark\\\\:portrait\\\\:hover\\\\:\\\\!h6:hover {\\n        line-height: var(--su-lh-title) !important;\\n        color: var(--su-title) !important;\\n        font-size: var(--su-fs-h6) !important;\\n        letter-spacing: var(--su-ls-h6) !important;\\n        font-weight: var(--su-fw-h6) !important;\\n      }\\n  }\\n}"
 `;
 
 exports[`compiler: dark:sm:d-block 1`] = `
-":where([data-color-scheme=\\"dark\\"] *) {\\n  @media (width >= 40rem) {\\n    &.dark\\\\:sm\\\\:d-block {\\n      display: block;\\n    }\\n  }\\n}"
+"@layer components {\\n \\n}\\n\\n:where([data-color-scheme=\\"dark\\"] *) {\\n  @media (width >= 40rem) {\\n    &.dark\\\\:sm\\\\:d-block {\\n      display: block;\\n    }\\n  }\\n}"
 `;
 
 exports[`compiler: disabled:as-stretch 1`] = `
-".disabled\\\\:as-stretch:is(:disabled, [aria-disabled=\\"true\\"]) {\\n    align-self: stretch;\\n  }"
+"@layer components {\\n \\n}\\n\\n  .disabled\\\\:as-stretch:is(:disabled, [aria-disabled=\\"true\\"]) {\\n    align-self: stretch;\\n  }"
 `;
 
 exports[`compiler: even:!z-100 1`] = `
-".even\\\\:\\\\!z-100:nth-child(even) {\\n    z-index: 100 !important;\\n  }"
+"@layer components {\\n \\n}\\n\\n  .even\\\\:\\\\!z-100:nth-child(even) {\\n    z-index: 100 !important;\\n  }"
 `;
 
 exports[`compiler: even:b-7 1`] = `
-".even\\\\:b-7:nth-child(even) {\\n    border-width: 7px;\\n  }"
+"@layer components {\\n \\n}\\n\\n  .even\\\\:b-7:nth-child(even) {\\n    border-width: 7px;\\n  }"
 `;
 
 exports[`compiler: even:b-7vw 1`] = `
-".even\\\\:b-7vw:nth-child(even) {\\n    border-width: 7vw;\\n  }"
+"@layer components {\\n \\n}\\n\\n  .even\\\\:b-7vw:nth-child(even) {\\n    border-width: 7vw;\\n  }"
 `;
 
 exports[`compiler: fd-row 1`] = `
-".fd-row {\\n  flex-direction: row;\\n}"
+"@layer components {\\n \\n}\\n\\n.fd-row {\\n  flex-direction: row;\\n}"
 `;
 
 exports[`compiler: ff-mono 1`] = `
-".ff-mono {\\n  font-family: var(--su-ff-mono);\\n  font-size-adjust: var(--su-fs-adjust-mono);\\n}"
+"@layer components {\\n \\n}\\n\\n.ff-mono {\\n  font-family: var(--su-ff-mono);\\n  font-size-adjust: var(--su-fs-adjust-mono);\\n}"
 `;
 
 exports[`compiler: first:rb-2 1`] = `
-".first\\\\:rb-2:first-child {\\n    border-bottom-left-radius: 0.5rem;\\n    border-bottom-right-radius: 0.5rem;\\n  }"
+"@layer components {\\n \\n}\\n\\n  .first\\\\:rb-2:first-child {\\n    border-bottom-left-radius: 0.5rem;\\n    border-bottom-right-radius: 0.5rem;\\n  }"
 `;
 
 exports[`compiler: flex-y 1`] = `
-".flex-y {\\n  display: flex;\\n  flex-direction: column;\\n}"
+"@layer components {\\n \\n}\\n\\n.flex-y {\\n  display: flex;\\n  flex-direction: column;\\n}"
 `;
 
 exports[`compiler: flex-y 2`] = `
-".flex-y {\\n  display: flex;\\n  flex-direction: column;\\n}"
+"@layer components {\\n \\n}\\n\\n.flex-y {\\n  display: flex;\\n  flex-direction: column;\\n}"
 `;
 
 exports[`compiler: focus-visible:jc-center 1`] = `
-".focus-visible\\\\:jc-center:focus-visible {\\n    justify-content: center;\\n  }"
+"@layer components {\\n \\n}\\n\\n  .focus-visible\\\\:jc-center:focus-visible {\\n    justify-content: center;\\n  }"
 `;
 
 exports[`compiler: fs-sm 1`] = `
-".fs-sm {\\n  font-size: 0.875rem;\\n}"
+"@layer components {\\n \\n}\\n\\n.fs-sm {\\n  font-size: 0.875rem;\\n}"
 `;
 
 exports[`compiler: fw-thin 1`] = `
-".fw-thin {\\n  font-weight: 100;\\n}"
+"@layer components {\\n \\n}\\n\\n.fw-thin {\\n  font-weight: 100;\\n}"
 `;
 
 exports[`compiler: fw-wrap 1`] = `
-".fw-wrap {\\n  flex-wrap: wrap;\\n}"
+"@layer components {\\n \\n}\\n\\n.fw-wrap {\\n  flex-wrap: wrap;\\n}"
 `;
 
 exports[`compiler: gap-0 1`] = `
-".gap-0 {\\n  gap: 0;\\n}"
+"@layer components {\\n \\n}\\n\\n.gap-0 {\\n  gap: 0;\\n}"
 `;
 
 exports[`compiler: gap-0px 1`] = `
-".gap-0px {\\n  gap: 0;\\n}"
+"@layer components {\\n \\n}\\n\\n.gap-0px {\\n  gap: 0;\\n}"
 `;
 
 exports[`compiler: gap-4 1`] = `
-".gap-4 {\\n  gap: 1rem;\\n}"
+"@layer components {\\n \\n}\\n\\n.gap-4 {\\n  gap: 1rem;\\n}"
 `;
 
 exports[`compiler: gap-53mm 1`] = `
-".gap-53mm {\\n  gap: 53mm;\\n}"
+"@layer components {\\n \\n}\\n\\n.gap-53mm {\\n  gap: 53mm;\\n}"
 `;
 
 exports[`compiler: gap-x-12vw 1`] = `
-".gap-x-12vw {\\n  column-gap: 12vw;\\n}"
+"@layer components {\\n \\n}\\n\\n.gap-x-12vw {\\n  column-gap: 12vw;\\n}"
 `;
 
 exports[`compiler: gap-x-2.5 1`] = `
-".gap-x-2\\\\.5 {\\n  column-gap: 0.625rem;\\n}"
+"@layer components {\\n \\n}\\n\\n.gap-x-2\\\\.5 {\\n  column-gap: 0.625rem;\\n}"
 `;
 
 exports[`compiler: grayscale-0.6 1`] = `
-".grayscale-0\\\\.6 {\\n  --su-grayscale: grayscale(0.6);\\n}"
+"@layer components {\\n \\n}\\n\\n.grayscale-0\\\\.6 {\\n  --su-grayscale: grayscale(0.6);\\n}"
 `;
 
 exports[`compiler: grayscale-5/2 1`] = `
-".grayscale-5\\\\/2 {\\n  --su-grayscale: grayscale(0.025);\\n}"
+"@layer components {\\n \\n}\\n\\n.grayscale-5\\\\/2 {\\n  --su-grayscale: grayscale(0.025);\\n}"
 `;
 
 exports[`compiler: grayscale-50 1`] = `
-".grayscale-50 {\\n  --su-grayscale: grayscale(0.5);\\n}"
+"@layer components {\\n \\n}\\n\\n.grayscale-50 {\\n  --su-grayscale: grayscale(0.5);\\n}"
 `;
 
 exports[`compiler: grid-cols-12 1`] = `
-".grid-cols-12 {\\n  grid-template-columns: repeat(12, minmax(0, 1fr));\\n}"
+"@layer components {\\n \\n}\\n\\n.grid-cols-12 {\\n  grid-template-columns: repeat(12, minmax(0, 1fr));\\n}"
 `;
 
 exports[`compiler: grid-cols-subgrid 1`] = `
-".grid-cols-subgrid {\\n  grid-template-columns: subgrid;\\n}"
+"@layer components {\\n \\n}\\n\\n.grid-cols-subgrid {\\n  grid-template-columns: subgrid;\\n}"
 `;
 
 exports[`compiler: group-hover:!ac-evenly 1`] = `
-".group:hover .group-hover\\\\:\\\\!ac-evenly {\\n    align-content: space-evenly !important;\\n  }"
+"@layer components {\\n \\n}\\n\\n  .group:hover .group-hover\\\\:\\\\!ac-evenly {\\n    align-content: space-evenly !important;\\n  }"
 `;
 
 exports[`compiler: group-selected:!max-h-26cm 1`] = `
-".group.selected .group-selected\\\\:\\\\!max-h-26cm {\\n    max-height: 26cm !important;\\n  }"
+"@layer components {\\n \\n}\\n\\n  .group.selected .group-selected\\\\:\\\\!max-h-26cm {\\n    max-height: 26cm !important;\\n  }"
 `;
 
 exports[`compiler: grow-0 1`] = `
-".grow-0 {\\n  flex-grow: 0;\\n}"
+"@layer components {\\n \\n}\\n\\n.grow-0 {\\n  flex-grow: 0;\\n}"
 `;
 
 exports[`compiler: grow-initial 1`] = `
-".grow-initial {\\n  flex-grow: initial;\\n}"
+"@layer components {\\n \\n}\\n\\n.grow-initial {\\n  flex-grow: initial;\\n}"
 `;
 
 exports[`compiler: h1 1`] = `
-".h1 {\\n  line-height: var(--su-lh-title);\\n  color: var(--su-title);\\n  font-size: var(--su-fs-h1);\\n  letter-spacing: var(--su-ls-h1);\\n  font-weight: var(--su-fw-h1);\\n}"
+"@layer components {\\n \\n}\\n\\n.h1 {\\n  line-height: var(--su-lh-title);\\n  color: var(--su-title);\\n  font-size: var(--su-fs-h1);\\n  letter-spacing: var(--su-ls-h1);\\n  font-weight: var(--su-fw-h1);\\n}"
 `;
 
 exports[`compiler: h2 1`] = `
-".h2 {\\n  line-height: var(--su-lh-title);\\n  color: var(--su-title);\\n  font-size: var(--su-fs-h2);\\n  letter-spacing: var(--su-ls-h2);\\n  font-weight: var(--su-fw-h2);\\n}"
+"@layer components {\\n \\n}\\n\\n.h2 {\\n  line-height: var(--su-lh-title);\\n  color: var(--su-title);\\n  font-size: var(--su-fs-h2);\\n  letter-spacing: var(--su-ls-h2);\\n  font-weight: var(--su-fw-h2);\\n}"
 `;
 
 exports[`compiler: h3 1`] = `
-".h3 {\\n  line-height: var(--su-lh-title);\\n  color: var(--su-title);\\n  font-size: var(--su-fs-h3);\\n  letter-spacing: var(--su-ls-h3);\\n  font-weight: var(--su-fw-h3);\\n}"
+"@layer components {\\n \\n}\\n\\n.h3 {\\n  line-height: var(--su-lh-title);\\n  color: var(--su-title);\\n  font-size: var(--su-fs-h3);\\n  letter-spacing: var(--su-ls-h3);\\n  font-weight: var(--su-fw-h3);\\n}"
 `;
 
 exports[`compiler: hover:h5 1`] = `
-".hover\\\\:h5:hover {\\n    line-height: var(--su-lh-title);\\n    color: var(--su-title);\\n    font-size: var(--su-fs-h5);\\n    letter-spacing: var(--su-ls-h5);\\n    font-weight: var(--su-fw-h5);\\n  }"
+"@layer components {\\n \\n}\\n\\n  .hover\\\\:h5:hover {\\n    line-height: var(--su-lh-title);\\n    color: var(--su-title);\\n    font-size: var(--su-fs-h5);\\n    letter-spacing: var(--su-ls-h5);\\n    font-weight: var(--su-fw-h5);\\n  }"
 `;
 
 exports[`compiler: hover:m-3rem 1`] = `
-".hover\\\\:m-3rem:hover {\\n    margin: 3rem;\\n  }"
+"@layer components {\\n \\n}\\n\\n  .hover\\\\:m-3rem:hover {\\n    margin: 3rem;\\n  }"
 `;
 
 exports[`compiler: hover:m-auto 1`] = `
-".hover\\\\:m-auto:hover {\\n    margin: auto;\\n  }"
+"@layer components {\\n \\n}\\n\\n  .hover\\\\:m-auto:hover {\\n    margin: auto;\\n  }"
 `;
 
 exports[`compiler: hue-rotate-1/4turn 1`] = `
-".hue-rotate-1\\\\/4turn {\\n  --su-hue-rotate: hue-rotate(0.25turn);\\n}"
+"@layer components {\\n \\n}\\n\\n.hue-rotate-1\\\\/4turn {\\n  --su-hue-rotate: hue-rotate(0.25turn);\\n}"
 `;
 
 exports[`compiler: hue-rotate-180/2 1`] = `
-".hue-rotate-180\\\\/2 {\\n  --su-hue-rotate: hue-rotate(90deg);\\n}"
+"@layer components {\\n \\n}\\n\\n.hue-rotate-180\\\\/2 {\\n  --su-hue-rotate: hue-rotate(90deg);\\n}"
 `;
 
 exports[`compiler: hue-rotate-3.6rad 1`] = `
-".hue-rotate-3\\\\.6rad {\\n  --su-hue-rotate: hue-rotate(3.6rad);\\n}"
+"@layer components {\\n \\n}\\n\\n.hue-rotate-3\\\\.6rad {\\n  --su-hue-rotate: hue-rotate(3.6rad);\\n}"
 `;
 
 exports[`compiler: hue-rotate-90 1`] = `
-".hue-rotate-90 {\\n  --su-hue-rotate: hue-rotate(90deg);\\n}"
+"@layer components {\\n \\n}\\n\\n.hue-rotate-90 {\\n  --su-hue-rotate: hue-rotate(90deg);\\n}"
 `;
 
 exports[`compiler: inset-middle 1`] = `
-".inset-middle {\\n  inset: 50%;\\n  --su-tr-x: -50%;\\n  --su-tr-y: -50%;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));\\n}"
+"@layer components {\\n \\n}\\n\\n.inset-middle {\\n  inset: 50%;\\n  --su-tr-x: -50%;\\n  --su-tr-y: -50%;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));\\n}"
 `;
 
 exports[`compiler: inset-x-20% 1`] = `
-".inset-x-20\\\\% {\\n  inset-inline: 20%;\\n}"
+"@layer components {\\n \\n}\\n\\n.inset-x-20\\\\% {\\n  inset-inline: 20%;\\n}"
 `;
 
 exports[`compiler: invert-0.8333333 1`] = `
-".invert-0\\\\.8333333 {\\n  --su-invert: invert(0.833);\\n}"
+"@layer components {\\n \\n}\\n\\n.invert-0\\\\.8333333 {\\n  --su-invert: invert(0.833);\\n}"
 `;
 
 exports[`compiler: invert-80 1`] = `
-".invert-80 {\\n  --su-invert: invert(0.8);\\n}"
+"@layer components {\\n \\n}\\n\\n.invert-80 {\\n  --su-invert: invert(0.8);\\n}"
 `;
 
 exports[`compiler: jc-between 1`] = `
-".jc-between {\\n  justify-content: space-between;\\n}"
+"@layer components {\\n \\n}\\n\\n.jc-between {\\n  justify-content: space-between;\\n}"
 `;
 
 exports[`compiler: jc-evenly 1`] = `
-".jc-evenly {\\n  justify-content: space-evenly;\\n}"
+"@layer components {\\n \\n}\\n\\n.jc-evenly {\\n  justify-content: space-evenly;\\n}"
 `;
 
 exports[`compiler: jc-start 1`] = `
-".jc-start {\\n  justify-content: start;\\n}"
+"@layer components {\\n \\n}\\n\\n.jc-start {\\n  justify-content: start;\\n}"
 `;
 
 exports[`compiler: last:h-12 1`] = `
-".last\\\\:h-12:last-child {\\n    height: 3rem;\\n  }"
+"@layer components {\\n \\n}\\n\\n  .last\\\\:h-12:last-child {\\n    height: 3rem;\\n  }"
 `;
 
 exports[`compiler: lg:gap-5/2 1`] = `
-"@media (width >= 64rem) {\\n  .lg\\\\:gap-5\\\\/2 {\\n    gap: 0.625rem;\\n  }\\n}"
+"@layer components {\\n \\n}\\n\\n@media (width >= 64rem) {\\n  .lg\\\\:gap-5\\\\/2 {\\n    gap: 0.625rem;\\n  }\\n}"
 `;
 
 exports[`compiler: lh-2% 1`] = `
-".lh-2\\\\% {\\n  line-height: 2%;\\n}"
+"@layer components {\\n \\n}\\n\\n.lh-2\\\\% {\\n  line-height: 2%;\\n}"
 `;
 
 exports[`compiler: lh-2/3 1`] = `
-".lh-2\\\\/3 {\\n  line-height: 0.667;\\n}"
+"@layer components {\\n \\n}\\n\\n.lh-2\\\\/3 {\\n  line-height: 0.667;\\n}"
 `;
 
 exports[`compiler: lh-5 1`] = `
-".lh-5 {\\n  line-height: 5;\\n}"
+"@layer components {\\n \\n}\\n\\n.lh-5 {\\n  line-height: 5;\\n}"
 `;
 
 exports[`compiler: lh-none 1`] = `
-".lh-none {\\n  line-height: 1;\\n}"
+"@layer components {\\n \\n}\\n\\n.lh-none {\\n  line-height: 1;\\n}"
 `;
 
 exports[`compiler: ls-0.5 1`] = `
-".ls-0\\\\.5 {\\n  letter-spacing: 0.005em;\\n}"
+"@layer components {\\n \\n}\\n\\n.ls-0\\\\.5 {\\n  letter-spacing: 0.005em;\\n}"
 `;
 
 exports[`compiler: ls-12.3rem 1`] = `
-".ls-12\\\\.3rem {\\n  letter-spacing: 12.3rem;\\n}"
+"@layer components {\\n \\n}\\n\\n.ls-12\\\\.3rem {\\n  letter-spacing: 12.3rem;\\n}"
 `;
 
 exports[`compiler: ls-12rem 1`] = `
-".ls-12rem {\\n  letter-spacing: 12rem;\\n}"
+"@layer components {\\n \\n}\\n\\n.ls-12rem {\\n  letter-spacing: 12rem;\\n}"
 `;
 
 exports[`compiler: ls-3/2 1`] = `
-".ls-3\\\\/2 {\\n  letter-spacing: 0.015em;\\n}"
+"@layer components {\\n \\n}\\n\\n.ls-3\\\\/2 {\\n  letter-spacing: 0.015em;\\n}"
 `;
 
 exports[`compiler: ls-5 1`] = `
-".ls-5 {\\n  letter-spacing: 0.05em;\\n}"
+"@layer components {\\n \\n}\\n\\n.ls-5 {\\n  letter-spacing: 0.05em;\\n}"
 `;
 
 exports[`compiler: ls-md 1`] = `
-".ls-md {\\n  letter-spacing: 0.05em;\\n}"
+"@layer components {\\n \\n}\\n\\n.ls-md {\\n  letter-spacing: 0.05em;\\n}"
 `;
 
 exports[`compiler: m-0 1`] = `
-".m-0 {\\n  margin: 0;\\n}"
+"@layer components {\\n \\n}\\n\\n.m-0 {\\n  margin: 0;\\n}"
 `;
 
 exports[`compiler: m-1 1`] = `
-".m-1 {\\n  margin: 0.25rem;\\n}"
+"@layer components {\\n \\n}\\n\\n.m-1 {\\n  margin: 0.25rem;\\n}"
 `;
 
 exports[`compiler: m-12/3 1`] = `
-".m-12\\\\/3 {\\n  margin: 1rem;\\n}"
+"@layer components {\\n \\n}\\n\\n.m-12\\\\/3 {\\n  margin: 1rem;\\n}"
 `;
 
 exports[`compiler: m-2.5 1`] = `
-".m-2\\\\.5 {\\n  margin: 0.625rem;\\n}"
+"@layer components {\\n \\n}\\n\\n.m-2\\\\.5 {\\n  margin: 0.625rem;\\n}"
 `;
 
 exports[`compiler: m-2px 1`] = `
-".m-2px {\\n  margin: 2px;\\n}"
+"@layer components {\\n \\n}\\n\\n.m-2px {\\n  margin: 2px;\\n}"
 `;
 
 exports[`compiler: m-3/2px 1`] = `
-".m-3\\\\/2px {\\n  margin: 1.5px;\\n}"
+"@layer components {\\n \\n}\\n\\n.m-3\\\\/2px {\\n  margin: 1.5px;\\n}"
 `;
 
 exports[`compiler: m-4.2px 1`] = `
-".m-4\\\\.2px {\\n  margin: 4.2px;\\n}"
+"@layer components {\\n \\n}\\n\\n.m-4\\\\.2px {\\n  margin: 4.2px;\\n}"
 `;
 
 exports[`compiler: masonry 1`] = `
-".masonry {\\n  position: relative;\\n}\\n\\n.masonry > * {\\n  position: absolute;\\n}"
+"@layer components {\\n .masonry {\\n  position: relative;\\n}\\n\\n.masonry > * {\\n  position: absolute;\\n}\\n\\n\\n}"
 `;
 
 exports[`compiler: md:!cur-copy 1`] = `
-"@media (width >= 48rem) {\\n  .md\\\\:\\\\!cur-copy {\\n    cursor: copy !important;\\n  }\\n}"
+"@layer components {\\n \\n}\\n\\n@media (width >= 48rem) {\\n  .md\\\\:\\\\!cur-copy {\\n    cursor: copy !important;\\n  }\\n}"
 `;
 
 exports[`compiler: md:!fs-5xl 1`] = `
-"@media (width >= 48rem) {\\n  .md\\\\:\\\\!fs-5xl {\\n    font-size: 3rem !important;\\n  }\\n}"
+"@layer components {\\n \\n}\\n\\n@media (width >= 48rem) {\\n  .md\\\\:\\\\!fs-5xl {\\n    font-size: 3rem !important;\\n  }\\n}"
 `;
 
 exports[`compiler: md:!pos-sticky 1`] = `
-"@media (width >= 48rem) {\\n  .md\\\\:\\\\!pos-sticky {\\n    position: sticky !important;\\n  }\\n}"
+"@layer components {\\n \\n}\\n\\n@media (width >= 48rem) {\\n  .md\\\\:\\\\!pos-sticky {\\n    position: sticky !important;\\n  }\\n}"
 `;
 
 exports[`compiler: md:ai-center 1`] = `
-"@media (width >= 48rem) {\\n  .md\\\\:ai-center {\\n    align-items: center;\\n  }\\n}"
+"@layer components {\\n \\n}\\n\\n@media (width >= 48rem) {\\n  .md\\\\:ai-center {\\n    align-items: center;\\n  }\\n}"
 `;
 
 exports[`compiler: md:lh-12px 1`] = `
-"@media (width >= 48rem) {\\n  .md\\\\:lh-12px {\\n    line-height: 12px;\\n  }\\n}"
+"@layer components {\\n \\n}\\n\\n@media (width >= 48rem) {\\n  .md\\\\:lh-12px {\\n    line-height: 12px;\\n  }\\n}"
 `;
 
 exports[`compiler: md:m-auto 1`] = `
-"@media (width >= 48rem) {\\n  .md\\\\:m-auto {\\n    margin: auto;\\n  }\\n}"
+"@layer components {\\n \\n}\\n\\n@media (width >= 48rem) {\\n  .md\\\\:m-auto {\\n    margin: auto;\\n  }\\n}"
 `;
 
 exports[`compiler: min-w-3 1`] = `
-".min-w-3 {\\n  min-width: 0.75rem;\\n}"
+"@layer components {\\n \\n}\\n\\n.min-w-3 {\\n  min-width: 0.75rem;\\n}"
 `;
 
 exports[`compiler: mv-x-10 1`] = `
-".mv-x-10 {\\n  --su-tr-x: 10px;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));\\n}"
+"@layer components {\\n \\n}\\n\\n.mv-x-10 {\\n  --su-tr-x: 10px;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));\\n}"
 `;
 
 exports[`compiler: mv-y-20px 1`] = `
-".mv-y-20px {\\n  --su-tr-y: 20px;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));\\n}"
+"@layer components {\\n \\n}\\n\\n.mv-y-20px {\\n  --su-tr-y: 20px;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));\\n}"
 `;
 
 exports[`compiler: odd:!ov-visible 1`] = `
-".odd\\\\:\\\\!ov-visible:nth-child(odd) {\\n    overflow: visible !important;\\n  }"
+"@layer components {\\n \\n}\\n\\n  .odd\\\\:\\\\!ov-visible:nth-child(odd) {\\n    overflow: visible !important;\\n  }"
 `;
 
 exports[`compiler: opacity-0.5 1`] = `
-".opacity-0\\\\.5 {\\n  opacity: 0.5;\\n}"
+"@layer components {\\n \\n}\\n\\n.opacity-0\\\\.5 {\\n  opacity: 0.5;\\n}"
 `;
 
 exports[`compiler: opacity-50 1`] = `
-".opacity-50 {\\n  opacity: 0.5;\\n}"
+"@layer components {\\n \\n}\\n\\n.opacity-50 {\\n  opacity: 0.5;\\n}"
 `;
 
 exports[`compiler: ov-hidden 1`] = `
-".ov-hidden {\\n  overflow: hidden;\\n}"
+"@layer components {\\n \\n}\\n\\n.ov-hidden {\\n  overflow: hidden;\\n}"
 `;
 
 exports[`compiler: p-0 1`] = `
-".p-0 {\\n  padding: 0;\\n}"
+"@layer components {\\n \\n}\\n\\n.p-0 {\\n  padding: 0;\\n}"
 `;
 
 exports[`compiler: p-1 1`] = `
-".p-1 {\\n  padding: 0.25rem;\\n}"
+"@layer components {\\n \\n}\\n\\n.p-1 {\\n  padding: 0.25rem;\\n}"
 `;
 
 exports[`compiler: p-2/3 1`] = `
-".p-2\\\\/3 {\\n  padding: 0.167rem;\\n}"
+"@layer components {\\n \\n}\\n\\n.p-2\\\\/3 {\\n  padding: 0.167rem;\\n}"
 `;
 
 exports[`compiler: p-3.2px 1`] = `
-".p-3\\\\.2px {\\n  padding: 3.2px;\\n}"
+"@layer components {\\n \\n}\\n\\n.p-3\\\\.2px {\\n  padding: 3.2px;\\n}"
 `;
 
 exports[`compiler: p-3/2px 1`] = `
-".p-3\\\\/2px {\\n  padding: 1.5px;\\n}"
+"@layer components {\\n \\n}\\n\\n.p-3\\\\/2px {\\n  padding: 1.5px;\\n}"
 `;
 
 exports[`compiler: p-4px 1`] = `
-".p-4px {\\n  padding: 4px;\\n}"
+"@layer components {\\n \\n}\\n\\n.p-4px {\\n  padding: 4px;\\n}"
 `;
 
 exports[`compiler: pos-static 1`] = `
-".pos-static {\\n  position: static;\\n}"
+"@layer components {\\n \\n}\\n\\n.pos-static {\\n  position: static;\\n}"
 `;
 
 exports[`compiler: ps-0 1`] = `
-".ps-0 {\\n  padding-inline-start: 0;\\n}"
+"@layer components {\\n \\n}\\n\\n.ps-0 {\\n  padding-inline-start: 0;\\n}"
 `;
 
 exports[`compiler: r-2 1`] = `
-".r-2 {\\n  border-radius: 0.5rem;\\n}"
+"@layer components {\\n \\n}\\n\\n.r-2 {\\n  border-radius: 0.5rem;\\n}"
 `;
 
 exports[`compiler: r-3/2 1`] = `
-".r-3\\\\/2 {\\n  border-radius: 150%;\\n}"
+"@layer components {\\n \\n}\\n\\n.r-3\\\\/2 {\\n  border-radius: 150%;\\n}"
 `;
 
 exports[`compiler: rot-1/4turn 1`] = `
-".rot-1\\\\/4turn {\\n  --su-rot: 0.25turn;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));\\n}"
+"@layer components {\\n \\n}\\n\\n.rot-1\\\\/4turn {\\n  --su-rot: 0.25turn;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));\\n}"
 `;
 
 exports[`compiler: rot-45 1`] = `
-".rot-45 {\\n  --su-rot: 45deg;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));\\n}"
+"@layer components {\\n \\n}\\n\\n.rot-45 {\\n  --su-rot: 45deg;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));\\n}"
 `;
 
 exports[`compiler: saturate-0.2 1`] = `
-".saturate-0\\\\.2 {\\n  --su-saturate: saturate(0.2);\\n}"
+"@layer components {\\n \\n}\\n\\n.saturate-0\\\\.2 {\\n  --su-saturate: saturate(0.2);\\n}"
 `;
 
 exports[`compiler: saturate-200 1`] = `
-".saturate-200 {\\n  --su-saturate: saturate(2);\\n}"
+"@layer components {\\n \\n}\\n\\n.saturate-200 {\\n  --su-saturate: saturate(2);\\n}"
 `;
 
 exports[`compiler: sc-110 1`] = `
-".sc-110 {\\n  --su-sc: 1.1;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));\\n}"
+"@layer components {\\n \\n}\\n\\n.sc-110 {\\n  --su-sc: 1.1;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));\\n}"
 `;
 
 exports[`compiler: sc-15 1`] = `
-".sc-15 {\\n  --su-sc: 0.15;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));\\n}"
+"@layer components {\\n \\n}\\n\\n.sc-15 {\\n  --su-sc: 0.15;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));\\n}"
 `;
 
 exports[`compiler: sc-x-12 1`] = `
-".sc-x-12 {\\n  --su-sc-x: 0.12;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));\\n}"
+"@layer components {\\n \\n}\\n\\n.sc-x-12 {\\n  --su-sc-x: 0.12;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));\\n}"
 `;
 
 exports[`compiler: sc-x-3/2 1`] = `
-".sc-x-3\\\\/2 {\\n  --su-sc-x: 1.5;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));\\n}"
+"@layer components {\\n \\n}\\n\\n.sc-x-3\\\\/2 {\\n  --su-sc-x: 1.5;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));\\n}"
 `;
 
 exports[`compiler: selected:!fw-bold 1`] = `
-".selected\\\\:\\\\!fw-bold.selected {\\n    font-weight: 700 !important;\\n  }"
+"@layer components {\\n \\n}\\n\\n  .selected\\\\:\\\\!fw-bold.selected {\\n    font-weight: 700 !important;\\n  }"
 `;
 
 exports[`compiler: sepia-0.2 1`] = `
-".sepia-0\\\\.2 {\\n  --su-sepia: sepia(0.2);\\n}"
+"@layer components {\\n \\n}\\n\\n.sepia-0\\\\.2 {\\n  --su-sepia: sepia(0.2);\\n}"
 `;
 
 exports[`compiler: sepia-200 1`] = `
-".sepia-200 {\\n  --su-sepia: sepia(2);\\n}"
+"@layer components {\\n \\n}\\n\\n.sepia-200 {\\n  --su-sepia: sepia(2);\\n}"
 `;
 
 exports[`compiler: shrink-0 1`] = `
-".shrink-0 {\\n  flex-shrink: 0;\\n}"
+"@layer components {\\n \\n}\\n\\n.shrink-0 {\\n  flex-shrink: 0;\\n}"
 `;
 
 exports[`compiler: shrink-inherit 1`] = `
-".shrink-inherit {\\n  flex-shrink: inherit;\\n}"
+"@layer components {\\n \\n}\\n\\n.shrink-inherit {\\n  flex-shrink: inherit;\\n}"
 `;
 
 exports[`compiler: sm:!grayscale-80 1`] = `
-"@media (width >= 40rem) {\\n  .sm\\\\:\\\\!grayscale-80 {\\n    --su-grayscale: grayscale(0.8) !important;\\n  }\\n}"
+"@layer components {\\n \\n}\\n\\n@media (width >= 40rem) {\\n  .sm\\\\:\\\\!grayscale-80 {\\n    --su-grayscale: grayscale(0.8) !important;\\n  }\\n}"
 `;
 
 exports[`compiler: sm:bg-subtle 1`] = `
-"@media (width >= 40rem) {\\n  .sm\\\\:bg-subtle {\\n    background-color: var(--su-subtle);\\n  }\\n}"
+"@layer components {\\n \\n}\\n\\n@media (width >= 40rem) {\\n  .sm\\\\:bg-subtle {\\n    background-color: var(--su-subtle);\\n  }\\n}"
 `;
 
 exports[`compiler: td-u 1`] = `
-".td-u {\\n  text-decoration-line: underline;\\n}"
+"@layer components {\\n \\n}\\n\\n.td-u {\\n  text-decoration-line: underline;\\n}"
 `;
 
 exports[`compiler: td-w-2 1`] = `
-".td-w-2 {\\n  text-decoration-thickness: 2px;\\n}"
+"@layer components {\\n \\n}\\n\\n.td-w-2 {\\n  text-decoration-thickness: 2px;\\n}"
 `;
 
 exports[`compiler: td-w-3/2rem 1`] = `
-".td-w-3\\\\/2rem {\\n  text-decoration-thickness: 1.5rem;\\n}"
+"@layer components {\\n \\n}\\n\\n.td-w-3\\\\/2rem {\\n  text-decoration-thickness: 1.5rem;\\n}"
 `;
 
 exports[`compiler: td-y-12 1`] = `
-".td-y-12 {\\n  text-underline-offset: 12px;\\n}"
+"@layer components {\\n \\n}\\n\\n.td-y-12 {\\n  text-underline-offset: 12px;\\n}"
 `;
 
 exports[`compiler: text-body-200 1`] = `
-".text-body-200 {\\n  color: color-mix(in oklch, var(--su-body), #fff 60%);\\n}"
+"@layer components {\\n \\n}\\n\\n.text-body-200 {\\n  color: color-mix(in oklch, var(--su-body), #fff 60%);\\n}"
 `;
 
 exports[`compiler: text-center 1`] = `
-".text-center {\\n  text-align: center;\\n}"
+"@layer components {\\n \\n}\\n\\n.text-center {\\n  text-align: center;\\n}"
 `;
 
 exports[`compiler: text-justify 1`] = `
-".text-justify {\\n  text-align: justify;\\n}"
+"@layer components {\\n \\n}\\n\\n.text-justify {\\n  text-align: justify;\\n}"
 `;
 
 exports[`compiler: text-red 1`] = `
-".text-red {\\n  color: var(--su-red);\\n}"
+"@layer components {\\n \\n}\\n\\n.text-red {\\n  color: var(--su-red);\\n}"
 `;
 
 exports[`compiler: text-start 1`] = `
-".text-start {\\n  text-align: start;\\n}"
+"@layer components {\\n \\n}\\n\\n.text-start {\\n  text-align: start;\\n}"
 `;
 
 exports[`compiler: text-title/50 1`] = `
-".text-title\\\\/50 {\\n  color: oklch(from var(--su-title) l c h / 0.5);\\n}"
+"@layer components {\\n \\n}\\n\\n.text-title\\\\/50 {\\n  color: oklch(from var(--su-title) l c h / 0.5);\\n}"
 `;
 
 exports[`compiler: top-50% 1`] = `
-".top-50\\\\% {\\n  top: 50%;\\n}"
+"@layer components {\\n \\n}\\n\\n.top-50\\\\% {\\n  top: 50%;\\n}"
 `;
 
 exports[`compiler: top-middle 1`] = `
-".top-middle {\\n  top: 50%;\\n  --su-tr-y: -50%;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));\\n}"
+"@layer components {\\n \\n}\\n\\n.top-middle {\\n  top: 50%;\\n  --su-tr-y: -50%;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));\\n}"
 `;
 
 exports[`compiler: tr-bg-500-ease-in 1`] = `
-".tr-bg-500-ease-in {\\n  transition: background-color 500ms ease-in ;\\n}"
+"@layer components {\\n \\n}\\n\\n.tr-bg-500-ease-in {\\n  transition: background-color 500ms ease-in ;\\n}"
 `;
 
 exports[`compiler: tr-colors 1`] = `
-".tr-colors {\\n  transition: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke 150ms ease ;\\n}"
+"@layer components {\\n \\n}\\n\\n.tr-colors {\\n  transition: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke 150ms ease ;\\n}"
 `;
 
 exports[`compiler: tr-colors-200-ease-out 1`] = `
-".tr-colors-200-ease-out {\\n  transition: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke 200ms ease-out ;\\n}"
+"@layer components {\\n \\n}\\n\\n.tr-colors-200-ease-out {\\n  transition: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke 200ms ease-out ;\\n}"
 `;
 
 exports[`compiler: tr-opacity-200-150-ease-in 1`] = `
-".tr-opacity-200-150-ease-in {\\n  transition: opacity 200ms ease-in  150ms;\\n}"
+"@layer components {\\n \\n}\\n\\n.tr-opacity-200-150-ease-in {\\n  transition: opacity 200ms ease-in  150ms;\\n}"
 `;
 
 exports[`compiler: tr-opacity-200-cubic(0.1,0.7,1.0,0.1) 1`] = `
-".tr-opacity-200-cubic\\\\(0\\\\.1\\\\,0\\\\.7\\\\,1\\\\.0\\\\,0\\\\.1\\\\) {\\n  transition: opacity 200ms cubic-bezier(0.1,0.7,1.0,0.1) ;\\n}"
+"@layer components {\\n \\n}\\n\\n.tr-opacity-200-cubic\\\\(0\\\\.1\\\\,0\\\\.7\\\\,1\\\\.0\\\\,0\\\\.1\\\\) {\\n  transition: opacity 200ms cubic-bezier(0.1,0.7,1.0,0.1) ;\\n}"
 `;
 
 exports[`compiler: tr-shadow-step(1,end) 1`] = `
-".tr-shadow-step\\\\(1\\\\,end\\\\) {\\n  transition: box-shadow 150ms steps(1,end) ;\\n}"
+"@layer components {\\n \\n}\\n\\n.tr-shadow-step\\\\(1\\\\,end\\\\) {\\n  transition: box-shadow 150ms steps(1,end) ;\\n}"
 `;
 
 exports[`compiler: w-2.5 1`] = `
-".w-2\\\\.5 {\\n  width: 0.625rem;\\n}"
+"@layer components {\\n \\n}\\n\\n.w-2\\\\.5 {\\n  width: 0.625rem;\\n}"
 `;
 
 exports[`compiler: w-2/3 1`] = `
-".w-2\\\\/3 {\\n  width: 66.667%;\\n}"
+"@layer components {\\n \\n}\\n\\n.w-2\\\\/3 {\\n  width: 66.667%;\\n}"
 `;
 
 exports[`compiler: w-4 1`] = `
-".w-4 {\\n  width: 1rem;\\n}"
+"@layer components {\\n \\n}\\n\\n.w-4 {\\n  width: 1rem;\\n}"
 `;
 
 exports[`compiler: w-48px 1`] = `
-".w-48px {\\n  width: 48px;\\n}"
+"@layer components {\\n \\n}\\n\\n.w-48px {\\n  width: 48px;\\n}"
 `;
 
 exports[`compiler: w-fit 1`] = `
-".w-fit {\\n  width: fit-content;\\n}"
+"@layer components {\\n \\n}\\n\\n.w-fit {\\n  width: fit-content;\\n}"
 `;
 
 exports[`compiler: w-full 1`] = `
-".w-full {\\n  width: 100%;\\n}"
+"@layer components {\\n \\n}\\n\\n.w-full {\\n  width: 100%;\\n}"
 `;
 
 exports[`compiler: w-screen 1`] = `
-".w-screen {\\n  width: 100vw;\\n}"
+"@layer components {\\n \\n}\\n\\n.w-screen {\\n  width: 100vw;\\n}"
 `;
 
 exports[`compiler: ws-normal 1`] = `
-".ws-normal {\\n  white-space: normal;\\n}"
+"@layer components {\\n \\n}\\n\\n.ws-normal {\\n  white-space: normal;\\n}"
 `;
 
 exports[`compiler: xl:!shrink-2 1`] = `
-"@media (width >= 80rem) {\\n  .xl\\\\:\\\\!shrink-2 {\\n    flex-shrink: 2 !important;\\n  }\\n}"
+"@layer components {\\n \\n}\\n\\n@media (width >= 80rem) {\\n  .xl\\\\:\\\\!shrink-2 {\\n    flex-shrink: 2 !important;\\n  }\\n}"
 `;
 
 exports[`compiler: z-base 1`] = `
-".z-base {\\n  z-index: 0;\\n}"
+"@layer components {\\n \\n}\\n\\n.z-base {\\n  z-index: 0;\\n}"
 `;
 
 exports[`compiler: z-sticky 1`] = `
-".z-sticky {\\n  z-index: 200;\\n}"
+"@layer components {\\n \\n}\\n\\n.z-sticky {\\n  z-index: 200;\\n}"
 `;
