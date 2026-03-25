@@ -17,6 +17,7 @@ body {
   font-family: var(--su-ff-base);
   font-size-adjust: var(--su-fs-adjust-base);
   background-color: var(--su-page);
+  color: var(--su-body);
 }
 img,
 picture,

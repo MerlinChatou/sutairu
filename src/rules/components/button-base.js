@@ -10,13 +10,16 @@ const masonryDecls = {
 
 export const rules = {
   // 1. Standard 'masonry' class
-  "btn": {
+  btn: {
     rules: [
       {
         selector: "btn",
         declarations: [
           { appearance: "button" },
-          { display: "inline-block" },
+          { display: "inline-flex" },
+          { "align-items": "center" },
+          { "justify-content": "center" },
+          { "line-height": "1" },
           { padding: "var(--su-btn-x-padding) var(--su-btn-y-padding)" },
           { "border-radius": "var(--su-btn-radius)" },
           { "border-width": "var(--su-btn-border-width)" },
@@ -26,7 +29,7 @@ export const rules = {
           { "vertical-align": "middle" },
           { "text-align": "center" },
           { "user-select": "none" },
-          { "transition" : "color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out"},
+          { transition: "color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out" },
         ],
       },
     ],
@@ -40,7 +43,10 @@ export const rules = {
         selector: "!btn",
         declarations: [
           { appearance: "button" },
-          { display: "inline-block" },
+          { display: "inline-flex" },
+          { "align-items": "center" },
+          { "justify-content": "center" },
+          { "line-height": "1" },
           { padding: "var(--su-btn-x-padding) var(--su-btn-y-padding)" },
           { "border-radius": "var(--su-btn-radius)" },
           { "border-width": "var(--su-btn-border-width)" },
@@ -50,7 +56,7 @@ export const rules = {
           { "vertical-align": "middle" },
           { "text-align": "center" },
           { "user-select": "none" },
-          { "transition" : "color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out"},
+          { transition: "color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out" },
         ],
       },
     ],

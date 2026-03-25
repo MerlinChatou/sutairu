@@ -35,7 +35,7 @@ exports[`compiler: !b-1.5rem 1`] = `
 `;
 
 exports[`compiler: !b-3/2 1`] = `
-".\\\\!b-3\\\\/2 {\\n  border-width: 0.375rem !important;\\n}"
+".\\\\!b-3\\\\/2 {\\n  border-width: 1.5px !important;\\n}"
 `;
 
 exports[`compiler: !b-blue-133/12 1`] = `
@@ -107,7 +107,7 @@ exports[`compiler: !grow-1 1`] = `
 `;
 
 exports[`compiler: !h4 1`] = `
-".\\\\!h4 {\\n  line-height: var(--su-lh-title) !important;\\n  color: var(--su-text-title) !important;\\n  font-size: var(--su-fs-h4) !important;\\n  letter-spacing: var(--su-ls-h4) !important;\\n  font-weight: var(--su-fw-h4) !important;\\n}"
+".\\\\!h4 {\\n  line-height: var(--su-lh-title) !important;\\n  color: var(--su-title) !important;\\n  font-size: var(--su-fs-h4) !important;\\n  letter-spacing: var(--su-ls-h4) !important;\\n  font-weight: var(--su-fw-h4) !important;\\n}"
 `;
 
 exports[`compiler: !hue-rotate-90deg 1`] = `
@@ -124,6 +124,10 @@ exports[`compiler: !invert-1/2 1`] = `
 
 exports[`compiler: !jc-flex-start 1`] = `
 ".jc-flex-start {\\n  justify-content: flex-start !important;\\n}"
+`;
+
+exports[`compiler: !lh-xs 1`] = `
+".\\\\!lh-xs {\\n  line-height: 1.25 !important;\\n}"
 `;
 
 exports[`compiler: !ls-5.2px 1`] = `
@@ -299,11 +303,11 @@ exports[`compiler: as-flex-start 1`] = `
 `;
 
 exports[`compiler: b-0.5 1`] = `
-".b-0\\\\.5 {\\n  border-width: 0.125rem;\\n}"
+".b-0\\\\.5 {\\n  border-width: 0.5px;\\n}"
 `;
 
 exports[`compiler: b-1 1`] = `
-".b-1 {\\n  border-width: 0.25rem;\\n}"
+".b-1 {\\n  border-width: 1px;\\n}"
 `;
 
 exports[`compiler: b-1/3cqw 1`] = `
@@ -431,7 +435,7 @@ exports[`compiler: dark:md:hover:p-4vw 1`] = `
 `;
 
 exports[`compiler: dark:portrait:hover:!h6 1`] = `
-":where([data-color-scheme=\\"dark\\"] *) {\\n  @media (orientation: portrait) {\\n      &.dark\\\\:portrait\\\\:hover\\\\:\\\\!h6:hover {\\n        line-height: var(--su-lh-title) !important;\\n        color: var(--su-text-title) !important;\\n        font-size: var(--su-fs-h6) !important;\\n        letter-spacing: var(--su-ls-h6) !important;\\n        font-weight: var(--su-fw-h6) !important;\\n      }\\n  }\\n}"
+":where([data-color-scheme=\\"dark\\"] *) {\\n  @media (orientation: portrait) {\\n      &.dark\\\\:portrait\\\\:hover\\\\:\\\\!h6:hover {\\n        line-height: var(--su-lh-title) !important;\\n        color: var(--su-title) !important;\\n        font-size: var(--su-fs-h6) !important;\\n        letter-spacing: var(--su-ls-h6) !important;\\n        font-weight: var(--su-fw-h6) !important;\\n      }\\n  }\\n}"
 `;
 
 exports[`compiler: dark:sm:d-block 1`] = `
@@ -447,7 +451,7 @@ exports[`compiler: even:!z-100 1`] = `
 `;
 
 exports[`compiler: even:b-7 1`] = `
-".even\\\\:b-7:nth-child(even) {\\n    border-width: 1.75rem;\\n  }"
+".even\\\\:b-7:nth-child(even) {\\n    border-width: 7px;\\n  }"
 `;
 
 exports[`compiler: even:b-7vw 1`] = `
@@ -551,19 +555,19 @@ exports[`compiler: grow-initial 1`] = `
 `;
 
 exports[`compiler: h1 1`] = `
-".h1 {\\n  line-height: var(--su-lh-title);\\n  color: var(--su-text-title);\\n  font-size: var(--su-fs-h1);\\n  letter-spacing: var(--su-ls-h1);\\n  font-weight: var(--su-fw-h1);\\n}"
+".h1 {\\n  line-height: var(--su-lh-title);\\n  color: var(--su-title);\\n  font-size: var(--su-fs-h1);\\n  letter-spacing: var(--su-ls-h1);\\n  font-weight: var(--su-fw-h1);\\n}"
 `;
 
 exports[`compiler: h2 1`] = `
-".h2 {\\n  line-height: var(--su-lh-title);\\n  color: var(--su-text-title);\\n  font-size: var(--su-fs-h2);\\n  letter-spacing: var(--su-ls-h2);\\n  font-weight: var(--su-fw-h2);\\n}"
+".h2 {\\n  line-height: var(--su-lh-title);\\n  color: var(--su-title);\\n  font-size: var(--su-fs-h2);\\n  letter-spacing: var(--su-ls-h2);\\n  font-weight: var(--su-fw-h2);\\n}"
 `;
 
 exports[`compiler: h3 1`] = `
-".h3 {\\n  line-height: var(--su-lh-title);\\n  color: var(--su-text-title);\\n  font-size: var(--su-fs-h3);\\n  letter-spacing: var(--su-ls-h3);\\n  font-weight: var(--su-fw-h3);\\n}"
+".h3 {\\n  line-height: var(--su-lh-title);\\n  color: var(--su-title);\\n  font-size: var(--su-fs-h3);\\n  letter-spacing: var(--su-ls-h3);\\n  font-weight: var(--su-fw-h3);\\n}"
 `;
 
 exports[`compiler: hover:h5 1`] = `
-".hover\\\\:h5:hover {\\n    line-height: var(--su-lh-title);\\n    color: var(--su-text-title);\\n    font-size: var(--su-fs-h5);\\n    letter-spacing: var(--su-ls-h5);\\n    font-weight: var(--su-fw-h5);\\n  }"
+".hover\\\\:h5:hover {\\n    line-height: var(--su-lh-title);\\n    color: var(--su-title);\\n    font-size: var(--su-fs-h5);\\n    letter-spacing: var(--su-ls-h5);\\n    font-weight: var(--su-fw-h5);\\n  }"
 `;
 
 exports[`compiler: hover:m-3rem 1`] = `
@@ -624,6 +628,22 @@ exports[`compiler: last:h-12 1`] = `
 
 exports[`compiler: lg:gap-5/2 1`] = `
 "@media (width >= 64rem) {\\n  .lg\\\\:gap-5\\\\/2 {\\n    gap: 0.625rem;\\n  }\\n}"
+`;
+
+exports[`compiler: lh-2% 1`] = `
+".lh-2\\\\% {\\n  line-height: 2%;\\n}"
+`;
+
+exports[`compiler: lh-2/3 1`] = `
+".lh-2\\\\/3 {\\n  line-height: 0.667;\\n}"
+`;
+
+exports[`compiler: lh-5 1`] = `
+".lh-5 {\\n  line-height: 5;\\n}"
+`;
+
+exports[`compiler: lh-none 1`] = `
+".lh-none {\\n  line-height: 1;\\n}"
 `;
 
 exports[`compiler: ls-0.5 1`] = `
@@ -696,6 +716,10 @@ exports[`compiler: md:!pos-sticky 1`] = `
 
 exports[`compiler: md:ai-center 1`] = `
 "@media (width >= 48rem) {\\n  .md\\\\:ai-center {\\n    align-items: center;\\n  }\\n}"
+`;
+
+exports[`compiler: md:lh-12px 1`] = `
+"@media (width >= 48rem) {\\n  .md\\\\:lh-12px {\\n    line-height: 12px;\\n  }\\n}"
 `;
 
 exports[`compiler: md:m-auto 1`] = `

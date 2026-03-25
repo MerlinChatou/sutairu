@@ -120,7 +120,7 @@ export const sampleClasses = [
   "tr-bg-500-ease-in",
   "tr-opacity-200-cubic(0.1,0.7,1.0,0.1)",
   "tr-shadow-step(1,end)",
-  
+
   // :::::::::::::: INTERACTIVITY ::::::::::::::
 
   // /interactivity/cursor.js
@@ -359,7 +359,13 @@ export const sampleClasses = [
   "ls-12.3rem",
 
   // /typography/line-height.js
-
+  "lh-none",
+  "lh-5",
+  "lh-2%",
+  "lh-2/3",
+  "!lh-xs",
+  "md:lh-12px",
+  
   // /typography/text-alignment.js
   "text-center",
   "text-start",

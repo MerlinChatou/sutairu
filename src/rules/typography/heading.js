@@ -15,7 +15,7 @@ const baseHeadings = {
 // Common shared properties for all titles to keep the baseHeadings map clean
 const sharedTitleProps = {
   "line-height": "var(--su-lh-title)",
-  color: "var(--su-text-title)",
+  color: "var(--su-title)",
 };
 
 /**

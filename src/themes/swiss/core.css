@@ -1,5 +1,5 @@
 /* Import Inter & Indie Flower */
-@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Indie+Flower&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 [data-theme="swiss"] {
   /* Base Palette Colors */
@@ -38,7 +38,7 @@
   --su-ff-title: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --su-fs-adjust-title: none;
 
-  --su-ff-mono: Consolas, monaco, monospace;
+  --su-ff-mono: "Google Sans Code", monospace;
   --su-fs-adjust-mono: 0.559;
 
   --su-ff-handwritten: "Indie Flower";
