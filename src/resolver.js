@@ -1,14 +1,33 @@
-import { staticMap, dynamicPatterns } from "./rules/index.js";
+import { staticUtilitiesMap, dynamicUtilitiesPatterns,  staticComponentsMap, dynamicComponentsPatterns  } from "./rules/index.js";
 
 
 
-export function resolveCoreStyle(cls) {
+export function resolveCoreUtilitiesStyle(cls) {
 
   // 1. Check static maps first (Performance)
-  if (staticMap[cls]) return staticMap[cls];
+  if (staticUtilitiesMap[cls]) return staticUtilitiesMap[cls];
 
   // 2. Check dynamic regex patterns
-  for (const pattern of dynamicPatterns) {
+  for (const pattern of dynamicUtilitiesPatterns) {
+    const match = cls.match(pattern.test);
+    if (match) {
+      return pattern.parse(match);
+    }
+  }
+
+  // 3. If the class is not found, returns null
+  return null;
+}
+
+
+
+export function resolveCoreComponentsStyle(cls) {
+
+  // 1. Check static maps first (Performance)
+  if (staticComponentsMap[cls]) return staticComponentsMap[cls];
+
+  // 2. Check dynamic regex patterns
+  for (const pattern of dynamicComponentsPatterns) {
     const match = cls.match(pattern.test);
     if (match) {
       return pattern.parse(match);

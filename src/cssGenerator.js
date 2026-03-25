@@ -8,8 +8,6 @@ export const generateCSS = (ruleConfig, path, util, tools) => {
   // Loop through each rule in the object
   return ruleConfig.rules
     .map((rule) => {
-      console.log (rule);
-      console.log (path);
       // Prepend path to selector
       let selector = path.length > 0 ? `${path.join(":")}:${rule.selector}` : `${rule.selector}`;
 

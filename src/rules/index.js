@@ -5,7 +5,7 @@ import * as hatching from "./background/hatching.js";
 import * as pattern_angle from "./background/pattern-angle.js";
 import * as pattern_period from "./background/pattern-period.js";
 import * as pattern_width from "./background/pattern-width.js";
-import * as stripes from "./background/stripes.js"
+import * as stripes from "./background/stripes.js";
 
 // Border
 import * as border_color from "./border/border-color.js";
@@ -17,8 +17,8 @@ import * as border_width_unit from "./border/border-width-unit.js";
 
 // Components
 import * as badge from "./components/badge.js";
-import * as button from "./components/button.js"
-import * as button_base from "./components/button-base.js"
+import * as button from "./components/button.js";
+import * as button_base from "./components/button-base.js";
 import * as card from "./components/card.js";
 import * as group from "./components/group.js";
 import * as masonry from "./components/masonry.js";
@@ -34,7 +34,6 @@ import * as opacity from "./effects/opacity.js";
 import * as saturate from "./effects/saturate.js";
 import * as sepia from "./effects/sepia.js";
 import * as transitions from "./effects/transitions.js";
-
 
 // Interactivity
 import * as cursor from "./interactivity/cursor.js";
@@ -91,7 +90,6 @@ import * as text_decoration from "./typography/text-decoration.js";
 import * as text_wrap from "./typography/text-wrap.js";
 import * as white_space from "./typography/white-space.js";
 
-
 /*
 src/
 └── rules/
@@ -104,7 +102,7 @@ src/
     └── interactivity/    # cursor, pointer-events, user-select, outline
 */
 
-const modules = [
+const utilities = [
   // Background
   background_color,
   dotted,
@@ -121,14 +119,6 @@ const modules = [
   border_radius_unit,
   border_width,
   border_width_unit,
-
-  // Components
-  badge,
-  button,
-  button_base,
-  card,
-  group,
-  masonry,
 
   // Effects
   blur,
@@ -156,7 +146,7 @@ const modules = [
   flex,
   flex_basis,
   flex_grow,
-  flex_shrink,  
+  flex_shrink,
   grid,
   grid_cols,
   grid_rows,
@@ -180,7 +170,7 @@ const modules = [
 
   // Transform
   rotate,
-  scale, 
+  scale,
   translate,
 
   // Typography
@@ -198,8 +188,19 @@ const modules = [
   white_space,
 ];
 
-// Flatten all static rules into one object for O(1) lookup
-export const staticMap = modules.reduce((acc, mod) => ({ ...acc, ...mod.rules }), {});
+// Components
+const components = [badge, button, button_base, card, group, masonry];
 
-// Flatten all regex patterns into one array
-export const dynamicPatterns = modules.flatMap((mod) => mod.patterns || []);
+// Flatten all static utilities rules into one object for O(1) lookup
+export const staticUtilitiesMap = utilities.reduce((acc, mod) => ({ ...acc, ...mod.rules }), {});
+
+// Flatten all regex utilities patterns into one array
+export const dynamicUtilitiesPatterns = utilities.flatMap((mod) => mod.patterns || []);
+
+
+
+// Flatten all static components rules into one object for O(1) lookup
+export const staticComponentsMap = components.reduce((acc, mod) => ({ ...acc, ...mod.rules }), {});
+
+// Flatten all regex components patterns into one array
+export const dynamicComponentsPatterns = components.flatMap((mod) => mod.patterns || []);

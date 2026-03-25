@@ -1,5 +1,5 @@
 import { variantHandlers } from "./variants/index.js";
-import { resolveCoreStyle } from "./resolver.js";
+import { resolveCoreUtilitiesStyle, resolveCoreComponentsStyle } from "./resolver.js";
 import { generateCSS } from "./cssGenerator.js";
 import { logger } from "./utils/logger.js";
 
@@ -8,7 +8,7 @@ import { logger } from "./utils/logger.js";
  * @param {object} tree The tree to processs
  * @returns {string} The CSS generated
  */
-export function buildCSS(tree) {
+export function buildCSS(tree, { isComponents = false } = {}) {
   let cssOutput = "";
 
   /**
@@ -42,7 +42,7 @@ export function buildCSS(tree) {
       const rules = node._utilities
         .map((util) => {
           logger.verbose(`Resolve ${util}`);
-          const rulesConfig = resolveCoreStyle(util);
+          const rulesConfig = (isComponents)? resolveCoreComponentsStyle(util) : resolveCoreUtilitiesStyle(util);
           if (!rulesConfig) return null;
 
           // Generate CSS properties from rules
