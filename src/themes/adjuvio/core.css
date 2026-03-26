@@ -48,6 +48,9 @@
   --su-lh-title: 1.2;
   --su-lh-base: 1.5;
 
+    --su-link-color: var(--su-blue);
+  --su-link-color-hover: color-mix(var(--su-blue), #000 20%);
+
   /* Headings */
   --su-fs-h1: clamp(2.25rem, 1.6rem + 2.8vw, 3rem);
   --su-fs-h2: calc(1rem + (var(--su-fs-h1) - 1rem) * 0.6);

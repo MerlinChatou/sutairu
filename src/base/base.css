@@ -13,6 +13,16 @@
   /* The Master Pipeline Trigger */
 }
 
+a {
+  color: var(--su-link-color);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+a:hover {
+  color: var(--su-link-color-hover);
+  /* Inverted hover effect for high impact */
+  text-decoration: underline;
+}
 :where(
   [class*="blur-"],
   [class*="grayscale-"],

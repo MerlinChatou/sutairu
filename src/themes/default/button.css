@@ -219,7 +219,7 @@
   --su-btn-neutral-border: var(--su-btn-neutral-bg);
   --su-btn-neutral-outline: 0;
 
-  --su-btn-neutral-bg-hover: color-mix(var(--su-btn-neutral-bg), #000 8%);
+  --su-btn-neutral-bg-hover: color-mix(var(--su-btn-neutral-bg), #000 10%);
   --su-btn-neutral-text-hover: var(--su-btn-neutral-text);
   --su-btn-neutral-border-hover: var(--su-btn-neutral-bg-hover);
   --su-btn-neutral-outline-hover: 0;
@@ -234,12 +234,12 @@
   --su-btn-neutral-border-focus-visible: var(--su-btn-secondary-bg-hover);
   --su-btn-neutral-outline-focus-visible: 4px solid oklch(from var(--su-btn-neutral-bg) l c h / 35%);
 
-  --su-btn-neutral-bg-active: color-mix(var(--su-btn-neutral-bg), #000 12%);
+  --su-btn-neutral-bg-active: color-mix(var(--su-btn-neutral-bg), #000 16%);
   --su-btn-neutral-text-active: var(--su-btn-neutral-text);
   --su-btn-neutral-border-active: var(--su-btn-neutral-bg-active);
   --su-btn-neutral-outline-active: inherit;
 
-  --su-btn-neutral-bg-selected: color-mix(var(--su-btn-neutral-bg), #000 12%);
+  --su-btn-neutral-bg-selected: color-mix(var(--su-btn-neutral-bg), #000 16%);
   --su-btn-neutral-text-selected: var(--su-btn-neutral-text);
   --su-btn-neutral-border-selected: var(--su-btn-neutral-bg-selected);
   --su-btn-neutral-outline-selected: inherit;
