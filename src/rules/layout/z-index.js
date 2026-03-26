@@ -1,15 +1,15 @@
 const zScale = {
-  'behind': '-1',
-  'base': '0',
-  'raised': '10',
-  'dropdown': '100',
-  'sticky': '200',
-  'overlay': '300',
-  'modal': '1000',
-  'popover': '2000',
-  'tooltip': '3000',
-  'toast': '4000',
-  'auto': 'auto',
+  'behind': 'var(--su-z-behind)',
+  'base': 'var(--su-z-base)',
+  'raised': 'var(--su-z-raised)',
+  'dropdown': 'var(--su-z-dropdown)',
+  'sticky': 'var(--su-z-sticky)',
+  'overlay': 'var(--su-z-overlay)',
+  'modal': 'var(--su-z-modal)',
+  'popover': 'var(--su-z-popover)',
+  'tooltip': 'var(--su-z-tooltip)',
+  'toast': 'var(--su-z-toast)',
+  'auto': 'var(--su-z-auto)',
 };
 
 export const patterns = [

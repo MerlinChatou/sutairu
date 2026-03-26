@@ -1,4 +1,18 @@
-/* The Master Pipeline Trigger */
+:root {
+  --su-z-behind: -1;
+  --su-z-base: 0;
+  --su-z-raised: 0;
+  --su-z-dropdown: 100;
+  --su-z-sticky: 200;
+  --su-z-overlay: 300;
+  --su-z-modal: 1000;
+  --su-z-popover: 2000;
+  --su-z-tooltip: 3000;
+  --su-z-toast: 4000;
+  --su-z-auto: auto;
+  /* The Master Pipeline Trigger */
+}
+
 :where(
   [class*="blur-"],
   [class*="grayscale-"],

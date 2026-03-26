@@ -1,0 +1,28 @@
+[data-theme="swiss"] {
+  --su-modal-opening-duration: 300ms;
+  --su-modal-closing-duration: 200ms;
+  --su-modal-animation: su-modal-animation-swiss;
+  --su-modal-backdrop-animation: su-modal-backdrop-animation-swiss;
+}
+
+@keyframes su-modal-animation-swiss {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes su-modal-backdrop-animation-swiss {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

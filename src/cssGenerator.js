@@ -11,8 +11,8 @@ export const generateCSS = (ruleConfig, path, util, tools) => {
       // Prepend path to selector
       let selector = path.length > 0 ? `${path.join(":")}:${rule.selector}` : `${rule.selector}`;
 
-      // Add prefix and escape selector
-      selector = `${rule.identifier || "."}${escapeClassName(selector)}`;
+      // Add prefix and escape selector      
+      selector = `${rule.identifier ?? "."}${escapeClassName(selector)}`;
       
       // Apply path tools (& selector or selector:hover)
       for (const tool of [...tools].reverse()) {
