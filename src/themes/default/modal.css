@@ -9,6 +9,11 @@
   --su-modal-footer-bg-color: var(--su-container);
   --su-modal-border-color: var(--su-border);
   --su-modal-border-radius: 0.75rem;
+  --su-modal-backdrop-color: #0000008f;
+}
+
+[data-color-scheme="dark"] {
+  --su-modal-backdrop-color: #000000af;
 }
 
 @keyframes su-modal-animation-default {

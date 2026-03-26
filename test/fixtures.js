@@ -11,11 +11,32 @@ export const sampleClasses = [
   "sm:bg-subtle",
 
   // /background/dotted.js
+  "dotted-green",
+  "dotted-white-200",
+  "dotted-gray/50",
+  "dotted-black-800/80",
+  "!dotted-page",
+  "sm:dotted-subtle",
+
   // /background/hatching.js
+  "hatching-green",
+  "hatching-white-200",
+  "hatching-gray/50",
+  "hatching-black-800/80",
+  "!hatching-page",
+  "sm:hatching-subtle",
+
   // /background/pattern-angle.js
   // /background/pattern-period.js
   // /background/pattern-width.js
+  
   // /background/stripes.js
+  "stripes-green",
+  "stripes-white-200",
+  "stripes-gray/50",
+  "stripes-black-800/80",
+  "!stripes-page",
+  "sm:stripes-subtle",
 
   // :::::::::::::: BORDER ::::::::::::::
 
@@ -59,6 +80,10 @@ export const sampleClasses = [
   // /components/masonry.js
   "masonry",
   "!masonry",
+
+  // /components/modal.js
+  "modal",
+  "modal-content",
 
   // :::::::::::::: EFFECTS ::::::::::::::
 

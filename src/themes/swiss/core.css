@@ -81,8 +81,8 @@
   --su-border: oklch(from var(--su-accent) 27% 0.005 h);
 
   /* Semantic text */
-  --su-text-body: oklch(from var(--su-accent) 85% 0.001 h);
-  --su-text-title: #fff;
+  --su-body: oklch(from var(--su-accent) 85% 0.001 h);
+  --su-title: #fff;
 
   /* Semantic background */
   --su-page: oklch(from var(--su-accent) 18% 0.003 h);

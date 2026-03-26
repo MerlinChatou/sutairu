@@ -4,7 +4,7 @@ export const patterns = [
   {
     /**
      * Matches:
-     * bg-blue, !bg-red-500, bg-green/50, !bg-primary-200/0.8
+     * hatching-blue, !hatching-red-500, hatching-green/50, !hatching-primary-200/0.8
      *
      * Group 1: (!?)       -> Importance
      * Group 2: (colors)   -> Base color name
@@ -53,41 +53,3 @@ export const patterns = [
     },
   },
 ];
-/*
-import { convertToOklch } from "../utils.js";
-import { colorsList } from "../utils.js";
-
-export const patterns = [
-  {
-
-    test: new RegExp(`^(!?)hatching-${colorsList}(?:-([0-9]+))?(?:\\/([0-9.]+))?$`),
-    parse: (match) => {
-      const isImportant = match[1] === "!";
-      const colorValue = convertToOklch({
-        color: match[2],
-        shade: match[3],
-        transparency: match[4],
-      });
-
-      const importantTag = isImportant ? " !important" : "";
-
-
-      return (
-        `
-        background-position: 0 0${importantTag};
-        background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px)${importantTag};
-        background-image: repeating-linear-gradient(
-        var(--su-pattern-angle, 135deg),
-          ${colorValue} 0,
-          ${colorValue} var(--su-pattern-w, 1px),
-          transparent 0,
-          transparent 50%
-        )${importantTag};
-      `
-          .replace(/\s+/g, " ")
-          .trim() + ";"
-      );
-    },
-  },
-];
-*/

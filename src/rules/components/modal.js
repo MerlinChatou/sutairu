@@ -54,7 +54,7 @@ export const rules = {
           { content: '""' },
           { position: "fixed" },
           { inset: "0" },
-          { "background-color": "var(--su-modal-backdrop)" },
+          { "background-color": "var(--su-modal-backdrop-color)" },
           { opacity: "1" },
           { "backdrop-filter": "blur(0.375rem)" },
           { "pointer-events": "auto" },
