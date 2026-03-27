@@ -52,6 +52,16 @@
     border-width: 1px;
     border-color: var(--su-border);
   }
+  ul,
+  ol {
+    padding-left: 1.5rem;
+    margin-block: 0.5rem 1rem;
+  }
+
+  li {
+    margin: 0;
+    line-height: 1.5;
+  }
   p {
     line-height: var(--su-lh-base);
   }
