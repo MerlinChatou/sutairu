@@ -17,6 +17,7 @@ import * as border_width_unit from "./border/border-width-unit.js";
 
 // Components
 import * as badge from "./components/badge.js";
+import * as btn_close from "./components/btn-close.js";
 import * as button from "./components/button.js";
 import * as button_base from "./components/button-base.js";
 import * as card from "./components/card.js";
@@ -191,7 +192,7 @@ const utilities = [
 ];
 
 // Components
-const components = [badge, button, button_base, card, group, hljs, masonry, modal];
+const components = [badge, btn_close, button, button_base, card, group, hljs, masonry, modal];
 
 // Flatten all static utilities rules into one object for O(1) lookup
 export const staticUtilitiesMap = utilities.reduce((acc, mod) => ({ ...acc, ...mod.rules }), {});

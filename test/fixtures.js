@@ -77,6 +77,13 @@ export const sampleClasses = [
   "badge-outline",
   "!badge-dot",
 
+  // /components/btn-close.js
+  "btn-close",
+  "btn-close-red",
+  "btn-close-red-800",
+  "btn-close-red-800/50",
+
+
   // /components/card.js
   "card",
 
