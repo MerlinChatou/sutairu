@@ -18,7 +18,8 @@
     margin: 0;
     line-height: 1;
     -webkit-font-smoothing: antialiased;
-    font-family: var(--su-ff-base);
+    font-family: var(--su-ff-base);    
+    font-size: 1rem;
     font-size-adjust: var(--su-fs-adjust-base);
     background-color: var(--su-page);
     color: var(--su-body);
@@ -53,5 +54,10 @@
   }
   p {
     line-height: var(--su-lh-base);
+  }
+  pre {
+    margin: 0;
+    display: block;
+    white-space: pre;
   }
 }
