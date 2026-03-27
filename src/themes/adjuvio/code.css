@@ -1,0 +1,69 @@
+:root {
+  --su-code-bg: oklch(from var(--su-accent) 94% 0.01 h);
+  --su-code-radius: 0.25rem;
+
+  --su-code-block-bg: oklch(from var(--su-accent) 90% 0.01 h);
+  --su-code-block-radius: 0.5rem;
+
+  --hljs-text: var(--su-body);
+  --hljs-bg: var(--su-subtle);
+  --hljs-selection: color-mix(in oklch, var(--su-blue), white 30%);
+  --hljs-comment: color-mix(in oklch, var(--su-green), black 30%);
+  --hljs-variable: color-mix(in oklch, var(--su-yellow), black 25%);
+  --hljs-formula: color-mix(in oklch, var(--su-yellow), white 25%);
+  --hljs-bullet: color-mix(in oklch, var(--su-yellow), black 25%);
+  --hljs-template-variable: color-mix(in oklch, var(--su-yellow), black 25%);
+  --hljs-selector-tag: color-mix(in oklch, var(--su-yellow), black 25%);
+  --hljs-deletion: color-mix(in oklch, var(--su-yellow), black 25%);
+  --hljs-title: color-mix(in oklch, var(--su-pink), black 10%);
+  --hljs-attribute: color-mix(in oklch, var(--su-orange), black 10%);
+  --hljs-string: color-mix(in oklch, var(--su-orange), black 10%);
+  --hljs-keyword: color-mix(in oklch, var(--su-purple), black 10%);
+  --hljs-name: color-mix(in oklch, var(--su-blue), black 10%);
+  --hljs-built_in: color-mix(in oklch, var(--su-yellow), black 20%);
+  --hljs-attr: color-mix(in oklch, var(--su-blue), white 10%);
+  --hljs-symbol: color-mix(in oklch, var(--su-blue), white 10%);
+  --hljs-number: color-mix(in oklch, var(--su-blue), white 10%);
+  --hljs-link: color-mix(in oklch, var(--su-blue), white 10%);
+  --hljs-literal: color-mix(in oklch, var(--su-blue), white 10%);
+  --hljs-tag: color-mix(in oklch, var(--su-gray), black 20%);
+  --hljs-operators: color-mix(in oklch, var(--su-black), black 10%);
+  --hljs-subst: color-mix(in oklch, var(--su-black), black 10%);
+  --hljs-punctuation: color-mix(in oklch, var(--su-black), black 10%);
+  --hljs-params: color-mix(in oklch, var(--su-cyan), black 10%);
+  --hljs-strong: color-mix(in oklch, var(--su-pink), black 0%);
+  --hljs-emphasis: color-mix(in oklch, var(--su-blue), black 10%);
+}
+
+/* Dark */
+[data-color-scheme="dark"] {
+  --su-code-bg: oklch(from var(--su-accent) 35% 0.02 h);
+  --su-code-block-bg: oklch(from var(--su-accent) 35% 0.02 h);
+
+  --hljs-selection: color-mix(in oklch, var(--su-blue), black 35%);
+  --hljs-comment: color-mix(in oklch, var(--su-green), white 10%);
+  --hljs-variable: color-mix(in oklch, var(--su-yellow), white 10%);
+  --hljs-formula: color-mix(in oklch, var(--su-yellow), white 10%);
+  --hljs-bullet: color-mix(in oklch, var(--su-yellow), black 10%);
+  --hljs-template-variable: color-mix(in oklch, var(--su-yellow), black 10%);
+  --hljs-selector-tag: color-mix(in oklch, var(--su-yellow), black 10%);
+  --hljs-deletion: color-mix(in oklch, var(--su-yellow), black 10%);
+  --hljs-title: color-mix(in oklch, var(--su-pink), white 10%);
+  --hljs-attribute: color-mix(in oklch, var(--su-orange), white 10%);
+  --hljs-string: color-mix(in oklch, var(--su-orange), white 20%);
+  --hljs-keyword: color-mix(in oklch, var(--su-purple), white 10%);
+  --hljs-name: color-mix(in oklch, var(--su-blue), black 10%);
+  --hljs-built_in: color-mix(in oklch, var(--su-yellow), white 10%);
+  --hljs-attr: color-mix(in oklch, var(--su-blue), white 20%);
+  --hljs-symbol: color-mix(in oklch, var(--su-blue), white 20%);
+  --hljs-number: color-mix(in oklch, var(--su-blue), white 20%);
+  --hljs-link: color-mix(in oklch, var(--su-blue), white 20);
+  --hljs-literal: color-mix(in oklch, var(--su-blue), white 20%);
+  --hljs-tag: color-mix(in oklch, var(--su-gray), white 20%);
+  --hljs-operators: color-mix(in oklch, var(--white), white 10%);
+  --hljs-subst: color-mix(in oklch, var(--su-black), black 10%);
+  --hljs-punctuation: color-mix(in oklch, var(--su-black), black 10%);
+  --hljs-params: color-mix(in oklch, var(--su-cyan), black 10%);
+  --hljs-strong: color-mix(in oklch, var(--su-pink), white 0%);
+  --hljs-emphasis: color-mix(in oklch, var(--su-blue), white 10%);
+}
