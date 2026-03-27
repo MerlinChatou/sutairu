@@ -29,7 +29,7 @@ export const sampleClasses = [
   // /background/pattern-angle.js
   // /background/pattern-period.js
   // /background/pattern-width.js
-  
+
   // /background/stripes.js
   "stripes-green",
   "stripes-white-200",
@@ -72,6 +72,10 @@ export const sampleClasses = [
   // :::::::::::::: COMPONENTS ::::::::::::::
 
   // /components/badge.js
+  "badge",
+  "badge-pill",
+  "badge-outline",
+  "!badge-dot",
 
   // /components/card.js
   "card",
@@ -390,7 +394,7 @@ export const sampleClasses = [
   "lh-2/3",
   "!lh-xs",
   "md:lh-12px",
-  
+
   // /typography/text-alignment.js
   "text-center",
   "text-start",
