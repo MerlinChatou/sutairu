@@ -1,19 +1,19 @@
+<!-- 
+ CSS generator
+sutairu -w "./playground/" -e "html" -o "./playground/style.css" -s "bg-red-500,d-flex" -v 
+-->
 <!doctype html>
 <html>
   <head>
     <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
     <link rel="alternate icon" href="/favicon.ico" />
     <link rel="stylesheet" href="../playground/style.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/css.min.js"></script>
     <title>Sutairu Playground</title>
     <style>
-      /*
-      body {
-        font-family: sans-serif;
-      }
-        */
-
-
-
       textarea,
       pre {
         outline: none;
@@ -48,17 +48,24 @@
   <body class="m-0 flex-y h-100vh">
     <div class="section pos-rel h-50vh ov-hidden flex-y">
       <div class="label pos-abs top-0 left-0">INPUT (SPACE SEPARATED)</div>
-      <textarea id="input" class="grow-1 m-0 b-0 p-4 pt-8" placeholder="m-3 !bg-blue-123/83 m-5"></textarea>
+      <textarea id="input" class="grow-1 m-0 b-0 p-4 pt-8 lh-1.5" placeholder="m-3 !bg-blue-123/83 m-5"></textarea>
     </div>
-
     <div class="section pos-rel h-50vh ov-hidden flex-y">
       <div class="label pos-abs top-0 left-0">GENERATED CSS</div>
-      <pre id="output" class="grow-1 ov-auto ff-mono m-0 b-0 lh-1.5 p-4 pt-8"></pre>
+      <pre class="w-100% h-100%"><code id="output" class="language-css w-100% h-100% grow-1 ov-auto ff-mono m-0 b-0 lh-1.5 !p-4 !pt-8"></code></pre>
     </div>
 
     <script type="module">
       // Points to your actual source logic!
       import { compileCSS } from "../src/compiler.js";
+
+      import hljs from "./playground/highlight/es/highlight.min.js";
+      //  and it's easy to individually load additional languages
+      import css from "./playground/highlight/es/languages/css.min.js";
+      hljs.registerLanguage("css", css);
+
+      console.log(hljs)
+
 
       const input = document.getElementById("input");
       const output = document.getElementById("output");
@@ -66,6 +73,11 @@
         const classes = input.value.split(/\s+/).filter(Boolean);
         const css = await compileCSS(classes);
         output.textContent = css;
+        
+        // Refresh highlight
+        delete output.dataset.highlighted;
+        output.classList.remove('hljs');        
+        hljs.highlightElement(output);
       });
     </script>
   </body>

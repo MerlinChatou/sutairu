@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Indie+Flower&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 /* Define the order upfront (Weakest to Strongest) */
 @layer reset, base, components, utilities;
@@ -203,7 +203,7 @@
   --su-ff-title: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --su-fs-adjust-title: none;
 
-  --su-ff-mono: "Google Sans Code", monospace;
+  --su-ff-mono: monospace;
   --su-fs-adjust-mono: 0.5;
 
   --su-ff-handwritten: "Indie Flower";
@@ -709,7 +709,122 @@
 
 
 @layer components {
- 
+ .hljs {
+  color: var(--hljs-text-l);
+  border: 3px solid var(--hljs-bg);
+  background-color: var(--hljs-bg);
+}
+
+.hljs::selection {
+  background-color: var(--hljs-selection);
+}
+
+.hljs-comment {
+  color: var(--hljs-comment);
+  font-style: italic;
+}
+
+.hljs-formula {
+  color: var(--hljs-formula);
+}
+
+.hljs-params {
+  color: var(--hljs-params);
+}
+
+.hljs-property {
+  color: inherit;
+}
+
+.hljs-tag {
+  color: var(--hljs-tag);
+}
+
+.hljs-bullet {
+  color: var(--hljs-bullet);
+}
+
+.hljs-variable {
+  color: var(--hljs-variable);
+}
+
+.hljs-template-variable {
+  color: var(--hljs-template-variable);
+}
+
+.hljs-selector-tag {
+  color: var(--hljs-selector-tag);
+}
+
+.hljs-deletion {
+  color: var(--hljs-deletion);
+}
+
+.hljs-name {
+  color: var(--hljs-name);
+}
+
+.hljs-title {
+  color: var(--hljs-title);
+}
+
+.hljs-attribute {
+  color: var(--hljs-attribute);
+}
+
+.hljs-attr {
+  color: var(--hljs-attr);
+}
+
+.hljs-symbol {
+  color: var(--hljs-symbol);
+}
+
+.hljs-number {
+  color: var(--hljs-number);
+}
+
+.hljs-link {
+  color: var(--hljs-link);
+}
+
+.hljs-literal {
+  color: var(--hljs-literal);
+}
+
+.hljs-keyword {
+  color: var(--hljs-keyword);
+}
+
+.hljs-keyword {
+  color: var(--hljs-keyword);
+}
+
+.hljs-punctuation {
+  color: var(--hljs-punctuation);
+}
+
+.hljs-subst {
+  color: var(--hljs-subst);
+}
+
+.hljs-built_in {
+  color: var(--hljs-built_in);
+}
+
+.hljs-string {
+  color: var(--hljs-string);
+}
+
+.hljs-strong {
+  color: var(--hljs-strong);
+}
+
+.hljs-emphasis {
+  color: var(--hljs-emphasis);
+}
+
+
 }
 
 @layer utilities {
@@ -766,6 +881,18 @@
   padding-top: 2rem;
 }
 
+.lh-1\.5 {
+  line-height: 1.5;
+}
+
+.w-100\% {
+  width: 100%;
+}
+
+.h-100\% {
+  height: 100%;
+}
+
 .ov-auto {
   overflow: auto;
 }
@@ -775,8 +902,12 @@
   font-size-adjust: var(--su-fs-adjust-mono);
 }
 
-.lh-1\.5 {
-  line-height: 1.5;
+.\!p-4 {
+  padding: 1rem !important;
+}
+
+.\!pt-8 {
+  padding-top: 2rem !important;
 }
 
 .bg-red-500 {
