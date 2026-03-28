@@ -83,7 +83,6 @@ export const sampleClasses = [
   "btn-close-red-800",
   "btn-close-red-800/50",
 
-
   // /components/card.js
   "card",
 

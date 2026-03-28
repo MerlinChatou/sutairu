@@ -6,11 +6,15 @@ import fs from "fs-extra";
 import { transform } from "lightningcss";
 import { compileCSS } from "./compiler.js";
 
-const fileClassMap = new Map();
+export const fileClassMap = new Map();
+
+
+export function resetFileClassMap() {
+  fileClassMap.clear();
+}
+
 
 export function scanFile(filePath) {
-  // If verbose is required display parsed file
-  logger.verbose(`[NEW] Monitoring: ${filePath}`);
 
   try {
     const content = fs.readFileSync(filePath, "utf-8");
@@ -57,7 +61,7 @@ export async function generateCSS(config, safeList) {
   }
   // Add safelist
   safeList.forEach((cls) => allUniqueClasses.add(cls));
-  logger.info(`${allUniqueClasses.size} classes found`);
+  logger.verbose(`${allUniqueClasses.size} classes found`);
 
   // 2. Build css from class list
   const onDemandCSS = compileCSS(Array.from(allUniqueClasses));
