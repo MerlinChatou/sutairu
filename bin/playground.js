@@ -41,7 +41,11 @@ const server = http.createServer((req, res) => {
     }
     
     // Set content type for JS modules
-    if (filePath.endsWith('.js')) res.setHeader('Content-Type', 'application/javascript');
+    if (filePath.endsWith('.js')) 
+      res.setHeader('Content-Type', 'application/javascript');
+    else if (filePath.endsWith('.css')) {
+      res.setHeader('Content-Type', 'text/css');
+    }
     
     res.writeHead(200);
     res.end(data);
