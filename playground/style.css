@@ -204,7 +204,7 @@
   --su-fs-adjust-title: none;
 
   --su-ff-mono: monospace;
-  --su-fs-adjust-mono: 0.5;
+  --su-fs-adjust-mono: 0.56;
 
   --su-ff-handwritten: "Indie Flower";
   --su-fs-adjust-handwritten: 0.44;
@@ -865,8 +865,53 @@
   left: 0;
 }
 
+.px-4 {
+  padding-inline: 1rem;
+}
+
+.py-1\.5 {
+  padding-block: 0.375rem;
+}
+
+.fw-bold {
+  font-weight: 700;
+}
+
+.fs-xs {
+  font-size: 0.75rem;
+}
+
+.ls-1px {
+  letter-spacing: 1px;
+}
+
+.text-white {
+  color: var(--su-white);
+}
+
+.bg-gray-600\/80 {
+  background-color: oklch(from color-mix(in oklch, var(--su-gray), #000 20%) l c h / 0.8);
+}
+
+.z-10 {
+  z-index: 10;
+}
+
 .grow-1 {
   flex-grow: 1;
+}
+
+.bg-black {
+  background-color: var(--su-black);
+}
+
+.text-white-570 {
+  color: color-mix(in oklch, var(--su-white), #000 14%);
+}
+
+.ff-mono {
+  font-family: var(--su-ff-mono);
+  font-size-adjust: var(--su-fs-adjust-mono);
 }
 
 .b-0 {
@@ -885,6 +930,10 @@
   line-height: 1.5;
 }
 
+.top-2px {
+  top: 2px;
+}
+
 .w-100\% {
   width: 100%;
 }
@@ -893,13 +942,16 @@
   height: 100%;
 }
 
-.ov-auto {
-  overflow: auto;
+.bt-2 {
+  border-top-width: 2px;
 }
 
-.ff-mono {
-  font-family: var(--su-ff-mono);
-  font-size-adjust: var(--su-fs-adjust-mono);
+.b-blue {
+  border-color: var(--su-blue);
+}
+
+.ov-auto {
+  overflow: auto;
 }
 
 .\!p-4 {

@@ -21,25 +21,10 @@ sutairu -w "./playground/" -e "html" -o "./playground/style.css" -s "bg-red-500,
       }
 
       textarea {
-        background: #1e1e1e;
-        color: #d4d4d4;
-        font-family: monospace;
         resize: none;
       }
 
-      pre {
-        background: #f8f9fa;
-        color: #212529;
-        border-top: 2px solid #ddd; /* Changed from left to top border */
-      }
-
       .label {
-        padding: 4px 12px;
-        font-size: 11px;
-        font-weight: bold;
-        letter-spacing: 1px;
-        color: white;
-        background: rgba(85, 85, 85, 0.8);
         pointer-events: none; /* Allows clicking "through" the label to the textarea */
         z-index: 10;
       }
@@ -47,12 +32,12 @@ sutairu -w "./playground/" -e "html" -o "./playground/style.css" -s "bg-red-500,
   </head>
   <body class="m-0 flex-y h-100vh">
     <div class="section pos-rel h-50vh ov-hidden flex-y">
-      <div class="label pos-abs top-0 left-0">INPUT (SPACE SEPARATED)</div>
-      <textarea id="input" class="grow-1 m-0 b-0 p-4 pt-8 lh-1.5" placeholder="m-3 !bg-blue-123/83 m-5"></textarea>
+      <div class="label pos-abs top-0 left-0 px-4 py-1.5 fw-bold fs-xs ls-1px text-white bg-gray-600/80 z-10">INPUT (SPACE SEPARATED)</div>
+      <textarea id="input" class="grow-1 bg-black text-white-570 ff-mono m-0 b-0 p-4 pt-8 lh-1.5" placeholder="m-3 !bg-blue-123/83 m-5"></textarea>
     </div>
     <div class="section pos-rel h-50vh ov-hidden flex-y">
-      <div class="label pos-abs top-0 left-0">GENERATED CSS</div>
-      <pre class="w-100% h-100%"><code id="output" class="language-css w-100% h-100% grow-1 ov-auto ff-mono m-0 b-0 lh-1.5 !p-4 !pt-8"></code></pre>
+      <div class="label pos-abs top-2px left-0 px-4 py-1.5 fw-bold fs-xs ls-1px text-white bg-gray-600/80 z-10">GENERATED CSS</div>
+      <pre class="w-100% h-100% bt-2 b-blue"><code id="output" class="language-css w-100% h-100% grow-1 ov-auto ff-mono m-0 b-0 lh-1.5 !p-4 !pt-8"></code></pre>
     </div>
 
     <script type="module">
