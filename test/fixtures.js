@@ -57,6 +57,9 @@ export const sampleClasses = [
 
   // /border/border-radius-unit.js
   // /border/border-style.js
+  "b-solid",
+  "!b-groove",
+
   // /border/border-width.js
   "b-1",
   "!b-3/2",
@@ -162,6 +165,34 @@ export const sampleClasses = [
   "cur-wait",
   "!cur-grab",
   "md:!cur-copy",
+
+  // /interactivity/outline-color.js
+  "ol-red",
+  "!ol-blue/50",
+  "ol-green-200",
+  "ol-cyan-600/80",
+
+  // /interactivity/outline-style.js
+  "ol-solid",
+  "!ol-groove",
+  "focus:ol-dashed",
+
+  // /interactivity/outline-width.js
+  "ol-5",
+  "!ol-12",
+
+  // /interactivity/outline-width-unit.js
+  "ol-5rem",
+  "!ol-12px",
+
+    // /interactivity/pointer-events.js
+  "pe-none",
+  "!pe-all",
+
+
+  // /interactivity/resize.js
+  "resize-none",
+  "!resize-vertical",
 
   // :::::::::::::: LAYOUT ::::::::::::::
 

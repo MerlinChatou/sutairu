@@ -13,30 +13,14 @@ sutairu -w "./playground/" -e "html" -o "./playground/style.css" -s "bg-red-500,
     <!-- and it's easy to individually load additional languages -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/css.min.js"></script>
     <title>Sutairu Playground</title>
-    <style>
-      textarea,
-      pre {
-        outline: none;
-        /* font-size: 16px; */
-      }
-
-      textarea {
-        resize: none;
-      }
-
-      .label {
-        pointer-events: none; /* Allows clicking "through" the label to the textarea */
-        z-index: 10;
-      }
-    </style>
   </head>
   <body class="m-0 flex-y h-100vh">
     <div class="section pos-rel h-50vh ov-hidden flex-y">
-      <div class="label pos-abs top-0 left-0 px-4 py-1.5 fw-bold fs-xs ls-1px text-white bg-gray-600/80 z-10">INPUT (SPACE SEPARATED)</div>
-      <textarea id="input" class="grow-1 bg-black text-white-570 ff-mono m-0 b-0 p-4 pt-8 lh-1.5" placeholder="m-3 !bg-blue-123/83 m-5"></textarea>
+      <div class="label pos-abs top-0 left-0 pe-none px-4 py-1.5 fw-bold fs-xs ls-1px text-white bg-gray-600/80 z-10">INPUT (SPACE SEPARATED)</div>
+      <textarea id="input" class="grow-1 resize-none bg-black text-white-570 ff-mono m-0 b-0 p-4 pt-8 lh-1.5" placeholder="m-3 !bg-blue-123/83 m-5"></textarea>
     </div>
     <div class="section pos-rel h-50vh ov-hidden flex-y">
-      <div class="label pos-abs top-2px left-0 px-4 py-1.5 fw-bold fs-xs ls-1px text-white bg-gray-600/80 z-10">GENERATED CSS</div>
+      <div class="label pos-abs top-2px left-0 pe-none px-4 py-1.5 fw-bold fs-xs ls-1px text-white bg-gray-600/80 z-10">GENERATED CSS</div>
       <pre class="w-100% h-100% bt-2 b-blue"><code id="output" class="language-css w-100% h-100% grow-1 ov-auto ff-mono m-0 b-0 lh-1.5 !p-4 !pt-8"></code></pre>
     </div>
 
@@ -48,10 +32,6 @@ sutairu -w "./playground/" -e "html" -o "./playground/style.css" -s "bg-red-500,
       //  and it's easy to individually load additional languages
       import css from "./playground/highlight/es/languages/css.min.js";
       hljs.registerLanguage("css", css);
-
-      console.log(hljs)
-
-
       const input = document.getElementById("input");
       const output = document.getElementById("output");
       input.addEventListener("input", async () => {

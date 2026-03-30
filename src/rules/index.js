@@ -40,6 +40,12 @@ import * as transitions from "./effects/transitions.js";
 
 // Interactivity
 import * as cursor from "./interactivity/cursor.js";
+import * as outline_color from "./interactivity/outline-color.js";
+import * as outline_style from "./interactivity/outline-style.js";
+import * as outline_width from "./interactivity/outline-width.js";
+import * as outline_width_unit from "./interactivity/outline-width-unit.js";
+import * as pointer_events from "./interactivity/pointer-events.js";
+import * as resize from "./interactivity/resize.js";
 
 // Layout
 import * as alignment from "./layout/alignment.js";
@@ -137,6 +143,12 @@ const utilities = [
 
   // Interactivity
   cursor,
+  outline_color,
+  outline_style,
+  outline_width,
+  outline_width_unit,
+  pointer_events,
+  resize,
 
   // Layout
   alignment,

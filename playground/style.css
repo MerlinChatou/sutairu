@@ -865,6 +865,10 @@
   left: 0;
 }
 
+.pe-none {
+  pointer-events: none;
+}
+
 .px-4 {
   padding-inline: 1rem;
 }
@@ -899,6 +903,10 @@
 
 .grow-1 {
   flex-grow: 1;
+}
+
+.resize-none {
+  resize: none;
 }
 
 .bg-black {

@@ -42,6 +42,10 @@ exports[`compiler: !b-blue-133/12 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.\\\\!b-blue-133\\\\/12 {\\n  border-color: oklch(from color-mix(in oklch, var(--su-blue), #fff 73.4%) l c h / 0.12) !important;\\n}\\n\\n}"
 `;
 
+exports[`compiler: !b-groove 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.\\\\!b-groove {\\n  border-style: groove !important;\\n}\\n\\n}"
+`;
+
 exports[`compiler: !badge-dot 1`] = `
 "@layer components {\\n .\\\\!badge-dot {\\n  display: inline-block !important;\\n  width: 0.5rem !important;\\n  height: 0.5rem !important;\\n  border-radius: 50% !important;\\n}\\n\\n\\n}\\n\\n@layer utilities {\\n}"
 `;
@@ -170,6 +174,22 @@ exports[`compiler: !mv-x-50% 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.\\\\!mv-x-50\\\\% {\\n  --su-tr-x: 50% !important;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1))) !important;\\n}\\n\\n}"
 `;
 
+exports[`compiler: !ol-12 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.\\\\!ol-12 {\\n  outline-width: 12px !important;\\n}\\n\\n}"
+`;
+
+exports[`compiler: !ol-12px 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.\\\\!ol-12px {\\n  outline-width: 12px !important;\\n}\\n\\n}"
+`;
+
+exports[`compiler: !ol-blue/50 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.\\\\!ol-blue\\\\/50 {\\n  outline-color: oklch(from var(--su-blue) l c h / 0.5) !important;\\n}\\n\\n}"
+`;
+
+exports[`compiler: !ol-groove 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.\\\\!ol-groove {\\n  outline-style: groove !important;\\n}\\n\\n}"
+`;
+
 exports[`compiler: !opacity-1/2 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.\\\\!opacity-1\\\\/2 {\\n  opacity: 0.5 !important;\\n}\\n\\n}"
 `;
@@ -186,6 +206,10 @@ exports[`compiler: !p-2 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.\\\\!p-2 {\\n  padding: 0.5rem !important;\\n}\\n\\n}"
 `;
 
+exports[`compiler: !pe-all 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.\\\\!pe-all {\\n  pointer-events: all !important;\\n}\\n\\n}"
+`;
+
 exports[`compiler: !pos-rel 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.\\\\!pos-rel {\\n  position: relative !important;\\n}\\n\\n}"
 `;
@@ -196,6 +220,10 @@ exports[`compiler: !py-2.5 1`] = `
 
 exports[`compiler: !r-2.5 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.r-2\\\\.5 {\\n  border-radius: 0.625rem !important;\\n}\\n\\n}"
+`;
+
+exports[`compiler: !resize-vertical 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.\\\\!resize-vertical {\\n  resize: vertical !important;\\n}\\n\\n}"
 `;
 
 exports[`compiler: !rot-1/3   1`] = `
@@ -348,6 +376,10 @@ exports[`compiler: b-purple-200/60 1`] = `
 
 exports[`compiler: b-red/50 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.b-red\\\\/50 {\\n  border-color: oklch(from var(--su-red) l c h / 0.5);\\n}\\n\\n}"
+`;
+
+exports[`compiler: b-solid 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.b-solid {\\n  border-style: solid;\\n}\\n\\n}"
 `;
 
 exports[`compiler: b-yellow 1`] = `
@@ -540,6 +572,10 @@ exports[`compiler: flex-y 2`] = `
 
 exports[`compiler: focus-visible:jc-center 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n  .focus-visible\\\\:jc-center:focus-visible {\\n    justify-content: center;\\n  }\\n\\n}"
+`;
+
+exports[`compiler: focus:ol-dashed 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n  .focus\\\\:ol-dashed:focus {\\n    outline-style: dashed;\\n  }\\n\\n}"
 `;
 
 exports[`compiler: fs-sm 1`] = `
@@ -826,6 +862,30 @@ exports[`compiler: odd:!ov-visible 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n  .odd\\\\:\\\\!ov-visible:nth-child(odd) {\\n    overflow: visible !important;\\n  }\\n\\n}"
 `;
 
+exports[`compiler: ol-5 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.ol-5 {\\n  outline-width: 5px;\\n}\\n\\n}"
+`;
+
+exports[`compiler: ol-5rem 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.ol-5rem {\\n  outline-width: 5rem;\\n}\\n\\n}"
+`;
+
+exports[`compiler: ol-cyan-600/80 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.ol-cyan-600\\\\/80 {\\n  outline-color: oklch(from color-mix(in oklch, var(--su-cyan), #000 20%) l c h / 0.8);\\n}\\n\\n}"
+`;
+
+exports[`compiler: ol-green-200 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.ol-green-200 {\\n  outline-color: color-mix(in oklch, var(--su-green), #fff 60%);\\n}\\n\\n}"
+`;
+
+exports[`compiler: ol-red 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.ol-red {\\n  outline-color: var(--su-red);\\n}\\n\\n}"
+`;
+
+exports[`compiler: ol-solid 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.ol-solid {\\n  outline-style: solid;\\n}\\n\\n}"
+`;
+
 exports[`compiler: opacity-0.5 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.opacity-0\\\\.5 {\\n  opacity: 0.5;\\n}\\n\\n}"
 `;
@@ -862,6 +922,10 @@ exports[`compiler: p-4px 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.p-4px {\\n  padding: 4px;\\n}\\n\\n}"
 `;
 
+exports[`compiler: pe-none 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.pe-none {\\n  pointer-events: none;\\n}\\n\\n}"
+`;
+
 exports[`compiler: pos-static 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.pos-static {\\n  position: static;\\n}\\n\\n}"
 `;
@@ -876,6 +940,10 @@ exports[`compiler: r-2 1`] = `
 
 exports[`compiler: r-3/2 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.r-3\\\\/2 {\\n  border-radius: 150%;\\n}\\n\\n}"
+`;
+
+exports[`compiler: resize-none 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.resize-none {\\n  resize: none;\\n}\\n\\n}"
 `;
 
 exports[`compiler: rot-1/4turn 1`] = `

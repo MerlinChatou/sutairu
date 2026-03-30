@@ -9,7 +9,7 @@ export const patterns = [
      * Matches: ol-solid, !ol-double, ol-inset, etc.
      * Use 'ol-' for outlines or 'b-' for borders.
      */
-    test: new RegExp(`^(!?)b-(${styles.join('|')})$`),
+    test: new RegExp(`^(!?)ol-(${styles.join('|')})$`),
     parse: (match) => {
       const [util, important, style] = match;
 
@@ -19,7 +19,7 @@ export const patterns = [
           {
             selector: util,
             declarations: [
-              { "border-style": style }
+              { "outline-style": style }
             ]
           }
         ]
