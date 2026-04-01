@@ -1,55 +1,46 @@
-/**
- * Utility for Pattern Angle.
- * Matches: 
- * - pa-90 (default deg)
- * - pa-1/4 (alias for 1/4turn)
- * - pa-1/4deg (explicit deg)
- */
-
 export const patterns = [
   {
     /**
-     * Regex Breakdown:
-     * ^(!?)               -> Group 1: Important
-     * (-)?                -> Group 2: Negative
-     * (hover:)?           -> Group 3: Hover
-     * (pattern-angle|pa)- -> Group 4: Flexible prefix
-     * ([0-9]+(?:\/[0-9]+)?) -> Group 5: Value/Fraction
-     * (deg|turn|rad|grad)? -> Group 6: Units
+     * Matches: 
+     * pa-90              -> 90deg
+     * pa-0.5turn         -> 0.5turn
+     * !pa-1/4            -> 0.25turn
+     * pattern-angle--45  -> -45deg
      */
-    test: /^(!?)(-)?(hover:)?(?:pattern-angle|pa)-([0-9]+(?:\/[0-9]+)?)(deg|turn|rad|grad)?$/,
+    test: /^(!?)(?:pattern-angle|pa)-(-?[0-9./]+)(deg|turn|rad|grad)?$/,
     parse: (match) => {
-      const isImportant = match[1] === "!";
-      const isNegative = match[2] === "-";
-      const rawValue = match[3];
-      const hasExplicitUnit = !!match[4];
-      const importantTag = isImportant ? " !important" : "";
+      const [util, important, rawValue, unitMatch] = match;
 
-      let value;
       const isFraction = rawValue.includes("/");
-
-      // 1. Determine the Unit
-      // Logic: If it's a fraction and no unit is provided, use 'turn'. Otherwise 'deg'.
-      let unit = match[5];
-      if (!hasExplicitUnit) {
-        unit = isFraction ? "turn" : "deg";
-      }
-
-      // 2. Process Math
+      let value;
+      
+      // 1. Resolve Math (Fractions or Decimals)
       if (isFraction) {
         const [num, den] = rawValue.split("/").map(Number);
-        value = parseFloat((num / den).toFixed(3));
-        
+        // Ensure we don't divide by zero
+        value = den !== 0 ? parseFloat((num / den).toFixed(3)) : 0;
       } else {
         value = parseFloat(rawValue);
       }
 
-      if (isNegative) value = -value;
+      // 2. Determine Unit
+      // Priority: 
+      // 1. Explicitly provided unit (e.g., 'turn' in '0.5turn')
+      // 2. Default for fractions ('turn')
+      // 3. Default for integers/decimals ('deg')
+      const unit = unitMatch || (isFraction ? "turn" : "deg");
 
-      const declaration = `--su-pattern-angle: ${value}${unit}${importantTag};`;
-
-
-      return declaration;
+      return {
+        isImportant: important === "!",
+        rules: [
+          {
+            selector: util,
+            declarations: [
+              { "--su-pattern-angle": `${value}${unit}` }
+            ]
+          }
+        ]
+      };
     },
   },
 ];

@@ -206,6 +206,10 @@ exports[`compiler: !p-2 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.\\\\!p-2 {\\n  padding: 0.5rem !important;\\n}\\n\\n}"
 `;
 
+exports[`compiler: !pa-1/4 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.\\\\!pa-1\\\\/4 {\\n  --su-pattern-angle: 0.25turn !important;\\n}\\n\\n}"
+`;
+
 exports[`compiler: !pe-all 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.\\\\!pe-all {\\n  pointer-events: all !important;\\n}\\n\\n}"
 `;
@@ -272,6 +276,10 @@ exports[`compiler: !text-container-300/10 1`] = `
 
 exports[`compiler: !text-end 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.text-end {\\n  text-align: end !important;\\n}\\n\\n}"
+`;
+
+exports[`compiler: !tt-capitalize   1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n}"
 `;
 
 exports[`compiler: !w-screen-h 1`] = `
@@ -922,6 +930,46 @@ exports[`compiler: p-4px 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.p-4px {\\n  padding: 4px;\\n}\\n\\n}"
 `;
 
+exports[`compiler: pattern-angle-0.5turn 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.pattern-angle-0\\\\.5turn {\\n  --su-pattern-angle: 0.5turn;\\n}\\n\\n}"
+`;
+
+exports[`compiler: pattern-angle-3.14rad 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.pattern-angle-3\\\\.14rad {\\n  --su-pattern-angle: 3.14rad;\\n}\\n\\n}"
+`;
+
+exports[`compiler: pattern-angle-35deg 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.pattern-angle-35deg {\\n  --su-pattern-angle: 35deg;\\n}\\n\\n}"
+`;
+
+exports[`compiler: pattern-angle-90 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.pattern-angle-90 {\\n  --su-pattern-angle: 90deg;\\n}\\n\\n}"
+`;
+
+exports[`compiler: pattern-period-1/3 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.pattern-period-1\\\\/3 {\\n  --su-pattern-p: 33.333%;\\n}\\n\\n}"
+`;
+
+exports[`compiler: pattern-period-20% 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.pattern-period-20\\\\% {\\n  --su-pattern-p: 20%;\\n}\\n\\n}"
+`;
+
+exports[`compiler: pattern-period-20px 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.pattern-period-20px {\\n  --su-pattern-p: 20px;\\n}\\n\\n}"
+`;
+
+exports[`compiler: pattern-width-1/3 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.pattern-width-1\\\\/3 {\\n  --su-pattern-w: 33.333%;\\n}\\n\\n}"
+`;
+
+exports[`compiler: pattern-width-20% 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.pattern-width-20\\\\% {\\n  --su-pattern-w: 20%;\\n}\\n\\n}"
+`;
+
+exports[`compiler: pattern-width-20px 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.pattern-width-20px {\\n  --su-pattern-w: 20px;\\n}\\n\\n}"
+`;
+
 exports[`compiler: pe-none 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.pe-none {\\n  pointer-events: none;\\n}\\n\\n}"
 `;
@@ -930,8 +978,16 @@ exports[`compiler: pos-static 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.pos-static {\\n  position: static;\\n}\\n\\n}"
 `;
 
+exports[`compiler: pp-5 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.pp-5 {\\n  --su-pattern-p: 5px;\\n}\\n\\n}"
+`;
+
 exports[`compiler: ps-0 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.ps-0 {\\n  padding-inline-start: 0;\\n}\\n\\n}"
+`;
+
+exports[`compiler: pw-5 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.pw-5 {\\n  --su-pattern-w: 5px;\\n}\\n\\n}"
 `;
 
 exports[`compiler: r-2 1`] = `
@@ -1104,6 +1160,14 @@ exports[`compiler: tr-opacity-200-cubic(0.1,0.7,1.0,0.1) 1`] = `
 
 exports[`compiler: tr-shadow-step(1,end) 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.tr-shadow-step\\\\(1\\\\,end\\\\) {\\n  transition: box-shadow 150ms steps(1,end) ;\\n}\\n\\n}"
+`;
+
+exports[`compiler: tt-capitalize 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.tt-capitalize {\\n  text-transform: capitalize;\\n}\\n\\n}"
+`;
+
+exports[`compiler: tt-none 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.tt-none {\\n  text-transform: none;\\n}\\n\\n}"
 `;
 
 exports[`compiler: w-2.5 1`] = `

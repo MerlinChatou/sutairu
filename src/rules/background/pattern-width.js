@@ -1,59 +1,46 @@
 import { spacingUnitPattern } from "../utils.js";
 
-/**
- * Utility for Pattern Width (Density).
- * Matches: 
- * - pw-20 (default 20px)
- * - pw-1/2 (alias for 50%)
- * - pw-2rem (explicit unit)
- */
-
 export const patterns = [
   {
     /**
-     * Regex Breakdown:
-     * ^(!?)               -> Group 1: Important
-     * (pattern-width|pw)- -> Group 3: Flexible prefix
-     * ([0-9]+(?:\/[0-9]+)?) -> Group 4: Value/Fraction
-     * ${spacingUnitPattern}? -> Group 5: Optional units from constants
+     * Matches: 
+     * pw-20             -> --su-pattern-w: 20px;
+     * !pw-1/2           -> --su-pattern-w: 50% !important;
+     * pw-5rem           -> --su-pattern-w: 5rem;
+     * pattern-width-10  -> --su-pattern-w: 10px;
      */
-    test: new RegExp(`^(!?)(?:pattern-width|pw)-([0-9]+(?:\\/[0-9]+)?)${spacingUnitPattern}?$`),
+    test: new RegExp(`^(!?)(?:pattern-width|pw)-([0-9]+(?:\\/[0-9]+)?)(?:(${spacingUnitPattern}))?$`),
     parse: (match) => {
-      const isImportant = match[1] === "!";
-      const rawValue = match[2];
-      const hasExplicitUnit = !!match[3];
-      const importantTag = isImportant ? " !important" : "";
+      const [util, important, rawValue, unitMatch] = match;
 
-      let value;
       const isFraction = rawValue.includes("/");
-
+      
       // 1. Determine the Unit
-      // Logic: If it's a fraction without a unit, default to '%'. 
-      // If it's an integer without a unit, default to 'px'.
-      let unit = match[4];
-      if (!hasExplicitUnit) {
-        unit = isFraction ? "%" : "px";
-      }
+      // Priority: Explicit match > Fraction (%) > Integer (px)
+      const unit = unitMatch || (isFraction ? "%" : "px");
 
       // 2. Process Math
+      let value;
       if (isFraction) {
         const [num, den] = rawValue.split("/").map(Number);
-        // If the unit is %, we multiply the fraction by 100 (e.g., 1/2 -> 50)
+        // Multiply by 100 only if the unit is percentage
         const multiplier = unit === "%" ? 100 : 1;
-        value = parseFloat(((num / den) * multiplier).toFixed(3));
+        value = den !== 0 ? parseFloat(((num / den) * multiplier).toFixed(3)) : 0;
       } else {
         value = parseFloat(rawValue);
       }
 
-      const declaration = `--su-pattern-w: ${value}${unit}${importantTag};`;
-
-      if (isHover) {
-        const prefix = match[2] ? "hover:" : "";
-        const rawClass = `${match[0].replace(/^!?/, "")}`; // Reconstruct class without important flag
-        return `.${prefix}${rawClass.replace(":", "\\:")}:hover { ${declaration} }`;
-      }
-
-      return declaration;
+      return {
+        isImportant: important === "!",
+        rules: [
+          {
+            selector: util,
+            declarations: [
+              { "--su-pattern-w": `${value}${unit}` }
+            ]
+          }
+        ]
+      };
     },
   },
 ];

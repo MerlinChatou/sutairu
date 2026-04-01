@@ -96,6 +96,7 @@ import * as line_height from "./typography/line-height.js";
 import * as text_alignement from "./typography/text-alignment.js";
 import * as text_color from "./typography/text-color.js";
 import * as text_decoration from "./typography/text-decoration.js";
+import * as text_transform from "./typography/text-transform.js";
 import * as text_wrap from "./typography/text-wrap.js";
 import * as white_space from "./typography/white-space.js";
 
@@ -199,6 +200,7 @@ const utilities = [
   text_alignement,
   text_color,
   text_decoration,
+  text_transform,
   text_wrap,
   white_space,
 ];

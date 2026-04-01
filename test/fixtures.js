@@ -27,8 +27,23 @@ export const sampleClasses = [
   "sm:hatching-subtle",
 
   // /background/pattern-angle.js
+  "!pa-1/4",
+  "pattern-angle-35deg",
+  "pattern-angle-0.5turn",
+  "pattern-angle-3.14rad",
+  "pattern-angle-90",
+
   // /background/pattern-period.js
+  "pp-5",
+  "pattern-period-20px",
+  "pattern-period-20%",
+  "pattern-period-1/3",
+
   // /background/pattern-width.js
+  "pw-5",
+  "pattern-width-20px",
+  "pattern-width-20%",
+  "pattern-width-1/3",
 
   // /background/stripes.js
   "stripes-green",
@@ -185,10 +200,9 @@ export const sampleClasses = [
   "ol-5rem",
   "!ol-12px",
 
-    // /interactivity/pointer-events.js
+  // /interactivity/pointer-events.js
   "pe-none",
   "!pe-all",
-
 
   // /interactivity/resize.js
   "resize-none",
@@ -454,71 +468,14 @@ export const sampleClasses = [
   "!td-y-3.6",
   "!td-y-3.6vw",
 
+  // /typography/text-transform.js
+  "tt-capitalize",
+  "tt-none",
+  "!tt-capitalize  ",
+
   // /typography/text-wrap.js
 
   // /typography/white-space.js
   "ws-normal",
   "!ws-pre",
-
-  /*
-  "p-2",
-  "p-1/2",
-  "-m-2",
-  "!m-32px",
-  "hover:bg-blue-500",
-  "md:flex",
-  "dark:md:hover:bg-red-300/30",
-  "object-contain",
-  "of-cover",
-  "!of-cover",
-  "ov-hidden",
-  "!of-contain",
-  "!ov-x-hidden",
-  "ov-auto",
-
-  "hue-rotate-45",
-  "-hue-rotate-45",
-  "hue-rotate-45deg",
-  "-hue-rotate-45deg",
-  "hue-rotate-3/4turn",
-  "-hue-rotate-1/4turn",
-
-  "opacity-inherit",
-  "opacity-initial",
-  "opacity-revert",
-  "opacity-unset",
-  "opacity-50",
-
-  "pattern-angle-50",
-  "pattern-angle-50deg",
-  "-pattern-angle-50deg",
-  "!-pattern-angle-50deg",
-  "pattern-angle-1/4",
-  "pattern-angle-1/3turn",
-  "-pattern-angle-1/3turn",
-
-  "flex-row",
-  "!flex-x",
-  "fd-row",
-  "fd-col",
-  "fw-wrap",
-
-  "lh-sm",
-  "lh-150%",
-  "!lh-15",
-  "!lh-sm",
-  "lh-2em",
-  "lh-3/2em",
-  "lh-12px",
-  "lh-none",
-
-  "!align-cc",
-  "align-center-center",
-  "!align-top-center",
-  "align-top-center",
-  "align-tl",
-  "align-br",
-  "align-bl",
-
-  */
 ];
