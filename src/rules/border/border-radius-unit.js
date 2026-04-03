@@ -1,11 +1,11 @@
 import { spacingUnitPattern } from "../utils.js";
 
 const sideMap = {
-  r: ["border-radius"],
-  rt: ["border-top-left-radius", "border-top-right-radius"],
-  rb: ["border-bottom-left-radius", "border-bottom-right-radius"],
-  rl: ["border-top-left-radius", "border-bottom-left-radius"],
-  rr: ["border-top-right-radius", "border-bottom-right-radius"],
+  r:   ["border-radius"],
+  rt:  ["border-top-left-radius", "border-top-right-radius"],
+  rb:  ["border-bottom-left-radius", "border-bottom-right-radius"],
+  rl:  ["border-top-left-radius", "border-bottom-left-radius"],
+  rr:  ["border-top-right-radius", "border-bottom-right-radius"],
   rtl: ["border-top-left-radius"],
   rtr: ["border-top-right-radius"],
   rbl: ["border-bottom-left-radius"],
@@ -14,17 +14,29 @@ const sideMap = {
 
 export const patterns = [
   {
-    // Matches: r-12vw, rt-5vh, !rl-20px, r-10%
-    test: new RegExp(`^(!?)(r|rt|rb|rl|rr|rtl|rtr|rbl|rbr)-([0-9.]+?)${spacingUnitPattern}$`),
+    /**
+     * Matches: r-12, rt-5vh, !rl-20px, r-10%, rbr-4
+     */
+    test: new RegExp(`^(!?)(r|rt|rb|rl|rr|rtl|rtr|rbl|rbr)-([0-9.]+)(?:(${spacingUnitPattern}))?$`),
     parse: (match) => {
-      const isImportant = match[1] === "!";
-      const properties = sideMap[match[2]];
-      const value = match[3];
-      const unit = match[4];
+      const [util, important, sideKey, value, unitMatch] = match;
 
-      const cssValue = `${value}${unit}${isImportant ? " !important" : ""}`;
+      const properties = sideMap[sideKey];
+      const unit = unitMatch || "px"; // Default to px if no unit is provided
+      
+      const declarations = properties.map((prop) => ({
+        [prop]: `${value}${unit}`
+      }));
 
-      return properties.map((p) => `${p}: ${cssValue};`).join(" ");
+      return {
+        isImportant: important === "!",
+        rules: [
+          {
+            selector: util,
+            declarations: declarations
+          }
+        ]
+      };
     },
   },
 ];

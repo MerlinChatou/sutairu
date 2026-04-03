@@ -56,7 +56,8 @@ import * as aspect_ratio from "./layout/aspect-ratio.js";
 import * as coordinate from "./layout/coordinate.js";
 import * as display from "./layout/display.js";
 import * as flex from "./layout/flex.js";
-import * as flex_basis from "./layout/flex-basis.js";
+import * as flex_basis_dynamic from "./layout/flex-basis-dynamic.js";
+import * as flex_basis_static from "./layout/flex-basis-static.js";
 import * as flex_grow from "./layout/flex-grow.js";
 import * as flex_shrink from "./layout/flex-shrink.js";
 import * as grid from "./layout/grid.js";
@@ -99,6 +100,8 @@ import * as text_decoration from "./typography/text-decoration.js";
 import * as text_transform from "./typography/text-transform.js";
 import * as text_wrap from "./typography/text-wrap.js";
 import * as white_space from "./typography/white-space.js";
+
+
 
 /*
 src/
@@ -160,7 +163,8 @@ const utilities = [
   coordinate,
   display,
   flex,
-  flex_basis,
+  flex_basis_dynamic,
+  flex_basis_static,
   flex_grow,
   flex_shrink,
   grid,

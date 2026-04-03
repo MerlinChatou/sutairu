@@ -71,6 +71,11 @@ export const sampleClasses = [
   "first:rb-2",
 
   // /border/border-radius-unit.js
+  "r-5px",
+  "rb-12rem",
+  "r-100%",
+  "r-0.5rem",
+
   // /border/border-style.js
   "b-solid",
   "!b-groove",
@@ -255,7 +260,19 @@ export const sampleClasses = [
   "d-grid",
   "dark:sm:d-block",
 
-  // /layout/flex-basis.js
+  // /layout/flex-basis-static.js
+  "fb-auto",
+  "fb-max",
+  "fb-fit",
+  "!fb-content",
+
+  // /layout/flex-basis-dynamic.js
+  "fb-1/2",
+  "fb-200",
+  "fb-150rem",
+  "fb-0",
+  "!fb-50vw",
+
   // /layout/flex-grow.js
   "grow-initial",
   "grow-0",
@@ -388,7 +405,7 @@ export const sampleClasses = [
   "rot-45",
   "rot-1/4turn",
   "-rot-180/3deg",
-  "!rot-1/3  ",
+  "!rot-1/3",
 
   // /transform/scale.js
   "sc-110",
@@ -471,7 +488,7 @@ export const sampleClasses = [
   // /typography/text-transform.js
   "tt-capitalize",
   "tt-none",
-  "!tt-capitalize  ",
+  "!tt-capitalize",
 
   // /typography/text-wrap.js
 
