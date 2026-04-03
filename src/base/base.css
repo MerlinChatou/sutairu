@@ -24,6 +24,37 @@
     text-decoration: underline;
   }
 
+  table {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    border-collapse: collapse;
+    overflow-x: auto;
+    background-color: inherit;
+  }
+
+  table * {
+    margin: 0;
+  }
+
+  td {
+    background-color: inherit;
+  }
+
+  table thead tr th,
+  table tbody tr td,
+  table tbody tr th,
+  table tr th,
+  table tr td {
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--su-border);
+    text-align: inherit;
+    background-color: inherit;
+  }
+
+  th {
+    color: var(--title);
+  }
+
   :not(pre) > code {
     font-family: var(--su-ff-mono);
     font-size-adjust: var(--su-fs-adjust-mono);
@@ -59,7 +90,6 @@
     width: fit-content;
     border-radius: 0.5rem;
   }
-
 
   :where(
     [class*="blur-"],

@@ -101,8 +101,6 @@ import * as text_transform from "./typography/text-transform.js";
 import * as text_wrap from "./typography/text-wrap.js";
 import * as white_space from "./typography/white-space.js";
 
-
-
 /*
 src/
 └── rules/

@@ -286,6 +286,10 @@ exports[`compiler: !text-end 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.text-end {\\n  text-align: end !important;\\n}\\n\\n}"
 `;
 
+exports[`compiler: !text-pretty 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.\\\\!text-pretty {\\n  text-wrap: pretty !important;\\n}\\n\\n}"
+`;
+
 exports[`compiler: !tt-capitalize 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.\\\\!tt-capitalize {\\n  text-transform: capitalize !important;\\n}\\n\\n}"
 `;
@@ -555,15 +559,15 @@ exports[`compiler: dotted-white-200 1`] = `
 `;
 
 exports[`compiler: even:!z-100 1`] = `
-"@layer components {\\n \\n}\\n\\n@layer utilities {\\n  .even\\\\:\\\\!z-100:nth-child(even) {\\n    z-index: 100 !important;\\n  }\\n\\n}"
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n  .even\\\\:\\\\!z-100 > :nth-child(even) {\\n    z-index: 100 !important;\\n  }\\n\\n}"
 `;
 
 exports[`compiler: even:b-7 1`] = `
-"@layer components {\\n \\n}\\n\\n@layer utilities {\\n  .even\\\\:b-7:nth-child(even) {\\n    border-width: 7px;\\n  }\\n\\n}"
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n  .even\\\\:b-7 > :nth-child(even) {\\n    border-width: 7px;\\n  }\\n\\n}"
 `;
 
 exports[`compiler: even:b-7vw 1`] = `
-"@layer components {\\n \\n}\\n\\n@layer utilities {\\n  .even\\\\:b-7vw:nth-child(even) {\\n    border-width: 7vw;\\n  }\\n\\n}"
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n  .even\\\\:b-7vw > :nth-child(even) {\\n    border-width: 7vw;\\n  }\\n\\n}"
 `;
 
 exports[`compiler: fb-0 1`] = `
@@ -903,7 +907,7 @@ exports[`compiler: mv-y-20px 1`] = `
 `;
 
 exports[`compiler: odd:!ov-visible 1`] = `
-"@layer components {\\n \\n}\\n\\n@layer utilities {\\n  .odd\\\\:\\\\!ov-visible:nth-child(odd) {\\n    overflow: visible !important;\\n  }\\n\\n}"
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n  .odd\\\\:\\\\!ov-visible > :nth-child(odd) {\\n    overflow: visible !important;\\n  }\\n\\n}"
 `;
 
 exports[`compiler: ol-5 1`] = `
@@ -1170,6 +1174,10 @@ exports[`compiler: text-justify 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.text-justify {\\n  text-align: justify;\\n}\\n\\n}"
 `;
 
+exports[`compiler: text-nowrap 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.text-nowrap {\\n  text-wrap: nowrap;\\n}\\n\\n}"
+`;
+
 exports[`compiler: text-red 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.text-red {\\n  color: var(--su-red);\\n}\\n\\n}"
 `;
@@ -1180,6 +1188,10 @@ exports[`compiler: text-start 1`] = `
 
 exports[`compiler: text-title/50 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.text-title\\\\/50 {\\n  color: oklch(from var(--su-title) l c h / 0.5);\\n}\\n\\n}"
+`;
+
+exports[`compiler: text-wrap 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.text-wrap {\\n  text-wrap: wrap;\\n}\\n\\n}"
 `;
 
 exports[`compiler: top-50% 1`] = `

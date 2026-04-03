@@ -491,6 +491,9 @@ export const sampleClasses = [
   "!tt-capitalize",
 
   // /typography/text-wrap.js
+  "text-nowrap",
+  "text-wrap",
+  "!text-pretty",
 
   // /typography/white-space.js
   "ws-normal",
