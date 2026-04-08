@@ -1,8 +1,3 @@
-/**
- * Utility for object-fit.
- * Matches: !of-cover, object-contain, !of-fill, of-none
- */
-
 const objectFitMap = {
   'contain':    'contain',
   'cover':      'cover',
@@ -11,21 +6,36 @@ const objectFitMap = {
   'scale-down': 'scale-down',
 };
 
+const keys = Object.keys(objectFitMap).join('|');
+
 export const patterns = [
   {
     /**
+     * Matches: of-cover, !object-contain, of-scale-down
      * Regex:
-     * ^(!)?              -> Group 1: Optional "!"
-     * (object|of)-       -> Group 2: Support both standard and your "of-" shorthand
-     * (...)              -> Group 3: The map keys
+     * ^(!?)             -> Group 1: Important (0 or 1)
+     * (?:object|of)-    -> Non-capturing group for prefix
+     * (${keys})         -> Group 2: The actual value
      */
-    test: new RegExp(`^(!)?(object|of)-(${Object.keys(objectFitMap).join('|')})$`),
+    test: new RegExp(`^(!?)(?:object|of)-(${keys})$`),
     parse: (match) => {
-      const isImportant = match[1] === "!";
-      const value = objectFitMap[match[3]]; // Use Group 3 for the value
-      const importantTag = isImportant ? " !important" : "";
-      
-      return `object-fit: ${value}${importantTag};`;
+      // With the non-capturing group (?:), indices are cleaner:
+      // match[0] = "!of-cover"
+      // match[1] = "!" (or "")
+      // match[2] = "cover"
+      const [util, important, key] = match;
+
+      return {
+        isImportant: important === "!",
+        rules: [
+          {
+            selector: util,
+            declarations: [
+              { "object-fit": objectFitMap[key] }
+            ]
+          }
+        ]
+      };
     },
   },
 ];

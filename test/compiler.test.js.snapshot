@@ -114,12 +114,16 @@ exports[`compiler: !gap-y-5% 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.\\\\!gap-y-5\\\\% {\\n  row-gap: 5% !important;\\n}\\n\\n}"
 `;
 
+exports[`compiler: !grid-col 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.\\\\!grid-col {\\n  display: grid !important;\\n  grid-auto-flow: row !important;\\n}\\n\\n}"
+`;
+
 exports[`compiler: !grid-cols-2 1`] = `
-"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.\\\\!grid-cols-2 {\\n  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;\\n}\\n\\n}"
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n}"
 `;
 
 exports[`compiler: !grid-cols-none 1`] = `
-"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.\\\\!grid-cols-none {\\n  grid-template-columns: none !important;\\n}\\n\\n}"
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n}"
 `;
 
 exports[`compiler: !grow-1 1`] = `
@@ -180,6 +184,10 @@ exports[`compiler: !min-w-12vw 1`] = `
 
 exports[`compiler: !mv-x-50% 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.\\\\!mv-x-50\\\\% {\\n  --su-tr-x: 50% !important;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1))) !important;\\n}\\n\\n}"
+`;
+
+exports[`compiler: !object-none 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.\\\\!object-none {\\n  object-fit: none !important;\\n}\\n\\n}"
 `;
 
 exports[`compiler: !ol-12 1`] = `
@@ -256,6 +264,10 @@ exports[`compiler: !sepia-3/2 1`] = `
 
 exports[`compiler: !shrink-5 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.\\\\!shrink-5 {\\n  flex-shrink: 5 !important;\\n}\\n\\n}"
+`;
+
+exports[`compiler: !stack 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.\\\\!stack {\\n  display: grid !important;\\n  grid-template-areas: 'stack' !important;\\n  align-items: center !important;\\n  justify-items: center !important;\\n}\\n\\n.\\\\!stack > * {\\n  grid-area: stack !important;\\n}\\n\\n}"
 `;
 
 exports[`compiler: !stripes-page 1`] = `
@@ -675,11 +687,15 @@ exports[`compiler: grayscale-50 1`] = `
 `;
 
 exports[`compiler: grid-cols-12 1`] = `
-"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.grid-cols-12 {\\n  grid-template-columns: repeat(12, minmax(0, 1fr));\\n}\\n\\n}"
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n}"
 `;
 
 exports[`compiler: grid-cols-subgrid 1`] = `
-"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.grid-cols-subgrid {\\n  grid-template-columns: subgrid;\\n}\\n\\n}"
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n}"
+`;
+
+exports[`compiler: grid-y 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.grid-y {\\n  display: grid;\\n  grid-auto-flow: row;\\n}\\n\\n}"
 `;
 
 exports[`compiler: group-hover:!ac-evenly 1`] = `
@@ -724,6 +740,10 @@ exports[`compiler: hatching-green 1`] = `
 
 exports[`compiler: hatching-white-200 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.hatching-white-200 {\\n  background-position: 0 0;\\n  background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);\\n  background-image: repeating-linear-gradient(\\n        var(--su-pattern-angle, 135deg),\\n          color-mix(in oklch, var(--su-white), #fff 60%) 0,\\n          color-mix(in oklch, var(--su-white), #fff 60%) var(--su-pattern-w, 1px),\\n          transparent 0,\\n          transparent 50%\\n        );\\n}\\n\\n}"
+`;
+
+exports[`compiler: hover:grid-x 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n  .hover\\\\:grid-x:hover {\\n    display: grid;\\n    grid-auto-flow: column;\\n  }\\n\\n}"
 `;
 
 exports[`compiler: hover:h5 1`] = `
@@ -906,8 +926,16 @@ exports[`compiler: mv-y-20px 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.mv-y-20px {\\n  --su-tr-y: 20px;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));\\n}\\n\\n}"
 `;
 
+exports[`compiler: object-cover 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.object-cover {\\n  object-fit: cover;\\n}\\n\\n}"
+`;
+
 exports[`compiler: odd:!ov-visible 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n  .odd\\\\:\\\\!ov-visible > :nth-child(odd) {\\n    overflow: visible !important;\\n  }\\n\\n}"
+`;
+
+exports[`compiler: of-cover 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.of-cover {\\n  object-fit: cover;\\n}\\n\\n}"
 `;
 
 exports[`compiler: ol-5 1`] = `
@@ -1128,6 +1156,10 @@ exports[`compiler: sm:hatching-subtle 1`] = `
 
 exports[`compiler: sm:stripes-subtle 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n@media (width >= 40rem) {\\n  .sm\\\\:stripes-subtle {\\n    background-image: repeating-linear-gradient(\\n                    var(--su-pattern-angle, 135deg),\\n                    var(--su-subtle) 0,\\n                    var(--su-subtle) var(--su-pattern-w, 10px),\\n                    transparent calc(var(--su-pattern-w, 10px) + 1px),\\n                    transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))\\n                  );\\n  }\\n}\\n\\n}"
+`;
+
+exports[`compiler: stack 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.stack {\\n  display: grid;\\n  grid-template-areas: 'stack';\\n  align-items: center;\\n  justify-items: center;\\n}\\n\\n.stack > * {\\n  grid-area: stack;\\n}\\n\\n}"
 `;
 
 exports[`compiler: stripes-black-800/80 1`] = `

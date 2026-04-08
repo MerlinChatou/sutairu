@@ -71,6 +71,7 @@ import * as overflow from "./layout/overflow.js";
 import * as position from "./layout/position.js";
 import * as size from "./layout/size.js";
 import * as size_unit from "./layout/size-unit.js";
+import * as stack from "./layout/stack.js";
 import * as z_index from "./layout/z-index.js";
 
 // Spacing
@@ -166,9 +167,9 @@ const utilities = [
   flex_grow,
   flex_shrink,
   grid,
-  grid_cols,
-  grid_rows,
-  grid_span,
+  //grid_cols,
+  //grid_rows,
+  //grid_span,
   justify_content,
   justify_self,
   object_fit,
@@ -176,6 +177,7 @@ const utilities = [
   position,
   size,
   size_unit,
+  stack,
   z_index,
 
   // Spacing

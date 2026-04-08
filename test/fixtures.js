@@ -299,6 +299,10 @@ export const sampleClasses = [
   "!grid-cols-none",
 
   // /layout/grid.js
+  "grid-y",
+  "hover:grid-x",
+  "!grid-col",
+
   // /layout/grid-rows.js
   // /layout/grid-span.js
 
@@ -311,6 +315,9 @@ export const sampleClasses = [
 
   // /layout/justify-self.js
   // /layout/object-fit.js
+  "of-cover",
+  "!object-none",
+  "object-cover",
 
   // /layout/overflow.js
   "ov-hidden",
@@ -339,6 +346,10 @@ export const sampleClasses = [
   "!min-w-12vw",
   "group-selected:!max-h-26cm",
 
+  // /layout/stack.js
+  "stack",
+  "!stack",
+  
   // /layout/transforms.js
 
   // /layout/z-index.js
