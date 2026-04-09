@@ -291,6 +291,11 @@ export const sampleClasses = [
   "shrink-inherit",
   "!shrink-5",
   "xl:!shrink-2",
+  
+  // /layout/grid.js
+  "grid-y",
+  "hover:grid-x",
+  "!grid-col",
 
   // /layout/grid-cols.js
   "grid-cols-12",
@@ -298,13 +303,14 @@ export const sampleClasses = [
   "grid-cols-subgrid",
   "!grid-cols-none",
 
-  // /layout/grid.js
-  "grid-y",
-  "hover:grid-x",
-  "!grid-col",
-
   // /layout/grid-rows.js
+  "grid-rows-3",
+  "grid-rows-none",
+  "!grid-cols-subgrid",
+
   // /layout/grid-span.js
+  "gc-span-2",
+  "gr-span-full",
 
   // /layout/justify-content.js
   "jc-start",

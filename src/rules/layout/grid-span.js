@@ -6,11 +6,18 @@ export const patterns = [
   {
     test: /^(!?)gc-span-(\d+|full)$/,
     parse: (match) => {
-      const isImportant = match[1] === "!";
-      const val = match[2];
-      const result = val === "full" ? "1 / -1" : `span ${val} / span ${val}`;
-      
-      return `grid-column: ${result}${isImportant ? " !important" : ""};`;
+      const [util, important, val] = match;
+      const value = val === "full" ? "1 / -1" : `span ${val}`;
+
+      return {
+        isImportant: important === "!",
+        rules: [
+          {
+            selector: util,
+            declarations: [{ "grid-column": value }]
+          }
+        ]
+      };
     }
   },
 
@@ -21,11 +28,18 @@ export const patterns = [
   {
     test: /^(!?)gr-span-(\d+|full)$/,
     parse: (match) => {
-      const isImportant = match[1] === "!";
-      const val = match[2];
-      const result = val === "full" ? "1 / -1" : `span ${val} / span ${val}`;
-      
-      return `grid-row: ${result}${isImportant ? " !important" : ""};`;
+      const [util, important, val] = match;
+      const value = val === "full" ? "1 / -1" : `span ${val}`;
+
+      return {
+        isImportant: important === "!",
+        rules: [
+          {
+            selector: util,
+            declarations: [{ "grid-row": value }]
+          }
+        ]
+      };
     }
   }
 ];
