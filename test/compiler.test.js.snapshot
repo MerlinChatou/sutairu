@@ -678,6 +678,14 @@ exports[`compiler: gap-x-2.5 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.gap-x-2\\\\.5 {\\n  column-gap: 0.625rem;\\n}\\n\\n}"
 `;
 
+exports[`compiler: gc-span-2 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.gc-span-2 {\\n  grid-column: span 2;\\n}\\n\\n}"
+`;
+
+exports[`compiler: gr-span-full 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.gr-span-full {\\n  grid-row: 1 / -1;\\n}\\n\\n}"
+`;
+
 exports[`compiler: grayscale-0.6 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.grayscale-0\\\\.6 {\\n  --su-grayscale: grayscale(0.6);\\n}\\n\\n}"
 `;
@@ -754,6 +762,10 @@ exports[`compiler: hatching-white-200 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.hatching-white-200 {\\n  background-position: 0 0;\\n  background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);\\n  background-image: repeating-linear-gradient(\\n        var(--su-pattern-angle, 135deg),\\n          color-mix(in oklch, var(--su-white), #fff 60%) 0,\\n          color-mix(in oklch, var(--su-white), #fff 60%) var(--su-pattern-w, 1px),\\n          transparent 0,\\n          transparent 50%\\n        );\\n}\\n\\n}"
 `;
 
+exports[`compiler: hover:!js-center 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n  .hover\\\\:\\\\!js-center:hover {\\n    justify-self: center !important;\\n  }\\n\\n}"
+`;
+
 exports[`compiler: hover:grid-x 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n  .hover\\\\:grid-x:hover {\\n    display: grid;\\n    grid-auto-flow: column;\\n  }\\n\\n}"
 `;
@@ -812,6 +824,14 @@ exports[`compiler: jc-evenly 1`] = `
 
 exports[`compiler: jc-start 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.jc-start {\\n  justify-content: start;\\n}\\n\\n}"
+`;
+
+exports[`compiler: js-auto 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.js-auto {\\n  justify-self: auto;\\n}\\n\\n}"
+`;
+
+exports[`compiler: js-start 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.js-start {\\n  justify-self: start;\\n}\\n\\n}"
 `;
 
 exports[`compiler: last:h-12 1`] = `

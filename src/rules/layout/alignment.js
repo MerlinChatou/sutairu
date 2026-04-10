@@ -1,4 +1,9 @@
-const terms = {
+/*
+  align-cc
+  !align-tr
+  !align-bottom-left
+  */ 
+  const terms = {
   t: 'top',
   c: 'center',
   b: 'bottom',

@@ -320,6 +320,11 @@ export const sampleClasses = [
   "jc-between",
 
   // /layout/justify-self.js
+  "js-auto",
+  "js-start",
+  "hover:!js-center",
+
+
   // /layout/object-fit.js
   "of-cover",
   "!object-none",
@@ -356,8 +361,6 @@ export const sampleClasses = [
   "stack",
   "!stack",
   
-  // /layout/transforms.js
-
   // /layout/z-index.js
   "z-base",
   "z-sticky",

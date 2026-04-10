@@ -1,8 +1,3 @@
-/**
- * Utility for justify-self.
- * Matches: !js-start, js-center, !js-stretch
- */
-
 const justifySelfMap = {
   'auto': 'auto',
   'start': 'start',
@@ -13,21 +8,32 @@ const justifySelfMap = {
   'stretch': 'stretch',
 };
 
+const keys = Object.keys(justifySelfMap).join('|');
+
 export const patterns = [
   {
     /**
-     * Regex:
-     * ^(!)?         -> Capture group 1: Optional "!"
-     * js-           -> Prefix (Surgical shorthand for justify-self)
-     * (...)         -> Capture group 2: The map keys
+     * Matches: js-start, !js-center, js-stretch
+     * justify-self aligns an individual item along the INLINE (horizontal) axis.
      */
-    test: new RegExp(`^(!)?js-(${Object.keys(justifySelfMap).join('|')})$`),
+    test: new RegExp(`^(!?)js-(${keys})$`),
     parse: (match) => {
-      const isImportant = match[1] === "!";
-      const value = justifySelfMap[match[2]];
-      const importantTag = isImportant ? " !important" : "";
-      
-      return `justify-self: ${value}${importantTag};`;
+      // match[0] = full utility (e.g. "!js-start")
+      // match[1] = "!" or ""
+      // match[2] = the key (e.g. "start")
+      const [util, important, key] = match;
+
+      return {
+        isImportant: important === "!",
+        rules: [
+          {
+            selector: util,
+            declarations: [
+              { "justify-self": justifySelfMap[key] }
+            ]
+          }
+        ]
+      };
     },
   },
 ];
