@@ -291,7 +291,7 @@ export const sampleClasses = [
   "shrink-inherit",
   "!shrink-5",
   "xl:!shrink-2",
-  
+
   // /layout/grid.js
   "grid-y",
   "hover:grid-x",
@@ -323,7 +323,6 @@ export const sampleClasses = [
   "js-auto",
   "js-start",
   "hover:!js-center",
-
 
   // /layout/object-fit.js
   "of-cover",
@@ -360,7 +359,7 @@ export const sampleClasses = [
   // /layout/stack.js
   "stack",
   "!stack",
-  
+
   // /layout/z-index.js
   "z-base",
   "z-sticky",
