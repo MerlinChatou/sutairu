@@ -1,11 +1,10 @@
 export const patterns = [
   {
     /**
-     * Fluid Font Size (vmin Edition)
      * Matches: 
-     * fs-fluid-1/2         -> Clamps between 1rem and 2rem
+     * fs-fluid-1-2         -> Clamps between 1rem and 2rem
      * !fs-fluid-16-32px    -> Clamps between 16px and 32px (Important)
-     * fs-fluid-0.8/1.5     -> Decimal rem support
+     * fs-fluid-0.8-1.5     -> Decimal rem support
      */
     test: /^(!?)fs-fluid-([0-9./]+)-([0-9./]+)(rem|px)?$/,
     parse: (match) => {

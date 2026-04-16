@@ -75,6 +75,7 @@ export async function generateCSS(config, safeList) {
     ...config.themes.map((t) => `themes/${t}/modal.css`),
     ...config.themes.map((t) => `themes/${t}/card.css`),
     ...config.themes.map((t) => `themes/${t}/code.css`),
+    ...config.themes.map((t) => `themes/${t}/typography.css`),
   ]);
   let finalCSS = `${staticCss}\n\n${onDemandCSS}`;
 

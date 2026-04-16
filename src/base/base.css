@@ -55,6 +55,29 @@
     color: var(--title);
   }
 
+  kbd {
+    font-family: var(--su-ff-mono);
+    font-size-adjust: var(--su-fs-adjust-mono);
+    padding: 1px 6px;
+    background-color: var(--su-kbd-bg);
+    display: inline;
+    border-radius: 4px;
+    border-color: var(--su-kbd-border);
+    box-shadow: var(--su-kbd-shadow);
+  }
+
+  .del,
+  del {
+    color: var(--su-red);
+    text-decoration: strikethrough;
+  }
+
+  .ins,
+  ins {
+    color: var(--su-green);
+    text-decoration: none;
+  }
+
   :not(pre) > code {
     font-family: var(--su-ff-mono);
     font-size-adjust: var(--su-fs-adjust-mono);

@@ -466,6 +466,10 @@ exports[`compiler: blur-50 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.blur-50 {\\n  --su-blur: blur(50px);\\n}\\n\\n}"
 `;
 
+exports[`compiler: bold 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.bold {\\n  font-weight: 700;\\n}\\n\\n}"
+`;
+
 exports[`compiler: brightness-2/3 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.brightness-2\\\\/3 {\\n  --su-brightness: brightness(0.667);\\n}\\n\\n}"
 `;
@@ -826,6 +830,10 @@ exports[`compiler: invert-80 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.invert-80 {\\n  --su-invert: invert(0.8);\\n}\\n\\n}"
 `;
 
+exports[`compiler: italic 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.italic {\\n  font-style: italic;\\n}\\n\\n}"
+`;
+
 exports[`compiler: jc-between 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.jc-between {\\n  justify-content: space-between;\\n}\\n\\n}"
 `;
@@ -968,6 +976,10 @@ exports[`compiler: mv-x-10 1`] = `
 
 exports[`compiler: mv-y-20px 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.mv-y-20px {\\n  --su-tr-y: 20px;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));\\n}\\n\\n}"
+`;
+
+exports[`compiler: not-italic 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.not-italic {\\n  font-style: normal;\\n}\\n\\n}"
 `;
 
 exports[`compiler: object-cover 1`] = `

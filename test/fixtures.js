@@ -454,10 +454,15 @@ export const sampleClasses = [
   "!fs-xl",
   "md:!fs-5xl",
 
+  // /typography/font-style.js
+  "italic",
+  "not-italic",
+
   // /typography/font-weight.js
   "fw-thin",
   "!fw-350",
   "selected:!fw-bold",
+  "bold",
 
   // /typography/heading.js
   "h1",

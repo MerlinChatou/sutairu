@@ -91,6 +91,7 @@ import * as translate from "./transform/translate.js";
 import * as font_family from "./typography/font-family.js";
 import * as font_size from "./typography/font-size.js";
 import * as font_size_fluid from "./typography/font-size-fluid.js";
+import * as font_style from "./typography/font-style.js";
 import * as font_weight from "./typography/font-weight.js";
 import * as heading from "./typography/heading.js";
 import * as letter_spacing from "./typography/letter-spacing.js";
@@ -197,6 +198,7 @@ const utilities = [
   font_family,
   font_size,
   font_size_fluid,
+  font_style,
   font_weight,
   heading,
   letter_spacing,

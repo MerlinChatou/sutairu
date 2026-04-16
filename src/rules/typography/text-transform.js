@@ -1,4 +1,4 @@
-const styles = ['uppercase', 'lowercase', 'capitalize', 'none', 'full-width', 'full-size-kana'];
+const styles = ['upper', 'lower', 'capitalize', 'none', 'full-width', 'full-size-kana'];
 export const patterns = [
   {
     /**

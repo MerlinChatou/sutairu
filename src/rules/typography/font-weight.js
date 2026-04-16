@@ -12,6 +12,7 @@ const baseFontWeights = {
   "fw-medium": "500",
   "fw-semibold": "600",
   "fw-bold": "700",
+  "bold": "700",
   "fw-extrabold": "800",
   "fw-black": "900",
 };
