@@ -98,6 +98,10 @@ exports[`compiler: !flex-row 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.\\\\!flex-row {\\n  display: flex !important;\\n  flex-direction: row !important;\\n}\\n\\n}"
 `;
 
+exports[`compiler: !fs-fluid-2-4rem 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.\\\\!fs-fluid-2-4rem {\\n  font-size: clamp(32px, 18.29px + 3.81vmin, 64px) !important;\\n}\\n\\n}"
+`;
+
 exports[`compiler: !fs-xl 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.\\\\!fs-xl {\\n  font-size: 1.25rem !important;\\n}\\n\\n}"
 `;
@@ -640,6 +644,14 @@ exports[`compiler: focus-visible:jc-center 1`] = `
 
 exports[`compiler: focus:ol-dashed 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n  .focus\\\\:ol-dashed:focus {\\n    outline-style: dashed;\\n  }\\n\\n}"
+`;
+
+exports[`compiler: fs-fluid-0.8-1.5 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.fs-fluid-0\\\\.8-1\\\\.5 {\\n  font-size: clamp(12.8px, 8.00px + 1.33vmin, 24px);\\n}\\n\\n}"
+`;
+
+exports[`compiler: fs-fluid-1-2 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.fs-fluid-1-2 {\\n  font-size: clamp(16px, 9.14px + 1.90vmin, 32px);\\n}\\n\\n}"
 `;
 
 exports[`compiler: fs-sm 1`] = `

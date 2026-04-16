@@ -445,6 +445,9 @@ export const sampleClasses = [
   "!ff-handwritten",
 
   // /typography/font-size-fluid.js
+  "fs-fluid-1-2",
+  "fs-fluid-0.8-1.5",
+  "!fs-fluid-2-4rem",
 
   // /typography/font-size.js
   "fs-sm",
