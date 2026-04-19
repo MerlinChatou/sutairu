@@ -17,6 +17,7 @@
 
   /* Accent color, here blue reported from the palette */
   --su-accent: var(--su-blue);
+  --su-highlight: oklch(from var(--su-yellow)  98% c h);
 
   /* Semantic text */
   --su-body: oklch(from var(--su-accent) 60% 0.01 h);
@@ -88,4 +89,5 @@
   --su-page: oklch(from var(--su-black) 16% c h);
   --su-container: oklch(from var(--su-black) 22% c h);
   --su-subtle: oklch(from var(--su-black) 26% c h);
+  --su-kbd-text: var(--su-black);
 }

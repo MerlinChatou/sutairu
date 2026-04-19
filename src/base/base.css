@@ -24,6 +24,12 @@
     text-decoration: underline;
   }
 
+  abbr {
+    border-bottom: 1px dotted;
+    text-decoration: none;
+    cursor: help;
+  }
+
   table {
     margin-top: 1rem;
     margin-bottom: 1.5rem;
@@ -60,22 +66,25 @@
     font-size-adjust: var(--su-fs-adjust-mono);
     padding: 1px 6px;
     background-color: var(--su-kbd-bg);
+    color: var(--su-kbd-text);
     display: inline;
     border-radius: 4px;
     border-color: var(--su-kbd-border);
     box-shadow: var(--su-kbd-shadow);
   }
 
-  .del,
   del {
     color: var(--su-red);
-    text-decoration: strikethrough;
+    text-decoration: line-through;
   }
 
-  .ins,
   ins {
     color: var(--su-green);
     text-decoration: none;
+  }
+
+  mark {
+    background-color: var(--su-highlight);
   }
 
   :not(pre) > code {
@@ -138,4 +147,5 @@
     /* If a variable is empty, the browser ignores that segment */
     filter: var(--su-blur) var(--su-brightness) var(--su-contrast) var(--su-grayscale) var(--su-invert) var(--su-saturate) var(--su-sepia) var(--su-hue-rotate);
   }
+
 }

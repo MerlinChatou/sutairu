@@ -5,16 +5,24 @@ import { generateRegistry, spacingUnitPattern, resolveNumericValue } from "../ut
  */
 const decorationBase = {
   "td-u": { "text-decoration-line": "underline" },
+  "underline": { "text-decoration-line": "underline" },
   "td-o": { "text-decoration-line": "overline" },
+  "overline": { "text-decoration-line": "overline" },
   "td-l": { "text-decoration-line": "line-through" },
+  "linethrough": { "text-decoration-line": "line-through" },
+  "strike": { "text-decoration-line": "line-through" },
   "td-s": { "text-decoration-line": "line-through" },
   "td-n": { "text-decoration-line": "none" },
+  "td-abbr": { "border-bottom": "1px dotted", "text-decoration": "none", "cursor": "help" },
   "td-solid":  { "text-decoration-style": "solid" },
   "td-double": { "text-decoration-style": "double" },
   "td-dotted": { "text-decoration-style": "dotted" },
   "td-dashed": { "text-decoration-style": "dashed" },
   "td-wavy":   { "text-decoration-style": "wavy" },
-  "td-none":   { "text-decoration": "none" },
+  "td-none":   { "text-decoration": "none" }, 
+  "td-del": { "color": "var(--su-red)", "text-decoration": "line-through" },
+  "td-ins": { "color": "var(--su-green)", "text-decoration": "none" },
+  "highlight": { "background-color": "var(--su-highlight)", "color":"marktext" },
 };
 
 const baseRules = Object.entries(decorationBase).reduce((acc, [key, decls]) => {

@@ -310,8 +310,8 @@ exports[`compiler: !text-pretty 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.\\\\!text-pretty {\\n  text-wrap: pretty !important;\\n}\\n\\n}"
 `;
 
-exports[`compiler: !tt-capitalize 1`] = `
-"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.\\\\!tt-capitalize {\\n  text-transform: capitalize !important;\\n}\\n\\n}"
+exports[`compiler: !tt-lower 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.\\\\!tt-lower {\\n  text-transform: lowercase !important;\\n}\\n\\n}"
 `;
 
 exports[`compiler: !w-screen-h 1`] = `
@@ -1320,6 +1320,10 @@ exports[`compiler: tt-capitalize 1`] = `
 
 exports[`compiler: tt-none 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.tt-none {\\n  text-transform: none;\\n}\\n\\n}"
+`;
+
+exports[`compiler: tt-upper 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.tt-upper {\\n  text-transform: uppercase;\\n}\\n\\n}"
 `;
 
 exports[`compiler: w-2.5 1`] = `

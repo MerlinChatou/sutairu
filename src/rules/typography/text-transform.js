@@ -1,13 +1,24 @@
-const styles = ['upper', 'lower', 'capitalize', 'none', 'full-width', 'full-size-kana'];
+const transformMap = {
+  'upper': 'uppercase',
+  'lower': 'lowercase',
+  'capitalize': 'capitalize',
+  'normal': 'none',
+  'none': 'none',
+  'full-width': 'full-width',
+  'full-size-kana': 'full-size-kana'
+};
+
+const keys = Object.keys(transformMap).join('|');
+
 export const patterns = [
   {
     /**
-     * Matches: ol-solid, !ol-double, ol-inset, etc.
-     * Use 'ol-' for outlines or 'b-' for borders.
+     * Matches: tt-upper, !tt-capitalize, tt-lower
+     * Prefix: tt (text-transform)
      */
-    test: new RegExp(`^(!?)tt-(${styles.join('|')})$`),
+    test: new RegExp(`^(!?)tt-(${keys})$`),
     parse: (match) => {
-      const [util, important, style] = match;
+      const [util, important, key] = match;
 
       return {
         isImportant: important === "!",
@@ -15,7 +26,7 @@ export const patterns = [
           {
             selector: util,
             declarations: [
-              { "text-transform": style }
+              { "text-transform": transformMap[key] }
             ]
           }
         ]

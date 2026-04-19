@@ -26,6 +26,7 @@
 
   /* Accent color, here blue reported from the palette */
   --su-accent: var(--su-blue);
+  --su-highlight: oklch(from var(--su-yellow)  98% c h);
 
   /* Scroll bar */
   --su-sb-track-color: var(--su-container);
@@ -90,4 +91,5 @@
   --su-page: oklch(from var(--su-accent) 20% 0.03 h);
   --su-container: oklch(from var(--su-accent) 23% 0.03 h);
   --su-subtle: oklch(from var(--su-accent) 30% 0.02 h);
+  --su-kbd-text: var(--su-black);
 }

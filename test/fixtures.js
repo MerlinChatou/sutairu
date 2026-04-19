@@ -515,7 +515,8 @@ export const sampleClasses = [
   // /typography/text-transform.js
   "tt-capitalize",
   "tt-none",
-  "!tt-capitalize",
+  "!tt-lower",
+  "tt-upper",
 
   // /typography/text-wrap.js
   "text-nowrap",
