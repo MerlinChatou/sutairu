@@ -30,6 +30,26 @@
     cursor: help;
   }
 
+  blockquote {
+    letter-spacing: 0.02ch;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0.25rem;
+    padding-left: 0.5rem;
+    border-left: 4px solid var(--su-border);
+    margin-block: 1.5rem;
+  }
+
+  blockquote footer {
+    padding-top: 1rem;
+    font-weight: bold;
+    font-size: 0.98rem;
+    font-style: normal;
+  }
+  blockquote > p {
+    margin: 0;
+  }
+
   table {
     margin-top: 1rem;
     margin-bottom: 1.5rem;
@@ -147,5 +167,4 @@
     /* If a variable is empty, the browser ignores that segment */
     filter: var(--su-blur) var(--su-brightness) var(--su-contrast) var(--su-grayscale) var(--su-invert) var(--su-saturate) var(--su-sepia) var(--su-hue-rotate);
   }
-
 }
