@@ -51,6 +51,7 @@ export const patterns = [
 
       // Calculate the numeric result
       let calculatedValue = denominator ? numerator / denominator : numerator;
+      calculatedValue = parseFloat(calculatedValue.toFixed(3));
 
       let finalValue;
       if (!unit) {
@@ -60,7 +61,7 @@ export const patterns = [
         // Explicit Unit (e.g., fs-20/3rem)
         finalValue = `${calculatedValue}${unit}`;
       }
-
+      
       return {
         isImportant,
         rules: [{
