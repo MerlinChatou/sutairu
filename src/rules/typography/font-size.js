@@ -34,27 +34,31 @@ export const rules = generateRegistry(baseRules);
 export const patterns = [
   {
     /**
-     * Matches: fs-4 (1rem), !fs-16px, fs-2rem, !fs-1.5vh
-     * 
-     * Group 1: (!?)       -> Importance
-     * Group 2: (\d...)    -> Numeric value
-     * Group 3: (unit?)    -> Optional unit from spacingUnitPattern
+     * Updated regex to handle fractions.
+     * Matches: fs-4, fs-5/3, !fs-20/3rem, fs-1.5rem
+     * * Group 1: (!?)              -> Importance
+     * Group 2: (\d*\.?\d+)       -> Numerator (Value)
+     * Group 3: (\/(\d*\.?\d+))?  -> Optional /Denominator (Group 4 is the actual divisor)
+     * Group 5: (unit?)           -> Optional unit
      */
-    test: new RegExp(`^(!?)fs-(\\d*\\.?\\d+)(${spacingUnitPattern})?$`),
+    test: new RegExp(`^(!?)fs-(\\d*\\.?\\d+)(\\/(\\d*\\.?\\d+))?(${spacingUnitPattern})?$`),
     parse: (match) => {
       const util = match[0];
       const isImportant = match[1] === "!";
-      const rawValue = match[2];
-      const unit = match[3];
+      const numerator = parseFloat(match[2]);
+      const denominator = match[4] ? parseFloat(match[4]) : null;
+      const unit = match[5];
+
+      // Calculate the numeric result
+      let calculatedValue = denominator ? numerator / denominator : numerator;
 
       let finalValue;
       if (!unit) {
-        // Unitless Step (e.g., fs-4 -> 1rem)
-        const num = parseFloat(rawValue);
-        finalValue = num === 0 ? "0" : `${num * 0.25}rem`;
+        // Unitless Step (e.g., fs-4 -> 1rem, fs-5/3 -> 1.25rem)
+        finalValue = calculatedValue === 0 ? "0" : `${calculatedValue * 0.25}rem`;
       } else {
-        // Explicit Unit (e.g., fs-14px)
-        finalValue = `${rawValue}${unit}`;
+        // Explicit Unit (e.g., fs-20/3rem)
+        finalValue = `${calculatedValue}${unit}`;
       }
 
       return {
@@ -67,3 +71,4 @@ export const patterns = [
     },
   },
 ];
+

@@ -650,6 +650,18 @@ exports[`compiler: focus:ol-dashed 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n  .focus\\\\:ol-dashed:focus {\\n    outline-style: dashed;\\n  }\\n\\n}"
 `;
 
+exports[`compiler: fs-10px 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.fs-10px {\\n  font-size: 10px;\\n}\\n\\n}"
+`;
+
+exports[`compiler: fs-5/2 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.fs-5\\\\/2 {\\n  font-size: 0.625rem;\\n}\\n\\n}"
+`;
+
+exports[`compiler: fs-5/2px 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.fs-5\\\\/2px {\\n  font-size: 2.5px;\\n}\\n\\n}"
+`;
+
 exports[`compiler: fs-fluid-0.8-1.5 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.fs-fluid-0\\\\.8-1\\\\.5 {\\n  font-size: clamp(12.8px, 8.00px + 1.33vmin, 24px);\\n}\\n\\n}"
 `;
