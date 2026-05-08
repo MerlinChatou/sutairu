@@ -10,7 +10,7 @@ const whiteSpaceMap = {
   'pre': 'pre',
   'pre-line': 'pre-line',
   'pre-wrap': 'pre-wrap',
-  'break-spaces': 'break-spaces',
+  'break': 'break-spaces',
 };
 
 export const patterns = [

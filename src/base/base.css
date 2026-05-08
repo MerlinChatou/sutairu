@@ -17,10 +17,14 @@
   a {
     color: var(--su-link-color);
     text-decoration: none;
-    transition: all 0.2s ease;
+    transition: color 0.1s ease;
   }
   a:hover {
     color: var(--su-link-color-hover);
+    text-decoration: underline;
+  }
+  a:active {
+    color: var(--su-link-color-active);
     text-decoration: underline;
   }
 

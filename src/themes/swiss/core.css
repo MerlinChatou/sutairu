@@ -17,7 +17,7 @@
 
   /* Accent color, here blue reported from the palette */
   --su-accent: var(--su-red);
-  --su-highlight: oklch(from var(--su-yellow)  98% c h);
+  --su-highlight: oklch(from var(--su-yellow) 98% c h);
 
   /* Semantic text */
   --su-body: oklch(from var(--su-accent) 45% 0.01 h);
@@ -50,6 +50,8 @@
 
   --su-link-color: var(--su-blue);
   --su-link-color-hover: color-mix(var(--su-blue), #000 20%);
+  --su-link-color-active: color-mix(var(--su-blue), #000 30%);
+  --su-link-color-disabled: color-mix(var(--su-blue), #fff 40%);
 
   /* Headings */
   --su-fs-h1: clamp(2.25rem, 1.6rem + 2.8vw, 3rem);
@@ -89,6 +91,11 @@
   --su-page: oklch(from var(--su-accent) 18% 0.003 h);
   --su-container: oklch(from var(--su-accent) 23% 0.003 h);
   --su-subtle: oklch(from var(--su-accent) 30% 0.003 h);
-  
+
   --su-kbd-text: var(--su-black);
+
+  --su-link-color-hover: color-mix(var(--su-blue), #fff 20%);
+  --su-link-color-active: color-mix(var(--su-blue), #fff 30%);
+  --su-link-color-disabled: color-mix(var(--su-blue), #000 35%);
+
 }

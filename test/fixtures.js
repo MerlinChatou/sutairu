@@ -94,6 +94,7 @@ export const sampleClasses = [
 
   // :::::::::::::: COMPONENTS ::::::::::::::
 
+  
   // /components/badge.js
   "badge",
   "badge-pill",
@@ -105,6 +106,11 @@ export const sampleClasses = [
   "btn-close-red",
   "btn-close-red-800",
   "btn-close-red-800/50",
+
+  // /components/button.js
+"btn-link",
+"btn-danger",
+"btn-dark ",
 
   // /components/card.js
   "card",
