@@ -94,7 +94,6 @@ export const sampleClasses = [
 
   // :::::::::::::: COMPONENTS ::::::::::::::
 
-  
   // /components/badge.js
   "badge",
   "badge-pill",
@@ -108,9 +107,9 @@ export const sampleClasses = [
   "btn-close-red-800/50",
 
   // /components/button.js
-"btn-link",
-"btn-danger",
-"btn-dark ",
+  "btn-link",
+  "btn-danger",
+  "btn-dark ",
 
   // /components/card.js
   "card",
@@ -462,7 +461,7 @@ export const sampleClasses = [
   "fs-10px",
   "fs-5/2",
   "fs-5/2px",
-  
+
   // /typography/font-style.js
   "italic",
   "not-italic",

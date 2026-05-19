@@ -283,9 +283,6 @@
   --su-btn-dark-text-disabled: var(--su-btn-dark-text);
   --su-btn-dark-border-disabled: var(--su-btn-dark-bg-disabled);
   --su-btn-dark-outline-disabled: 0;
-
-
-
 }
 
 [data-color-scheme="dark"] {
