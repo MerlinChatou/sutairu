@@ -4,7 +4,7 @@ import sm from './sm.js';
 import md from './md.js';
 import lg from './lg.js';
 import xl from './xl.js';
-import _2xl from './2xl.js';
+import xxl from './xxl.js';
 
 import portrait from './portrait.js';
 import landscape from './landscape.js';
@@ -22,6 +22,11 @@ import last from './last.js';
 import odd from './odd.js';
 import even from './even.js';
 
+import is_first from './is-first.js';
+import is_last from './is-last.js';
+import is_odd from './is-odd.js';
+import is_even from './is-even.js';
+
 import group_hover from './group-hover.js';
 import group_selected from './group-selected.js';
 
@@ -32,7 +37,7 @@ export const variantHandlers = {
   'md': md,
   'lg': lg,
   'xl': xl,
-  '2xl': _2xl,
+  'xxl': xxl,
 
   'portrait': portrait,
   'landscape': landscape,
@@ -46,10 +51,16 @@ export const variantHandlers = {
   "selected": selected,
   
   'placeholder': placeholder,
+
   'first': first,
   'last': last,
   'odd': odd,
   'even': even,
+
+  'is-first': is_first,
+  'is-last': is_last,
+  'is-odd': is_odd,
+  'is-even': is_even,
 
   'group-hover': group_hover,
   'group-selected': group_selected,
