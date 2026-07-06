@@ -1,5 +1,19 @@
 import { colorsList, convertToOklch } from "../utils.js";
 
+
+export const rules = {
+  "bg-transparent": {
+    rules: [
+      {
+        selector: "bg-transparent",
+        declarations: [
+          { "background-color": "transparent" },
+        ],
+      },
+    ]
+  }
+}
+
 export const patterns = [
   {
     /**
