@@ -1,5 +1,20 @@
 import { resolveNumericValue } from "../utils.js";
 
+
+
+export const rules = {
+  "border": {
+    rules: [
+      {
+        selector: "border",
+        declarations: [
+          { "border-width": "1px" },
+        ],
+      },
+    ]
+  }
+}
+
 /**
  * Utility for border-width.
  * Scale: 1 unit = 1px
