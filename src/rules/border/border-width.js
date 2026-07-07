@@ -30,6 +30,8 @@ const getDeclarations = (type, value) => {
     br: { "border-right-width": value },
     bx: { "border-inline-width": value },
     by: { "border-block-width": value },
+    bs: { "border-inline-start-width": value },
+    be: { "border-inline-end-width": value },
   };
   return map[type];
 };
@@ -43,7 +45,7 @@ export const patterns = [
      * -                     -> Literal dash
      * ([0-9./]+)            -> Group 3: Value (Supports Integers, Fractions, Decimals)
      */
-    test: /^(!?)(b|bt|bb|bl|br|bx|by)-([0-9./]+)$/,
+    test: /^(!?)(b|bt|bb|bl|br|bx|by|bs|be)-([0-9./]+)$/,
     parse: (match) => {
       const [, important, type, rawValue] = match;
       const util = match[0];
