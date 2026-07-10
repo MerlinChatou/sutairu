@@ -1,5 +1,23 @@
 import { resolveNumericValue } from "../utils.js";
 
+
+
+
+export const rules = {
+  "outline": {
+    rules: [
+      {
+        selector: "outline",
+        declarations: [
+          { "outline-width": "1px" },
+          { "outline-style": "solid" },
+        ],
+      },
+    ]
+  }
+}
+
+
 export const patterns = [
   {
     /**
