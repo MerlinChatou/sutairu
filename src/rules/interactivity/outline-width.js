@@ -23,7 +23,7 @@ export const patterns = [
     /**
      * Regex Breakdown:
      * ^(!?)                 -> Group 1: Optional "!"
-     * (b|bt|bb|bl|br|bx|by) -> Group 2: Border type
+     * ol-                   -> Group 2: outline
      * -                     -> Literal dash
      * ([0-9./]+)            -> Group 3: Value (Supports Integers, Fractions, Decimals)
      */
