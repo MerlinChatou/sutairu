@@ -14,6 +14,9 @@ export const rules = {
           { "border-radius": "var(--su-input-border-radius)" },
           { "border-width": "var(--su-input-border-width)" },
           { "border-style": "solid" },
+          { "background-color": "var(--su-input-bg)" },
+          { color: "var(--su-input-text)" },
+
           { outline: "0" },
         ],
       },
@@ -51,24 +54,44 @@ export const rules = {
           },
         ],
       },
-
-            /* File selector */
       {
-        prefix: "select",
-        selector: "input",        
+        selector: "input",
+        suffix: ':is(:disabled, [aria-disabled="true"])::placeholder',
         declarations: [
           {
-            "padding": "0.375rem 0.5rem",
-            "padding-right": "1.5rem",            
-            "background-image": "var(--su-input-select-image)",
-            "background-repeat": "no-repeat",
-            "background-position": "right 0.5rem center",
-            "background-size": "1rem",
-            "appearance": "none",
+            color: "var(--su-input-text-disabled)",
           },
         ],
       },
 
+      /* Drop-down selector */
+      {
+        prefix: "select",
+        selector: "input",
+        declarations: [
+          {
+            padding: "0.375rem 0.5rem",
+            "padding-right": "1.5rem",
+            "background-image": "var(--su-input-select-image)",
+            "background-repeat": "no-repeat",
+            "background-position": "right 0.5rem center",
+            "background-size": "1rem",
+            appearance: "none",
+            transition: "background-color 0.15s ease-in-out",
+          },
+        ],
+      },
+      {
+        prefix: "select",
+        selector: "input",
+        suffix: ":hover",
+        declarations: [
+          {
+            "background-color": "var(--su-input-select-bg-hover)",            
+            cursor: "pointer"
+          },
+        ],
+      },
 
       /* File selector */
       {
@@ -100,9 +123,9 @@ export const rules = {
             "border-right-style": "solid",
             "border-right-color": "inherit",
             "margin-right": "0.5rem",
-            padding: "0.5rem 1rem",
+            padding: "0.375rem 0.5rem",
             "background-color": "var(--su-input-file-bg)",
-            color: "var(--su-input-file-text)",
+            color: "var(--su-input-file-text)",            
             transition: "background-color 0.15s ease-in-out",
           },
         ],
@@ -112,8 +135,8 @@ export const rules = {
         suffix: '[type="file"]::file-selector-button:hover',
         declarations: [
           {
-            cursor: "pointer",
-            "background-color": "var(--su-input-file-bg-hover)",
+            "background-color": "var(--su-input-file-bg-hover)",            
+            cursor: "pointer",            
           },
         ],
       },
@@ -122,6 +145,8 @@ export const rules = {
         suffix: '[type="file"]:is(:disabled, [aria-disabled="true"])::file-selector-button',
         declarations: [
           {
+            "background-color": "var(--su-input-bg-disabled)",
+            "color": "var(--su-input-text-disabled)",
             cursor: "not-allowed",
           },
         ],
