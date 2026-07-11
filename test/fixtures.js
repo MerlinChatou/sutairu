@@ -68,7 +68,7 @@ export const sampleClasses = [
   "r-2",
   "r-3/2",
   "!r-2.5",
-  "first:rb-2",
+  "is-first:rb-2",
 
   // /border/border-radius-unit.js
   "r-5px",
@@ -354,7 +354,7 @@ export const sampleClasses = [
   "w-full",
   "w-screen",
   "!w-screen-h",
-  "last:h-12",
+  "is-last:h-12",
 
   // /layout/size-unit.js
   "w-48px",
@@ -384,7 +384,7 @@ export const sampleClasses = [
   "gap-53mm",
   "gap-x-12vw",
   "!gap-y-5%",
-  "2xl:hover:gap-3",
+  "xxl:hover:gap-3",
 
   // /spacing/margin-unit.js
   "m-2px",

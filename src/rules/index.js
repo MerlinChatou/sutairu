@@ -22,8 +22,9 @@ import * as btn_link from "./components/btn-link.js";
 import * as button from "./components/button.js";
 import * as button_base from "./components/button-base.js";
 import * as card from "./components/card.js";
-import * as hljs from "./components/hljs.js";
 import * as group from "./components/group.js";
+import * as hljs from "./components/hljs.js";
+import * as input_base from "./components/input-base.js";
 import * as masonry from "./components/masonry.js";
 import * as modal from "./components/modal.js";
 
@@ -213,7 +214,7 @@ const utilities = [
 ];
 
 // Components
-const components = [badge, btn_close, btn_link, button, button_base, card, group, hljs, masonry, modal];
+const components = [badge, btn_close, btn_link, button, button_base, card, group, hljs, input_base, masonry, modal];
 
 // Flatten all static utilities rules into one object for O(1) lookup
 export const staticUtilitiesMap = utilities.reduce((acc, mod) => ({ ...acc, ...mod.rules }), {});

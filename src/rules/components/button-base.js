@@ -1,15 +1,5 @@
-/**
- * Utility for Masonry layouts.
- * Uses 'suffix' to prevent escaping the child combinator.
- */
-
-const masonryDecls = {
-  container: { position: "relative" },
-  item: { position: "absolute" },
-};
-
 export const rules = {
-  // 1. Standard 'masonry' class
+  // 1. Standard 'btn' class
   btn: {
     rules: [
       {
@@ -35,7 +25,7 @@ export const rules = {
     ],
   },
 
-  // 2. Important '!masonry' class
+  // 2. Important '!btn' class
   "!btn": {
     isImportant: true,
     rules: [

@@ -1,0 +1,35 @@
+:root {
+  /* Base */
+  --su-input-border-color: color-mix(var(--su-gray), #fff 70%);
+  --su-input-border-width: 1px;
+  --su-input-border-radius: 0.375rem;
+  --su-input-placeholder-color: color-mix(var(--su-gray), #fff 20%);
+
+  /* Focus-visible */
+  --su-input-border-focus-visible: var(--su-input-border-color);
+  --su-input-ol-focus-visible: oklch(from var(--su-accent) l c h / 30%);
+  --su-input-ol-width-focus-visible: 3px;
+
+  /* Disabled */
+  --su-input-bg-disabled: color-mix(var(--su-gray), #fff 80%);
+  --su-input-text-disabled: oklch(from var(--su-gray) l c h / 20%);
+
+  
+  /* File selector */
+  --su-input-file-bg: transparent;
+  --su-input-file-bg-hover: color-mix(var(--su-gray), #fff 80%);
+  --su-input-file-text: var(--su-body);
+
+  /* Input select */
+  --su-input-select-image: url("data:image/svg+xml,%3csvg aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 10 6'%3e %3cpath stroke='%236B7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m1 1 4 4 4-4'/%3e %3c/svg%3e");
+
+  /* Valid */
+  --su-input-border-valid: var(--su-green);
+  --su-input-border-valid-focus-visible: var(--su-input-border-valid);
+  --su-input-ol-valid-focus-visible: oklch(from var(--su-input-border-valid) l c h / 30%);
+  
+  /* Invalid */
+  --su-input-border-invalid: var(--su-red);
+  --su-input-border-invalid-focus-visible: var(--su-input-border-invalid);
+  --su-input-ol-invalid-focus-visible: oklch(from var(--su-input-border-invalid) l c h / 30%);
+}

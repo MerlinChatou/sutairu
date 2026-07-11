@@ -19,7 +19,7 @@ export const generateCSS = (ruleConfig, path, util, tools) => {
         selector = tool.selector(selector);
       }
       // Add suffix
-      selector = `${selector}${rule.suffix || ""}`;
+      selector = `${rule.prefix || ""}${selector}${rule.suffix || ""}`;
 
       // 4. Build the declarations block
       const body = rule.declarations

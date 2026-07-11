@@ -72,6 +72,7 @@ export async function generateCSS(config, safeList) {
     "base/base.css",
     ...config.themes.map((t) => `themes/${t}/core.css`),
     ...config.themes.map((t) => `themes/${t}/button.css`),
+    ...config.themes.map((t) => `themes/${t}/input.css`),
     ...config.themes.map((t) => `themes/${t}/modal.css`),
     ...config.themes.map((t) => `themes/${t}/card.css`),
     ...config.themes.map((t) => `themes/${t}/code.css`),

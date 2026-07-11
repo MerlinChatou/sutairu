@@ -334,10 +334,6 @@ exports[`compiler: -rot-180/3deg 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.\\\\-rot-180\\\\/3deg {\\n  --su-rot: -60deg;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));\\n}\\n\\n}"
 `;
 
-exports[`compiler: 2xl:hover:gap-3 1`] = `
-"@layer components {\\n \\n}\\n\\n@layer utilities {\\n@media (width >= 96rem) {\\n    .2xl\\\\:hover\\\\:gap-3:hover {\\n      gap: 0.75rem;\\n    }\\n}\\n\\n}"
-`;
-
 exports[`compiler: ac-start 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.ac-start {\\n  align-content: start;\\n}\\n\\n}"
 `;
@@ -643,7 +639,7 @@ exports[`compiler: ff-mono 1`] = `
 `;
 
 exports[`compiler: first:rb-2 1`] = `
-"@layer components {\\n \\n}\\n\\n@layer utilities {\\n  .first\\\\:rb-2:first-child {\\n    border-bottom-left-radius: 0.5rem;\\n    border-bottom-right-radius: 0.5rem;\\n  }\\n\\n}"
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n  .first\\\\:rb-2 > :first-child {\\n    border-bottom-left-radius: 0.5rem;\\n    border-bottom-right-radius: 0.5rem;\\n  }\\n\\n}"
 `;
 
 exports[`compiler: flex-y 1`] = `
@@ -854,6 +850,10 @@ exports[`compiler: invert-80 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.invert-80 {\\n  --su-invert: invert(0.8);\\n}\\n\\n}"
 `;
 
+exports[`compiler: is-last:h-12 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n  .is-last\\\\:h-12:last-child {\\n    height: 3rem;\\n  }\\n\\n}"
+`;
+
 exports[`compiler: italic 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.italic {\\n  font-style: italic;\\n}\\n\\n}"
 `;
@@ -876,10 +876,6 @@ exports[`compiler: js-auto 1`] = `
 
 exports[`compiler: js-start 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.js-start {\\n  justify-self: start;\\n}\\n\\n}"
-`;
-
-exports[`compiler: last:h-12 1`] = `
-"@layer components {\\n \\n}\\n\\n@layer utilities {\\n  .last\\\\:h-12:last-child {\\n    height: 3rem;\\n  }\\n\\n}"
 `;
 
 exports[`compiler: lg:gap-5/2 1`] = `
@@ -1384,6 +1380,10 @@ exports[`compiler: ws-normal 1`] = `
 
 exports[`compiler: xl:!shrink-2 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n@media (width >= 80rem) {\\n  .xl\\\\:\\\\!shrink-2 {\\n    flex-shrink: 2 !important;\\n  }\\n}\\n\\n}"
+`;
+
+exports[`compiler: xxl:hover:gap-3 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n@media (width >= 96rem) {\\n    .xxl\\\\:hover\\\\:gap-3:hover {\\n      gap: 0.75rem;\\n    }\\n}\\n\\n}"
 `;
 
 exports[`compiler: z-base 1`] = `
