@@ -1,4 +1,14 @@
 export const rules = {
+  "input-label": {
+    rules: [
+      {
+        /* Base */
+        selector: "input-label",
+        declarations: [{ display: "inline-block" }, { "margin-top": "0.25rem" }, { "margin-bottom": "0" }],
+      },
+    ],
+  },
+
   // 1. Standard 'input' class
   input: {
     rules: [
@@ -87,8 +97,8 @@ export const rules = {
         suffix: ":hover",
         declarations: [
           {
-            "background-color": "var(--su-input-select-bg-hover)",            
-            cursor: "pointer"
+            "background-color": "var(--su-input-select-bg-hover)",
+            cursor: "pointer",
           },
         ],
       },
@@ -125,7 +135,7 @@ export const rules = {
             "margin-right": "0.5rem",
             padding: "0.375rem 0.5rem",
             "background-color": "var(--su-input-file-bg)",
-            color: "var(--su-input-file-text)",            
+            color: "var(--su-input-file-text)",
             transition: "background-color 0.15s ease-in-out",
           },
         ],
@@ -135,8 +145,8 @@ export const rules = {
         suffix: '[type="file"]::file-selector-button:hover',
         declarations: [
           {
-            "background-color": "var(--su-input-file-bg-hover)",            
-            cursor: "pointer",            
+            "background-color": "var(--su-input-file-bg-hover)",
+            cursor: "pointer",
           },
         ],
       },
@@ -146,7 +156,7 @@ export const rules = {
         declarations: [
           {
             "background-color": "var(--su-input-bg-disabled)",
-            "color": "var(--su-input-text-disabled)",
+            color: "var(--su-input-text-disabled)",
             cursor: "not-allowed",
           },
         ],
