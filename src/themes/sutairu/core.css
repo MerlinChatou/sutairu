@@ -77,7 +77,7 @@
   --su-ls-h6: -0.01em;
 
   /* Default border colors*/
-  --su-border: oklch(from var(--su-accent) 94% 0.01 h);
+  --su-border: oklch(from var(--su-accent) 92% 0.01 h);
 
 }
 

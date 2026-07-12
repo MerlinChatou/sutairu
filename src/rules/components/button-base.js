@@ -7,6 +7,7 @@ export const rules = {
         declarations: [
           { appearance: "button" },
           { display: "inline-flex" },
+          { color: "var(--su-body)" },
           { "align-items": "center" },
           { "justify-content": "center" },
           { "line-height": "1" },

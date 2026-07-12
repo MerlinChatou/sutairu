@@ -48,6 +48,7 @@ export const rules = {
             "outline-width": "var(--su-input-ol-width-focus-visible)",
             "outline-offset": "1px",
             "outline-style": "solid",
+            "z-index": "1",
           },
         ],
       },
@@ -209,22 +210,5 @@ export const rules = {
   },
 
   // 2. Important '!input' class
-  "!input": {
-    isImportant: true,
-    rules: [
-      {
-        selector: "!input",
-        declarations: [
-          { width: "100%" },
-          { padding: "0.25rem 0.5rem" },
-          { "margin-top": "0.25rem" },
-          { "margin-bottom": "0.5rem" },
-          { "border-radius": "var(--su-input-border-radius)" },
-          { "border-width": "var(--su-input-border-width)" },
-          { "border-style": "solid" },
-          { outline: "0" },
-        ],
-      },
-    ],
-  },
+
 };
