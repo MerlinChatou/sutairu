@@ -1,4 +1,11 @@
 [data-theme="swiss"] { 
   --su-input-border-width: 1px;
   --su-input-border-radius: 0.375rem;
+  --su-input-ol-focus-visible: oklch(from var(--su-blue) l c h / 30%);
+}
+
+
+[data-color-scheme="dark"] {
+  /* Focus-visible */
+  --su-input-ol-focus-visible: oklch(from var(--su-blue) l c h / 50%);
 }

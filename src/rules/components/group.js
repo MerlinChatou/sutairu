@@ -4,7 +4,7 @@
  */
 
 const baseRules = {
-  "group":       { "display": "inline-flex", "vertical-align": "middle", "position": "relative", "clip-path": "inset(0% round 0)"},
+  "group-container":       { "display": "inline-flex", "vertical-align": "middle", "position": "relative", "clip-path": "inset(0% round 0)"},
   "group-row":   { "display": "inline-flex", "flex-direction": "row" },
   "group-col":   { "display": "inline-flex", "flex-direction": "column" },
   "group-fluid": { "display": "flex", "width": "100%" },
@@ -24,7 +24,7 @@ const attachedRules = {
   ".group-col > .group-item:last-child:not(:first-child)":        { "border-top-left-radius": "0", "border-top-right-radius": "0" },
   
   // Border overlap logic to maintain consistent 1px thickness
-  ".group:not(.group-col) > .group-item + .group-item, .group-row > .group-item + .group-item": { "margin-left": "-1px" },
+  ".group-container:not(.group-col) > .group-item + .group-item, .group-row > .group-item + .group-item": { "margin-left": "-1px" },
   ".group-col > .group-item + .group-item": { "margin-top": "-1px", "margin-left": "0" }
 };
 
