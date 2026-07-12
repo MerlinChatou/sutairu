@@ -31,7 +31,7 @@ export const rules = {
       },
       {
         selector: "input-group",
-        suffix: " > *",
+        suffix: " > :is(span, .input, button)",
         declarations: [          
           { "border-width": "0" },
           { "border-radius": "0" },
@@ -53,6 +53,15 @@ export const rules = {
         declarations: [          
           { "border-top-right-radius": "var(--su-input-border-radius)" },
           { "border-bottom-right-radius": "var(--su-input-border-radius)" },
+        ],
+      },
+
+      {
+        selector: "input-group",
+        suffix: " > *:not(:first-child):not(:last-child)",
+        declarations: [          
+          { "border-right-width": "var(--su-input-border-width)" },
+          { "border-left-width": "var(--su-input-border-width)" },
         ],
       },
 

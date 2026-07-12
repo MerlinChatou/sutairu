@@ -15,6 +15,8 @@ export const rules = {
       {
         /* Base */
         selector: "input",
+        /*identifier: ":where(",
+        suffix: ")",*/
         declarations: [
           { width: "100%" },
           { padding: "0.25rem 0.5rem" },
@@ -78,7 +80,7 @@ export const rules = {
       /* Drop-down selector */
       {
         prefix: "select",
-        selector: "input",
+        selector: ".input",
         declarations: [
           {
             padding: "0.375rem 0.5rem",

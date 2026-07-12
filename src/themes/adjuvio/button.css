@@ -39,7 +39,7 @@
   --su-btn-primary-border-disabled: var(--su-btn-primary-bg-disabled);
   --su-btn-primary-outline-disabled: 0;
 
-  --su-btn-secondary-bg: var(--su-white);
+  --su-btn-secondary-bg: var(--su-subtle);
   --su-btn-secondary-text: var(--su-black);
   --su-btn-secondary-border: color-mix(var(--su-white), #000 15%);
   --su-btn-secondary-outline: 0;
@@ -288,7 +288,7 @@
 
 
 [data-color-scheme="dark"] {
-  --su-btn-secondary-bg: var(--su-black);
+  --su-btn-secondary-bg: var(--su-subtle);
   --su-btn-secondary-text: var(--su-white);
   --su-btn-secondary-border: color-mix(var(--su-black), #fff 20%);
   --su-btn-secondary-outline: 0;
