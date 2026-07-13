@@ -30,6 +30,7 @@ export const patterns = [
     parse: (match) => {
       // Note: match[0] is the full string, match[1] is the !
       const [, important, propKey, durationRaw, delayRaw, easingRaw] = match;
+      
       // Special Case: tr-none
       if (propKey === "none") {
         return {
@@ -42,15 +43,21 @@ export const patterns = [
           ],
         };
       }
-      const property = properties[propKey];
+
+      const rawProperties = properties[propKey];
       const duration = durationRaw ? `${durationRaw}ms` : "150ms";
+      // Ensure there's a space prefix if a delay exists
       const delay = delayRaw && delayRaw !== "0" ? ` ${delayRaw}ms` : "";
 
       let easing = easingRaw || "ease";
       if (easing.startsWith("cubic(")) easing = easing.replace("cubic(", "cubic-bezier(");
       if (easing.startsWith("step(")) easing = easing.replace("step(", "steps(");
 
-      const transitionValue = `${property} ${duration} ${easing} ${delay}`;
+      // Split comma-separated properties, apply settings to each, and join them back safely
+      const transitionValue = rawProperties
+        .split(",")
+        .map((prop) => `${prop.trim()} ${duration} ${easing}${delay}`)
+        .join(", ");
 
       return {
         isImportant: important === "!",

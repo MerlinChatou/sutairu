@@ -251,6 +251,7 @@ export const sampleClasses = [
   "ar-cinema",
 
   // /layout/coordinate.js
+  "left-100",
   "top-50%",
   "top-middle",
   "!-left-20rem",
@@ -443,6 +444,11 @@ export const sampleClasses = [
   "mv-y-20px",
   "-mv-x-10%",
   "!mv-x-50%",
+  "mv-x-2px",
+  "mv-2px",
+  "mv-middle",
+  "mv-x-middle",
+
   // :::::::::::::: TYPOGRAPHY ::::::::::::::
 
   // /typography/font-family.js

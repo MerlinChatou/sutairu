@@ -18,7 +18,7 @@ const getCoordValue = (value, unit, isNegative) => {
   if (value === "0") return "0";
   if (!unit) {
     const num = parseFloat(value);
-    return `${num * (isNegative ? -0.25 : 0.25)}rem`;
+    return `${num * (isNegative ? -1 : 1)}%`;
   }
   return `${isNegative ? "-" : ""}${value}${unit}`;
 };

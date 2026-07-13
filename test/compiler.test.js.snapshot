@@ -638,10 +638,6 @@ exports[`compiler: ff-mono 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.ff-mono {\\n  font-family: var(--su-ff-mono);\\n  font-size-adjust: var(--su-fs-adjust-mono);\\n}\\n\\n}"
 `;
 
-exports[`compiler: first:rb-2 1`] = `
-"@layer components {\\n \\n}\\n\\n@layer utilities {\\n  .first\\\\:rb-2 > :first-child {\\n    border-bottom-left-radius: 0.5rem;\\n    border-bottom-right-radius: 0.5rem;\\n  }\\n\\n}"
-`;
-
 exports[`compiler: flex-y 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.flex-y {\\n  display: flex;\\n  flex-direction: column;\\n}\\n\\n}"
 `;
@@ -850,6 +846,10 @@ exports[`compiler: invert-80 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.invert-80 {\\n  --su-invert: invert(0.8);\\n}\\n\\n}"
 `;
 
+exports[`compiler: is-first:rb-2 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n  .is-first\\\\:rb-2:first-child {\\n    border-bottom-left-radius: 0.5rem;\\n    border-bottom-right-radius: 0.5rem;\\n  }\\n\\n}"
+`;
+
 exports[`compiler: is-last:h-12 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n  .is-last\\\\:h-12:last-child {\\n    height: 3rem;\\n  }\\n\\n}"
 `;
@@ -876,6 +876,10 @@ exports[`compiler: js-auto 1`] = `
 
 exports[`compiler: js-start 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.js-start {\\n  justify-self: start;\\n}\\n\\n}"
+`;
+
+exports[`compiler: left-100 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.left-100 {\\n  left: 100%;\\n}\\n\\n}"
 `;
 
 exports[`compiler: lg:gap-5/2 1`] = `
@@ -990,8 +994,24 @@ exports[`compiler: modal-content 1`] = `
 "@layer components {\\n .modal-content {\\n  position: relative;\\n  max-height: 100%;\\n  border: 1px solid var(--b-base-ld, var(--su-modal-border-color));\\n  border-radius: var(--su-modal-border-radius);\\n  background-clip: padding-box;\\n  display: flex;\\n  flex-direction: column;\\n  overflow: hidden;\\n}\\n\\n.modal-content > .header {\\n  background-color: var(--su-modal-header-bg-color);\\n  border-bottom: 1px solid var(--su-modal-border-color);\\n  padding: 0.75rem;\\n  display: flex;\\n  justify-content: space-between;\\n  align-items: center;\\n}\\n\\n.modal-content > .body {\\n  background-color: var(--bg-base-ld, var(--su-modal-body-bg-color));\\n  border-bottom: 1px solid var(--b-base-ld, var(--su-modal-border-color));\\n  padding: 1rem;\\n  overflow-y: auto;\\n}\\n\\n.modal-content > .footer {\\n  background-color: var(--su-modal-footer-bg-color);\\n  padding: 1rem;\\n}\\n\\n\\n}\\n\\n@layer utilities {\\n}"
 `;
 
+exports[`compiler: mv-2px 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.mv-2px {\\n  --su-tr-x: 2px;\\n  --su-tr-y: 2px;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));\\n}\\n\\n}"
+`;
+
+exports[`compiler: mv-middle 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.mv-middle {\\n  --su-tr-x: -50%;\\n  --su-tr-y: -50%;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));\\n}\\n\\n}"
+`;
+
 exports[`compiler: mv-x-10 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.mv-x-10 {\\n  --su-tr-x: 10px;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));\\n}\\n\\n}"
+`;
+
+exports[`compiler: mv-x-2px 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.mv-x-2px {\\n  --su-tr-x: 2px;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));\\n}\\n\\n}"
+`;
+
+exports[`compiler: mv-x-middle 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.mv-x-middle {\\n  --su-tr-x: -50%;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));\\n}\\n\\n}"
 `;
 
 exports[`compiler: mv-y-20px 1`] = `
@@ -1311,27 +1331,27 @@ exports[`compiler: top-middle 1`] = `
 `;
 
 exports[`compiler: tr-bg-500-ease-in 1`] = `
-"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.tr-bg-500-ease-in {\\n  transition: background-color 500ms ease-in ;\\n}\\n\\n}"
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.tr-bg-500-ease-in {\\n  transition: background-color 500ms ease-in;\\n}\\n\\n}"
 `;
 
 exports[`compiler: tr-colors 1`] = `
-"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.tr-colors {\\n  transition: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke 150ms ease ;\\n}\\n\\n}"
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.tr-colors {\\n  transition: color 150ms ease, background-color 150ms ease, border-color 150ms ease, outline-color 150ms ease, text-decoration-color 150ms ease, fill 150ms ease, stroke 150ms ease;\\n}\\n\\n}"
 `;
 
 exports[`compiler: tr-colors-200-ease-out 1`] = `
-"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.tr-colors-200-ease-out {\\n  transition: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke 200ms ease-out ;\\n}\\n\\n}"
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.tr-colors-200-ease-out {\\n  transition: color 200ms ease-out, background-color 200ms ease-out, border-color 200ms ease-out, outline-color 200ms ease-out, text-decoration-color 200ms ease-out, fill 200ms ease-out, stroke 200ms ease-out;\\n}\\n\\n}"
 `;
 
 exports[`compiler: tr-opacity-200-150-ease-in 1`] = `
-"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.tr-opacity-200-150-ease-in {\\n  transition: opacity 200ms ease-in  150ms;\\n}\\n\\n}"
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.tr-opacity-200-150-ease-in {\\n  transition: opacity 200ms ease-in 150ms;\\n}\\n\\n}"
 `;
 
 exports[`compiler: tr-opacity-200-cubic(0.1,0.7,1.0,0.1) 1`] = `
-"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.tr-opacity-200-cubic\\\\(0\\\\.1\\\\,0\\\\.7\\\\,1\\\\.0\\\\,0\\\\.1\\\\) {\\n  transition: opacity 200ms cubic-bezier(0.1,0.7,1.0,0.1) ;\\n}\\n\\n}"
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.tr-opacity-200-cubic\\\\(0\\\\.1\\\\,0\\\\.7\\\\,1\\\\.0\\\\,0\\\\.1\\\\) {\\n  transition: opacity 200ms cubic-bezier(0.1,0.7,1.0,0.1);\\n}\\n\\n}"
 `;
 
 exports[`compiler: tr-shadow-step(1,end) 1`] = `
-"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.tr-shadow-step\\\\(1\\\\,end\\\\) {\\n  transition: box-shadow 150ms steps(1,end) ;\\n}\\n\\n}"
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.tr-shadow-step\\\\(1\\\\,end\\\\) {\\n  transition: box-shadow 150ms steps(1,end);\\n}\\n\\n}"
 `;
 
 exports[`compiler: tt-capitalize 1`] = `

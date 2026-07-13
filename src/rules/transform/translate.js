@@ -5,25 +5,34 @@ const getTransformEngine = () => ({
 export const patterns = [
   {
     /**
-     * Matches: mv-x-10, !-mv-y-50%, mv-x-2rem
+     * Matches: 
+     * - mv-x-10, !-mv-y-50%, mv-x-2rem
+     * - mv-middle, mv-x-middle, mv-y-middle
+     * - mv-20px, !-mv-5rem
      */
-    test: /^(!?)(-?)mv-(x|y)-(\d*\.?\d+)(px|rem|%|em)?$/,
+    test: /^(!?)(-?)mv(?:-(x|y))?-(?:(\d*\.?\d+)(px|rem|%|em)?|(middle))$/,
     parse: (match) => {
       const util = match[0];
       const isImportant = match[1] === "!";
       const isNeg = match[2] === "-";
-      const axis = match[3];
-      const num = match[4];
-      const unit = match[5] || "px";
+      const axis = match[3];          // 'x', 'y', or undefined (both)
+      const num = match[4];           // Numeric value
+      const unit = match[5] || "px";  // Unit (defaults to px if numeric)
+      const isMiddle = match[6] === "middle";
 
-      const value = `${isNeg ? "-" : ""}${num}${unit}`;
-      const variable = `--su-tr-${axis}`;
+      // Determine the final CSS value
+      const value = isMiddle ? "-50%" : `${isNeg ? "-" : ""}${num}${unit}`;
+
+      // Determine which variables to update
+      const declarations = {};
+      if (!axis || axis === "x") declarations["--su-tr-x"] = value;
+      if (!axis || axis === "y") declarations["--su-tr-y"] = value;
 
       return {
         isImportant,
         rules: [{
           selector: util,
-          declarations: [{ [variable]: value }, getTransformEngine()]
+          declarations: [declarations, getTransformEngine()]
         }]
       };
     }

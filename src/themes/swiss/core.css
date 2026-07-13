@@ -97,5 +97,4 @@
   --su-link-color-hover: color-mix(var(--su-blue), #fff 20%);
   --su-link-color-active: color-mix(var(--su-blue), #fff 30%);
   --su-link-color-disabled: color-mix(var(--su-blue), #000 35%);
-
 }
