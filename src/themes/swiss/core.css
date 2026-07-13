@@ -81,7 +81,7 @@
 
 /* Dark mode */
 [data-theme="swiss"][data-color-scheme="dark"] {
-  --su-border: oklch(from var(--su-accent) 27% 0.005 h);
+  --su-border: oklch(from var(--su-accent) 30% 0.005 h);
 
   /* Semantic text */
   --su-body: oklch(from var(--su-accent) 85% 0.001 h);
