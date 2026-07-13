@@ -33,7 +33,7 @@ export const patterns = [
           {
             selector: util,
             declarations: [
-              { "grid-template-columns": gridValue }
+              { "grid-template-columns": gridValue },              
             ]
           }
         ]
