@@ -95,7 +95,7 @@ export const rules = {
       {
         selector: "modal",
         suffix: ".no-animation",
-        declarations: [{ "--su-modal-opening-duration": "5ms" }, { "--modal-closing-duration": "5ms" }],
+        declarations: [{ "--su-modal-opening-duration": "5ms" }, { "--su-modal-closing-duration": "5ms" }],
       },
       {
         selector: "modal",
