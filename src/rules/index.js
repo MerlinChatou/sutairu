@@ -71,6 +71,7 @@ import * as justify_content from "./layout/justify-content.js";
 import * as justify_self from "./layout/justify-self.js";
 import * as object_fit from "./layout/object-fit.js";
 import * as overflow from "./layout/overflow.js";
+import * as place_items from "./layout/place-items.js";
 import * as position from "./layout/position.js";
 import * as size from "./layout/size.js";
 import * as size_unit from "./layout/size-unit.js";
@@ -178,6 +179,7 @@ const utilities = [
   justify_self,
   object_fit,
   overflow,
+  place_items,
   position,
   size,
   size_unit,
