@@ -63,6 +63,9 @@ export const sampleClasses = [
   "b-purple-200/60",
   "!b-blue-133/12",
   "dark:landscape:b-cyan-1000/1",
+  "bb-red-200/50",
+  "bx-blue",
+  "bs-purple",
 
   // /border/border-radius.js
   "r-2",

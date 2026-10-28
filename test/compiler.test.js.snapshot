@@ -434,6 +434,10 @@ exports[`compiler: badge-pill 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n}"
 `;
 
+exports[`compiler: bb-red-200/50 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.bb-red-200\\\\/50 {\\n  border-bottom-color: oklch(from color-mix(in oklch, var(--su-red), #fff 60%) l c h / 0.5);\\n}\\n\\n}"
+`;
+
 exports[`compiler: bg-black-800/80 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.bg-black-800\\\\/80 {\\n  background-color: oklch(from color-mix(in oklch, var(--su-black), #000 60%) l c h / 0.8);\\n}\\n\\n}"
 `;
@@ -474,6 +478,10 @@ exports[`compiler: brightness-50 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.brightness-50 {\\n  --su-brightness: brightness(0.5);\\n}\\n\\n}"
 `;
 
+exports[`compiler: bs-purple 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.bs-purple {\\n  border-inline-start-color: var(--su-purple);\\n}\\n\\n}"
+`;
+
 exports[`compiler: btn-close 1`] = `
 "@layer components {\\n .btn-close {\\n  appearance: button;\\n  display: inline-block;\\n  padding: 0.75rem;\\n  aspect-ratio: 1/1;\\n  border-radius: var(--su-btn-radius);\\n  border-width: var(--su-btn-border-width);\\n  position: relative;\\n  background-color: transparent;;\\n  border-color: transparent;;\\n  --su-btn-close-color: var(--su-gray);\\n  outline: 0;\\n  cursor: pointer;\\n}\\n\\n.btn-close::before {\\n  position: absolute;\\n  left: 50%;\\n  top: 50%;\\n  content: \\" \\";\\n  height: 1.5em;\\n  width: 3px;\\n  background-color: var(--su-btn-close-color);\\n  transform: translate(-50%, -50%) rotate(45deg);\\n}\\n\\n.btn-close::after {\\n  position: absolute;\\n  left: 50%;\\n  top: 50%;\\n  content: \\" \\";\\n  height: 1.5em;\\n  width: 3px;\\n  background-color: var(--su-btn-close-color);\\n  transform: translate(-50%, -50%) rotate(-45deg);\\n}\\n\\n.btn-close:hover::before {\\n  --su-btn-close-color: color-mix(var(--su-gray), #000 20%);\\n}\\n\\n.btn-close:hover::after {\\n  --su-btn-close-color: color-mix(var(--su-gray), #000 20%);\\n}\\n\\n.btn-close:focus-visible {\\n  outline: 4px solid oklch(from var(--su-btn-close-color) l c h / 30%);\\n  outline-offset: 1px;\\n}\\n\\n\\n}\\n\\n@layer utilities {\\n}"
 `;
@@ -500,6 +508,10 @@ exports[`compiler: btn-dark  1`] = `
 
 exports[`compiler: btn-link 1`] = `
 "@layer components {\\n .btn-link {\\n  color: var(--su-link-color);\\n  background-color: transparent;\\n  border-color: transparent;\\n  text-decoration: none;\\n  transition: color 0.1s ease;\\n}\\n\\n.btn-link:hover {\\n  color: var(--su-link-color-hover);\\n  text-decoration: underline;\\n  cursor: pointer;\\n}\\n\\n.btn-link:focus-visible {\\n  outline: var(--su-btn-link-outline-focus-visible);\\n}\\n\\n.btn-link:active {\\n  color: var(--su-link-color-active);\\n}\\n\\n.btn-link:is(:disabled, [aria-disabled=\\"true\\"]) {\\n  color: var(--su-link-color-disabled);\\n  outline: 0;\\n}\\n\\n\\n}\\n\\n@layer utilities {\\n}"
+`;
+
+exports[`compiler: bx-blue 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.bx-blue {\\n  border-inline-color: var(--su-blue);\\n}\\n\\n}"
 `;
 
 exports[`compiler: card 1`] = `
@@ -987,7 +999,7 @@ exports[`compiler: min-w-3 1`] = `
 `;
 
 exports[`compiler: modal 1`] = `
-"@layer components {\\n .modal {\\n  position: fixed;\\n  inset: 0;\\n  z-index: var(--su-z-modal);\\n  display: none;\\n  justify-content: center;\\n  align-items: start;\\n  padding: clamp(0.25rem, 4vw, 3rem);\\n  margin: 0;\\n}\\n\\nhtml.modal-open {\\n  overflow: hidden;\\n}\\n\\nbody.modal-open {\\n  overflow: hidden;\\n}\\n\\n.modal.centered {\\n  align-items: center;\\n}\\n\\n.modal[open] {\\n  display: flex;\\n}\\n\\n.modal::before {\\n  content: \\"\\";\\n  position: fixed;\\n  inset: 0;\\n  background-color: var(--su-modal-backdrop-color);\\n  opacity: 1;\\n  backdrop-filter: blur(0.375rem);\\n  pointer-events: auto;\\n}\\n\\n.modal.modal-is-opening .modal-content {\\n  animation: var(--su-modal-animation);\\n  animation-duration: var(--su-modal-opening-duration);\\n}\\n\\n.modal.modal-is-switching-in .modal-content {\\n  animation: var(--su-modal-animation);\\n  animation-duration: var(--su-modal-opening-duration);\\n}\\n\\n.modal.modal-is-opening::before {\\n  animation: var(--su-modal-backdrop-animation);\\n  animation-duration: var(--su-modal-opening-duration);\\n}\\n\\n.modal.modal-is-closing::before {\\n  animation: var(--su-modal-backdrop-animation);\\n  animation-duration: var(--su-modal-closing-duration);\\n  animation-direction: reverse ;\\n}\\n\\n.modal.modal-is-closing .modal-content {\\n  animation: var(--su-modal-animation);\\n  animation-duration: var(--su-modal-closing-duration);\\n  animation-direction: reverse ;\\n}\\n\\n.modal.modal-is-switching-out .modal-content {\\n  animation: var(--su-modal-animation);\\n  animation-duration: var(--su-modal-closing-duration);\\n  animation-direction: reverse ;\\n}\\n\\n.modal.no-animation {\\n  --su-modal-opening-duration: 5ms;\\n  --modal-closing-duration: 5ms;\\n}\\n\\n.modal.no-blur::before {\\n  backdrop-filter: blur(0rem);\\n}\\n\\n\\n}\\n\\n@layer utilities {\\n}"
+"@layer components {\\n .modal {\\n  position: fixed;\\n  inset: 0;\\n  z-index: var(--su-z-modal);\\n  display: none;\\n  justify-content: center;\\n  align-items: start;\\n  padding: clamp(0.25rem, 4vw, 3rem);\\n  margin: 0;\\n}\\n\\nhtml.modal-open {\\n  overflow: hidden;\\n}\\n\\nbody.modal-open {\\n  overflow: hidden;\\n}\\n\\n.modal.centered {\\n  align-items: center;\\n}\\n\\n.modal[open] {\\n  display: flex;\\n}\\n\\n.modal::before {\\n  content: \\"\\";\\n  position: fixed;\\n  inset: 0;\\n  background-color: var(--su-modal-backdrop-color);\\n  opacity: 1;\\n  backdrop-filter: blur(0.375rem);\\n  pointer-events: auto;\\n}\\n\\n.modal.modal-is-opening .modal-content {\\n  animation: var(--su-modal-animation);\\n  animation-duration: var(--su-modal-opening-duration);\\n}\\n\\n.modal.modal-is-switching-in .modal-content {\\n  animation: var(--su-modal-animation);\\n  animation-duration: var(--su-modal-opening-duration);\\n}\\n\\n.modal.modal-is-opening::before {\\n  animation: var(--su-modal-backdrop-animation);\\n  animation-duration: var(--su-modal-opening-duration);\\n}\\n\\n.modal.modal-is-closing::before {\\n  animation: var(--su-modal-backdrop-animation);\\n  animation-duration: var(--su-modal-closing-duration);\\n  animation-direction: reverse ;\\n}\\n\\n.modal.modal-is-closing .modal-content {\\n  animation: var(--su-modal-animation);\\n  animation-duration: var(--su-modal-closing-duration);\\n  animation-direction: reverse ;\\n}\\n\\n.modal.modal-is-switching-out .modal-content {\\n  animation: var(--su-modal-animation);\\n  animation-duration: var(--su-modal-closing-duration);\\n  animation-direction: reverse ;\\n}\\n\\n.modal.no-animation {\\n  --su-modal-opening-duration: 5ms;\\n  --su-modal-closing-duration: 5ms;\\n}\\n\\n.modal.no-blur::before {\\n  backdrop-filter: blur(0rem);\\n}\\n\\n\\n}\\n\\n@layer utilities {\\n}"
 `;
 
 exports[`compiler: modal-content 1`] = `

@@ -1,7 +1,18 @@
 import { colorsList, convertToOklch } from "../utils.js";
 
 
-
+// Map prefix utility keys to their CSS border color properties
+const borderColorProps = {
+  b:  "border-color",
+  bt: "border-top-color",
+  bb: "border-bottom-color",
+  bl: "border-left-color",
+  br: "border-right-color",
+  bx: "border-inline-color",
+  by: "border-block-color",
+  bs: "border-inline-start-color",
+  be: "border-inline-end-color",
+};
 
 export const patterns = [
   {
@@ -14,13 +25,14 @@ export const patterns = [
      * Group 3: ([0-9]+)   -> Optional shade (e.g., 500)
      * Group 4: ([0-9.]+)  -> Optional transparency (e.g., 0.5 or 50)
      */
-    test: new RegExp(`^(!?)b-${colorsList}(?:-([0-9]+))?(?:\\/([0-9.]+))?$`),
+    test: new RegExp(`^(!?)(b|bt|bb|bl|br|bx|by|bs|be)-${colorsList}(?:-([0-9]+))?(?:\\/([0-9.]+))?$`),
     parse: (match) => {
       const util = match[0];
       const isImportant = match[1] === "!";
-      const colorName = match[2];
-      const shade = match[3];
-      const opacity = match[4];
+      const prefix = match[2];
+      const colorName = match[3];
+      const shade = match[4];
+      const opacity = match[5];
 
       // Convert inputs to OKLCH color string
       const colorValue = convertToOklch({
@@ -28,6 +40,8 @@ export const patterns = [
         shade,
         opacity,
       });
+
+      const cssProperty = borderColorProps[prefix];
 
       return {
         isImportant,
@@ -38,7 +52,7 @@ export const patterns = [
             // Downstream generator handles escaping the "/" and "!"
             selector: util,
             declarations: [
-              { "border-color": colorValue }
+              { [cssProperty]: colorValue }
             ],
           },
         ],
