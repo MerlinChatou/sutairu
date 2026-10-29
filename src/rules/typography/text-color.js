@@ -1,4 +1,17 @@
 import { colorsList, convertToOklch } from "../utils.js";
+export const rules = {
+  "text-transparent": {
+    rules: [
+      {
+        selector: "text-transparent",
+        declarations: [
+          { "color": "transparent" },
+        ],
+      },
+    ]
+  }
+}
+
 
 export const patterns = [
   {

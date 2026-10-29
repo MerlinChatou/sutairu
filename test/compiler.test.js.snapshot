@@ -54,6 +54,10 @@ exports[`compiler: !bg-page 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.\\\\!bg-page {\\n  background-color: var(--su-page) !important;\\n}\\n\\n}"
 `;
 
+exports[`compiler: !bg-red-500 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.\\\\!bg-red-500 {\\n  background-color: var(--su-red) !important;\\n}\\n\\n}"
+`;
+
 exports[`compiler: !blur-3/2rem 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.\\\\!blur-3\\\\/2rem {\\n  --su-blur: blur(1.5rem) !important;\\n}\\n\\n}"
 `;
@@ -338,6 +342,10 @@ exports[`compiler: ac-start 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.ac-start {\\n  align-content: start;\\n}\\n\\n}"
 `;
 
+exports[`compiler: active:bg-pink-200/50 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n  .active\\\\:bg-pink-200\\\\/50:active {\\n    background-color: oklch(from color-mix(in oklch, var(--su-pink), #fff 60%) l c h / 0.5);\\n  }\\n\\n}"
+`;
+
 exports[`compiler: active:fw-nowrap 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n  .active\\\\:fw-nowrap:active {\\n    flex-wrap: nowrap;\\n  }\\n\\n}"
 `;
@@ -418,6 +426,10 @@ exports[`compiler: b-solid 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.b-solid {\\n  border-style: solid;\\n}\\n\\n}"
 `;
 
+exports[`compiler: b-transparent 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.b-transparent {\\n  border-color: transparent;\\n}\\n\\n}"
+`;
+
 exports[`compiler: b-yellow 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.b-yellow {\\n  border-color: var(--su-yellow);\\n}\\n\\n}"
 `;
@@ -450,6 +462,10 @@ exports[`compiler: bg-green 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.bg-green {\\n  background-color: var(--su-green);\\n}\\n\\n}"
 `;
 
+exports[`compiler: bg-transparent 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.bg-transparent {\\n  background-color: transparent;\\n}\\n\\n}"
+`;
+
 exports[`compiler: bg-white-200 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.bg-white-200 {\\n  background-color: color-mix(in oklch, var(--su-white), #fff 60%);\\n}\\n\\n}"
 `;
@@ -480,6 +496,10 @@ exports[`compiler: brightness-50 1`] = `
 
 exports[`compiler: bs-purple 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.bs-purple {\\n  border-inline-start-color: var(--su-purple);\\n}\\n\\n}"
+`;
+
+exports[`compiler: bs-transparent 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.bs-transparent {\\n  border-inline-start-color: transparent;\\n}\\n\\n}"
 `;
 
 exports[`compiler: btn-close 1`] = `
@@ -550,6 +570,10 @@ exports[`compiler: dark:landscape:b-cyan-1000/1 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n:is([data-color-scheme=\\"dark\\"] *) {\\n  @media (orientation: landscape) {\\n    &.dark\\\\:landscape\\\\:b-cyan-1000\\\\/1 {\\n      border-color: oklch(from color-mix(in oklch, var(--su-cyan), #000 100%) l c h / 0.01);\\n    }\\n  }\\n}\\n\\n}"
 `;
 
+exports[`compiler: dark:landscape:bg-purple-800/80 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n:is([data-color-scheme=\\"dark\\"] *) {\\n  @media (orientation: landscape) {\\n    &.dark\\\\:landscape\\\\:bg-purple-800\\\\/80 {\\n      background-color: oklch(from color-mix(in oklch, var(--su-purple), #000 60%) l c h / 0.8);\\n    }\\n  }\\n}\\n\\n}"
+`;
+
 exports[`compiler: dark:md:hover:!m-8 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n:is([data-color-scheme=\\"dark\\"] *) {\\n  @media (width >= 48rem) {\\n      &.dark\\\\:md\\\\:hover\\\\:\\\\!m-8:hover {\\n        margin: 2rem !important;\\n      }\\n  }\\n}\\n\\n}"
 `;
@@ -584,6 +608,10 @@ exports[`compiler: dark:sm:d-block 1`] = `
 
 exports[`compiler: disabled:as-stretch 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n  .disabled\\\\:as-stretch:is(:disabled, [aria-disabled=\\"true\\"]) {\\n    align-self: stretch;\\n  }\\n\\n}"
+`;
+
+exports[`compiler: disabled:bg-cyan-800/80 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n  .disabled\\\\:bg-cyan-800\\\\/80:is(:disabled, [aria-disabled=\\"true\\"]) {\\n    background-color: oklch(from color-mix(in oklch, var(--su-cyan), #000 60%) l c h / 0.8);\\n  }\\n\\n}"
 `;
 
 exports[`compiler: dotted-black-800/80 1`] = `
@@ -660,6 +688,10 @@ exports[`compiler: flex-y 2`] = `
 
 exports[`compiler: focus-visible:jc-center 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n  .focus-visible\\\\:jc-center:focus-visible {\\n    justify-content: center;\\n  }\\n\\n}"
+`;
+
+exports[`compiler: focus:bg-orange-800/80 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n  .focus\\\\:bg-orange-800\\\\/80:focus {\\n    background-color: oklch(from color-mix(in oklch, var(--su-orange), #000 60%) l c h / 0.8);\\n  }\\n\\n}"
 `;
 
 exports[`compiler: focus:ol-dashed 1`] = `
@@ -766,6 +798,10 @@ exports[`compiler: group-hover:!ac-evenly 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n  .group:hover .group-hover\\\\:\\\\!ac-evenly {\\n    align-content: space-evenly !important;\\n  }\\n\\n}"
 `;
 
+exports[`compiler: group-hover:bg-green-200/50 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n  .group:hover .group-hover\\\\:bg-green-200\\\\/50 {\\n    background-color: oklch(from color-mix(in oklch, var(--su-green), #fff 60%) l c h / 0.5);\\n  }\\n\\n}"
+`;
+
 exports[`compiler: group-selected:!max-h-26cm 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n  .group.selected .group-selected\\\\:\\\\!max-h-26cm {\\n    max-height: 26cm !important;\\n  }\\n\\n}"
 `;
@@ -808,6 +844,10 @@ exports[`compiler: hatching-white-200 1`] = `
 
 exports[`compiler: hover:!js-center 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n  .hover\\\\:\\\\!js-center:hover {\\n    justify-self: center !important;\\n  }\\n\\n}"
+`;
+
+exports[`compiler: hover:bg-yellow-200/50 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n  .hover\\\\:bg-yellow-200\\\\/50:hover {\\n    background-color: oklch(from color-mix(in oklch, var(--su-yellow), #fff 60%) l c h / 0.5);\\n  }\\n\\n}"
 `;
 
 exports[`compiler: hover:grid-x 1`] = `
@@ -1250,6 +1290,10 @@ exports[`compiler: sm:!grayscale-80 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n@media (width >= 40rem) {\\n  .sm\\\\:\\\\!grayscale-80 {\\n    --su-grayscale: grayscale(0.8) !important;\\n  }\\n}\\n\\n}"
 `;
 
+exports[`compiler: sm:bg-blue-200/50 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n@media (width >= 40rem) {\\n  .sm\\\\:bg-blue-200\\\\/50 {\\n    background-color: oklch(from color-mix(in oklch, var(--su-blue), #fff 60%) l c h / 0.5);\\n  }\\n}\\n\\n}"
+`;
+
 exports[`compiler: sm:bg-subtle 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n@media (width >= 40rem) {\\n  .sm\\\\:bg-subtle {\\n    background-color: var(--su-subtle);\\n  }\\n}\\n\\n}"
 `;
@@ -1318,6 +1362,10 @@ exports[`compiler: text-nowrap 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.text-nowrap {\\n  text-wrap: nowrap;\\n}\\n\\n}"
 `;
 
+exports[`compiler: text-orange-800 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.text-orange-800 {\\n  color: color-mix(in oklch, var(--su-orange), #000 60%);\\n}\\n\\n}"
+`;
+
 exports[`compiler: text-red 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.text-red {\\n  color: var(--su-red);\\n}\\n\\n}"
 `;
@@ -1330,8 +1378,16 @@ exports[`compiler: text-title/50 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.text-title\\\\/50 {\\n  color: oklch(from var(--su-title) l c h / 0.5);\\n}\\n\\n}"
 `;
 
+exports[`compiler: text-transparent 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.text-transparent {\\n  color: transparent;\\n}\\n\\n}"
+`;
+
 exports[`compiler: text-wrap 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.text-wrap {\\n  text-wrap: wrap;\\n}\\n\\n}"
+`;
+
+exports[`compiler: text-yellow/50 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.text-yellow\\\\/50 {\\n  color: oklch(from var(--su-yellow) l c h / 0.5);\\n}\\n\\n}"
 `;
 
 exports[`compiler: top-50% 1`] = `

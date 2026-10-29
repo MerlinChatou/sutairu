@@ -1,5 +1,19 @@
 import { colorsList, convertToOklch } from "../utils.js";
 
+
+export const rules = {
+  "ol-transparent": {
+    rules: [
+      {
+        selector: "ol-transparent",
+        declarations: [
+          { "outline-color": "transparent" },
+        ],
+      },
+    ]
+  }
+}
+
 export const patterns = [
   {
     /**

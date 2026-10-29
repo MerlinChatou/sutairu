@@ -1,6 +1,9 @@
 import { colorsList, convertToOklch } from "../utils.js";
 
 
+
+
+
 // Map prefix utility keys to their CSS border color properties
 const borderColorProps = {
   b:  "border-color",
@@ -13,6 +16,25 @@ const borderColorProps = {
   bs: "border-inline-start-color",
   be: "border-inline-end-color",
 };
+
+
+// Generate the rules object dynamically from the mapping
+export const rules = Object.fromEntries(
+  Object.entries(borderColorProps).map(([prefix, cssProperty]) => [
+    `${prefix}-transparent`,
+    {
+      rules: [
+        {
+          selector: `${prefix}-transparent`,
+          declarations: [
+            { [cssProperty]: "transparent" },
+          ],
+        },
+      ],
+    },
+  ])
+);
+
 
 export const patterns = [
   {

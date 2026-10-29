@@ -30,6 +30,7 @@ import * as masonry from "./components/masonry.js";
 import * as modal from "./components/modal.js";
 
 // Effects
+import * as animation_duration from "./effects/animation-duration.js";
 import * as blur from "./effects/blur.js";
 import * as brightness from "./effects/brightness.js";
 import * as contrast from "./effects/contrast.js";
@@ -110,13 +111,16 @@ import * as white_space from "./typography/white-space.js";
 /*
 src/
 └── rules/
-    ├── index.js          # The "Brain" that merges everything
-    ├── layout/           # display, position, z-index, overflow
-    ├── spacing/          # margin, padding, gap
-    ├── typography/       # font-size, color, leading, tracking
-    ├── flex-grid/        # flex-direction, grid-cols, justify, align
-    ├── effects/          # shadow, opacity, border-radius
-    └── interactivity/    # cursor, pointer-events, user-select, outline
+    ├── index.js             # The "Brain" that merges everything
+    ├── background/          # background-color, patterns, stripes, hatching
+    ├── border/              # border-color, radius, style, width
+    ├── components/          # badge, button, card, modal, masonry
+    ├── effects/             # blur, brightness, opacity, transitions, animations
+    ├── interactivity/       # cursor, outline, pointer-events, resize
+    ├── layout/              # display, position, flex, grid, sizing, alignment, z-index
+    ├── spacing/             # margin, padding, gap
+    ├── transform/           # rotate, scale, translate
+    └── typography/          # font-size, color, weight, text-alignment, decoration
 */
 
 const utilities = [
@@ -138,6 +142,7 @@ const utilities = [
   border_width_unit,
 
   // Effects
+  animation_duration,
   blur,
   brightness,
   contrast,

@@ -7,8 +7,18 @@ export const sampleClasses = [
   "bg-white-200",
   "bg-gray/50",
   "bg-black-800/80",
+  "bg-transparent",
+  "!bg-red-500",
+  "sm:bg-blue-200/50",
+  "dark:landscape:bg-purple-800/80",
+  "hover:bg-yellow-200/50",
+  "focus:bg-orange-800/80",
+  "active:bg-pink-200/50",
+  "disabled:bg-cyan-800/80",
+  "group-hover:bg-green-200/50",
   "!bg-page",
   "sm:bg-subtle",
+  
 
   // /background/dotted.js
   "dotted-green",
@@ -62,6 +72,8 @@ export const sampleClasses = [
   "b-pink-200/30",
   "b-purple-200/60",
   "!b-blue-133/12",
+  "b-transparent",
+  "bs-transparent",
   "dark:landscape:b-cyan-1000/1",
   "bb-red-200/50",
   "bx-blue",
@@ -515,6 +527,9 @@ export const sampleClasses = [
 
   // /typography/text-color.js
   "text-red",
+  "text-transparent",
+  "text-orange-800",
+  "text-yellow/50",
   "text-title/50",
   "text-body-200",
   "!text-container-300/10",
