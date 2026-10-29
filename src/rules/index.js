@@ -27,6 +27,7 @@ import * as input_group from "./components/input-group.js";
 import * as input from "./components/input.js";
 import * as loader from "./components/loader.js";
 import * as loader_clip from "./components/loader-clip.js";
+import * as loader_grow from "./components/loader-grow.js";
 import * as masonry from "./components/masonry.js";
 import * as modal from "./components/modal.js";
 
@@ -223,7 +224,7 @@ const utilities = [
 ];
 
 // Components
-const components = [badge, btn_close, btn_link, button, button_base, card, hljs, input_group, input, loader, loader_clip, masonry, modal];
+const components = [badge, btn_close, btn_link, button, button_base, card, hljs, input_group, input, loader, loader_clip, loader_grow, masonry, modal];
 
 // Flatten all static utilities rules into one object for O(1) lookup
 export const staticUtilitiesMap = utilities.reduce((acc, mod) => ({ ...acc, ...mod.rules }), {});
