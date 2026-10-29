@@ -16,6 +16,9 @@ import disabled from './disabled.js';
 import focus_visible from './focus-visible.js';
 import selected from './selected.js';
 
+import before from './before.js';
+import after from './after.js';
+
 import placeholder from './placeholder.js';
 import first from './first.js';
 import last from './last.js';
@@ -49,7 +52,10 @@ export const variantHandlers = {
   'active': active,
   'disabled': disabled,
   "selected": selected,
-  
+
+  'before': before,
+  'after': after,
+
   'placeholder': placeholder,
 
   'first': first,
