@@ -1,9 +1,9 @@
-  @keyframes su-loader-rotation {
-    100% {
-      rotate: 360deg;
-    }
+@keyframes su-loader-rotation {
+  100% {
+    rotate: 360deg;
   }
-  @keyframes su-loader-clip {
+}
+@keyframes su-loader-clip {
   0% {
     clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
   }
