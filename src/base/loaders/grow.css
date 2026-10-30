@@ -1,0 +1,17 @@
+@layer components {
+  @keyframes su-loader-grow {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+
+    60% {
+      opacity: 1;
+    }
+
+    100% {
+      transform: none;
+      opacity: 0;
+    }
+  }
+}

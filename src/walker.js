@@ -4,9 +4,12 @@ import { generateCSS } from "./cssGenerator.js";
 import { logger } from "./utils/logger.js";
 
 /**
- * Walk through the tree and generate the CSS
- * @param {object} tree The tree to processs
- * @returns {string} The CSS generated
+ * Walk through the tree and generate the CSS.
+ * 
+ * @param {Object} tree - The tree to process.
+ * @param {Object} [options={}] - Configuration options.
+ * @param {boolean} [options.isComponents=false] - Flag indicating whether to resolve component styles instead of utilities.
+ * @returns {string} The generated CSS output.
  */
 export function buildCSS(tree, { isComponents = false } = {}) {
   let cssOutput = "";
