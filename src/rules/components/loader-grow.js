@@ -8,7 +8,7 @@ export const rules = {
             display: "inline-block",
             position: "relative",
             "aspect-ratio": "1/1",
-            height: "2rem",
+            height: "2em",
             "vertical-align": "text-bottom",
             "border-radius": "50%",
             "border": "0",

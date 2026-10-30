@@ -7,7 +7,7 @@ export const rules = {
           {
             display: "inline-block",
             "aspect-ratio": "1/1",
-            height: "2rem",
+            height: "2em",
             "vertical-align": "text-bottom",
             "border-width": "0.5cqmin",
             "border-style": "solid",
