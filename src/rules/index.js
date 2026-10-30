@@ -27,10 +27,11 @@ import * as input_group from "./components/input-group.js";
 import * as input from "./components/input.js";
 import * as loader from "./components/loader.js";
 import * as loader_clip from "./components/loader-clip.js";
-import * as loader_grow from "./components/loader-grow.js";
+import * as loader_comet from "./components/loader-comet.js";
 import * as loader_dots_fade from "./components/loader-dots-fade.js";
 import * as loader_dots_spin from "./components/loader-dots-spin.js";
-import * as loader_comet from "./components/loader-comet.js";
+import * as loader_grow from "./components/loader-grow.js";
+import * as loader_skeleton from "./components/loader-skeleton.js";
 import * as masonry from "./components/masonry.js";
 import * as modal from "./components/modal.js";
 
@@ -243,6 +244,7 @@ const components = [
   loader_dots_fade,
   loader_dots_spin,
   loader_comet,
+  loader_skeleton,
   masonry,
   modal,
 ];

@@ -140,7 +140,6 @@
 }
 
 @keyframes su-loader-dots-spin {
-
   0%,
   100% {
     box-shadow:
@@ -191,7 +190,8 @@
   }
 
   50% {
-    box-shadow: 0 -1.1em 0 -0.5em,
+    box-shadow:
+      0 -1.1em 0 -0.5em,
       0.8em -0.8em 0 -0.5em,
       1.1em 0 0 -0.5em,
       0.8em 0.8em 0 0em,
@@ -238,61 +238,68 @@
   }
 }
 
-
 @keyframes su-loader-comet {
-    0% {
-      box-shadow:
-        0 -1.1em 0 0.05em,
-        0 -1.1em 0 0.015em,
-        0 -1.1em 0 -0.02em,
-        0 -1.1em 0 -0.055em,
-        0 -1.1em 0 -0.085em;
-    }
-
-    5%,
-    95% {
-      box-shadow:
-        0 -1.1em 0 0.05em,
-        0 -1.1em 0 0.015em,
-        0 -1.1em 0 -0.02em,
-        0 -1.1em 0 -0.055em,
-        0 -1.1em 0 -0.085em;
-    }
-
-    10%,
-    59% {
-      box-shadow:
-        calc(cos(-90deg) * 1.1em) calc(sin(-90deg) * 1.1em) 0 0.05em,
-        calc(cos(-99.31deg) * 1.1em) calc(sin(-99.31deg) * 1.1em) 0 0.015em,
-        calc(cos(-108.64deg) * 1.1em) calc(sin(-108.64deg) * 1.1em) 0 -0.02em,
-        calc(cos(-117.96deg) * 1.1em) calc(sin(-117.96deg) * 1.1em) 0 -0.055em,
-        calc(cos(-122.58deg) * 1.1em) calc(sin(-122.58deg) * 1.1em) 0 -0.085em;
-    }
-
-    20% {
-      box-shadow:
-        calc(cos(-90deg) * 1.1em) calc(sin(-90deg) * 1.1em) 0 0.05em,
-        calc(cos(-127.3deg) * 1.1em) calc(sin(-127.3deg) * 1.1em) 0 0.015em,
-        calc(cos(-155.1deg) * 1.1em) calc(sin(-155.1deg) * 1.1em) 0 -0.02em,
-        calc(cos(-170.19deg) * 1.1em) calc(sin(-170.19deg) * 1.1em) 0 -0.055em,
-        calc(cos(-191.75deg) * 1.1em) calc(sin(-191.75deg) * 1.1em) 0 -0.085em;
-    }
-
-    38% {
-      box-shadow:
-        calc(cos(-90deg) * 1.1em) calc(sin(-90deg) * 1.1em) 0 0.05em,
-        calc(cos(-131.93deg) * 1.1em) calc(sin(-131.93deg) * 1.1em) 0 0.015em,
-        calc(cos(-169.2deg) * 1.1em) calc(sin(-169.2deg) * 1.1em) 0 -0.02em,
-        calc(cos(-197.12deg) * 1.1em) calc(sin(-197.12deg) * 1.1em) 0 -0.055em,
-        calc(cos(-220deg) * 1.1em) calc(sin(-220deg) * 1.1em) 0 -0.085em;
-    }
-
-    100% {
-      box-shadow:
-        0 -1.1em 0 0.05em,
-        0 -1.1em 0 0.015em,
-        0 -1.1em 0 -0.02em,
-        0 -1.1em 0 -0.055em,
-        0 -1.1em 0 -0.085em;
-    }
+  0% {
+    box-shadow:
+      0 -1.1em 0 0.05em,
+      0 -1.1em 0 0.015em,
+      0 -1.1em 0 -0.02em,
+      0 -1.1em 0 -0.055em,
+      0 -1.1em 0 -0.085em;
   }
+
+  5%,
+  95% {
+    box-shadow:
+      0 -1.1em 0 0.05em,
+      0 -1.1em 0 0.015em,
+      0 -1.1em 0 -0.02em,
+      0 -1.1em 0 -0.055em,
+      0 -1.1em 0 -0.085em;
+  }
+
+  10%,
+  59% {
+    box-shadow:
+      calc(cos(-90deg) * 1.1em) calc(sin(-90deg) * 1.1em) 0 0.05em,
+      calc(cos(-99.31deg) * 1.1em) calc(sin(-99.31deg) * 1.1em) 0 0.015em,
+      calc(cos(-108.64deg) * 1.1em) calc(sin(-108.64deg) * 1.1em) 0 -0.02em,
+      calc(cos(-117.96deg) * 1.1em) calc(sin(-117.96deg) * 1.1em) 0 -0.055em,
+      calc(cos(-122.58deg) * 1.1em) calc(sin(-122.58deg) * 1.1em) 0 -0.085em;
+  }
+
+  20% {
+    box-shadow:
+      calc(cos(-90deg) * 1.1em) calc(sin(-90deg) * 1.1em) 0 0.05em,
+      calc(cos(-127.3deg) * 1.1em) calc(sin(-127.3deg) * 1.1em) 0 0.015em,
+      calc(cos(-155.1deg) * 1.1em) calc(sin(-155.1deg) * 1.1em) 0 -0.02em,
+      calc(cos(-170.19deg) * 1.1em) calc(sin(-170.19deg) * 1.1em) 0 -0.055em,
+      calc(cos(-191.75deg) * 1.1em) calc(sin(-191.75deg) * 1.1em) 0 -0.085em;
+  }
+
+  38% {
+    box-shadow:
+      calc(cos(-90deg) * 1.1em) calc(sin(-90deg) * 1.1em) 0 0.05em,
+      calc(cos(-131.93deg) * 1.1em) calc(sin(-131.93deg) * 1.1em) 0 0.015em,
+      calc(cos(-169.2deg) * 1.1em) calc(sin(-169.2deg) * 1.1em) 0 -0.02em,
+      calc(cos(-197.12deg) * 1.1em) calc(sin(-197.12deg) * 1.1em) 0 -0.055em,
+      calc(cos(-220deg) * 1.1em) calc(sin(-220deg) * 1.1em) 0 -0.085em;
+  }
+
+  100% {
+    box-shadow:
+      0 -1.1em 0 0.05em,
+      0 -1.1em 0 0.015em,
+      0 -1.1em 0 -0.02em,
+      0 -1.1em 0 -0.055em,
+      0 -1.1em 0 -0.085em;
+  }
+}
+@keyframes su-loader-skeleton {
+  0% {
+    background-position: 80% 0;
+  }
+  100% {
+    background-position: 20% 0;
+  }
+}
