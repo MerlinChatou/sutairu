@@ -10,7 +10,7 @@ export const rules = {
         selector: "input-group",
         declarations: [
           { "display": "flex" }, 
-          { "align-item": "stretch" }, 
+          { "align-items": "stretch" }, 
           { "justify-content": "center" },
           { "width": "100%" },
           { "border-radius": "var(--su-input-border-radius)" },

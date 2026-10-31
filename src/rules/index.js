@@ -48,6 +48,10 @@ import * as saturate from "./effects/saturate.js";
 import * as sepia from "./effects/sepia.js";
 import * as transitions from "./effects/transitions.js";
 
+
+// Icons
+import * as icons from "./icons/index.js";
+
 // Interactivity
 import * as cursor from "./interactivity/cursor.js";
 import * as outline_color from "./interactivity/outline-color.js";
@@ -168,6 +172,9 @@ const utilities = [
   outline_width_unit,
   pointer_events,
   resize,
+
+  // Icons
+  icons,
 
   // Layout
   alignment,

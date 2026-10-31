@@ -12,6 +12,11 @@ export function resetFileClassMap() {
   fileClassMap.clear();
 }
 
+
+/**
+ * Scans a file for CSS classes and updates the fileClassMap.
+ * @param {string} filePath - The path to the file to scan.
+ */
 export function scanFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, "utf-8");

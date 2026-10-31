@@ -77,3 +77,10 @@ sutairu -v
 ```
 
 
+## Playground Launcher
+
+Launch the interactive local playground to experiment with Sutairu classes and preview components in real time:
+
+```bash
+sutairu-play
+```
