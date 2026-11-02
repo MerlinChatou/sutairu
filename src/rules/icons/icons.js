@@ -8,20 +8,18 @@
  
  * actions.js           | CRUD operations, clipboard tasks, state triggers | edit, trash, save, copy, search
  * brands.js            | Social network logos, tech ecosystems, trademarks| github, twitter, discord, figma
- * 
- * ui.js                | General interface primitives, profiles, widgets  | user, cog, home, grid, dashboard
- * navigation.js        | Movement, directions, pagination, controls       | arrow-left, chevron-down, menu
- * communication.js     | Messaging, social interactions, email, broadcast | mail, chat, phone, send, megaphone
- * media.js             | Audio, video playback, photography, streaming    | play, pause, camera, image, mic
- * files.js             | Document management, folders, storage, archives  | file, folder, archive, clipboard
  * commerce.js          | E-commerce, transactions, shopping, finance      | shopping-cart, credit-card, tag, wallet
+ * communication.js     | Messaging, social interactions, email, broadcast | mail, chat, phone, send, megaphone 
+ * development.js       | Software engineering, version control, terminal  | code, terminal, git-branch, database 
  * devices.js           | Hardware, electronics, peripherals, viewports    | monitor, smartphone, laptop, server
- * security.js          | Authentication, authorization, privacy, crypto   | lock, key, shield, eye, fingerprint
- * time.js              | Chronological data, scheduling, calendars        | calendar, clock, watch, history
- * development.js       | Software engineering, version control, terminal  | code, terminal, git-branch, database
+ * files.js             | Document management, folders, storage, archives  | file, folder, archive, clipboard
  * map.js               | Geolocation, navigation pins, travel, building   | map-pin, compass, globe, building
- * 
+ * media.js             | Audio, video playback, photography, streaming    | play, pause, camera, image, mic 
+ * navigation.js        | Movement, directions, pagination, controls       | arrow-left, chevron-down, menu 
+ * security.js          | Authentication, authorization, privacy, crypto   | lock, key, shield, eye, fingerprint 
  * status.js            | Feedback indicators, validation states, alerts   | check, x, info, alert-triangle, loader 
+ * time.js              | Chronological data, scheduling, calendars        | calendar, clock, watch, history
+ * ui.js                | General interface primitives, profiles, widgets  | user, cog, home, grid, dashboard
  * weather.js           | Climate indicators, nature, elements             | sun, moon, cloud, fire, droplet 
  * =========================================================================
  */
