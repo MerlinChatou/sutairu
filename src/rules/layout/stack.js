@@ -17,7 +17,7 @@ export const patterns = [
               { "display": "grid" },
               { "grid-template-areas": "'stack'" },
               { "align-items": "center" },
-              { "justify-items": "center" }
+              { "justify-items": "center" }              
             ]
           },
           {
