@@ -84,3 +84,5 @@ export const iconRegistry = {
   ...timeIcons,
   ...uiIcons,
 };
+const iconsData = iconRegistry;
+export default iconsData;

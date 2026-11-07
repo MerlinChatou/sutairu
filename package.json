@@ -23,7 +23,9 @@
   "main": "index.js",
   "exports": {
     ".": "./index.js",
-    "./utils": "./lib/utils/index.js"
+    "./utils": "./lib/utils/index.js",
+    "./icons-meta": "./src/rules/icons/meta/icons-meta.json",
+    "./icons-data": "./src/rules/icons/icons.js"
   },
   "bin": {
     "sutairu": "./bin/cli.js",
