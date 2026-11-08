@@ -1094,7 +1094,7 @@
     {"name":"phone-wide","category":"communication","style":"wide","tags":["call","telephone","mobile","handset"],"related":["contact","dial","support"]},
     {"name":"php","category":"brands","style":"regular","tags":["brand","logo","programming","code","language","hypertext"],"related":["web","development","server","backend"]},
     {"name":"php-elips","category":"brands","style":"regular","tags":["brand","logo","programming","code","language","elephant"],"related":["web","development","server"]},
-    {"name":"php","category":"brands","style":"regular","tags":["brand","programming","code","language","hypertext"],"related":["web","development","server"]},
+    {"name":"php-text","category":"brands","style":"regular","tags":["brand","programming","code","language","hypertext"],"related":["web","development","server"]},
     {"name":"piano","category":"media","style":"regular","tags":["keyboard","music","instrument","keys"],"related":["sound","synthesizer","audio","melody"]},
     {"name":"piano-thin","category":"media","style":"thin","tags":["keyboard","music","instrument","keys"],"related":["sound","synthesizer","audio","melody"]},
     {"name":"piano-wide","category":"media","style":"wide","tags":["keyboard","music","instrument","keys"],"related":["sound","synthesizer","audio","melody"]},

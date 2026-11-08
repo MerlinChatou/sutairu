@@ -16,6 +16,8 @@ export const patterns = [
             declarations: [
               { "display": "grid" },
               { "grid-template-areas": "'stack'" },
+              { "grid-template-columns": "minmax(0, 1fr)" },
+              { "grid-template-rows": "minmax(0, 1fr)" },
               { "align-items": "center" },
               { "justify-items": "center" }              
             ]
