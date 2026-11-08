@@ -1357,7 +1357,7 @@
     {"name":"superscript-solid","category":"design","style":"solid","tags":["exponent","power","format","super","text"],"related":["math","editor","subscript","formatting","text-editor"]},
     {"name":"superscript-thin","category":"design","style":"thin","tags":["exponent","power","format","super","text"],"related":["math","editor","subscript","formatting","text-editor"]},
     {"name":"superscript-wide","category":"design","style":"wide","tags":["exponent","power","format","super","text"],"related":["math","editor","subscript","formatting","text-editor"]},
-    {"name":"svg-logo","category":"brands","style":"regular","tags":["vector","image","brand","graphics","graphic"],"related":["format","design","file","export"]},
+    {"name":"svg","category":"brands","style":"regular","tags":["vector","image","brand","graphics","graphic"],"related":["format","design","file","export"]},
     {"name":"switch","category":"ui","style":"regular","tags":["toggle","button","on off","power"],"related":["option","preference","settings","setting"]},
     {"name":"switch-solid","category":"ui","style":"solid","tags":["toggle","button","on off","power"],"related":["option","settings","setting","preference"]},
     {"name":"switch-thin","category":"ui","style":"thin","tags":["toggle","button","on off","power"],"related":["option","settings","setting","preference"]},
