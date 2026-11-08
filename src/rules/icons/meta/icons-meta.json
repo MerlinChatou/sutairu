@@ -1077,7 +1077,7 @@
     {"name":"paw-solid","category":"animals","style":"solid","tags":["animal","pet","footprint","print"],"related":["dog","cat","vet","veterinary"]},
     {"name":"paw-thin","category":"animals","style":"thin","tags":["animal","pet","footprint","print"],"related":["dog","cat","vet","veterinary"]},
     {"name":"paw-wide","category":"animals","style":"wide","tags":["animal","pet","footprint","print"],"related":["dog","cat","vet","veterinary"]},
-    {"name":"paypal-logo","category":"brands","style":"regular","tags":["brand","payment","money"],"related":["finance","checkout","ecommerce"]},
+    {"name":"paypal","category":"brands","style":"regular","tags":["brand","payment","money"],"related":["finance","checkout","ecommerce"]},
     {"name":"peace","category":"religion","style":"regular","tags":["pacifism","symbol","harmony","dove"],"related":["protest","war","nonviolence","hippie","love"]},
     {"name":"peace-thin","category":"religion","style":"thin","tags":["pacifism","symbol","harmony","dove"],"related":["protest","war","nonviolence","hippie","love"]},
     {"name":"peace-wide","category":"religion","style":"wide","tags":["pacifism","symbol","harmony","dove"],"related":["protest","war","nonviolence","hippie","love"]},
