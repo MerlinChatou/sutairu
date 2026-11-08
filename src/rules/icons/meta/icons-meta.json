@@ -715,7 +715,7 @@
     {"name":"globe-wide","category":"map","style":"wide","tags":["world","earth","planet","international"],"related":["internet","language","map","web","translate"]},
     {"name":"google-chrome","category":"brands","style":"regular","tags":["brand","logo","browser","web browser"],"related":["internet","web","chromium","software"]},
     {"name":"google-colab","category":"brands","style":"regular","tags":["brand","logo","notebook","jupyter"],"related":["python","data science","machine learning","coding","developer"]},
-    {"name":"google-logo","category":"brands","style":"regular","tags":["brand","g","alphabet"],"related":["search","sign in","login","web"]},
+    {"name":"google","category":"brands","style":"regular","tags":["brand","g","alphabet"],"related":["search","sign in","login","web"]},
     {"name":"graduation-cap-solid","category":"education","style":"solid","tags":["mortarboard","education","student","school","academic"],"related":["university","learning","degree","diploma"]},
     {"name":"grid","category":"ui","style":"regular","tags":["apps","layout","tiles","squares"],"related":["dashboard","gallery","view","menu"]},
     {"name":"grid-circle","category":"ui","style":"regular","tags":["apps","launcher","dots","menu"],"related":["layout","dashboard","drag handle","gallery"]},
