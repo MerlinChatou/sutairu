@@ -505,7 +505,7 @@
     {"name":"eye-wide","category":"security","style":"wide","tags":["view","visible","vision","preview","show","watch"],"related":["visibility","password","hide","privacy"]},
     {"name":"facebook","category":"brands","style":"regular","tags":["brand","logo","fb","meta"],"related":["social","social media"]},
     {"name":"facebook-circle","category":"brands","style":"regular","tags":["brand","logo","fb","meta"],"related":["social","social media"]},
-    {"name":"facebook-logo","category":"brands","style":"regular","tags":["brand","fb","meta"],"related":["social","social media"]},
+    {"name":"facebook-square","category":"brands","style":"regular","tags":["brand","fb","meta"],"related":["social","social media"]},
     {"name":"facebook-messenger","category":"brands","style":"regular","tags":["brand","logo","chat","messaging","meta"],"related":["social"]},
     {"name":"factory","category":"construction","style":"regular","tags":["industry","manufacturing","plant","production","mill"],"related":["building","warehouse","industrial"]},
     {"name":"factory-window","category":"construction","style":"regular","tags":["industry","manufacturing","plant","production"],"related":["building","warehouse"]},
