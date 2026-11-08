@@ -2,8 +2,6 @@
 
 On demand awesome CSS framework
 
-
-
 ## Usage Guide
 
 The best way to use **Sutairu** is to generate your CSS directly from the Command Line Interface (CLI).
