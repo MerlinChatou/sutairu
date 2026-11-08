@@ -29,7 +29,8 @@
   },
   "bin": {
     "sutairu": "./bin/cli.js",
-    "sutairu-play": "./bin/playground.js"
+    "sutairu-play": "./bin/playground.js",
+    "sutairu-add-icon": "./bin/add-icon.js"
   },
   "scripts": {
     "test": "node --test",
@@ -45,5 +46,9 @@
   "volta": {
     "node": "26.13.0",
     "npm": "11.20.0"
+  },
+  "devDependencies": {
+    "svgo": "^4.1.0",
+    "svgpath": "^2.6.0"
   }
 }
