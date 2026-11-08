@@ -10,6 +10,8 @@ const SVG_DIR = path.join(ROOT, "src/icons/svg");
 const DATA_DIR = path.join(ROOT, "src/rules/icons/data");
 const META_FILE = path.join(ROOT, "src/rules/icons/meta/icons-meta.json");
 const SIZE = 24;
+const PRECISION = 2;
+const LAYER_NAME = "icon";
 const KEBAB = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 
 const rel = (p) => path.relative(ROOT, p).split(path.sep).join("/");
@@ -17,31 +19,31 @@ const exists = (p) => fs.access(p).then(() => true, () => false);
 const toCamel = (s) => s.replace(/-([a-z0-9])/g, (_, c) => c.toUpperCase());
 const styleOf = (name) => name.match(/-(solid|thin|wide)$/)?.[1] ?? "regular";
 
-/* ------------------------------ Entrées ------------------------------ */
+/* ------------------------------ Input ------------------------------ */
 
 async function resolveInput(arg) {
   const candidates = [path.resolve(ROOT, arg)];
-  // Tolère "/src/icons/..." (slash initial) comme chemin relatif à la racine
+  // Tolerate a leading slash ("/src/icons/...") as a path relative to the repo root
   if (path.isAbsolute(arg)) candidates.push(path.join(ROOT, arg));
   for (const c of candidates) if (await exists(c)) return c;
-  throw new Error(`Fichier introuvable : ${arg}`);
+  throw new Error(`File not found: ${arg}`);
 }
 
 function parseTarget(file) {
   const r = path.relative(RAW_DIR, file);
   const parts = r.split(path.sep);
   if (r.startsWith("..") || parts.length !== 2 || !parts[1].endsWith(".svg")) {
-    throw new Error(`Le fichier doit être dans src/icons/raw/<category>/<name>.svg (reçu : ${rel(file)})`);
+    throw new Error(`File must be in src/icons/raw/<category>/<name>.svg (got: ${rel(file)})`);
   }
   const category = parts[0];
   const name = path.basename(parts[1], ".svg");
   if (!KEBAB.test(category) || !KEBAB.test(name)) {
-    throw new Error(`Catégorie et nom doivent être en kebab-case (reçu : ${category}/${name})`);
+    throw new Error(`Category and name must be kebab-case (got: ${category}/${name})`);
   }
   return { category, name };
 }
 
-/* --------------------------- Conversion SVG --------------------------- */
+/* --------------------------- SVG conversion --------------------------- */
 
 function parseViewBox(svg) {
   const vb = svg.match(/<svg\b[^>]*\sviewBox\s*=\s*["']([^"']+)["']/i);
@@ -52,18 +54,63 @@ function parseViewBox(svg) {
   const w = svg.match(/<svg\b[^>]*\swidth\s*=\s*["']([\d.]+)/i)?.[1];
   const h = svg.match(/<svg\b[^>]*\sheight\s*=\s*["']([\d.]+)/i)?.[1];
   if (w && h) return { x: 0, y: 0, w: +w, h: +h };
-  throw new Error("viewBox (ou width/height) introuvable dans le SVG source");
+  throw new Error("viewBox (or width/height) not found in the source SVG");
 }
 
-// Passe 1 : normalise (formes → path, transforms appliqués, styles inlinés…)
+// Pass 0: keep only the "icon" layer (drops <defs>, metadata, other layers...).
+// <style> elements are kept so that class-based styles can still be inlined.
+const keepIconLayer = {
+  name: "keepIconLayer",
+  fn: () => ({
+    root: {
+      enter(root) {
+        const svg = root.children.find((n) => n.type === "element" && n.name === "svg");
+        if (!svg) throw new Error("no <svg> root element");
+
+        const isLayer = (n) =>
+          n.type === "element" &&
+          n.name === "g" &&
+          (n.attributes.id === LAYER_NAME || n.attributes["inkscape:label"] === LAYER_NAME);
+
+        const find = (node, ancestors) => {
+          for (const child of node.children ?? []) {
+            if (isLayer(child)) return { layer: child, ancestors };
+            const found = find(child, [...ancestors, child]);
+            if (found) return found;
+          }
+          return null;
+        };
+
+        const found = find(svg, []);
+        if (!found) throw new Error(`layer "${LAYER_NAME}" not found`);
+        if (found.ancestors.some((a) => a.attributes?.transform)) {
+          throw new Error(`a parent of layer "${LAYER_NAME}" has a transform, which is not supported`);
+        }
+
+        const styles = [];
+        const collectStyles = (node) => {
+          for (const c of node.children ?? []) {
+            if (c.type === "element" && c.name === "style") styles.push(c);
+            else collectStyles(c);
+          }
+        };
+        collectStyles(svg);
+
+        svg.children = [...styles, found.layer];
+      },
+    },
+  }),
+};
+
+// Pass 1: normalize (shapes -> paths, transforms applied, styles inlined...)
 function normalize(svg) {
-  return optimize(svg, {
+  const isolated = optimize(svg, { plugins: [keepIconLayer] }).data;
+  return optimize(isolated, {
     plugins: [
       {
         name: "preset-default",
         params: {
           overrides: {
-            removeViewBox: false,
             mergePaths: false,
             convertPathData: { floatPrecision: 5 },
           },
@@ -84,23 +131,23 @@ function extractPaths(svg) {
   for (const [, tag, raw] of svg.matchAll(/<([a-zA-Z][\w:-]*)\b([^>]*)>/g)) {
     const a = attrsOf(raw);
     if ((a.stroke && a.stroke !== "none") || /stroke\s*:\s*(?!none\b)\S/.test(a.style ?? "")) {
-      throw new Error("l'icône contient des traits (stroke) : convertissez-les en contours avant (Stroke to Path)");
+      throw new Error(`the "${LAYER_NAME}" layer contains strokes: convert them to outlines first (Stroke to Path)`);
     }
-    if (a.transform) throw new Error("un attribut transform n'a pas pu être appliqué aux paths");
-    if (tag === "svg" || tag === "g") continue;
-    if (tag !== "path") throw new Error(`élément <${tag}> non supporté (seuls des <path> peuvent être fusionnés)`);
+    if (a.transform) throw new Error("a transform attribute could not be applied to the paths");
+    if (tag === "svg" || tag === "g" || tag === "style") continue;
+    if (tag !== "path") throw new Error(`unsupported <${tag}> element (only <path> can be merged)`);
     if (a.fill === "none") continue;
     if (a.d?.trim()) paths.push(a.d);
   }
-  if (!paths.length) throw new Error("aucun <path> exploitable dans le SVG");
+  if (!paths.length) throw new Error(`no usable <path> in the "${LAYER_NAME}" layer`);
   return paths;
 }
 
-function convertToSinglePath(rawSvg, precision) {
+function convertToSinglePath(rawSvg) {
   const vb = parseViewBox(rawSvg);
   const paths = extractPaths(normalize(rawSvg));
 
-  // Fit + centrage dans 24x24 en conservant le ratio
+  // Fit and center into 24x24 while keeping the aspect ratio
   const s = Math.min(SIZE / vb.w, SIZE / vb.h);
   const tx = (SIZE - vb.w * s) / 2 - vb.x * s;
   const ty = (SIZE - vb.h * s) / 2 - vb.y * s;
@@ -108,13 +155,13 @@ function convertToSinglePath(rawSvg, precision) {
     .map((d) => svgpath(d).abs().matrix([s, 0, 0, s, tx, ty]).round(4).toString())
     .join("");
 
-  // Passe 2 : optimisation de taille du path final
-  const wrapped = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${SIZE} ${SIZE}"><path d="${merged}"/></svg>`;
+  // Pass 2: size optimization of the final path
+  const wrapped = buildSvg(merged);
   const { data } = optimize(wrapped, {
-    plugins: [{ name: "convertPathData", params: { floatPrecision: precision } }],
+    plugins: [{ name: "convertPathData", params: { floatPrecision: PRECISION } }],
   });
   const d = data.match(/\sd="([^"]+)"/)?.[1];
-  if (!d) throw new Error("échec de l'optimisation du path");
+  if (!d) throw new Error("path optimization failed");
   return d;
 }
 
@@ -133,7 +180,7 @@ async function computeDataFile(category, name, d) {
   }
 
   const m = content.match(/export\s+const\s+\w+\s*=\s*\{/);
-  if (!m) throw new Error(`${rel(file)} : "export const xxx = {" introuvable`);
+  if (!m) throw new Error(`${rel(file)}: "export const xxx = {" not found`);
   const start = m.index + m[0].length;
   const end = content.lastIndexOf("}");
   const head = content.slice(0, start);
@@ -145,20 +192,20 @@ async function computeDataFile(category, name, d) {
   try {
     icons = JSON.parse(`{${body.trim().replace(/,$/, "")}}`);
   } catch {
-    throw new Error(`${rel(file)} : impossible à parser (clés et valeurs entre guillemets doubles attendues)`);
+    throw new Error(`${rel(file)}: cannot be parsed (double-quoted keys and values expected)`);
   }
 
-  // On garde l'ordre existant : remplacement en place ou insertion alphabétique
+  // Keep the existing order: replace in place, or insert alphabetically
   const entries = Object.entries(icons);
   const idx = entries.findIndex(([k]) => k === name);
   let status;
   if (idx >= 0) {
     entries[idx] = [name, d];
-    status = "remplacée";
+    status = "replaced";
   } else {
     const pos = entries.findIndex(([k]) => k > name);
     entries.splice(pos === -1 ? entries.length : pos, 0, [name, d]);
-    status = "ajoutée";
+    status = "added";
   }
 
   const lines = entries.map(([k, v]) => `  ${JSON.stringify(k)}: ${JSON.stringify(v)}`).join(",\n");
@@ -175,11 +222,11 @@ async function computeMeta(category, name) {
   const warnings = [];
 
   const entry = prev
-    ? { ...prev, name, category } // conserve style, tags, related…
+    ? { ...prev, name, category } // keep style, tags, related...
     : { name, category, style: styleOf(name), tags: [], related: [] };
 
   if (prev && prev.category !== category) {
-    warnings.push(`"${name}" était dans la catégorie "${prev.category}" : pensez à supprimer l'ancienne entrée de data/${prev.category}.js`);
+    warnings.push(`"${name}" was in category "${prev.category}": remember to remove the old entry from data/${prev.category}.js`);
   }
 
   if (idx >= 0) {
@@ -191,30 +238,34 @@ async function computeMeta(category, name) {
 
   if (!meta.categories.includes(category)) {
     meta.categories = [...meta.categories, category].sort();
-    warnings.push(`nouvelle catégorie "${category}" ajoutée à icons-meta.json (pensez à l'enregistrer dans le framework)`);
+    warnings.push(`new category "${category}" added to icons-meta.json (remember to register it in the framework)`);
   }
 
-  // Même mise en forme que le fichier actuel : 1 icône par ligne
+  // Same formatting as the current file: one icon per line
   const parts = Object.entries(meta).map(([k, v]) =>
     k === "icons"
       ? `  "icons": [\n${v.map((i) => "    " + JSON.stringify(i)).join(",\n")}\n  ]`
       : `  ${JSON.stringify(k)}: ${JSON.stringify(v)}`
   );
-  return { next: `{\n${parts.join(",\n")}\n}\n`, status: prev ? "remplacée (tags conservés)" : "ajoutée (tags vides)", warnings };
+  return {
+    next: `{\n${parts.join(",\n")}\n}\n`,
+    status: prev ? "replaced (tags kept)" : "added (empty tags)",
+    warnings,
+  };
 }
 
 /* ------------------------------- Main ------------------------------- */
 
-async function processFile(arg, precision) {
+async function processFile(arg) {
   const file = await resolveInput(arg);
   const { category, name } = parseTarget(file);
 
-  const d = convertToSinglePath(await fs.readFile(file, "utf8"), precision);
+  const d = convertToSinglePath(await fs.readFile(file, "utf8"));
   const svgOut = buildSvg(d);
   const data = await computeDataFile(category, name, d);
   const meta = await computeMeta(category, name);
 
-  // Toutes les vérifications sont passées : on écrit
+  // All checks passed: write everything
   const svgFile = path.join(SVG_DIR, category, `${name}.svg`);
   await fs.mkdir(path.dirname(svgFile), { recursive: true });
   await fs.mkdir(DATA_DIR, { recursive: true });
@@ -223,29 +274,22 @@ async function processFile(arg, precision) {
   await fs.writeFile(META_FILE, meta.next);
 
   console.log(`✔ ${category}/${name}`);
-  console.log(`   svg   ${rel(svgFile)} (${Buffer.byteLength(svgOut)} o)`);
-  console.log(`   data  ${rel(data.file)} : ${data.status}${data.created ? " (fichier créé, à exporter dans votre index)" : ""}`);
-  console.log(`   meta  ${rel(META_FILE)} : ${meta.status}`);
+  console.log(`   svg   ${rel(svgFile)} (${Buffer.byteLength(svgOut)} B)`);
+  console.log(`   data  ${rel(data.file)}: ${data.status}${data.created ? " (file created, export it from your index)" : ""}`);
+  console.log(`   meta  ${rel(META_FILE)}: ${meta.status}`);
   for (const w of meta.warnings) console.warn(`   ⚠️  ${w}`);
 }
 
 async function main() {
-  let precision = 2;
-  const files = [];
-  for (const a of process.argv.slice(2)) {
-    const m = a.match(/^--precision=(\d+)$/);
-    if (m) precision = Number(m[1]);
-    else if (a.startsWith("--")) throw new Error(`Option inconnue : ${a}`);
-    else files.push(a);
-  }
+  const files = process.argv.slice(2);
   if (!files.length) {
-    throw new Error("Usage : npm run add:icon src/icons/raw/<category>/<name>.svg [...autres fichiers]");
+    throw new Error("Usage: npm run add:icon src/icons/raw/<category>/<name>.svg [...more files]");
   }
 
   let failed = 0;
   for (const f of files) {
     try {
-      await processFile(f, precision);
+      await processFile(f);
     } catch (err) {
       failed++;
       console.error(`✘ ${f}\n   ${err.message}`);

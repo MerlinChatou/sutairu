@@ -30,7 +30,7 @@
   "bin": {
     "sutairu": "./bin/cli.js",
     "sutairu-play": "./bin/playground.js",
-    "sutairu-add-icon": "./bin/add-icon.js"
+    "sutairu-add-icon": "./bin/add-icon.mjs"
   },
   "scripts": {
     "test": "node --test",
