@@ -5,7 +5,7 @@ import * as hatching from "./background/hatching.js";
 import * as pattern_angle from "./background/pattern-angle.js";
 import * as pattern_period from "./background/pattern-period.js";
 import * as pattern_width from "./background/pattern-width.js";
-import * as stripes from "./background/stripes.js"
+import * as stripes from "./background/stripes.js";
 
 // Border
 import * as border_color from "./border/border-color.js";
@@ -17,9 +17,26 @@ import * as border_width_unit from "./border/border-width-unit.js";
 
 // Components
 import * as badge from "./components/badge.js";
-import * as group from "./components/group.js";
+import * as btn_close from "./components/btn-close.js";
+import * as btn_link from "./components/btn-link.js";
+import * as button from "./components/button.js";
+import * as button_base from "./components/button-base.js";
+import * as card from "./components/card.js";
+import * as hljs from "./components/hljs.js";
+import * as input_group from "./components/input-group.js";
+import * as input from "./components/input.js";
+import * as loader from "./components/loader.js";
+import * as loader_clip from "./components/loader-clip.js";
+import * as loader_comet from "./components/loader-comet.js";
+import * as loader_dots_fade from "./components/loader-dots-fade.js";
+import * as loader_dots_spin from "./components/loader-dots-spin.js";
+import * as loader_grow from "./components/loader-grow.js";
+import * as loader_skeleton from "./components/loader-skeleton.js";
+import * as masonry from "./components/masonry.js";
+import * as modal from "./components/modal.js";
 
 // Effects
+import * as animation_duration from "./effects/animation-duration.js";
 import * as blur from "./effects/blur.js";
 import * as brightness from "./effects/brightness.js";
 import * as contrast from "./effects/contrast.js";
@@ -29,10 +46,20 @@ import * as invert from "./effects/invert.js";
 import * as opacity from "./effects/opacity.js";
 import * as saturate from "./effects/saturate.js";
 import * as sepia from "./effects/sepia.js";
+import * as transitions from "./effects/transitions.js";
 
+
+// Icons
+import * as icons from "./icons/index.js";
 
 // Interactivity
 import * as cursor from "./interactivity/cursor.js";
+import * as outline_color from "./interactivity/outline-color.js";
+import * as outline_style from "./interactivity/outline-style.js";
+import * as outline_width from "./interactivity/outline-width.js";
+import * as outline_width_unit from "./interactivity/outline-width-unit.js";
+import * as pointer_events from "./interactivity/pointer-events.js";
+import * as resize from "./interactivity/resize.js";
 
 // Layout
 import * as alignment from "./layout/alignment.js";
@@ -43,10 +70,10 @@ import * as aspect_ratio from "./layout/aspect-ratio.js";
 import * as coordinate from "./layout/coordinate.js";
 import * as display from "./layout/display.js";
 import * as flex from "./layout/flex.js";
-import * as flex_basis from "./layout/flex-basis.js";
+import * as flex_basis_dynamic from "./layout/flex-basis-dynamic.js";
+import * as flex_basis_static from "./layout/flex-basis-static.js";
 import * as flex_grow from "./layout/flex-grow.js";
 import * as flex_shrink from "./layout/flex-shrink.js";
-import * as gap from "./layout/gap.js";
 import * as grid from "./layout/grid.js";
 import * as grid_cols from "./layout/grid-cols.js";
 import * as grid_rows from "./layout/grid-rows.js";
@@ -55,22 +82,31 @@ import * as justify_content from "./layout/justify-content.js";
 import * as justify_self from "./layout/justify-self.js";
 import * as object_fit from "./layout/object-fit.js";
 import * as overflow from "./layout/overflow.js";
+import * as place_items from "./layout/place-items.js";
 import * as position from "./layout/position.js";
 import * as size from "./layout/size.js";
 import * as size_unit from "./layout/size-unit.js";
-import * as transform from "./layout/transforms.js";
+import * as stack from "./layout/stack.js";
 import * as z_index from "./layout/z-index.js";
 
 // Spacing
+import * as gap from "./spacing/gap.js";
+import * as gap_unit from "./spacing/gap-unit.js";
 import * as margin from "./spacing/margin.js";
 import * as margin_unit from "./spacing/margin-unit.js";
 import * as padding from "./spacing/padding.js";
 import * as padding_unit from "./spacing/paddding-unit.js";
 
+// Transform
+import * as rotate from "./transform/rotate.js";
+import * as scale from "./transform/scale.js";
+import * as translate from "./transform/translate.js";
+
 // Typography
 import * as font_family from "./typography/font-family.js";
 import * as font_size from "./typography/font-size.js";
 import * as font_size_fluid from "./typography/font-size-fluid.js";
+import * as font_style from "./typography/font-style.js";
 import * as font_weight from "./typography/font-weight.js";
 import * as heading from "./typography/heading.js";
 import * as letter_spacing from "./typography/letter-spacing.js";
@@ -78,23 +114,26 @@ import * as line_height from "./typography/line-height.js";
 import * as text_alignement from "./typography/text-alignment.js";
 import * as text_color from "./typography/text-color.js";
 import * as text_decoration from "./typography/text-decoration.js";
+import * as text_transform from "./typography/text-transform.js";
 import * as text_wrap from "./typography/text-wrap.js";
 import * as white_space from "./typography/white-space.js";
-
 
 /*
 src/
 └── rules/
-    ├── index.js          # The "Brain" that merges everything
-    ├── layout/           # display, position, z-index, overflow
-    ├── spacing/          # margin, padding, gap
-    ├── typography/       # font-size, color, leading, tracking
-    ├── flex-grid/        # flex-direction, grid-cols, justify, align
-    ├── effects/          # shadow, opacity, border-radius
-    └── interactivity/    # cursor, pointer-events, user-select, outline
+    ├── index.js             # The "Brain" that merges everything
+    ├── background/          # background-color, patterns, stripes, hatching
+    ├── border/              # border-color, radius, style, width
+    ├── components/          # badge, button, card, modal, masonry
+    ├── effects/             # blur, brightness, opacity, transitions, animations
+    ├── interactivity/       # cursor, outline, pointer-events, resize
+    ├── layout/              # display, position, flex, grid, sizing, alignment, z-index
+    ├── spacing/             # margin, padding, gap
+    ├── transform/           # rotate, scale, translate
+    └── typography/          # font-size, color, weight, text-alignment, decoration
 */
 
-const modules = [
+const utilities = [
   // Background
   background_color,
   dotted,
@@ -112,11 +151,8 @@ const modules = [
   border_width,
   border_width_unit,
 
-  // Components
-  badge,
-  group,
-
   // Effects
+  animation_duration,
   blur,
   brightness,
   contrast,
@@ -126,9 +162,19 @@ const modules = [
   opacity,
   saturate,
   sepia,
+  transitions,
 
   // Interactivity
   cursor,
+  outline_color,
+  outline_style,
+  outline_width,
+  outline_width_unit,
+  pointer_events,
+  resize,
+
+  // Icons
+  icons,
 
   // Layout
   alignment,
@@ -139,10 +185,10 @@ const modules = [
   coordinate,
   display,
   flex,
-  flex_basis,
+  flex_basis_dynamic,
+  flex_basis_static,
   flex_grow,
   flex_shrink,
-  gap,
   grid,
   grid_cols,
   grid_rows,
@@ -151,22 +197,31 @@ const modules = [
   justify_self,
   object_fit,
   overflow,
+  place_items,
   position,
   size,
   size_unit,
-  transform,
+  stack,
   z_index,
 
   // Spacing
+  gap,
+  gap_unit,
   margin,
   margin_unit,
   padding,
   padding_unit,
 
+  // Transform
+  rotate,
+  scale,
+  translate,
+
   // Typography
   font_family,
   font_size,
   font_size_fluid,
+  font_style,
   font_weight,
   heading,
   letter_spacing,
@@ -174,12 +229,41 @@ const modules = [
   text_alignement,
   text_color,
   text_decoration,
+  text_transform,
   text_wrap,
   white_space,
 ];
 
-// Flatten all static rules into one object for O(1) lookup
-export const staticMap = modules.reduce((acc, mod) => ({ ...acc, ...mod.rules }), {});
+// Components
+const components = [
+  badge,
+  btn_close,
+  btn_link,
+  button,
+  button_base,
+  card,
+  hljs,
+  input_group,
+  input,
+  loader,
+  loader_clip,
+  loader_grow,
+  loader_dots_fade,
+  loader_dots_spin,
+  loader_comet,
+  loader_skeleton,
+  masonry,
+  modal,
+];
 
-// Flatten all regex patterns into one array
-export const dynamicPatterns = modules.flatMap((mod) => mod.patterns || []);
+// Flatten all static utilities rules into one object for O(1) lookup
+export const staticUtilitiesMap = utilities.reduce((acc, mod) => ({ ...acc, ...mod.rules }), {});
+
+// Flatten all regex utilities patterns into one array
+export const dynamicUtilitiesPatterns = utilities.flatMap((mod) => mod.patterns || []);
+
+// Flatten all static components rules into one object for O(1) lookup
+export const staticComponentsMap = components.reduce((acc, mod) => ({ ...acc, ...mod.rules }), {});
+
+// Flatten all regex components patterns into one array
+export const dynamicComponentsPatterns = components.flatMap((mod) => mod.patterns || []);

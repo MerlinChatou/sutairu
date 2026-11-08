@@ -1,16 +1,17 @@
 import { variantHandlers } from "./variants/index.js";
-import { resolveCoreStyle } from "./resolver.js";
-import { escapeClassName } from "./utils/escaper.js";
+import { resolveCoreUtilitiesStyle, resolveCoreComponentsStyle } from "./resolver.js";
+import { generateCSS } from "./cssGenerator.js";
 import { logger } from "./utils/logger.js";
 
-
-
 /**
- * Walk through the tree and generate the CSS
- * @param {object} tree The tree to processs
- * @returns {string} The CSS generated
+ * Walk through the tree and generate the CSS.
+ * 
+ * @param {Object} tree - The tree to process.
+ * @param {Object} [options={}] - Configuration options.
+ * @param {boolean} [options.isComponents=false] - Flag indicating whether to resolve component styles instead of utilities.
+ * @returns {string} The generated CSS output.
  */
-export function buildCSS(tree) {
+export function buildCSS(tree, { isComponents = false } = {}) {
   let cssOutput = "";
 
   /**
@@ -19,57 +20,58 @@ export function buildCSS(tree) {
    * @param {Array} path - The chain of variants (e.g., ['dark', 'md'])
    */
   function walk(node, path = []) {
-    //console.log (node);
     // 1. Process Utilities at this level if they exist
     if (node._utilities && node._utilities.length > 0) {
       // Initialize the variant "tools" for this specific branch
-      const tools = path.map((key) => {
-        // Get the variant functions
-        const handler = variantHandlers[key];
-        // Check if the variant exists,
-        if (!handler) {
-          // Log a warning
-          //console.log (path);
-          logger.warn(`Unknown variant "${key}" detected in class chain "${path.join(":")}". ` + `This variant will be ignored.`);
-          return null;
-        }
+      const tools = path
+        .map((key) => {
+          // Get the variant functions
+          const handler = variantHandlers[key];
+          // Check if the variant exists,
+          if (!handler) {
+            // Log a warning
+            logger.warn(`Unknown variant "${key}" detected in class chain "${path.join(":")}". ` + `This variant will be ignored.`);
+            return null;
+          }
+          return handler();
+        })
+        .filter((tool) => tool !== null);
 
-        return handler();
-      }).filter(tool => tool !== null);
+      // If the tools array contains any nulls, the whole chain is invalid.
+      if (tools.includes(null)) {
+        return null; // Exit early, do not generate CSS for this class
+      }
 
       const rules = node._utilities
         .map((util) => {
-          const body = resolveCoreStyle(util);
-          if (!body) return null;
+          logger.verbose(`Resolve ${util}`);
+          const rulesConfig = (isComponents)? resolveCoreComponentsStyle(util) : resolveCoreUtilitiesStyle(util);
+          if (!rulesConfig) return null;
 
-          // Reconstruct the class name for the CSS selector
-          const fullClass = path.length > 0 ? `${path.join(":")}:${util}` : util;
-          let selector = `.${escapeClassName(fullClass)}`;
-
-          // Transform the Selector (Inside-Out)
-          // e.g., .class -> & .class -> & .class:hover
-          for (const tool of [...tools].reverse()) {
-            selector = tool.selector(selector);
-          }
-
-          return `${selector} {\n  ${body}\n}`;
+          // Generate CSS properties from rules
+          return generateCSS(rulesConfig, path, util, tools);
         })
         .filter(Boolean)
         .join("\n\n");
 
-      // Transform the Wrapper (Inside-Out)
-      // e.g., body -> @media { body } -> :where { @media { body } }
-      let wrappedOutput = rules;
-      for (const tool of [...tools].reverse()) {
-        // Indent content for clean nested output
-        const indented = wrappedOutput
-          .split("\n")
-          .map((line) => `  ${line}`)
-          .join("\n");
-        wrappedOutput = tool.wrapper(indented);
-      }
+      if (!rules || rules.trim().length === 0) {
+        // No valid CSS was generated for these utilities,
+        // skip wrapping and move to sub-variants.
+      } else {
+        // Transform the Wrapper (Inside-Out)
+        // e.g., body -> @media { body } -> :where { @media { body } }
+        let wrappedOutput = rules;
+        for (const tool of [...tools].reverse()) {
+          // Indent content for clean nested output
+          const indented = wrappedOutput
+            .split("\n")
+            .map((line) => `  ${line}`)
+            .join("\n");
+          wrappedOutput = tool.wrapper(indented);
+        }
 
-      cssOutput += wrappedOutput + "\n\n";
+        cssOutput += wrappedOutput + "\n\n";
+      }
     }
 
     // 2. Dive deeper into sub-variants

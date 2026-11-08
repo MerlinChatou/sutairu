@@ -1,0 +1,7 @@
+@layer components {
+  @keyframes su-loader-rotation {
+    100% {
+      rotate: 360deg;
+    }
+  }
+}

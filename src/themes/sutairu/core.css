@@ -1,0 +1,101 @@
+/* Import Inter & Indie Flower for default theme */
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  /* Base Palette Colors */
+  --su-yellow: oklch(86% 0.17 92);
+  --su-orange: oklch(70% 0.19 48);
+  --su-red: oklch(64% 0.21 25);
+  --su-pink: oklch(66% 0.21 354);
+  --su-purple: oklch(63% 0.23 303);
+  --su-blue: oklch(62% 0.19 259);
+  --su-cyan: oklch(71% 0.13 214);
+  --su-green: oklch(70% 0.15 162);
+  --su-white: oklch(98% 0 264);
+  --su-gray: oklch(55% 0.02 264);
+  --su-black: oklch(21% 0.04 265);
+
+  /* Semantic text colors */
+  --su-body: oklch(from var(--su-accent) 48% 0.01 h);
+  --su-title: oklch(from var(--su-accent) 16% 0.01 h);
+
+  /* Semantic text background */
+  --su-page: oklch(from var(--su-accent) 97% 0 h);
+  --su-container: oklch(from var(--su-accent) 100% 0 h);
+  --su-subtle: oklch(from var(--su-accent) 95% 0.01 h);
+
+  /* Accent color, here blue reported from the palette */
+  --su-accent: var(--su-blue);
+  --su-highlight: oklch(from var(--su-yellow)  98% c h);
+
+  /* Scroll bar */
+  --su-sb-track-color: var(--su-container);
+  --su-sb-thumb-color: oklch(from var(--su-accent) l 0.05 h);
+
+  /* Typography */
+  --su-ff-base: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --su-fs-adjust-base: none;
+
+  --su-ff-title: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --su-fs-adjust-title: none;
+
+  --su-ff-mono: monospace;
+  --su-fs-adjust-mono: 0.56;
+
+  --su-ff-handwritten: "Indie Flower";
+  --su-fs-adjust-handwritten: 0.44;
+
+  /* Line Heights - Titles usually need less leading than body text */
+  --su-lh-title: 1.2;
+  --su-lh-base: 1.5;
+
+  --su-link-color: var(--su-blue);
+  --su-link-color-hover: color-mix(var(--su-blue), #000 20%);
+  --su-link-color-active: color-mix(var(--su-blue), #000 30%);
+  --su-link-color-disabled: color-mix(var(--su-blue), #fff 40%);
+
+  /* Headings */
+  --su-fs-h1: clamp(2.25rem, 1.6rem + 2.8vw, 3rem);
+  --su-fs-h2: calc(1rem + (var(--su-fs-h1) - 1rem) * 0.6);
+  --su-fs-h3: calc(1rem + (var(--su-fs-h1) - 1rem) * 0.35);
+  --su-fs-h4: calc(1rem + (var(--su-fs-h1) - 1rem) * 0.19);
+  --su-fs-h5: calc(1rem + (var(--su-fs-h1) - 1rem) * 0.1);
+  --su-fs-h6: calc(1rem + (var(--su-fs-h1) - 1rem) * 0.04);
+
+  --su-fw-h1: 800;
+  --su-fw-h2: 800;
+  --su-fw-h3: 700;
+  --su-fw-h4: 700;
+  --su-fw-h5: 700;
+  --su-fw-h6: 700;
+
+  --su-ls-h1: -0.06em;
+  --su-ls-h2: -0.05em;
+  --su-ls-h3: -0.04em;
+  --su-ls-h4: -0.03em;
+  --su-ls-h5: -0.02em;
+  --su-ls-h6: -0.01em;
+
+  /* Default border colors*/
+  --su-border: oklch(from var(--su-accent) 92% 0.01 h);
+
+}
+
+
+[data-color-scheme="dark"] {
+  --su-border: oklch(from var(--su-accent) 33% 0.03 h);
+
+  /* Semantic text colors */
+  --su-body: oklch(from var(--su-accent) 77% 0.01 h);
+  --su-title: oklch(from var(--su-accent) 96% 0.01 h);
+
+  /* Semantic text background */
+  --su-page: oklch(from var(--su-accent) 20% 0.03 h);
+  --su-container: oklch(from var(--su-accent) 23% 0.03 h);
+  --su-subtle: oklch(from var(--su-accent) 30% 0.02 h);
+  --su-kbd-text: var(--su-black);
+
+  --su-link-color-hover: color-mix(var(--su-blue), #fff 20%);
+  --su-link-color-active: color-mix(var(--su-blue), #fff 30%);
+  --su-link-color-disabled: color-mix(var(--su-blue), #000 35%);
+}

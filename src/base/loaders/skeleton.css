@@ -1,0 +1,10 @@
+@layer components {
+  @keyframes su-loader-skeleton {
+    0% {
+      background-position: 80% 0;
+    }
+    100% {
+      background-position: 20% 0;
+    }
+  }
+}

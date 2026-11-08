@@ -1,19 +1,43 @@
 export const patterns = [
-  /**
-   * Matches: grid-cols-3, grid-cols-none, !grid-cols-subgrid
-   */
   {
-    test: /^(!?)grid-cols-(\d+|none|subgrid)$/,
+    /**
+     * Matches:
+     *   grid-cols-3                      -> repeat(3, minmax(0, 1fr))
+     *   grid-cols-none                   -> none
+     *   !grid-cols-subgrid               -> subgrid
+     *   grid-cols-[max-content_1fr]      -> max-content 1fr
+     *   grid-cols-[200px_minmax(0,1fr)]  -> 200px minmax(0, 1fr)
+     */
+    test: /^(!?)grid-cols-(\d+|none|subgrid|\[.+\])$/,
     parse: (match) => {
-      const isImportant = match[1] === "!";
-      const val = match[2];
+      const [util, important, val] = match;
+      const isImportant = important === "!";
       
-      let result;
-      if (val === "none") result = "none";
-      else if (val === "subgrid") result = "subgrid";
-      else result = `repeat(${val}, minmax(0, 1fr))`;
+      let gridValue;
 
-      return `grid-template-columns: ${result}${isImportant ? " !important" : ""};`;
+      if (val === "none") {
+        gridValue = "none";
+      } else if (val === "subgrid") {
+        gridValue = "subgrid";
+      } else if (val.startsWith("[") && val.endsWith("]")) {
+        // Strip the brackets and safely replace internal underscores with spaces
+        gridValue = val.slice(1, -1).replace(/_/g, " ");
+      } else {
+        // Standard explicit numeric behavior
+        gridValue = `repeat(${val}, minmax(0, 1fr))`;
+      }
+
+      return {
+        isImportant,
+        rules: [
+          {
+            selector: util,
+            declarations: [
+              { "grid-template-columns": gridValue },              
+            ]
+          }
+        ]
+      };
     }
   }
 ];

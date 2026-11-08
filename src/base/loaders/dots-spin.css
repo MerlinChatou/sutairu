@@ -1,0 +1,100 @@
+@layer components {
+  @keyframes su-loader-dots-spin {
+    0%,
+    100% {
+      box-shadow:
+        0 -0.7em 0 0.04em,
+        0.5em -0.5em 0 0,
+        0.7em 0 0 -0.4em,
+        0.5em 0.5em 0 -0.4em,
+        0 0.7em 0 -0.4em,
+        -0.5em 0.5em 0 -0.4em,
+        -0.7em 0 0 -0.4em,
+        -0.5em -0.5em 0 0;
+    }
+
+    12.5% {
+      box-shadow:
+        0 -0.7em 0 0,
+        0.5em -0.5em 0 0.04em,
+        0.7em 0 0 0,
+        0.5em 0.5em 0 -0.4em,
+        0 0.7em 0 -0.4em,
+        -0.5em 0.5em 0 -0.4em,
+        -0.7em 0 0 -0.4em,
+        -0.5em -0.5em 0 -0.4em;
+    }
+
+    25% {
+      box-shadow:
+        0 -0.7em 0 -0.4em,
+        0.5em -0.5em 0 0,
+        0.7em 0 0 0.04em,
+        0.5em 0.5em 0 0,
+        0 0.7em 0 -0.4em,
+        -0.5em 0.5em 0 -0.4em,
+        -0.7em 0 0 -0.4em,
+        -0.5em -0.5em 0 -0.4em;
+    }
+
+    37.5% {
+      box-shadow:
+        0 -0.7em 0 -0.4em,
+        0.5em -0.5em 0 -0.4em,
+        0.7em 0 0 0,
+        0.5em 0.5em 0 0.04em,
+        0 0.7em 0 0,
+        -0.5em 0.5em 0 -0.4em,
+        -0.7em 0 0 -0.4em,
+        -0.5em -0.5em 0 -0.4em;
+    }
+
+    50% {
+      box-shadow:
+        0 -0.7em 0 -0.4em,
+        0.5em -0.5em 0 -0.4em,
+        0.7em 0 0 -0.4em,
+        0.5em 0.5em 0 0,
+        0 0.7em 0 0.04em,
+        -0.5em 0.5em 0 0,
+        -0.7em 0 0 -0.4em,
+        -0.5em -0.5em 0 -0.4em;
+    }
+
+    62.5% {
+      box-shadow:
+        0 -0.7em 0 -0.4em,
+        0.5em -0.5em 0 -0.4em,
+        0.7em 0 0 -0.4em,
+        0.5em 0.5em 0 -0.4em,
+        0 0.7em 0 0,
+        -0.5em 0.5em 0 0.04em,
+        -0.7em 0 0 0,
+        -0.5em -0.5em 0 -0.4em;
+    }
+
+    75% {
+      box-shadow:
+        0 -0.7em 0 -0.4em,
+        0.5em -0.5em 0 -0.4em,
+        0.7em 0 0 -0.4em,
+        0.5em 0.5em 0 -0.4em,
+        0 0.7em 0 -0.4em,
+        -0.5em 0.5em 0 0,
+        -0.7em 0 0 0.04em,
+        -0.5em -0.5em 0 0;
+    }
+
+    87.5% {
+      box-shadow:
+        0 -0.7em 0 0,
+        0.5em -0.5em 0 -0.4em,
+        0.7em 0 0 -0.4em,
+        0.5em 0.5em 0 -0.4em,
+        0 0.7em 0 -0.4em,
+        -0.5em 0.5em 0 -0.4em,
+        -0.7em 0 0 0,
+        -0.5em -0.5em 0 0.04em;
+    }
+  }
+}

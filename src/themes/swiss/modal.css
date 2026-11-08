@@ -1,0 +1,40 @@
+[data-theme="swiss"] {
+  --su-modal-opening-duration: 300ms;
+  --su-modal-closing-duration: 200ms;
+  --su-modal-animation: su-modal-animation-swiss;
+  --su-modal-backdrop-animation: su-modal-backdrop-animation-swiss;
+
+  --su-modal-header-bg-color: var(--su-container);
+  --su-modal-body-bg-color: var(--su-container);
+  --su-modal-footer-bg-color: var(--su-container);
+  --su-modal-border-color: var(--su-border);
+  --su-modal-border-radius: 0.75rem;
+  --su-modal-backdrop-color: #0000008f;
+}
+
+[data-theme="swiss"][data-color-scheme="dark"]  {
+  --su-modal-backdrop-color: #000000af;
+}
+
+
+@keyframes su-modal-animation-swiss {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes su-modal-backdrop-animation-swiss {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

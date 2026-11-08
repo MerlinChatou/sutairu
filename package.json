@@ -22,21 +22,33 @@
   "type": "module",
   "main": "index.js",
   "exports": {
-    ".": "./index.js"
+    ".": "./index.js",
+    "./utils": "./lib/utils/index.js",
+    "./icons-meta": "./src/rules/icons/meta/icons-meta.json",
+    "./icons-data": "./src/rules/icons/icons.js"
   },
   "bin": {
     "sutairu": "./bin/cli.js",
-    "sutairu-play": "./bin/playground.js"
+    "sutairu-play": "./bin/playground.js",
+    "sutairu-add-icon": "./bin/add-icon.mjs"
   },
   "scripts": {
     "test": "node --test",
     "test:update": "node --test --test-update-snapshots ./test/*.test.js"
   },
   "dependencies": {
-    "byte-size": "^9.0.1",
-    "chokidar": "^5.0.0",
-    "clean-css": "^5.3.3",
-    "commander": "^14.0.3",
-    "fs-extra": "^11.3.4"
+    "byte-size": "^9.0.2",
+    "chokidar": "^6.0.0",
+    "commander": "^15.0.0",
+    "fs-extra": "^11.4.1",
+    "lightningcss": "^1.33.0"
+  },
+  "volta": {
+    "node": "26.13.0",
+    "npm": "11.20.0"
+  },
+  "devDependencies": {
+    "svgo": "^4.1.0",
+    "svgpath": "^2.6.0"
   }
 }

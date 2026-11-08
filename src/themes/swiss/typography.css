@@ -1,0 +1,9 @@
+:root {
+  --su-kbd-bg: oklch(from var(--su-accent) 90% 0.1 h);
+  --su-kbd-border: var(--su-border);
+  --su-kbd-shadow-offset-x: 2px;
+  --su-kbd-shadow-offset-y: 2px;
+  --su-kbd-shadow-blur: 0px;
+  --su-kbd-shadow-color: oklch(from var(--su-accent) 70% 0.1 h);
+  --su-box-shadow: 0 var(--su-kbd-shadow-offset-x, 0) var(--su-kbd-shadow-offset-y, 0) var(--su-kbd-shadow-blur) var(--su-kbd-shadow-color);
+}

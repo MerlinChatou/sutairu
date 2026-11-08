@@ -1,0 +1,100 @@
+@layer components {
+  @keyframes su-loader-dots-fade {
+    0%,
+    100% {
+      box-shadow:
+        0 -0.7em 0 0 var(--spinner-color-100),
+        0.5em -0.5em 0 0 var(--spinner-color-20),
+        0.7em 0 0 0 var(--spinner-color-20),
+        0.5em 0.5em 0 0 var(--spinner-color-20),
+        0 0.7em 0 0 var(--spinner-color-20),
+        -0.5em 0.5em 0 0 var(--spinner-color-20),
+        -0.7em 0 0 0 var(--spinner-color-50),
+        -0.5em -0.5em 0 0 var(--spinner-color-70);
+    }
+
+    12.5% {
+      box-shadow:
+        0 -0.7em 0 0 var(--spinner-color-70),
+        0.5em -0.5em 0 0 var(--spinner-color-100),
+        0.7em 0 0 0 var(--spinner-color-20),
+        0.5em 0.5em 0 0 var(--spinner-color-20),
+        0 0.7em 0 0 var(--spinner-color-20),
+        -0.5em 0.5em 0 0 var(--spinner-color-20),
+        -0.7em 0 0 0 var(--spinner-color-20),
+        -0.5em -0.5em 0 0 var(--spinner-color-50);
+    }
+
+    25% {
+      box-shadow:
+        0 -0.7em 0 0 var(--spinner-color-50),
+        0.5em -0.5em 0 0 var(--spinner-color-70),
+        0.7em 0 0 0 var(--spinner-color-100),
+        0.5em 0.5em 0 0 var(--spinner-color-20),
+        0 0.7em 0 0 var(--spinner-color-20),
+        -0.5em 0.5em 0 0 var(--spinner-color-20),
+        -0.7em 0 0 0 var(--spinner-color-20),
+        -0.5em -0.5em 0 0 var(--spinner-color-20);
+    }
+
+    37.5% {
+      box-shadow:
+        0 -0.7em 0 0 var(--spinner-color-20),
+        0.5em -0.5em 0 0 var(--spinner-color-50),
+        0.7em 0 0 0 var(--spinner-color-70),
+        0.5em 0.5em 0 0 var(--spinner-color-100),
+        0 0.7em 0 0 var(--spinner-color-20),
+        -0.5em 0.5em 0 0 var(--spinner-color-20),
+        -0.7em 0 0 0 var(--spinner-color-20),
+        -0.5em -0.5em 0 0 var(--spinner-color-20);
+    }
+
+    50% {
+      box-shadow:
+        0 -0.7em 0 0 var(--spinner-color-20),
+        0.5em -0.5em 0 0 var(--spinner-color-20),
+        0.7em 0 0 0 var(--spinner-color-50),
+        0.5em 0.5em 0 0 var(--spinner-color-70),
+        0 0.7em 0 0 var(--spinner-color-100),
+        -0.5em 0.5em 0 0 var(--spinner-color-20),
+        -0.7em 0 0 0 var(--spinner-color-20),
+        -0.5em -0.5em 0 0 var(--spinner-color-20);
+    }
+
+    62.5% {
+      box-shadow:
+        0 -0.7em 0 0 var(--spinner-color-20),
+        0.5em -0.5em 0 0 var(--spinner-color-20),
+        0.7em 0 0 0 var(--spinner-color-20),
+        0.5em 0.5em 0 0 var(--spinner-color-50),
+        0 0.7em 0 0 var(--spinner-color-70),
+        -0.5em 0.5em 0 0 var(--spinner-color-100),
+        -0.7em 0 0 0 var(--spinner-color-20),
+        -0.5em -0.5em 0 0 var(--spinner-color-20);
+    }
+
+    75% {
+      box-shadow:
+        0 -0.7em 0 0 var(--spinner-color-20),
+        0.5em -0.5em 0 0 var(--spinner-color-20),
+        0.7em 0 0 0 var(--spinner-color-20),
+        0.5em 0.5em 0 0 var(--spinner-color-20),
+        0 0.7em 0 0 var(--spinner-color-50),
+        -0.5em 0.5em 0 0 var(--spinner-color-70),
+        -0.7em 0 0 0 var(--spinner-color-100),
+        -0.5em -0.5em 0 0 var(--spinner-color-20);
+    }
+
+    87.5% {
+      box-shadow:
+        0 -0.7em 0 0 var(--spinner-color-20),
+        0.5em -0.5em 0 0 var(--spinner-color-20),
+        0.7em 0 0 0 var(--spinner-color-20),
+        0.5em 0.5em 0 0 var(--spinner-color-20),
+        0 0.7em 0 0 var(--spinner-color-20),
+        -0.5em 0.5em 0 0 var(--spinner-color-50),
+        -0.7em 0 0 0 var(--spinner-color-70),
+        -0.5em -0.5em 0 0 var(--spinner-color-100);
+    }
+  }
+}

@@ -1,67 +1,82 @@
-const baseRules = {
-  // The core Badge structure
-  "badge": {
-    "display": "inline-flex",
-    "align-items": "center",
-    "justify-content": "center",
-    "white-space": "nowrap",
-    "padding-inline": "0.5rem", // Default internal spacing
-    "padding-block": "0.125rem",
-    "border-radius": "0.25rem",  // Pill shape by default
-    "font-size": "0.75rem",     // Small text
-    "font-weight": "600",
-    "line-height": "1"
-  },
-  "badge-pill": {
-    "display": "inline-flex",
-    "align-items": "center",
-    "justify-content": "center",
-    "white-space": "nowrap",
-    "padding-inline": "0.5rem", // Default internal spacing
-    "padding-block": "0.125rem",
-    "border-radius": "9999px",  // Pill shape by default
-    "font-size": "0.75rem",     // Small text
-    "font-weight": "600",
-    "line-height": "1"
-  },
-  // A "Dot" variant (Square/Circle with no text)
-  "badge-dot": {
-    "display": "inline-block",
-    "width": "0.5rem",
-    "height": "0.5rem",
-    "border-radius": "50%"
-  },
-
-  // An "Outline" version (Resetting backgrounds)
-  "badge-outline": {
-        "display": "inline-flex",
-    "align-items": "center",
-    "justify-content": "center",
-    "white-space": "nowrap",
-    "padding-inline": "0.5rem", // Default internal spacing
-    "padding-block": "0.125rem",
-    "border-radius": "0.25rem",  // Pill shape by default
-    "font-size": "0.75rem",     // Small text
-    "font-weight": "600",
-    "line-height": "1",
-    "background-color": "transparent",
-    "border-width": "1px",
-    "border-style": "solid",
-  }
-};
-
 /**
- * Helper to transform rule objects into CSS strings
+ * Shared structural properties for most badge variants
  */
-const buildRuleString = (props, important = false) => {
-  const suffix = important ? " !important" : "";
-  return Object.entries(props)
-    .map(([prop, val]) => `${prop}: ${val}${suffix};`)
-    .join(" ");
-};
+const badgeBase = [
+  { "display": "inline-flex" },
+  { "align-items": "center" },
+  { "justify-content": "center" },
+  { "white-space": "nowrap" },
+  { "padding-inline": "0.5rem" },
+  { "padding-block": "0.125rem" },
+  { "font-size": "0.75rem" },
+  { "font-weight": "600" },
+  { "line-height": "1" }
+];
 
-export const rules = Object.entries(baseRules).reduce((acc, [key, props]) => {
-  acc[key] = buildRuleString(props, false);
-  acc[`!${key}`] = buildRuleString(props, true);
-  return acc;
-}, {});
+export const patterns = [
+  // 1. Core Badge (.badge)
+  {
+    test: /^(!?)badge$/,
+    parse: (match) => ({
+      isImportant: match[1] === "!",
+      rules: [{
+        selector: match[0],
+        declarations: [
+          ...badgeBase,
+          { "border-radius": "0.25rem" }
+        ]
+      }]
+    })
+  },
+
+  // // 2. Pill Badge (.badge-pill)
+  // Replace by r-pill
+  // {
+  //   test: /^(!?)badge-pill$/,
+  //   parse: (match) => ({
+  //     isImportant: match[1] === "!",
+  //     rules: [{
+  //       selector: match[0],
+  //       declarations: [
+  //         ...badgeBase,
+  //         { "border-radius": "9999px" }
+  //       ]
+  //     }]
+  //   })
+  // },
+
+  // 3. Dot Badge (.badge-dot)
+  {
+    test: /^(!?)badge-dot$/,
+    parse: (match) => ({
+      isImportant: match[1] === "!",
+      rules: [{
+        selector: match[0],
+        declarations: [
+          { "display": "inline-block" },
+          { "width": "0.5rem" },
+          { "height": "0.5rem" },
+          { "border-radius": "50%" }
+        ]
+      }]
+    })
+  },
+
+  // 4. Outline Badge (.badge-outline)
+  {
+    test: /^(!?)badge-outline$/,
+    parse: (match) => ({
+      isImportant: match[1] === "!",
+      rules: [{
+        selector: match[0],
+        declarations: [
+          ...badgeBase,
+          { "border-radius": "0.25rem" },
+          { "background-color": "transparent" },
+          { "border-width": "1px" },
+          { "border-style": "solid" }
+        ]
+      }]
+    })
+  }
+];
