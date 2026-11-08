@@ -279,7 +279,7 @@ exports[`compiler: !shrink-5 1`] = `
 `;
 
 exports[`compiler: !stack 1`] = `
-"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.\\\\!stack {\\n  display: grid !important;\\n  grid-template-areas: 'stack' !important;\\n  align-items: center !important;\\n  justify-items: center !important;\\n}\\n\\n.\\\\!stack > * {\\n  grid-area: stack !important;\\n}\\n\\n}"
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.\\\\!stack {\\n  display: grid !important;\\n  grid-template-areas: 'stack' !important;\\n  grid-template-columns: minmax(0, 1fr) !important;\\n  grid-template-rows: minmax(0, 1fr) !important;\\n  align-items: center !important;\\n  justify-items: center !important;\\n}\\n\\n.\\\\!stack > * {\\n  grid-area: stack !important;\\n}\\n\\n}"
 `;
 
 exports[`compiler: !stripes-page 1`] = `
@@ -882,6 +882,14 @@ exports[`compiler: hue-rotate-90 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.hue-rotate-90 {\\n  --su-hue-rotate: hue-rotate(90deg);\\n}\\n\\n}"
 `;
 
+exports[`compiler: i-twitter 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.i-twitter::before {\\n  mask-image: url(\\"data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M18.14%204.42q.08.05.12.12c.12.16.2.19.3.19q.18.04.47-.05c.43-.14.96-.48%201.51-.7.3-.12.65.03.77.32.17.4.05.7-.07.93l-.14.29c.4-.14.86.2.81.62-.05.34-.19.5-.33.72q-.22.3-.53.63-.47.47-.99.89c.05%202.8-.93%205.59-2.66%207.77-2.18%202.79-5.69%204.37-9.2%204.32h-.02c-2.25%200-4.48-.65-6.38-1.87-.24-.17-.34-.46-.24-.72s.36-.43.65-.38c1.41.16%202.93-.1%204.2-.75-1.2-.48-2.19-1.46-2.64-2.71q-.08-.3.07-.55l.17-.17c-1.06-.86-1.73-2.18-1.7-3.6%200-.34.28-.58.62-.58-.8-1.39-.84-3.16.02-4.56.22-.36.72-.38.99-.07%201.7%202.14%204.3%203.55%207%203.87-.04-1.06.24-2.12.9-2.98.88-1.25%202.37-1.87%203.83-1.82.87.02%201.75.28%202.47.84m-2.52.36c-1.08-.03-2.18.45-2.8%201.32q0%20.02-.03.02c-.57.77-.79%201.82-.57%202.78.1.39-.22.75-.6.72-3-.12-5.9-1.46-7.97-3.62-.34%201.34.19%202.93%201.37%203.67.21.15.33.41.26.67-.07.24-.29.44-.55.44q-.61.02-1.1-.15c.33%201.18%201.36%202.19%202.56%202.4.24.05.43.24.48.5.05.25-.07.51-.31.63-.4.22-.77.22-1.08.2.6.88%201.66%201.48%202.71%201.48.27%200%20.48.17.58.4.07.25%200%20.51-.2.68-1.12.89-2.44%201.46-3.83%201.7%201.17.44%202.42.65%203.67.65%203.14.05%206.31-1.37%208.23-3.86%201.63-2.04%202.54-4.7%202.42-7.3q0-.33.27-.53l.5-.4-.38.07c-.31.02-.58-.15-.65-.43-.1-.3.05-.58.31-.7q.12-.08.34-.26c-.27.07-.58.12-.89.07q-.55-.11-.96-.58-.8-.54-1.78-.57M4.68%2014.33h-.02q-.05.03.02%200%22%2F%3E%3C%2Fsvg%3E\\");\\n}\\n\\n}"
+`;
+
+exports[`compiler: icon 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.icon {\\n  display: inline-flex;\\n  align-items: center;\\n  justify-content: center;\\n  width: 1em;\\n  height: 1em;\\n  vertical-align: middle;\\n}\\n\\n.icon::before {\\n  content: \\"\\";\\n  display: inline-block;\\n  width: 100%;\\n  height: 100%;\\n  background-color: currentColor;\\n  mask-size: 100% 100%;\\n  mask-repeat: no-repeat;\\n}\\n\\n}"
+`;
+
 exports[`compiler: inset-middle 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.inset-middle {\\n  inset: 50%;\\n  --su-tr-x: -50%;\\n  --su-tr-y: -50%;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));\\n}\\n\\n}"
 `;
@@ -1311,7 +1319,7 @@ exports[`compiler: sm:stripes-subtle 1`] = `
 `;
 
 exports[`compiler: stack 1`] = `
-"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.stack {\\n  display: grid;\\n  grid-template-areas: 'stack';\\n  align-items: center;\\n  justify-items: center;\\n}\\n\\n.stack > * {\\n  grid-area: stack;\\n}\\n\\n}"
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.stack {\\n  display: grid;\\n  grid-template-areas: 'stack';\\n  grid-template-columns: minmax(0, 1fr);\\n  grid-template-rows: minmax(0, 1fr);\\n  align-items: center;\\n  justify-items: center;\\n}\\n\\n.stack > * {\\n  grid-area: stack;\\n}\\n\\n}"
 `;
 
 exports[`compiler: stripes-black-800/80 1`] = `

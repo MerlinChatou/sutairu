@@ -129,7 +129,13 @@ export const sampleClasses = [
   // /components/card.js
   "card",
 
+  // /components/icons.js
+  "icon",
+  "i-twitter",
+  
   // /components/group.js
+
+
   // /components/masonry.js
   "masonry",
   "!masonry",
