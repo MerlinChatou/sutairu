@@ -82,3 +82,10 @@ Launch the interactive local playground to experiment with Sutairu classes and p
 ```bash
 sutairu-play
 ```
+
+
+
+
+## Add Icons
+
+To add new icons, follow [these instuctions](/src/icons/README.md).
