@@ -173,8 +173,6 @@ const utilities = [
   pointer_events,
   resize,
 
-  // Icons
-  icons,
 
   // Layout
   alignment,
@@ -243,6 +241,7 @@ const components = [
   button_base,
   card,
   hljs,
+  icons,
   input_group,
   input,
   loader,

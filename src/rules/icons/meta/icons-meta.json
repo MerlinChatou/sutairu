@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "categories": ["actions","agriculture","animals","brands","commerce","communication","construction","design","development","devices","education","files","food","games","health","legal","map","media","navigation","religion","security","status","time","ui"],
+  "categories": ["actions","agriculture","animals","base","brands","commerce","communication","construction","design","development","devices","education","files","food","games","health","legal","map","media","navigation","religion","security","status","time","ui"],
   "icons": [
     {"name":"accounting","category":"commerce","style":"regular","tags":["bookkeeping","ledger","finance","calculator","budget"],"related":["money","invoice","report","business","spreadsheet"]},
     {"name":"accounting-solid","category":"commerce","style":"solid","tags":["bookkeeping","ledger","finance","calculator","budget"],"related":["money","invoice","report","business","spreadsheet"]},
