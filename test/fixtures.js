@@ -18,7 +18,6 @@ export const sampleClasses = [
   "group-hover:bg-green-200/50",
   "!bg-page",
   "sm:bg-subtle",
-  
 
   // /background/dotted.js
   "dotted-green",
@@ -132,9 +131,8 @@ export const sampleClasses = [
   // /components/icons.js
   "icon",
   "i-twitter",
-  
-  // /components/group.js
 
+  // /components/group.js
 
   // /components/masonry.js
   "masonry",
@@ -204,6 +202,8 @@ export const sampleClasses = [
   "tr-bg-500-ease-in",
   "tr-opacity-200-cubic(0.1,0.7,1.0,0.1)",
   "tr-shadow-step(1,end)",
+  "tr-transform-500ms",
+  "tr-all-5.2s",
 
   // :::::::::::::: INTERACTIVITY ::::::::::::::
 

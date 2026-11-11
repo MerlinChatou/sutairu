@@ -212,5 +212,4 @@ export const rules = {
   },
 
   // 2. Important '!input' class
-
 };

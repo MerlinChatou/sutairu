@@ -14,7 +14,7 @@ const keys = Object.keys(baseRules).join("|");
 export const patterns = [
   {
     /**
-     * Matches: stack, grid-x, !grid-col, etc.
+     * Matches: grid-x, !grid-col, etc.
      */
     test: new RegExp(`^(!?)(${keys})$`),
     parse: (match) => {

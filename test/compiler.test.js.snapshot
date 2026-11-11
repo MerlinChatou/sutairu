@@ -1406,6 +1406,10 @@ exports[`compiler: top-middle 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.top-middle {\\n  top: 50%;\\n  --su-tr-y: -50%;\\n  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));\\n}\\n\\n}"
 `;
 
+exports[`compiler: tr-all-5.2s 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.tr-all-5\\\\.2s {\\n  transition: all 5.2s ease;\\n}\\n\\n}"
+`;
+
 exports[`compiler: tr-bg-500-ease-in 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.tr-bg-500-ease-in {\\n  transition: background-color 500ms ease-in;\\n}\\n\\n}"
 `;
@@ -1428,6 +1432,10 @@ exports[`compiler: tr-opacity-200-cubic(0.1,0.7,1.0,0.1) 1`] = `
 
 exports[`compiler: tr-shadow-step(1,end) 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.tr-shadow-step\\\\(1\\\\,end\\\\) {\\n  transition: box-shadow 150ms steps(1,end);\\n}\\n\\n}"
+`;
+
+exports[`compiler: tr-transform-500ms 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.tr-transform-500ms {\\n  transition: transform 500ms ease;\\n}\\n\\n}"
 `;
 
 exports[`compiler: tt-capitalize 1`] = `

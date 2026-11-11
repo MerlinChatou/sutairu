@@ -21,14 +21,15 @@ const properties = {
 const easingKeys = ["linear", "ease-in-out", "ease-in", "ease-out", "ease", "step-start", "step-end"];
 
 const propPattern = `(${Object.keys(properties).join("|")})`;
+// Supports digits, optional decimals, and optional 'ms' or 's' units
+const timePattern = `(\\d+(?:\\.\\d+)?(?:ms|s)?)`;
 const easingPattern = `(${easingKeys.join("|")}|cubic\\([^\\)]+\\)|steps?\\([^\\)]+\\))`;
-const masterRegex = new RegExp(`^(!?)tr-${propPattern}(?:-(\\d+))?(?:-(\\d+))?(?:-${easingPattern})?$`);
+const masterRegex = new RegExp(`^(!?)tr-${propPattern}(?:-${timePattern})?(?:-${timePattern})?(?:-${easingPattern})?$`);
 
 export const patterns = [
   {
     test: masterRegex,
     parse: (match) => {
-      // Note: match[0] is the full string, match[1] is the !
       const [, important, propKey, durationRaw, delayRaw, easingRaw] = match;
       
       // Special Case: tr-none
@@ -45,15 +46,20 @@ export const patterns = [
       }
 
       const rawProperties = properties[propKey];
-      const duration = durationRaw ? `${durationRaw}ms` : "150ms";
-      // Ensure there's a space prefix if a delay exists
-      const delay = delayRaw && delayRaw !== "0" ? ` ${delayRaw}ms` : "";
+
+      // Helper to ensure time values have units (defaults plain numbers to ms)
+      const formatTime = (raw) => {
+        if (!raw) return null;
+        return /(?:ms|s)$/.test(raw) ? raw : `${raw}ms`;
+      };
+
+      const duration = durationRaw ? formatTime(durationRaw) : "150ms";
+      const delay = delayRaw && delayRaw !== "0" ? ` ${formatTime(delayRaw)}` : "";
 
       let easing = easingRaw || "ease";
       if (easing.startsWith("cubic(")) easing = easing.replace("cubic(", "cubic-bezier(");
       if (easing.startsWith("step(")) easing = easing.replace("step(", "steps(");
 
-      // Split comma-separated properties, apply settings to each, and join them back safely
       const transitionValue = rawProperties
         .split(",")
         .map((prop) => `${prop.trim()} ${duration} ${easing}${delay}`)
@@ -63,10 +69,8 @@ export const patterns = [
         isImportant: important === "!",
         rules: [
           {
-            selector: match[0], // Use the full utility name as selector
+            selector: match[0],
             declarations: [
-              // We apply the transition property directly.
-              // This overwrites any other transition classes on the element.
               { transition: transitionValue },
             ],
           },
