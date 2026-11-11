@@ -31,12 +31,8 @@ Save it as `/src/icons/raw/<category>/<icon-name>.svg`.
 From the root of the repo:
 
 ```bash
-sutairu-add-icon ./src/icons/raw/<category>/<icon-name>.svg
+npm run add:icon ./src/icons/raw/<category>/<icon-name>.svg
 ```
-
-If the command is not found, either:
-- prefix it with `npx`: `npx sutairu-add-icon ...`
-- or register the binaries once with `npm link`, then run the command directly
 
 
 

@@ -29,13 +29,12 @@
   },
   "bin": {
     "sutairu": "./bin/cli.js",
-    "sutairu-play": "./bin/playground.js",
-    "sutairu-add-icon": "./bin/add-icon.mjs"
+    "sutairu-play": "./bin/playground.js"
   },
   "scripts": {
     "test": "node --test",
     "test:update": "node --test --test-update-snapshots ./test/*.test.js",
-    "add:icon": "node ./bin/add-icon.mjs"
+    "add:icon": "node ./scripts/add-icon.mjs"
   },
   "dependencies": {
     "byte-size": "^9.0.2",
