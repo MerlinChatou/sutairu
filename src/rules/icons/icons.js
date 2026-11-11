@@ -8,6 +8,7 @@
  * actions.js           | CRUD operations, clipboard tasks, state triggers | edit, trash, save, copy, search
  * agriculture.js       | Farming, gardening, plants, ecology, nature      | seedling, leaf, plant, tractor
  * animals.js           | Fauna, pets, wildlife, insects, veterinary       | dog, cat, bug, fish
+ * base.js              | Core primitives, shapes, symbols, generic icons  | circle, square, triangle, hexagon, octagon
  * brands.js            | Social network logos, tech ecosystems, trademarks| github, twitter, discord, figma
  * commerce.js          | E-commerce, transactions, shopping, finance      | shopping-cart, credit-card, tag, wallet
  * communication.js     | Messaging, social interactions, email, broadcast | mail, chat, phone, send, megaphone
@@ -35,6 +36,7 @@
 import { actionsIcons } from "./data/actions.js";
 import { agricultureIcons } from "./data/agriculture.js";
 import { animalsIcons } from "./data/animals.js";
+import { baseIcons } from "./data/base.js";
 import { brandsIcons } from "./data/brands.js";
 import { commerceIcons } from "./data/commerce.js";
 import { communicationIcons } from "./data/communication.js";
@@ -62,6 +64,7 @@ export const iconRegistry = {
   ...actionsIcons,
   ...agricultureIcons,
   ...animalsIcons,
+  ...baseIcons,
   ...brandsIcons,
   ...commerceIcons,
   ...communicationIcons,

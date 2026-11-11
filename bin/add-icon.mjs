@@ -82,7 +82,7 @@ const keepIconLayer = {
         };
 
         const found = find(svg, []);
-        if (!found) throw new Error(`layer "${LAYER_NAME}" not found`);
+        if (!found) return; //throw new Error(`layer "${LAYER_NAME}" not found`);
         if (found.ancestors.some((a) => a.attributes?.transform)) {
           throw new Error(`a parent of layer "${LAYER_NAME}" has a transform, which is not supported`);
         }

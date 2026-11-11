@@ -34,7 +34,8 @@
   },
   "scripts": {
     "test": "node --test",
-    "test:update": "node --test --test-update-snapshots ./test/*.test.js"
+    "test:update": "node --test --test-update-snapshots ./test/*.test.js",
+    "add:icon": "node ./bin/add-icon.mjs"
   },
   "dependencies": {
     "byte-size": "^9.0.2",
