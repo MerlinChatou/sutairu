@@ -971,6 +971,7 @@
     {"name":"minus-thin","category":"ui","style":"thin","tags":["subtract","remove","negative","decrease","dash"],"related":["zoom-out","collapse","calculator","math"]},
     {"name":"minus-wide","category":"ui","style":"wide","tags":["subtract","remove","negative","decrease","dash"],"related":["zoom-out","collapse","calculator","math"]},
     {"name":"moodle","category":"brands","style":"regular","tags":["brand","logo","lms","learning"],"related":["education","e-learning","course"]},
+    {"name":"moon","category":"time","style":"regular","tags":["moon","lunar","crescent","night","space","dark"],"related":["star","sleep","astronomy","cosmos"]},
     {"name":"motorbike","category":"map","style":"regular","tags":["scooter","motorcycle","bike","vehicle"],"related":["transport","ride","moped","delivery"]},
     {"name":"motorbike-solid","category":"map","style":"solid","tags":["scooter","motorcycle","bike","vehicle"],"related":["transport","ride","moped","delivery"]},
     {"name":"motorbike-thin","category":"map","style":"thin","tags":["scooter","motorcycle","bike","vehicle"],"related":["transport","ride","moped","delivery"]},

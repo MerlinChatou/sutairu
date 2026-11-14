@@ -12,7 +12,7 @@ export const rules = {
           { width: "1em" },
           { height: "auto" },
           { "aspect-ratio": "1 / 1" },
-          { "vertical-align": "middle" },
+          { "vertical-align": "baseline" },
         ],
       },
       {
