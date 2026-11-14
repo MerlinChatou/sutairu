@@ -486,22 +486,6 @@ exports[`compiler: bold 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.bold {\\n  font-weight: 700;\\n}\\n\\n}"
 `;
 
-exports[`compiler: break-all 1`] = `
-"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.break-all {\\n  word-break: break-all;\\n}\\n\\n}"
-`;
-
-exports[`compiler: break-keep 1`] = `
-"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.break-keep {\\n  word-break: keep-all;\\n}\\n\\n}"
-`;
-
-exports[`compiler: break-normal 1`] = `
-"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.break-normal {\\n  word-break: normal;\\n}\\n\\n}"
-`;
-
-exports[`compiler: break-word 1`] = `
-"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.break-word {\\n  word-break: break-word;\\n}\\n\\n}"
-`;
-
 exports[`compiler: brightness-2/3 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.brightness-2\\\\/3 {\\n  --su-brightness: brightness(0.667);\\n}\\n\\n}"
 `;
@@ -1492,6 +1476,22 @@ exports[`compiler: w-full 1`] = `
 
 exports[`compiler: w-screen 1`] = `
 "@layer components {\\n \\n}\\n\\n@layer utilities {\\n.w-screen {\\n  width: 100vw;\\n}\\n\\n}"
+`;
+
+exports[`compiler: wb-all 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.wb-all {\\n  word-break: break-all;\\n}\\n\\n}"
+`;
+
+exports[`compiler: wb-keep 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.wb-keep {\\n  word-break: keep-all;\\n}\\n\\n}"
+`;
+
+exports[`compiler: wb-normal 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.wb-normal {\\n  word-break: normal;\\n}\\n\\n}"
+`;
+
+exports[`compiler: wb-word 1`] = `
+"@layer components {\\n \\n}\\n\\n@layer utilities {\\n.wb-word {\\n  word-break: break-word;\\n}\\n\\n}"
 `;
 
 exports[`compiler: ws-normal 1`] = `

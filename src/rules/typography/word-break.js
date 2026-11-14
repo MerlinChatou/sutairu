@@ -15,10 +15,10 @@ export const patterns = [
     /**
      * Regex Breakdown:
      * ^(!?)                                -> Group 1: Important flag
-     * text-                                -> Prefix
+     * wb-                                -> Prefix
      * (wrap|nowrap|balance|pretty|stable)  -> Group 2: Wrap strategy keys
      */
-    test: new RegExp(`^(!?)break-(${Object.keys(breakMap).join("|")})$`),
+    test: new RegExp(`^(!?)wb-(${Object.keys(breakMap).join("|")})$`),
     parse: (match) => {
       const util = match[0];
       const isImportant = match[1] === "!";

@@ -566,8 +566,8 @@ export const sampleClasses = [
   "!ws-pre",
 
   // /typography/break-word.js
-  "break-normal",
-  "break-all",
-  "break-keep",
-  "break-word",
+  "wb-normal",
+  "wb-all",
+  "wb-keep",
+  "wb-word",
 ];
