@@ -1,6 +1,6 @@
 /**
- * Utility for break word
- * Controls how text wraps within an element.
+ * Utility for word-break
+ * Controls how words should break when reaching the edge of a container.
  */
 
 const breakMap = {
@@ -12,11 +12,13 @@ const breakMap = {
 
 export const patterns = [
   {
-    /**
-     * Regex Breakdown:
-     * ^(!?)                                -> Group 1: Important flag
-     * wb-                                -> Prefix
-     * (wrap|nowrap|balance|pretty|stable)  -> Group 2: Wrap strategy keys
+/**
+     * Matches:
+     * - wb-normal, !wb-all, wb-keep, !wb-word
+     * 
+     * Group 1: (!?)                    -> Important flag
+     * Prefix:  wb-                     -> Utility prefix
+     * Group 2: (normal|all|keep|word)  -> Word-break strategy keys
      */
     test: new RegExp(`^(!?)wb-(${Object.keys(breakMap).join("|")})$`),
     parse: (match) => {
