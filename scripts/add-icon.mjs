@@ -126,6 +126,27 @@ function attrsOf(str) {
   return out;
 }
 
+// Éléments sans rendu : on les ignore
+const IGNORED = new Set(["svg", "g", "style", "title", "desc", "metadata", "defs"]);
+
+function extractPaths(svg) {
+  const paths = [];
+  for (const [, tag, raw] of svg.matchAll(/<([a-zA-Z][\w:-]*)\b([^>]*)>/g)) {
+    if (IGNORED.has(tag)) continue;
+
+    const a = attrsOf(raw);
+    if ((a.stroke && a.stroke !== "none") || /stroke\s*:\s*(?!none\b)\S/.test(a.style ?? "")) {
+      throw new Error(`the "${LAYER_NAME}" layer contains strokes: convert them to outlines first (Stroke to Path)`);
+    }
+    if (a.transform) throw new Error("a transform attribute could not be applied to the paths");
+    if (tag !== "path") throw new Error(`unsupported <${tag}> element (only <path> can be merged)`);
+    if (a.fill === "none") continue;
+    if (a.d?.trim()) paths.push(a.d);
+  }
+  if (!paths.length) throw new Error(`no usable <path> in the "${LAYER_NAME}" layer`);
+  return paths;
+}
+/*
 function extractPaths(svg) {
   const paths = [];
   for (const [, tag, raw] of svg.matchAll(/<([a-zA-Z][\w:-]*)\b([^>]*)>/g)) {
@@ -142,6 +163,7 @@ function extractPaths(svg) {
   if (!paths.length) throw new Error(`no usable <path> in the "${LAYER_NAME}" layer`);
   return paths;
 }
+  */
 
 function convertToSinglePath(rawSvg) {
   const vb = parseViewBox(rawSvg);

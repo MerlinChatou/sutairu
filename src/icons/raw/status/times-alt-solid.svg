@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 1000">
+  <defs>
+    <style>
+      .cls-1{fill:#000000}
+    </style>
+  </defs>
+  <title>Artboard 1</title>
+  <g>
+    <path d="M253 677 C242 666 242 652 253 641 L394 500 L253 359 C242 348 242 334 253 323 L323 253 C334 242 348 242 359 253 L500 394 L641 253 C652 242 666 242 677 253 L747 323 C758 334 758 348 747 359 L606 500 L747 641 C758 652 758 666 747 677 L677 747 C666 758 652 758 641 747 L500 606 L359 747 C348 758 334 758 323 747 L253 677" class="cls-1"/>
+  </g>
+</svg>
