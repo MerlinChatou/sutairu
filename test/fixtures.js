@@ -564,4 +564,10 @@ export const sampleClasses = [
   // /typography/white-space.js
   "ws-normal",
   "!ws-pre",
+
+  // /typography/break-word.js
+  "break-normal",
+  "break-all",
+  "break-keep",
+  "break-word",
 ];
