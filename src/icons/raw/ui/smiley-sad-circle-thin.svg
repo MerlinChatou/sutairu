@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 1000">
+  <defs>
+    <style>
+      .cls-1{fill:#000000}
+      .cls-2{fill:#000000;opacity:0.1}
+    </style>
+  </defs>
+  <title>Artboard 1</title>
+  <g id="octagons">
+  </g>
+  <g id="hexagons">
+  </g>
+  <g id="circles">
+  </g>
+  <g id="squares">
+  </g>
+  <g id="equilaterals">
+  </g>
+  <g id="triangles">
+  </g>
+  <g id="lines">
+  </g>
+  <g id="icon">
+    <path d="M387 375 C387 409 359 437 325 437 C291 437 263 409 263 375 C263 341 291 313 325 313 C359 313 387 341 387 375 L387 375 M738 375 C738 409 709 437 675 437 C641 437 613 409 613 375 C613 341 641 313 675 313 C709 313 738 341 738 375 L738 375 M692 738 C697 742 698 747 696 752 C695 757 690 761 685 761 C682 761 679 760 677 758 C572 675 424 675 320 758 C314 762 306 761 302 756 C297 750 298 742 304 738 C361 693 430 671 498 671 C567 671 635 693 692 738 L692 738" class="cls-1"/>
+    <path id="circle-thin-2" data-name="circle-thin" d="M500 0 C224 0 0 224 0 500 C0 776 224 1000 500 1000 C776 1000 1000 776 1000 500 C1000 224 776 0 500 0 L500 0 M500 25 C762 25 975 238 975 500 C975 762 762 975 500 975 C238 975 25 762 25 500 C25 238 238 25 500 25 L500 25" class="cls-2"/>
+  </g>
+</svg>

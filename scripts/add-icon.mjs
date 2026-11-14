@@ -112,7 +112,7 @@ function normalize(svg) {
         params: {
           overrides: {
             mergePaths: false,
-            convertPathData: { floatPrecision: 5 },
+            convertPathData: { floatPrecision: 5, makeArcs: false },
           },
         },
       },
@@ -158,7 +158,14 @@ function convertToSinglePath(rawSvg) {
   // Pass 2: size optimization of the final path
   const wrapped = buildSvg(merged);
   const { data } = optimize(wrapped, {
-    plugins: [{ name: "convertPathData", params: { floatPrecision: PRECISION } }],
+    plugins: [
+      { 
+        name: "convertPathData", 
+        params: { 
+          floatPrecision: PRECISION,
+          makeArcs: false,
+        } 
+        }],
   });
   const d = data.match(/\sd="([^"]+)"/)?.[1];
   if (!d) throw new Error("path optimization failed");

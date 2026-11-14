@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 1000">
+  <defs>
+    <style>
+      .cls-1{fill:#000000;opacity:0.1}
+    </style>
+  </defs>
+  <title>Artboard 1</title>
+  <g id="octagons">
+  </g>
+  <g id="hexagons">
+  </g>
+  <g id="circles">
+  </g>
+  <g id="squares">
+  </g>
+  <g id="equilaterals">
+  </g>
+  <g id="triangles">
+  </g>
+  <g id="lines">
+  </g>
+  <g id="icon">
+    <path id="circle-solid-2" data-name="circle-solid" d="M0 500 C0 224 224 0 500 0 C776 0 1000 224 1000 500 C1000 776 776 1000 500 1000 C224 1000 0 776 0 500 Z M325 288 C277 288 238 327 238 375 C238 423 277 462 325 462 C373 462 412 423 412 375 C412 327 373 288 325 288 Z M675 288 C627 288 588 327 588 375 C588 423 627 462 675 462 C723 462 763 423 763 375 C763 327 723 288 675 288 Z M498 646 C424 646 350 670 289 719 C272 731 269 755 282 772 C295 788 319 791 335 777 C431 702 566 702 661 777 C668 783 676 786 684 786 C701 786 715 776 720 761 C726 746 721 729 708 719 C647 670 572 646 498 646 Z" class="cls-1"/>
+  </g>
+</svg>
