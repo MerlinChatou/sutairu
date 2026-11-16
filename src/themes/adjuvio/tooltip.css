@@ -1,0 +1,9 @@
+[data-theme="adjuvio"] {
+  --su-tip-bg-color: oklch(from var(--su-accent) 23% 0.03 h);
+  --su-tip-text-color: oklch(from var(--su-accent) 90% 0.01 h);
+}
+
+[data-color-scheme="dark"] {
+  --su-tip-bg-color: oklch(from var(--su-accent) 100% 0 h);
+  --su-tip-text-color: oklch(from var(--su-accent) 30% 0.01 h);
+}

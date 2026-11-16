@@ -87,6 +87,7 @@ export async function generateCSS(config, safeList) {
     ...config.themes.map((t) => `themes/${t}/modal.css`),
     ...config.themes.map((t) => `themes/${t}/card.css`),
     ...config.themes.map((t) => `themes/${t}/code.css`),
+    ...config.themes.map((t) => `themes/${t}/tooltip.css`),
     ...config.themes.map((t) => `themes/${t}/typography.css`),
   ];
   
@@ -127,6 +128,9 @@ export async function generateCSS(config, safeList) {
     if (cls.includes("loader-comet")) {
       loaderFilesToLoad.add("base/loaders/comet.css");
       loaderFilesToLoad.add("base/loaders/rotation.css");
+    }
+    if (cls.includes("tip")) {
+      loaderFilesToLoad.add("base/tooltip.css");
     }
   }
   

@@ -34,6 +34,7 @@ import * as loader_grow from "./components/loader-grow.js";
 import * as loader_skeleton from "./components/loader-skeleton.js";
 import * as masonry from "./components/masonry.js";
 import * as modal from "./components/modal.js";
+import * as tooltip from "./components/tooltip.js";
 
 // Effects
 import * as animation_duration from "./effects/animation-duration.js";
@@ -255,6 +256,7 @@ const components = [
   loader_skeleton,
   masonry,
   modal,
+  tooltip,
 ];
 
 // Flatten all static utilities rules into one object for O(1) lookup

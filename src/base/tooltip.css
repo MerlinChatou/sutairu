@@ -1,0 +1,42 @@
+@layer components {
+  @position-try --su-tip-shift-r {
+    position-area: top span-right;
+    justify-self: start;
+  }
+  @position-try --su-tip-shift-l {
+    position-area: top span-left;
+    justify-self: end;
+  }
+  @position-try --su-tip-t-r {
+    position-area: block-start span-inline-end;
+    justify-self: start;
+  }
+  @position-try --su-tip-t-l {
+    position-area: block-start span-inline-start;
+    justify-self: end;
+  }
+  @position-try --su-tip-b-r {
+    position-area: block-end span-inline-end;
+    justify-self: start;
+  }
+  @position-try --su-tip-b-l {
+    position-area: block-end span-inline-start;
+    justify-self: end;
+  }
+  @position-try --su-tip-s-d {
+    position-area: inline-start span-block-end;
+    align-self: start;
+  }
+  @position-try --su-tip-s-u {
+    position-area: inline-start span-block-start;
+    align-self: end;
+  }
+  @position-try --su-tip-e-d {
+    position-area: inline-end span-block-end;
+    align-self: start;
+  }
+  @position-try --su-tip-e-u {
+    position-area: inline-end span-block-start;
+    align-self: end;
+  }
+}

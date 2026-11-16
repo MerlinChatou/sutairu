@@ -1,0 +1,18 @@
+:root {
+  --su-tip-bg-color: oklch(from var(--su-accent) 23% 0.03 h);;
+  --su-tip-text-color: oklch(from var(--su-accent) 77% 0.01 h);
+  --su-tip-border-radius: 0.5rem;  
+  --su-tip-padding: 0.5rem 0.75rem;
+  --su-tip-margin: 0.25rem;
+  --su-tip-body-maring: 0.5rem;  
+  --su-tip-border-color: transparent;
+  --su-tip-border-width: 0;
+  --su-tip-border-style: solid;
+  --su-tip-shadow: none;  
+  --su-tip-opacity: 1;
+}
+
+[data-color-scheme="dark"] {
+  --su-tip-bg-color: oklch(from var(--su-accent) 100% 0 h);
+  --su-tip-text-color: oklch(from var(--su-accent) 48% 0.01 h);
+}
