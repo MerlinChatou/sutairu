@@ -25,7 +25,8 @@
     ".": "./index.js",
     "./utils": "./lib/utils/index.js",
     "./icons-meta": "./src/rules/icons/meta/icons-meta.json",
-    "./icons-data": "./src/rules/icons/icons.js"
+    "./icons-data": "./src/rules/icons/icons.js",
+    "./compiler": "./src/compiler.js"
   },
   "bin": {
     "sutairu": "./bin/cli.js",
