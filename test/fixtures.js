@@ -387,6 +387,14 @@ export const sampleClasses = [
   "stack",
   "!stack",
 
+  // /layout/visibility.js
+  "visible",
+  "invisible",
+  "collapse",
+  "v-collapse",
+  "v-visible",
+  "v-hidden",
+
   // /layout/z-index.js
   "z-base",
   "z-sticky",

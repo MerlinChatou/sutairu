@@ -62,7 +62,6 @@ Force Sutairu to include specific classes in the final CSS output even if they a
 
 ```bash
 npx sutairu -s "bg-red-500,flex,hidden,opacity-50"
-
 ```
 
 #### Multiple Themes
@@ -71,7 +70,6 @@ Generate a CSS bundle that includes both the `default` and `dark` themes:
 
 ```bash
 npx sutairu -t "default,dark"
-
 ```
 
 #### Verbose Logging
@@ -80,7 +78,6 @@ Display real-time updates on indexed files, detected classes, and exact CSS gene
 
 ```bash
 npx sutairu -v
-
 ```
 
 ## Playground Launcher

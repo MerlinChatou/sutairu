@@ -88,6 +88,7 @@ import * as position from "./layout/position.js";
 import * as size from "./layout/size.js";
 import * as size_unit from "./layout/size-unit.js";
 import * as stack from "./layout/stack.js";
+import * as visiblity from "./layout/visibility.js";
 import * as z_index from "./layout/z-index.js";
 
 // Spacing
@@ -202,6 +203,7 @@ const utilities = [
   size,
   size_unit,
   stack,
+  visiblity,
   z_index,
 
   // Spacing
