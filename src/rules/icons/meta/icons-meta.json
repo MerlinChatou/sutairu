@@ -1016,6 +1016,8 @@
     {"name":"not-equal-solid","category":"education","style":"solid","tags":["inequality","different","unequal","math"],"related":["operator","compare","comparison"]},
     {"name":"not-equal-thin","category":"education","style":"thin","tags":["inequality","different","unequal","math"],"related":["operator","compare","comparison"]},
     {"name":"not-equal-wide","category":"education","style":"wide","tags":["inequality","different","unequal","math"],"related":["operator","compare","comparison"]},
+    {"name":"npm","category":"brands","style":"regular","tags": ["npm","logo","node","package","manager"],"related":["javascript","code","programming","developer","web"]},
+    {"name":"npm-text","category":"brands","style":"regular","tags": ["npm","logo","node","package","manager"],"related":["javascript","code","programming","developer","web"]},
     {"name":"octagon","category":"base","style":"regular","tags":["shape","polygon","stop","sign"],"related":["alert","warning","error"]},
     {"name":"octagon-line","category":"base","style":"regular","tags":["shape","polygon","stop","blocked","sign"],"related":["alert","prohibited","slash","warning"]},
     {"name":"octagon-line-thin","category":"base","style":"thin","tags":["shape","polygon","stop","blocked","sign"],"related":["alert","prohibited","slash","warning"]},
