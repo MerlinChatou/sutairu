@@ -1,4 +1,6 @@
+[data-theme="sutairu"],
 :root {
+
   /* Base */
   --su-input-bg: color-mix(var(--su-container), #fff 5%);
   --su-input-text: var(--su-body);
@@ -36,6 +38,7 @@
   --su-input-ol-invalid-focus-visible: oklch(from var(--su-input-border-invalid) l c h / 30%);
 }
 
+[data-theme="amelie"][data-color-scheme="dark"],
 [data-color-scheme="dark"] {
   /* Focus-visible */
   --su-input-ol-focus-visible: oklch(from var(--su-accent) l c h / 50%);

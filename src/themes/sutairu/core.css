@@ -1,7 +1,9 @@
 /* Import Inter & Indie Flower for default theme */
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
+[data-theme="sutairu"],
 :root {
+
   /* Base Palette Colors */
   --su-yellow: oklch(86% 0.17 92);
   --su-orange: oklch(70% 0.19 48);
@@ -81,7 +83,7 @@
 
 }
 
-
+[data-theme="amelie"][data-color-scheme="dark"],
 [data-color-scheme="dark"] {
   --su-border: oklch(from var(--su-accent) 33% 0.03 h);
 

@@ -1,4 +1,6 @@
+[data-theme="sutairu"],
 :root {
+
   --su-code-bg: oklch(from var(--su-accent) 94% 0.01 h);
   --su-code-radius: 0.25rem;
 
@@ -36,6 +38,7 @@
 }
 
 /* Dark */
+[data-theme="amelie"][data-color-scheme="dark"],
 [data-color-scheme="dark"] {
   --su-code-bg: oklch(from var(--su-accent) 35% 0.02 h);
   --su-code-block-bg: oklch(from var(--su-accent) 35% 0.02 h);

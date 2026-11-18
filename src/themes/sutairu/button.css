@@ -1,3 +1,4 @@
+[data-theme="sutairu"],
 :root {
   --su-btn-x-padding: 0.5em;
   --su-btn-y-padding: 1em;
@@ -285,6 +286,7 @@
   --su-btn-dark-outline-disabled: 0;
 }
 
+[data-theme="amelie"][data-color-scheme="dark"],
 [data-color-scheme="dark"] {
   --su-btn-secondary-bg: var(--su-subtle);
   --su-btn-secondary-text: var(--su-white);

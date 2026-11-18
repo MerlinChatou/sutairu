@@ -1,4 +1,6 @@
+[data-theme="sutairu"],
 :root {
+
   --su-kbd-bg: oklch(from var(--su-accent) 90% 0.1 h);
   --su-kbd-border: var(--su-border);
   --su-kbd-shadow-offset-x: 2px;

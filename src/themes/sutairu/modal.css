@@ -1,4 +1,6 @@
+[data-theme="sutairu"],
 :root {
+
   --su-modal-opening-duration: 300ms;
   --su-modal-closing-duration: 200ms;
   --su-modal-animation: su-modal-animation-default;
@@ -12,6 +14,7 @@
   --su-modal-backdrop-color: #0000008f;
 }
 
+[data-theme="amelie"][data-color-scheme="dark"],
 [data-color-scheme="dark"] {
   --su-modal-backdrop-color: #000000af;
 }
