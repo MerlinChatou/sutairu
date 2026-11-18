@@ -27,6 +27,8 @@ const cursorMap = {
   "all-scroll": "all-scroll",
   "col-resize": "col-resize",
   "row-resize": "row-resize",
+  "zoom-in": "zoom-in",
+  "zoom-out": "zoom-out",
 };
 
 /**

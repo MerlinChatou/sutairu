@@ -12,7 +12,7 @@ export const rules = {
         selector: "card",
         declarations: [{
           "border-radius": "var(--su-card-border-radius)",
-          "border-width": "1px",
+          "border-width": "var(--su-card-border-color-width)",
           "border-color": "var(--su-card-border-color)",
           "border-style": "solid",
           "box-shadow": "var(--su-card-shadow)",

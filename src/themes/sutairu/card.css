@@ -9,6 +9,7 @@
   --su-card-footer-bg-color: var(--su-container);
   --su-card-footer-padding: 1rem;
   --su-card-border-color: var(--su-border);
+  --su-card-border-color-width: 1px;
   --su-card-header-border-bottom-color: var(--su-border);
   --su-card-header-border-bottom-style: solid;
   --su-card-body-border-bottom-color: var(--su-border);
