@@ -25,6 +25,9 @@
     background-color: var(--su-page);
     color: var(--su-body);
   }
+  ::selection{
+    background-color: var(--su-selection-bg-color, revert);
+  }
   img,
   picture,
   video,

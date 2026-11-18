@@ -33,6 +33,9 @@
   --su-sb-track-color: var(--su-container);
   --su-sb-thumb-color: oklch(from var(--su-accent) l 0.1 h);
 
+  /* Selection */
+  --su-selection-bg-color: color-mix(in oklch, var(--su-purple), white 35%);
+
   /* Typography */
   --su-ff-base: "Agrave Pro", cursive;
   --su-fs-adjust-base: 0.55;
@@ -98,4 +101,8 @@
   --su-link-color-hover: color-mix(var(--su-blue), #fff 20%);
   --su-link-color-active: color-mix(var(--su-blue), #fff 30%);
   --su-link-color-disabled: color-mix(var(--su-blue), #000 35%);
+
+  /* Selection */
+  --su-selection-bg-color: color-mix(in oklch, var(--su-purple), black 35%);
+  
 }
