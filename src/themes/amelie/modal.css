@@ -7,7 +7,7 @@
   --su-modal-header-bg-color: oklch(from var(--su-purple) 98% 0.2 h);
   --su-modal-body-bg-color: var(--su-container);
   --su-modal-footer-bg-color: var(--su-container);
-  --su-modal-border-color: var(--su-border);
+  --su-modal-border-color: oklch(from var(--su-pink) 95% c h );
   --su-modal-border-radius: 0.75rem;
   --su-modal-backdrop-color: #0000008f;
 }
@@ -15,6 +15,7 @@
 [data-theme="amelie"][data-color-scheme="dark"]  {
   --su-modal-backdrop-color: #000000af;
   --su-modal-header-bg-color: oklch(from var(--su-purple) 30% 0.07 h);
+  --su-modal-border-color: oklch(from var(--su-purple) 35% 0.07 h);
 }
 
 
