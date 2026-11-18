@@ -1,91 +1,99 @@
-# sutairu
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-On demand awesome CSS framework
+# Sutairu
+
+Lightweight, high-performance utility CSS framework designed to scan your project files and generate optimized, atomic styles in real-time.
+
+## Installation
+
+Install Sutairu as a development dependency:
+
+```bash
+npm install -D @merlin-chatou/sutairu
+```
 
 ## Usage Guide
 
-The best way to use **Sutairu** is to generate your CSS directly from the Command Line Interface (CLI).
-
-### Basic Command
+Generate your CSS directly from the Command Line Interface (CLI):
 
 ```bash
-sutairu [options]
+npx sutairu [options]
 ```
 
-### 🛠 Available Options
+### Available Options
 
-| Option       | Alias | Description                                      | Default                                           |
-| :----------- | :---- | :----------------------------------------------- | :------------------------------------------------ |
-| `--watch`    | `-w`  | Folders or glob patterns to monitor for changes  | `./src`                                           |
-| `--output`   | `-o`  | The destination path for the generated CSS file  | `./dist/sutairu.css` and `./dist/sutairu.min.css` |
-| `--ext`      | `-e`  | Comma-separated list of file extensions to scan  | `html,js,jsx,ts...`                               |
-| `--themes`   | `-t`  | Themes to include in the build (comma-separated) | `default`                                         |
-| `--safelist` | `-s`  | Classes to always include (comma-separated)      | `''`                                              |
-| `--verbose`  | `-v`  | Show detailed logs and performance metrics       | `false`                                           |
-| `--label`    | `-l`  | Custom prefix for the console logger             | `SUTAIRU`                                         |
+| Option | Alias | Description | Default |
+| --- | --- | --- | --- |
+| `--watch` | `-w` | Folders or glob patterns to monitor for changes | `./src` |
+| `--output` | `-o` | Destination path for the generated CSS file | `./dist/sutairu.css` & `./dist/sutairu.min.css` |
+| `--ext` | `-e` | Comma-separated list of file extensions to scan | `html,js,jsx,ts,tsx...` |
+| `--themes` | `-t` | Comma-separated list of themes to include in the build | `default` |
+| `--safelist` | `-s` | Comma-separated list of classes to always include | `''` |
+| `--verbose` | `-v` | Show detailed logs and build performance metrics | `false` |
+| `--label` | `-l` | Custom prefix for the console logger | `SUTAIRU` |
 
 ### Examples
 
-Here is a typical usage example:
+Combine multiple options for a complete build setup:
 
 ```bash
-sutairu -w "./src/,./playground/" -e "html" -o "./dist/main.css" -s "bg-red-500,d-flex" -v
+npx sutairu -w "./src/,./playground/" -e "html" -o "./dist/main.css" -s "bg-red-500,d-flex" -v
 ```
-
 
 #### Standard Development Mode
 
 Watch your `src` folder and output to a local `assets` directory with verbose logging enabled:
 
 ```bash
-sutairu -w "./src" -o "./assets/main.css" -v
+npx sutairu -w "./src" -o "./assets/main.css" -v
 ```
 
 #### Specific File Extensions
 
-If you only want to scan HTML and PHP files while adding specific classes to the safelist:
+Scan only HTML and PHP files:
 
 ```bash
-sutairu -e "html,php"
+npx sutairu -e "html,php"
 ```
 
-#### Safe list
+#### Safelist
 
-The Safelist is used to force Sutairu to include specific classes in the final CSS output, even if they aren't found during the file scan. This is essential for classes generated dynamically in JavaScript (e.g., class="bg-${color}-500").
+Force Sutairu to include specific classes in the final CSS output even if they aren't statically detected during file scanning—useful for dynamically constructed classes (e.g., ``bg-${color}-500``):
 
 ```bash
-sutairu -s "bg-red-500,flex,hidden,opacity-50"
+npx sutairu -s "bg-red-500,flex,hidden,opacity-50"
+
 ```
 
 #### Multiple Themes
 
-Generate a CSS file that includes both the `default` and `dark` theme configurations:
+Generate a CSS bundle that includes both the `default` and `dark` themes:
 
 ```bash
-sutairu -t "default,dark"
+npx sutairu -t "default,dark"
+
 ```
 
+#### Verbose Logging
 
-#### Verbose
+Display real-time updates on indexed files, detected classes, and exact CSS generation time (in milliseconds):
 
-Enable verbose logging to see real-time updates on which files are being indexed, the number of classes found, and the exact time (in milliseconds) it takes to generate your CSS.
+```bash
+npx sutairu -v
 
-```baseh
-sutairu -v
 ```
-
 
 ## Playground Launcher
 
 Launch the interactive local playground to experiment with Sutairu classes and preview components in real time:
 
 ```bash
-sutairu-play
+npx sutairu-play
 ```
 
+## Contributing & Icons
+
+To add new icons to the library, follow [these instructions](https://www.google.com/search?q=/src/icons/README.md).
 
 
 
-## Add Icons
-
-To add new icons, follow [these instuctions](/src/icons/README.md).
