@@ -10,10 +10,7 @@ import path from 'node:path';
 export async function writeThemesJson(config) {
   if (!config.themesJson) return;
 
-  const payload = {
-    generatedAt: new Date().toISOString(),
-    themes: config.themes,
-  };
+  const payload =config.themes;
 
   try {
     await fs.mkdir(path.dirname(config.themesJson), { recursive: true });
