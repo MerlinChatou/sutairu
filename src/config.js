@@ -1,3 +1,4 @@
+// ./src/config.js
 import { Command } from 'commander';
 import { loadUserConfig } from './loader.js';
 
@@ -19,6 +20,7 @@ export async function getResolvedConfig() {
   program
     .option('-w, --watch <dirs>', 'folders to monitor', userConfig.watch || './src')
     .option('-o, --output <file>', 'output CSS path', userConfig.output || './dist/sutairu.css')
+    .option('-j, --themes-json <file>', 'destination path for the generated themes JSON file', userConfig.themesJson || '')    
     .option('-e, --ext <exts>', 'extensions', userConfig.ext || 'html,js,jsx,ts,tsx,vue,svelte,astro,php,md,mdx')
     .option('-t, --themes <names>', 'themes to include (comma separated)', userConfig.themes || 'sutairu')    
     .option('-s, --safelist <classes>', 'manually include classes (comma separated)', '') 
@@ -32,6 +34,7 @@ export async function getResolvedConfig() {
 
   // Populate the exported object instead of creating a new one
   config.output = options.output;
+  config.themesJson = options.themesJson;
   config.watchDirs = options.watch.split(',').map(d => d.trim());
   config.extensions = options.ext.split(',').map(e => e.trim());
   config.themes = options.themes.split(',').map(t => t.trim());

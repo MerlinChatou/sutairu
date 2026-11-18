@@ -1,3 +1,4 @@
+// ./src/loader.js
 import path from 'path';
 import { pathToFileURL } from 'url';
 import fs from 'fs';

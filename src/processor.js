@@ -1,3 +1,4 @@
+// ./src/processor.js
 import { logger } from "./utils/logger.js";
 import { getStaticStyles } from "./utils/css-loader.js";
 import { hoistImports } from "./utils/css-hoist.js";

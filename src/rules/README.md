@@ -1,86 +1,21 @@
-# Rules List
+# Style Rules
 
-## Background 
+Modular CSS-in-JS utility and component definitions, aggregated and exported via `index.js`.
 
-### Background Color
+## Folders
 
+* **`background/`** – Surface colors and procedural background patterns (dots, hatching, stripes) with angle, period, and width controls.
+* **`border/`** – Border colors, styles, widths, corner radii, and unit-specific variants.
+* **`components/`** – Multi-part UI patterns (buttons, inputs, cards, modals, tooltips, badges, masonry, syntax highlighting, and loaders).
+* **`effects/`** – CSS filters (blur, brightness, contrast, etc.), opacity, transitions, and animation durations.
+* **`icons/`** – Icon assets, metadata, and rendering rules.
+* **`interactivity/`** – Cursor styles, pointer events, resize behavior, and focus outlines.
+* **`layout/`** – Display, visibility, positioning, sizing, z-index, overflow, Flexbox, Grid, and alignment primitives.
+* **`spacing/`** – Margin, padding, and gap scales alongside explicit unit helpers.
+* **`transform/`** – 2D/3D rotation, scaling, and translation utilities.
+* **`typography/`** – Font families, static/fluid sizing, weights, headings, line height, spacing, color, and text wrapping/alignment.
 
-``` text
-[variant:]*[!]?bg-(color)-(shade)/(transparency)
-```
+## Root Files
 
-## Effects
-
-### Border radius
-
-```text
-[variant:]*[!]?(r|rt|rb|rl|rr|rtl|rtr|rbl|rbr)-(none|pill|circle|number|unit|fraction)
-```
-
-## Interactivity
-
-### Cursor
-
-```text
-[variant:]*[!]?cur-(type)
-```
-
-
-## Layout 
-
-### Aspect ratio
-
-```text
-[variant:]*[!]?ar-(square|video|cinema|auto)
-[variant:]*[!]?ar-(numeric|fraction)
-```
-
-### Sizing
-
-```text
-[variant:]*[!]?(w|h|min-w|min-h|max-w|max-h)-(value|fraction|[arbitrary])
-```
-
-### Display
-
-```text
-[variant:]*[!]?d-(block|inline-block|inline|flex|inline-flex|grid|inline-grid|contents|list-item|none|hidden|table|flow-root)
-```
-
-## Spacing
-
-### Margins
-
-
-```text
-[variant:]*[!]?[-?](m|mt|mb|ml|mr|mx|my|ms|me)-(number)(px|rem|em|vw|vh|vmin|vmax|vi|vb|ch|ex|cqw|cqh|cqi|cqb|cqmin|cqmax|%)
-```
-
-### Padding
-
-```text
-[variant:]*[!]?(p|pt|pb|pl|pr|px|py|ps|pe)-(number)(px|rem|em|vw|vh|vmin|vmax|vi|vb|ch|ex|cqw|cqh|cqi|cqb|cqmin|cqmax|%)
-```
-
-
-## Typography
-
-### Font Weight
-
-```text
-[variant:]*[!]?fw-(thin|extralight|light|normal|medium|semibold|bold|extrabold|black|[1-9]00)
-```
-
-### Font Size
-
-```text
-[variant:]*[!]?fs-(xs|sm|base|lg|xl|2xl|3xl|4xl|5xl)
-[variant:]*[!]?fs-(\d*\.?\d+)
-[variant:]*[!]?fs-(\d*\.?\d+)(px|rem|em|vw|vh|vmin|vmax|vi|vb|ch|ex|cqw|cqh|cqi|cqb|cqmin|cqmax|%)
-```
-
-### Headings
-
-```text
-[variant:]*[!]?h(1|2|3|4|5|6)
-```
+* **`index.js`** – Aggregates and exports all rule modules.
+* **`utils.js`** – Shared helpers for building and formatting rule objects.

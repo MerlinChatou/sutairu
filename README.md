@@ -1,8 +1,8 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
 # Sutairu
 
-Lightweight, high-performance utility CSS framework designed to scan your project files and generate optimized, atomic styles in real-time.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+A lightweight, high-performance utility CSS framework designed to scan your project files and generate optimized, atomic styles in real time. It also includes hundreds of embedded icons that are compiled on demand directly into your CSS.
 
 ## Installation
 
@@ -12,20 +12,51 @@ Install Sutairu as a development dependency:
 npm install -D @merlin-chatou/sutairu
 ```
 
-## Usage Guide
+Once installed, Sutairu exposes two binaries via your project's scripts or `npx`:
 
-Generate your CSS directly from the Command Line Interface (CLI):
+* `sutairu` — The core CSS compiler CLI.
+* `sutairu-play` — The interactive local playground launcher.
+
+
+## Configuration File
+
+Sutairu automatically looks for a `sutairu.config.js` file in your root directory. You can define your default build options right in your project:
+
+```javascript
+// sutairu.config.js
+
+export default {
+  watch: "./src, ./static",
+  themes: "sutairu,swiss",
+  output: "./generated/sutairu.css",
+  themesJson: "./generated/sutairu-themes.json", 
+  ext: "html,svelte",
+  verbose: false,
+  label: 'SUTAIRU',
+  safelist: ['bg-red-500', 'flex', 'hidden'],
+};
+```
+
+The `sutairu.config.js` file is loaded once when the compiler starts up. If you modify your configuration options while running in watch mode, you will need to restart Sutairu for the changes to take effect.
+
+## CLI Usage & Options
+
+You can invoke the CLI directly using `npx`:
 
 ```bash
 npx sutairu [options]
 ```
 
+Any options passed via the command line will automatically override your `sutairu.config.js` settings.
+
 ### Available Options
+
 
 | Option | Alias | Description | Default |
 | --- | --- | --- | --- |
 | `--watch` | `-w` | Folders or glob patterns to monitor for changes | `./src` |
 | `--output` | `-o` | Destination path for the generated CSS file | `./dist/sutairu.css` & `./dist/sutairu.min.css` |
+| `--theme-json` | `-j` | Destination path for the generated themes JSON file | `''` |
 | `--ext` | `-e` | Comma-separated list of file extensions to scan | `html,js,jsx,ts,tsx...` |
 | `--themes` | `-t` | Comma-separated list of themes to include in the build | `default` |
 | `--safelist` | `-s` | Comma-separated list of classes to always include | `''` |
@@ -34,31 +65,25 @@ npx sutairu [options]
 
 ### Examples
 
-Combine multiple options for a complete build setup:
+#### Using the Configuration File
+
+If you have a `sutairu.config.js` set up, simply run:
 
 ```bash
-npx sutairu -w "./src/,./playground/" -e "html" -o "./dist/main.css" -s "bg-red-500,d-flex" -v
+npx sutairu
 ```
 
-#### Standard Development Mode
+#### Override with CLI Flags
 
-Watch your `src` folder and output to a local `assets` directory with verbose logging enabled:
+Watch specific directories and output to a custom path on the fly:
 
 ```bash
 npx sutairu -w "./src" -o "./assets/main.css" -v
 ```
 
-#### Specific File Extensions
+#### Safelist Dynamic Classes
 
-Scan only HTML and PHP files:
-
-```bash
-npx sutairu -e "html,php"
-```
-
-#### Safelist
-
-Force Sutairu to include specific classes in the final CSS output even if they aren't statically detected during file scanning—useful for dynamically constructed classes (e.g., ``bg-${color}-500``):
+Force Sutairu to include specific classes in the final CSS output even if they aren't statically detected during file scanning—ideal for dynamically constructed classes (e.g., `bg-${color}-500`):
 
 ```bash
 npx sutairu -s "bg-red-500,flex,hidden,opacity-50"
@@ -66,19 +91,12 @@ npx sutairu -s "bg-red-500,flex,hidden,opacity-50"
 
 #### Multiple Themes
 
-Generate a CSS bundle that includes both the `default` and `dark` themes:
+Generate a CSS bundle combining specific themes:
 
 ```bash
-npx sutairu -t "default,dark"
+npx sutairu -t "sutairu,swiss,adjuvio"
 ```
 
-#### Verbose Logging
-
-Display real-time updates on indexed files, detected classes, and exact CSS generation time (in milliseconds):
-
-```bash
-npx sutairu -v
-```
 
 ## Playground Launcher
 
