@@ -6,7 +6,7 @@
   --su-code-block-radius: 0.5rem;
 
   --hljs-text: var(--su-body);
-  --hljs-bg: var(--su-subtle);
+  --hljs-bg: oklch(from var(--su-accent) 92% 0.01 h);
   --hljs-selection: color-mix(in oklch, var(--su-blue), white 30%);
   --hljs-comment: color-mix(in oklch, var(--su-green), black 30%);
   --hljs-variable: color-mix(in oklch, var(--su-yellow), black 25%);
@@ -39,7 +39,8 @@
 [data-color-scheme="dark"] {
   --su-code-bg: oklch(from var(--su-accent) 35% 0.02 h);
   --su-code-block-bg: oklch(from var(--su-accent) 35% 0.02 h);
-
+  
+  --hljs-bg: oklch(from var(--su-accent) 30% 0.02 h);
   --hljs-selection: color-mix(in oklch, var(--su-blue), black 35%);
   --hljs-comment: color-mix(in oklch, var(--su-green), white 10%);
   --hljs-variable: color-mix(in oklch, var(--su-yellow), white 10%);
