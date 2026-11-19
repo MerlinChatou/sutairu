@@ -9,6 +9,15 @@
     "components",
     "utilities"
   ],
+  "files": [
+    "bin",
+    "lib",
+    "themes",
+    "scripts",
+    "src",
+    "playground",
+    "index.js"
+  ],
   "homepage": "https://github.com/MerlinChatou/sutairu#readme",
   "bugs": {
     "url": "https://github.com/MerlinChatou/sutairu/issues"
