@@ -108,7 +108,7 @@ npx sutairu-play
 
 ## Contributing & Icons
 
-To add new icons to the library, follow [these instructions](https://www.google.com/search?q=/src/icons/README.md).
+To add new icons to the library, follow [these instructions](https://github.com/MerlinChatou/sutairu/blob/main/src/icons/README.md).
 
 
 
