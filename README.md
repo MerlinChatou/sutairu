@@ -98,13 +98,18 @@ npx sutairu -t "sutairu,swiss,adjuvio"
 ```
 
 
-## Playground Launcher
+## Playgrounds
 
-Launch the interactive local playground to experiment with Sutairu classes and preview components in real time:
+Experiment with Sutairu classes and preview components directly in your browser using the **[Interactive StackBlitz Playground](https://stackblitz.com/edit/sutairu?file=index.html)**.
+
+Prefer working locally? Launch the interactive playground straight from your terminal (note that it only displays the generated utility classes matching your input, omitting reset, base, and theme styles):
 
 ```bash
 npx sutairu-play
+
 ```
+
+
 
 ## Contributing & Icons
 
