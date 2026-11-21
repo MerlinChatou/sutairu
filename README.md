@@ -2,11 +2,11 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A lightweight, high-performance utility CSS framework designed to scan your project files and generate optimized, atomic styles in real time. It also includes hundreds of embedded icons that are compiled on demand directly into your CSS.
+[Sutairu](https://sutairu.dev) is a lightweight, high-performance utility CSS framework designed to scan your project files and generate optimized, atomic styles in real time. It also includes hundreds of embedded icons that are compiled on demand directly into your CSS.
 
 ## Installation
 
-Install Sutairu as a development dependency:
+Install [Sutairu](https://sutairu.dev) as a development dependency:
 
 ```bash
 npm install -D @merlin-chatou/sutairu
@@ -20,7 +20,7 @@ Once installed, Sutairu exposes two binaries via your project's scripts or `npx`
 
 ## Configuration File
 
-Sutairu automatically looks for a `sutairu.config.js` file in your root directory. You can define your default build options right in your project:
+[Sutairu](https://sutairu.dev) automatically looks for a `sutairu.config.js` file in your root directory. You can define your default build options right in your project:
 
 ```javascript
 // sutairu.config.js
@@ -83,7 +83,7 @@ npx sutairu -w "./src" -o "./assets/main.css" -v
 
 #### Safelist Dynamic Classes
 
-Force Sutairu to include specific classes in the final CSS output even if they aren't statically detected during file scanning—ideal for dynamically constructed classes (e.g., `bg-${color}-500`):
+Force [Sutairu](https://sutairu.dev) to include specific classes in the final CSS output even if they aren't statically detected during file scanning—ideal for dynamically constructed classes (e.g., `bg-${color}-500`):
 
 ```bash
 npx sutairu -s "bg-red-500,flex,hidden,opacity-50"

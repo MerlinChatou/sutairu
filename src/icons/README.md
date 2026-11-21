@@ -49,7 +49,7 @@ If the icon already exists, its path is replaced and its existing `tags` and `re
 
 ### 4. Fill in the metadata
 
-The metadata is required by the [Sutairu website search engine](https://sutairu.com/icons).
+The metadata is required by the [Sutairu website search engine](https://sutairu.dev/icons).
 
 1. Open [/src/rules/icons/meta/icons-meta.json](/src/rules/icons/meta/icons-meta.json).
 2. Find the new icon in the list.
