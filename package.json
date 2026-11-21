@@ -1,6 +1,6 @@
 {
   "name": "@merlin-chatou/sutairu",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CSS framework that creates a minifyed css file on demand with utilities and components",
   "keywords": [
     "CSS",
