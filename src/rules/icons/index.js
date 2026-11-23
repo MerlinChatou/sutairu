@@ -52,6 +52,30 @@ export const rules = {
       },
     ],
   },
+  "icon-fill": {
+    rules: [
+      {
+        // The element becomes a size container: cq units in ::before resolve against its content box
+        selector: "icon-fill",
+        declarations: [{ "container-type": "size" }],
+      },
+      {
+        // Scale the glyph so its largest side equals the content box, then center it
+        selector: "icon-fill",
+        suffix: "::before",
+        declarations: [
+          { "--icon-m": "max(var(--icon-w), var(--icon-h))" },
+          { flex: "none" },
+          { "mask-size": "calc(24 / var(--icon-m) * 100cqmin) calc(24 / var(--icon-m) * 100cqmin)" },
+          {
+            "mask-position":
+              "calc(((var(--icon-m) - var(--icon-w)) / 2 - var(--icon-x)) / var(--icon-m) * 100cqmin) " +
+              "calc(((var(--icon-m) - var(--icon-h)) / 2 - var(--icon-y)) / var(--icon-m) * 100cqmin)",
+          },
+        ],
+      },
+    ],
+  },
 };
 
 export const patterns = [
