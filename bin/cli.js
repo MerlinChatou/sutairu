@@ -20,7 +20,7 @@ const safeList = processSafelist(config);
 // Initialize Logger
 logger.init(config.verbose, config.label);
 logger.verbose(`Sutairu is running in: ${process.cwd()}`);
-logger.info(`Sutairu v1.0.0 CSS active!\n`);
+logger.info(`Sutairu v1.0.1 CSS active!\n`);
 
 // Write themes in json if requested
 await writeThemesJson(config);

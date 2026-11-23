@@ -44,7 +44,10 @@
   "scripts": {
     "test": "node --test",
     "test:update": "node --test --test-update-snapshots ./test/*.test.js",
-    "add:icon": "node ./scripts/add-icon.mjs"
+    "add:icon": "node ./scripts/add-icon.mjs",
+    "add:icons": "node ./scripts/add-all-icons.mjs",
+    "move:icon": "node ./scripts/move-icon.mjs",
+    "remove:icon": "node ./scripts/remove-icon.mjs"
   },
   "dependencies": {
     "byte-size": "^9.0.2",
@@ -54,10 +57,11 @@
     "lightningcss": "^1.33.0"
   },
   "volta": {
-    "node": "26.13.0",
+    "node": "24.22.3",
     "npm": "11.20.0"
   },
   "devDependencies": {
+    "svg-path-bbox": "^2.1.0",
     "svgo": "^4.1.0",
     "svgpath": "^2.6.0"
   }

@@ -680,7 +680,6 @@
     {"name":"gamepad-wide","category":"games","style":"wide","tags":["controller","joystick","console","play","video game"],"related":["gaming","game","entertainment","arcade"]},
     {"name":"gavel","category":"legal","style":"regular","tags":["judge","auction","hammer","verdict"],"related":["law","court","justice","legal","bid"]},
     {"name":"gavel-solid","category":"legal","style":"solid","tags":["judge","auction","hammer","verdict"],"related":["law","court","justice","legal","bid"]},
-    {"name":"gavel-solid-alt","category":"legal","style":"regular","tags":["judge","auction","hammer","verdict"],"related":["law","court","justice","legal","bid"]},
     {"name":"gavel-thin","category":"legal","style":"thin","tags":["judge","auction","hammer","verdict"],"related":["law","court","justice","legal","bid"]},
     {"name":"gavel-wide","category":"legal","style":"wide","tags":["judge","auction","hammer","verdict"],"related":["law","court","justice","legal","bid"]},
     {"name":"gear","category":"ui","style":"regular","tags":["cog","settings","cogwheel","options"],"related":["preferences","configure","tools","mechanical","config"]},
