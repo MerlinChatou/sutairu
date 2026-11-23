@@ -108,24 +108,25 @@ test("all raw icons are generated in svg, data, and icons-meta.json", async () =
       `[${id}] Invalid bounding box "${boxKey}" value "${categoryData[boxKey]}" in src/rules/icons/data/${category}.js`,
     );
 
-    // 3. Entry in icons-meta.json has right category, >= 1 tag, and >= 1 related
+// 3. Entry in icons-meta.json has right category, >= 1 tag, and >= 1 related
+    const metaRelPath = "src/rules/icons/meta/icons-meta.json";
     const metaEntry = metaByName.get(name);
     assert.ok(
       metaEntry,
-      `[${id}] Missing "${name}" in src/rules/icons/meta/icons-meta.json`,
+      `[${id}] Missing "${name}" in ${metaRelPath}`,
     );
     assert.equal(
       metaEntry.category,
       category,
-      `[${id}] Expected category "${category}" in icons-meta.json, got "${metaEntry.category}"`,
+      `[${id}] Expected category "${category}" in ${metaRelPath}, got "${metaEntry.category}"`,
     );
     assert.ok(
       Array.isArray(metaEntry.tags) && metaEntry.tags.length >= 1,
-      `[${id}] Expected at least one tag in icons-meta.json`,
+      `[${id}] Expected at least one tag in ${metaRelPath}`,
     );
     assert.ok(
       Array.isArray(metaEntry.related) && metaEntry.related.length >= 1,
-      `[${id}] Expected at least one related icon in icons-meta.json`,
+      `[${id}] Expected at least one related icon in ${metaRelPath}`,
     );
   }
 });
