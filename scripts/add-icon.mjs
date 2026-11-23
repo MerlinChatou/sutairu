@@ -3,6 +3,7 @@ import { promises as fs } from "node:fs";
 import path from "node:path";
 import { optimize } from "svgo";
 import svgpath from "svgpath";
+import { svgPathBbox } from "svg-path-bbox";
 
 const ROOT = process.cwd();
 const RAW_DIR = path.join(ROOT, "src/icons/raw");
@@ -15,7 +16,11 @@ const LAYER_NAME = "icon";
 const KEBAB = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 
 const rel = (p) => path.relative(ROOT, p).split(path.sep).join("/");
-const exists = (p) => fs.access(p).then(() => true, () => false);
+const exists = (p) =>
+  fs.access(p).then(
+    () => true,
+    () => false,
+  );
 const toCamel = (s) => s.replace(/-([a-z0-9])/g, (_, c) => c.toUpperCase());
 const styleOf = (name) => name.match(/-(solid|thin|wide)$/)?.[1] ?? "regular";
 
@@ -48,7 +53,10 @@ function parseTarget(file) {
 function parseViewBox(svg) {
   const vb = svg.match(/<svg\b[^>]*\sviewBox\s*=\s*["']([^"']+)["']/i);
   if (vb) {
-    const [x, y, w, h] = vb[1].trim().split(/[\s,]+/).map(Number);
+    const [x, y, w, h] = vb[1]
+      .trim()
+      .split(/[\s,]+/)
+      .map(Number);
     if ([x, y, w, h].every(Number.isFinite) && w > 0 && h > 0) return { x, y, w, h };
   }
   const w = svg.match(/<svg\b[^>]*\swidth\s*=\s*["']([\d.]+)/i)?.[1];
@@ -67,10 +75,7 @@ const keepIconLayer = {
         const svg = root.children.find((n) => n.type === "element" && n.name === "svg");
         if (!svg) throw new Error("no <svg> root element");
 
-        const isLayer = (n) =>
-          n.type === "element" &&
-          n.name === "g" &&
-          (n.attributes.id === LAYER_NAME || n.attributes["inkscape:label"] === LAYER_NAME);
+        const isLayer = (n) => n.type === "element" && n.name === "g" && (n.attributes.id === LAYER_NAME || n.attributes["inkscape:label"] === LAYER_NAME);
 
         const find = (node, ancestors) => {
           for (const child of node.children ?? []) {
@@ -173,33 +178,36 @@ function convertToSinglePath(rawSvg) {
   const s = Math.min(SIZE / vb.w, SIZE / vb.h);
   const tx = (SIZE - vb.w * s) / 2 - vb.x * s;
   const ty = (SIZE - vb.h * s) / 2 - vb.y * s;
-  const merged = paths
-    .map((d) => svgpath(d).abs().matrix([s, 0, 0, s, tx, ty]).round(4).toString())
-    .join("");
+  const merged = paths.map((d) => svgpath(d).abs().matrix([s, 0, 0, s, tx, ty]).round(4).toString()).join("");
 
   // Pass 2: size optimization of the final path
   const wrapped = buildSvg(merged);
   const { data } = optimize(wrapped, {
     plugins: [
-      { 
-        name: "convertPathData", 
-        params: { 
+      {
+        name: "convertPathData",
+        params: {
           floatPrecision: PRECISION,
           makeArcs: false,
-        } 
-        }],
+        },
+      },
+    ],
   });
   const d = data.match(/\sd="([^"]+)"/)?.[1];
   if (!d) throw new Error("path optimization failed");
-  return d;
+
+  const [x0, y0, x1, y1] = svgPathBbox(d);
+  const r = (n) => +n.toFixed(2);
+  const box = `${r(x0)} ${r(y0)} ${r(x1 - x0)} ${r(y1 - y0)}`;
+  return { d, box };  
+  //return d;
 }
 
-const buildSvg = (d) =>
-  `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${SIZE} ${SIZE}"><path d="${d}"/></svg>`;
+const buildSvg = (d) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${SIZE} ${SIZE}"><path d="${d}"/></svg>`;
 
 /* ----------------------- data/<category>.js ----------------------- */
 
-async function computeDataFile(category, name, d) {
+async function computeDataFile(category, name, d, box) {
   const file = path.join(DATA_DIR, `${category}.js`);
   let content = (await exists(file)) ? await fs.readFile(file, "utf8") : null;
   let created = false;
@@ -226,16 +234,30 @@ async function computeDataFile(category, name, d) {
 
   // Keep the existing order: replace in place, or insert alphabetically
   const entries = Object.entries(icons);
-  const idx = entries.findIndex(([k]) => k === name);
-  let status;
-  if (idx >= 0) {
-    entries[idx] = [name, d];
-    status = "replaced";
-  } else {
-    const pos = entries.findIndex(([k]) => k > name);
-    entries.splice(pos === -1 ? entries.length : pos, 0, [name, d]);
-    status = "added";
-  }
+
+  let status = "added";
+  const upsert = (key, value) => {
+    const idx = entries.findIndex(([k]) => k === key);
+    if (idx >= 0) {
+      entries[idx] = [key, value];
+      if (key === name) status = "replaced";
+    } else {
+      const pos = entries.findIndex(([k]) => k > key);
+      entries.splice(pos === -1 ? entries.length : pos, 0, [key, value]);
+    }
+  };
+  upsert(name, d);
+  upsert(`${name}_box`, box);
+  // const idx = entries.findIndex(([k]) => k === name);
+  // let status;
+  // if (idx >= 0) {
+  //   entries[idx] = [name, d];
+  //   status = "replaced";
+  // } else {
+  //   const pos = entries.findIndex(([k]) => k > name);
+  //   entries.splice(pos === -1 ? entries.length : pos, 0, [name, d]);
+  //   status = "added";
+  // }
 
   const lines = entries.map(([k, v]) => `  ${JSON.stringify(k)}: ${JSON.stringify(v)}`).join(",\n");
   const next = `${head}\n${lines}${trailingComma ? "," : ""}\n${tail}`;
@@ -272,9 +294,7 @@ async function computeMeta(category, name) {
 
   // Same formatting as the current file: one icon per line
   const parts = Object.entries(meta).map(([k, v]) =>
-    k === "icons"
-      ? `  "icons": [\n${v.map((i) => "    " + JSON.stringify(i)).join(",\n")}\n  ]`
-      : `  ${JSON.stringify(k)}: ${JSON.stringify(v)}`
+    k === "icons" ? `  "icons": [\n${v.map((i) => "    " + JSON.stringify(i)).join(",\n")}\n  ]` : `  ${JSON.stringify(k)}: ${JSON.stringify(v)}`,
   );
   return {
     next: `{\n${parts.join(",\n")}\n}\n`,
@@ -285,14 +305,19 @@ async function computeMeta(category, name) {
 
 /* ------------------------------- Main ------------------------------- */
 
-async function processFile(arg) {
+export async function processFile(arg) {
   const file = await resolveInput(arg);
   const { category, name } = parseTarget(file);
 
-  const d = convertToSinglePath(await fs.readFile(file, "utf8"));
+  const { d, box } = convertToSinglePath(await fs.readFile(file, "utf8"));
   const svgOut = buildSvg(d);
-  const data = await computeDataFile(category, name, d);
+  const data = await computeDataFile(category, name, d, box);
   const meta = await computeMeta(category, name);
+
+  // const d = convertToSinglePath(await fs.readFile(file, "utf8"));
+  // const svgOut = buildSvg(d);
+  // const data = await computeDataFile(category, name, d);
+
 
   // All checks passed: write everything
   const svgFile = path.join(SVG_DIR, category, `${name}.svg`);
@@ -327,7 +352,12 @@ async function main() {
   if (failed) process.exit(1);
 }
 
-main().catch((err) => {
-  console.error(err.message);
-  process.exit(1);
-});
+// At the bottom of scripts/add-icon.mjs, replace the bare main().catch(...) with:
+import { pathToFileURL } from "node:url";
+
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  main().catch((err) => {
+    console.error(err.message);
+    process.exit(1);
+  });
+}

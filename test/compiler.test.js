@@ -1,3 +1,5 @@
+// test/compiler.test.js
+
 import { test } from "node:test";
 import { compileCSS } from "../src/compiler.js";
 import { sampleClasses } from "./fixtures.js";
@@ -17,15 +19,3 @@ sampleClasses.forEach((className) => {
     t.assert.snapshot(sanitizedCss);
   });
 });
-/*
-test("compiler snapshot", async (t) => {
-  const css = await compileCSS(sampleClasses);
-  // Split by newline and trim empty lines to keep the snapshot clean
-  const cssLines = css
-    .split("\n")
-    .map((line) => line.trim())
-    .filter((line) => line.length > 0);
-  // Native Node.js snapshot assertion
-  t.assert.snapshot(cssLines);
-});
-*/
